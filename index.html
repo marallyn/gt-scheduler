@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degree Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://catalog.gatech.edu/images/logo.svg" alt="Georgia Tech Logo" class="gt-logo">
+            <h1 class="logo-title">Degree Planner</h1>
+        </div>
+        <div class="controls">
+            <div class="school-select">
+                <label for="gt-major">Major:</label>
+                <select id="gt-major">
+                    <option value="biology">Biology</option>
+                    <option value="neuroscience">Neuroscience</option>
+                    <option value="bme">Biomedical Engineering</option>
+                </select>
+                <button id="load-suggested-btn" class="action-btn" title="Reset this semester layout to the official suggested plan of study">Load Suggested Plan</button>
+                <button id="open-utilities-btn" class="settings-btn" title="Open Planner Utilities & Catalog Updater">⚙️ Utilities</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="planner-grid">
+        <!-- Requirements Bank (Left Sidebar) -->
+        <aside id="requirements-bank">
+            <div class="sidebar-tabs">
+                <button class="tab-btn active" id="tab-checklist">Requirements</button>
+                <button class="tab-btn" id="tab-search">Search Catalog</button>
+            </div>
+            
+            <!-- Checklist Tab Content -->
+            <div id="checklist-view" class="tab-content active">
+                <div class="checklist-header">
+                    <h3>Degree Audit</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="audit-progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text" id="audit-progress-text">0 / 0 Credits Satisfied</span>
+                </div>
+                <div id="checklist-categories">
+                    <!-- Categories and slots will be dynamically generated -->
+                </div>
+            </div>
+            
+            <!-- Search Tab Content -->
+            <div id="search-view" class="tab-content">
+                <div class="search-box">
+                    <input type="text" id="catalog-search-input" placeholder="Search 200+ courses...">
+                    <div class="search-results-info">
+                        <span class="search-count" id="search-results-count">Showing all courses</span>
+                    </div>
+                </div>
+                <div id="catalog-search-results" class="class-list search-results-container">
+                    <!-- Matching courses will be injected here -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Calendar Area -->
+        <div id="calendar-area">
+            <!-- Header/Stats -->
+            <div class="calendar-header">
+                <div class="stats-bar" id="gt-stats">
+                    <span id="gt-total-credits">Total: 0h</span> | 
+                    <span id="gt-core-remaining">0h left</span>
+                </div>
+            </div>
+
+            <!-- Semester Rows will be injected here by JS -->
+            <div id="semester-rows-container"></div>
+        </div>
+    </main>
+
+    <!-- Utilities Modal -->
+    <div id="utilities-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-utilities-btn">&times;</span>
+            <h2>Planner Utilities</h2>
+            <p class="modal-subtitle">Tools to update and manage course catalogs from Georgia Tech.</p>
+            
+            <div class="utility-section">
+                <h3>Fetch Subject Catalog</h3>
+                <p class="utility-desc">Download and merge the latest course titles, hours, and descriptions directly from the official Georgia Tech catalog (e.g., APPH, CS, MATH, LCC, HIST).</p>
+                <div class="fetch-input-group">
+                    <input type="text" id="fetch-subject-input" placeholder="e.g. CS" maxlength="8">
+                    <button id="fetch-subject-btn" class="modal-btn">Fetch & Merge</button>
+                </div>
+                <div id="fetch-status-container" class="status-container hidden">
+                    <div class="spinner" id="fetch-spinner"></div>
+                    <span id="fetch-status-text">Fetching courses...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
