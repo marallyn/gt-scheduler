@@ -75,7 +75,7 @@ function init() {
         if (confirm(`Are you sure you want to reset your schedule? This will replace all planned semester courses with the official suggested plan of study for ${majorName}. (Transfer credits will be preserved).`)) {
             const major = majorData[activeMajor];
             activeSchedule = JSON.parse(JSON.stringify(major.suggested_semesters));
-            saveState();
+            localStorage.setItem('gt_planner_active_schedule', JSON.stringify(activeSchedule));
             updatePlanner();
         }
     });
@@ -103,12 +103,15 @@ function saveState() {
             const semName = listEl.dataset.semester;
             if (semName) {
                 const courseCodes = [];
-                listEl.querySelectorAll('.class-card').forEach(card => {
+                listEl.querySelectorAll('[data-code]').forEach(card => {
                     if (card.dataset.code) {
                         const code = card.dataset.code;
-                        if (!seenCodes.has(code)) {
+                        const isPlaceholder = code.includes("ELECTIVE") || code.includes("DEPTH") || code.includes("BREADTH") || (COURSES_DB[code] && COURSES_DB[code].choices);
+                        if (isPlaceholder || !seenCodes.has(code)) {
                             courseCodes.push(code);
-                            seenCodes.add(code);
+                            if (!isPlaceholder) {
+                                seenCodes.add(code);
+                            }
                         }
                     }
                 });
@@ -252,7 +255,7 @@ function auditRequirements(majorKey, schedule, transferCredits) {
             }
             
             if (isChoice) {
-                satisfiedBy = consumeCourse(c => choices.includes(c.code));
+                satisfiedBy = consumeCourse(c => choices.includes(c.code) || c.code === slotKey);
             } else if (slotKey.includes("ELECTIVE") || slotKey.includes("DEPTH") || slotKey.includes("BREADTH")) {
                 // Elective placeholders are skipped in the first specific pass
                 satisfiedBy = null;
@@ -280,34 +283,36 @@ function auditRequirements(majorKey, schedule, transferCredits) {
                 let matchFn = null;
                 
                 if (slotKey === "RESEARCH") {
-                    matchFn = c => c.code === "BIOS 4590" || c.code === "BIOS 4690";
+                    matchFn = c => c.code === slotKey || c.code === "BIOS 4590" || c.code === "BIOS 4690";
                 } else if (slotKey.startsWith("BIOS DEPTH")) {
                     matchFn = c => {
+                        if (c.code === slotKey) return true;
                         if (!c.code.startsWith("BIOS")) return false;
                         const num = parseInt(c.code.replace(/\D/g, ''));
                         return num >= 3000 && num < 5000;
                     };
                 } else if (slotKey.startsWith("BIOS BREADTH")) {
                     const sciencePrefixes = ["CHEM", "PHYS", "MATH", "CS", "NEUR", "BMED", "BIOS"];
-                    matchFn = c => sciencePrefixes.some(p => c.code.startsWith(p));
+                    matchFn = c => c.code === slotKey || sciencePrefixes.some(p => c.code.startsWith(p));
                 } else if (slotKey.startsWith("BMED DEPTH")) {
                     matchFn = c => {
+                        if (c.code === slotKey) return true;
                         if (!c.code.startsWith("BMED")) return false;
                         const num = parseInt(c.code.replace(/\D/g, ''));
                         return num >= 3000 && num < 5000;
                     };
                 } else if (slotKey.startsWith("BMED BREADTH")) {
                     const engSciPrefixes = ["CHEM", "PHYS", "MATH", "CS", "BIOS", "MSE", "ECE", "COE", "ISYE", "BMED"];
-                    matchFn = c => engSciPrefixes.some(p => c.code.startsWith(p));
+                    matchFn = c => c.code === slotKey || engSciPrefixes.some(p => c.code.startsWith(p));
                 } else if (slotKey.startsWith("NEUR BREADTH")) {
                     const neurPrefixes = ["NEUR", "PSYC", "BIOS", "BMED", "CS", "MATH"];
-                    matchFn = c => neurPrefixes.some(p => c.code.startsWith(p));
+                    matchFn = c => c.code === slotKey || neurPrefixes.some(p => c.code.startsWith(p));
                 } else if (slotKey === "HUM ELECTIVE") {
-                    matchFn = c => getCourseCategory(c.code) === "HUM";
+                    matchFn = c => c.code === slotKey || getCourseCategory(c.code) === "HUM";
                 } else if (slotKey === "SS ELECTIVE") {
-                    matchFn = c => getCourseCategory(c.code) === "SS";
+                    matchFn = c => c.code === slotKey || getCourseCategory(c.code) === "SS";
                 } else if (slotKey === "FREE ELECTIVE") {
-                    matchFn = c => true;
+                    matchFn = c => c.code === slotKey || true;
                 }
                 
                 if (matchFn) {
@@ -540,7 +545,20 @@ function createSemesterCell(semName, fulfilledMap) {
             saveState();
             updatePlanner();
         },
-        onAdd: () => {
+        onAdd: (evt) => {
+            const itemEl = evt.item;
+            const code = itemEl.dataset.code;
+            if (code) {
+                // If this course is already scheduled in another semester, remove the old one to move it
+                document.querySelectorAll('.semester-column .class-list').forEach(otherList => {
+                    if (otherList !== listEl && otherList.id !== 'ap-transfer-list' && otherList.id !== 'de-transfer-list') {
+                        const duplicateCard = otherList.querySelector(`[data-code="${code}"]`);
+                        if (duplicateCard) {
+                            duplicateCard.remove();
+                        }
+                    }
+                });
+            }
             saveState();
             updatePlanner();
         }
@@ -556,16 +574,96 @@ function createClassCardForSemester(cls, isLocked, fulfilledMap, semName) {
     card.dataset.code = cls.code;
     card.dataset.hours = cls.hours;
     
+    const dbCourse = COURSES_DB[cls.code];
+    const hasChoices = dbCourse && dbCourse.choices && dbCourse.choices.length > 0;
+    const isGenericElective = cls.code.includes("DEPTH") || cls.code.includes("BREADTH") || cls.code.includes("ELECTIVE");
+    
+    if (!isLocked && (hasChoices || isGenericElective)) {
+        card.classList.add('placeholder-card');
+    }
+    
     card.innerHTML = `
         <div class="class-card-header">
             <span class="code">${cls.code}</span>
             <span class="name">${cls.name}</span>
-            <span class="hours">${cls.hours}h</span>
+            <span class="hours-container" style="display: flex; align-items: center; gap: 6px;">
+                ${hasChoices ? `<span class="card-info-icon" title="View course descriptions in catalog" style="cursor: pointer; font-size: 0.85rem;">ℹ️</span>` : ''}
+                <span class="hours">${cls.hours}h</span>
+            </span>
         </div>
         <div class="course-details">
             ${cls.description || "No description available."}
         </div>
     `;
+
+    if (!isLocked && (hasChoices || isGenericElective)) {
+        const selectContainer = document.createElement('div');
+        selectContainer.className = 'card-select-container';
+        
+        if (hasChoices) {
+            const warningBtn = document.createElement('button');
+            warningBtn.className = 'card-warning-btn';
+            warningBtn.textContent = '⚠️ Select Course';
+            selectContainer.appendChild(warningBtn);
+            
+            const select = document.createElement('select');
+            select.className = 'class-card-choice-select';
+            select.style.display = 'none'; // hidden initially
+            
+            const defaultOpt = document.createElement('option');
+            defaultOpt.value = '';
+            defaultOpt.disabled = true;
+            defaultOpt.selected = true;
+            defaultOpt.textContent = 'Choose...';
+            select.appendChild(defaultOpt);
+            
+            dbCourse.choices.forEach(choiceCode => {
+                const c = COURSES_DB[choiceCode];
+                if (c) {
+                    const opt = document.createElement('option');
+                    opt.value = choiceCode;
+                    opt.textContent = `${choiceCode} (${c.hours}h)`;
+                    select.appendChild(opt);
+                }
+            });
+            
+            warningBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                warningBtn.style.display = 'none';
+                select.style.display = 'block';
+                select.focus();
+            });
+            
+            const infoIcon = card.querySelector('.card-info-icon');
+            if (infoIcon) {
+                infoIcon.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showChoicesInCatalog(dbCourse.choices, cls.name);
+                });
+            }
+            
+            select.addEventListener('change', (e) => {
+                const newCode = e.target.value;
+                card.dataset.code = newCode;
+                saveState();
+                updatePlanner();
+            });
+            select.addEventListener('click', (e) => e.stopPropagation());
+            selectContainer.appendChild(select);
+        } else {
+            const warningBadge = document.createElement('span');
+            warningBadge.className = 'warning-badge';
+            warningBadge.style.color = '#c62828';
+            warningBadge.textContent = '⚠️ Specific Course Required';
+            selectContainer.appendChild(warningBadge);
+            
+            const warningText = document.createElement('div');
+            warningText.className = 'warning-text';
+            warningText.textContent = 'Replace from left or search catalog';
+            selectContainer.appendChild(warningText);
+        }
+        card.appendChild(selectContainer);
+    }
 
     // Map requirement category badge
     const key = `${semName}|${cls.code}`;
@@ -671,19 +769,33 @@ function renderChecklist(auditResults) {
                 const source = slot.satisfiedBy.source;
                 
                 const satisfiedSlot = document.createElement('div');
-                satisfiedSlot.className = 'requirement-slot satisfied';
+                const isTransfer = source === "AP Credit" || source === "Dual Enrollment" || source === "Transfer";
+                if (isTransfer) {
+                    satisfiedSlot.className = 'requirement-slot satisfied transfer-satisfied';
+                } else {
+                    satisfiedSlot.className = 'requirement-slot satisfied';
+                    satisfiedSlot.dataset.code = code;
+                    satisfiedSlot.dataset.hours = hours;
+                }
                 
                 // If this is a choice requirement and it was planned in a semester (not a transfer credit), let them modify it directly!
-                const isTransfer = source === "AP Credit" || source === "Dual Enrollment" || source === "Transfer";
                 if (slot.isChoice && !isTransfer) {
-                    let optionsHtml = slot.choices.map(cCode => {
+                    const isPlaceholder = !slot.choices.includes(code);
+                    let optionsHtml = '';
+                    if (isPlaceholder) {
+                        optionsHtml += `<option value="" disabled selected>Choose a class...</option>`;
+                    }
+                    optionsHtml += slot.choices.map(cCode => {
                         const c = COURSES_DB[cCode];
                         return `<option value="${cCode}" ${cCode === code ? 'selected' : ''}>${cCode} - ${c.name} (${c.hours}h)</option>`;
                     }).join('');
                     
                     satisfiedSlot.innerHTML = `
-                        <div class="satisfied-details">
-                            <span class="satisfied-title">${slot.displayName}</span>
+                        <div class="satisfied-details" style="width: 100%;">
+                            <div class="satisfied-title-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                <span class="satisfied-title">${slot.displayName}</span>
+                                <span class="satisfied-info-btn" title="View option details" style="cursor: pointer; font-size: 0.85rem; color: var(--gt-link-blue);">ℹ️</span>
+                            </div>
                             <div class="satisfied-row">
                                 <select class="satisfied-choice-select">
                                     ${optionsHtml}
@@ -693,6 +805,12 @@ function renderChecklist(auditResults) {
                         </div>
                         <span class="satisfied-icon">✓</span>
                     `;
+                    
+                    const infoBtn = satisfiedSlot.querySelector('.satisfied-info-btn');
+                    infoBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        showChoicesInCatalog(slot.choices, slot.displayName);
+                    });
                     
                     const select = satisfiedSlot.querySelector('.satisfied-choice-select');
                     select.addEventListener('change', (e) => {
@@ -755,6 +873,7 @@ function renderChecklist(auditResults) {
                 put: false // Disable dropping cards back into requirements
             },
             animation: 150,
+            filter: '.transfer-satisfied',
             ghostClass: 'sortable-ghost',
             onEnd: () => {
                 saveState();
@@ -786,10 +905,13 @@ function createChoiceCard(slot) {
         <div class="class-card-header">
             <span class="code" style="color: var(--gt-link-blue);">${slot.slotKey}</span>
             <span class="name">${slot.displayName}</span>
-            <span class="hours">${card.dataset.hours}h</span>
+            <span class="hours-container" style="display: flex; align-items: center; gap: 6px;">
+                <span class="choice-info-link" title="Compare options in catalog" style="cursor: pointer; font-size: 0.85rem;">ℹ️</span>
+                <span class="hours">${card.dataset.hours}h</span>
+            </span>
         </div>
         <div class="course-details" style="display: block; max-height: none; border-top: 1px solid #eee; margin-top: 0.5rem; padding-top: 0.5rem;">
-            <label style="font-size: 0.7rem; font-weight: bold; color: #666;">Select Option:</label>
+            <label style="font-size: 0.7rem; font-weight: bold; color: #666; margin-bottom: 0.25rem; display: block;">Select Option:</label>
             <select class="class-card-choice-select">
                 ${optionsHtml}
             </select>
@@ -798,6 +920,12 @@ function createChoiceCard(slot) {
             </div>
         </div>
     `;
+    
+    const infoLink = card.querySelector('.choice-info-link');
+    infoLink.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showChoicesInCatalog(slot.choices, slot.displayName);
+    });
     
     const select = card.querySelector('.class-card-choice-select');
     select.addEventListener('change', (e) => {
@@ -934,7 +1062,23 @@ function updateStats(auditResults) {
         });
     }
 
-    const targetHours = major.target_hours || 122;
+    let targetHours = 0;
+    if (major && major.requirements) {
+        for (let category in major.requirements) {
+            major.requirements[category].forEach(slotKey => {
+                let slotHours = 3;
+                if (COURSES_DB[slotKey]) {
+                    slotHours = COURSES_DB[slotKey].hours || 3;
+                } else if (slotKey.includes("DEPTH") || slotKey.includes("BREADTH") || slotKey.includes("ELECTIVE")) {
+                    slotHours = 3;
+                }
+                targetHours += slotHours;
+            });
+        }
+    }
+    if (targetHours === 0) {
+        targetHours = major.target_hours || 122;
+    }
     const progressPercent = Math.min(100, (totalSatisfiedHours / targetHours) * 100);
     
     // Update progress audit bar
@@ -978,6 +1122,13 @@ if (openUtilitiesBtn && utilitiesModal && closeUtilitiesBtn) {
 }
 
 if (fetchSubjectBtn && fetchSubjectInput) {
+    fetchSubjectInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            fetchSubjectBtn.click();
+        }
+    });
+
     fetchSubjectBtn.addEventListener('click', async () => {
         const subject = fetchSubjectInput.value.trim().toLowerCase();
         if (!subject) {
@@ -1006,7 +1157,46 @@ if (fetchSubjectBtn && fetchSubjectInput) {
                 newScript.onload = () => {
                     initDataAndRefresh();
                     setTimeout(() => {
-                        showFetchStatus(`Catalog updated! Found new courses.`, "success");
+                        let stats = data.stats;
+                        if (!stats && data.stdout) {
+                            const match = data.stdout.match(/JSON_STATS:\s*({.+})/);
+                            if (match) {
+                                try {
+                                    stats = JSON.parse(match[1]);
+                                } catch (e) {
+                                    console.error("Failed to parse JSON_STATS from stdout:", e);
+                                }
+                            }
+                        }
+                        if (!stats) {
+                            stats = { fetched: 0, added: 0, updated: 0, deleted: 0 };
+                        }
+                        
+                        const fetchedCount = stats.fetched || 0;
+                        const addedCount = stats.added || 0;
+                        const updatedCount = stats.updated || 0;
+                        const deletedCount = stats.deleted || 0;
+                        
+                        const fetchedText = `${fetchedCount} classes fetched`;
+                        let finalMsg = "";
+                        
+                        if (addedCount === 0 && deletedCount === 0 && updatedCount === 0) {
+                            finalMsg = `${fetchedText}, 0 updated.`;
+                        } else {
+                            const details = [];
+                            if (updatedCount > 0) {
+                                details.push(`${updatedCount} classes updated`);
+                            }
+                            if (addedCount > 0) {
+                                details.push(`${addedCount} classes added`);
+                            }
+                            if (deletedCount > 0) {
+                                details.push(`${deletedCount} classes deleted`);
+                            }
+                            finalMsg = `${fetchedText}. ${details.join(", ")}.`;
+                        }
+                        
+                        showFetchStatus(finalMsg, "success");
                         fetchSubjectBtn.disabled = false;
                     }, 1000);
                 };
@@ -1045,6 +1235,54 @@ function initDataAndRefresh() {
     // Refresh UI
     renderSearchCatalog();
     updatePlanner();
+}
+
+function showChoicesInCatalog(choices, title) {
+    // 1. Switch to the Search Catalog tab
+    const tabSearch = document.getElementById('tab-search');
+    const tabChecklist = document.getElementById('tab-checklist');
+    const searchView = document.getElementById('search-view');
+    const checklistView = document.getElementById('checklist-view');
+
+    tabSearch.classList.add('active');
+    tabChecklist.classList.remove('active');
+    searchView.classList.add('active');
+    checklistView.classList.remove('active');
+
+    // 2. Set search input placeholder
+    catalogSearchInput.value = '';
+    catalogSearchInput.placeholder = `Showing choices for: ${title}`;
+
+    // 3. Render only the matching choices
+    const container = document.getElementById('catalog-search-results');
+    container.innerHTML = '';
+    document.getElementById('search-results-count').textContent = `Showing choices for ${title}`;
+
+    choices.forEach(code => {
+        const c = COURSES_DB[code];
+        if (c) {
+            const card = createDraggableCard({
+                code: code,
+                name: c.name,
+                hours: c.hours,
+                description: c.description
+            });
+            card.classList.add('expanded');
+            container.appendChild(card);
+        }
+    });
+
+    // Bind Sortable with clone pull
+    new Sortable(container, {
+        group: {
+            name: 'shared',
+            pull: 'clone',
+            put: false
+        },
+        animation: 150,
+        sort: false,
+        ghostClass: 'sortable-ghost'
+    });
 }
 
 // Kick off planner init

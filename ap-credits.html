@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage AP Credits | Degree Planner</title>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -41,8 +61,27 @@
             gap: 1.25rem;
         }
 
+        .app-logo-link, .gt-logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: opacity 0.2s ease, transform 0.15s ease;
+        }
+
+        .app-logo-link:hover, .gt-logo-link:hover {
+            opacity: 0.85;
+            transform: scale(1.04);
+        }
+
         .gt-logo {
             height: 2.5rem;
+            display: block;
+        }
+
+        .app-logo {
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 6px;
             display: block;
         }
 
@@ -340,7 +379,12 @@
     <div class="container">
         <div class="form-header">
             <div class="logo-container">
-                <img src="https://catalog.gatech.edu/images/logo.svg" alt="Georgia Tech Logo" class="gt-logo">
+                <a href="#" onclick="location.reload(); return false;" class="app-logo-link">
+                    <img src="apple-touch-icon-120x120.png" alt="App Logo" class="app-logo">
+                </a>
+                <a href="https://www.gatech.edu" target="_blank" rel="noopener noreferrer" class="gt-logo-link">
+                    <img src="https://catalog.gatech.edu/images/logo.svg" alt="Georgia Tech Logo" class="gt-logo">
+                </a>
                 <div>
                     <h2 style="margin: 0; font-size: 1.8rem; font-weight: 700;">GT AP Exam Manager</h2>
                     <p style="margin: 0.2rem 0 0 0; opacity: 0.8; font-size: 0.9rem;">Select your scores to calculate automatically transfer credits according to GT Catalog policy.</p>

@@ -10,12 +10,24 @@ import sys
 PORT = 8085
 
 class CustomHandler(http.server.SimpleHTTPRequestHandler):
+    def end_headers(self):
+        self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
+        self.send_header("Pragma", "no-cache")
+        self.send_header("Expires", "0")
+        super().end_headers()
+
     def do_GET(self):
         # Parse the URL path and query parameters
         parsed_url = urllib.parse.urlparse(self.path)
         path = parsed_url.path
         query_params = urllib.parse.parse_qs(parsed_url.query)
         
+        # Ignore noisy browser/tooling requests to keep logs clean
+        if path in ("/favicon.ico", "/.well-known/appspecific/com.chrometools.json"):
+            self.send_response(204)
+            self.end_headers()
+            return
+            
         # Check if this is our API endpoint
         if path == "/api/fetch-subject":
             subject = query_params.get("subject", [None])[0]
@@ -41,10 +53,22 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
                     check=True
                 )
                 
+                # Try to parse JSON_STATS from stdout
+                stats = None
+                if result.stdout:
+                    for line in result.stdout.split('\n'):
+                        if line.startswith("JSON_STATS:"):
+                            try:
+                                stats = json.loads(line[len("JSON_STATS:"):].strip())
+                            except Exception as parse_err:
+                                print(f"Error parsing JSON_STATS: {parse_err}")
+                            break
+
                 # Send success response
                 self.send_success_response({
                     "success": True,
                     "message": f"Successfully updated subject '{subject.upper()}'.",
+                    "stats": stats,
                     "stdout": result.stdout,
                     "stderr": result.stderr
                 })

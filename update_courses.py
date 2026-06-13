@@ -14,14 +14,16 @@ def fetch_subject_courses(subject_code):
     print(f"Fetching courses from {url}...")
     
     try:
+        import ssl
+        ctx = ssl._create_unverified_context()
         req = urllib.request.Request(
             url, 
             headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
         )
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, context=ctx) as response:
             html = response.read().decode('utf-8')
     except Exception as e:
-        print(f"Error fetching subject {subject_code}: {e}")
+        print(f"Error fetching subject {subject_code}: {e}", file=sys.stderr)
         return None
         
     course_blocks = re.findall(r'<div class="courseblock">(.*?)</div>', html, re.DOTALL)
@@ -162,10 +164,53 @@ def main():
     print(f"Loaded {len(existing_db)} existing courses from database.")
     
     if args.subject:
+        subject_upper = args.subject.upper().strip()
         new_courses = fetch_subject_courses(args.subject)
-        if new_courses:
-            existing_db.update(new_courses)
-            save_db(existing_db)
+        
+        if new_courses is None:
+            print(f"Error: Failed to fetch catalog page for subject {subject_upper}.", file=sys.stderr)
+            sys.exit(1)
+            
+        if len(new_courses) == 0:
+            print(f"Error: No courses found in catalog for subject {subject_upper}. This might be an invalid subject code or the catalog layout has changed.", file=sys.stderr)
+            sys.exit(1)
+            
+        # Find all courses currently in database for this subject
+        existing_subject_keys = [k for k in existing_db if k.split() and k.split()[0].upper() == subject_upper]
+        
+        added = 0
+        updated = 0
+        deleted = 0
+        
+        # 1. Update existing courses and add new ones
+        for code, info in new_courses.items():
+            if code not in existing_db:
+                added += 1
+                existing_db[code] = info
+            else:
+                existing_info = existing_db[code]
+                if (existing_info.get("name") != info["name"] or 
+                    existing_info.get("hours") != info["hours"] or 
+                    existing_info.get("description") != info["description"]):
+                    updated += 1
+                    existing_db[code] = info
+        
+        # 2. Delete existing courses that are not in the fetched catalog
+        for code in existing_subject_keys:
+            if code not in new_courses:
+                deleted += 1
+                del existing_db[code]
+                
+        save_db(existing_db)
+        
+        # Print structured stats for server.py to parse
+        stats = {
+            "fetched": len(new_courses),
+            "added": added,
+            "updated": updated,
+            "deleted": deleted
+        }
+        print(f"JSON_STATS: {json.dumps(stats)}")
             
     elif args.course:
         # Resolve subject from course code (e.g., "MATH 1551" -> "MATH")
