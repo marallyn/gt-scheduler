@@ -77,11 +77,85 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_error_response(500, f"Script failed: {e.stderr or e.stdout or str(e)}")
             except Exception as e:
                 print(f"Error executing script: {str(e)}")
-                self.send_error_response(500, f"Error: {str(e)}")
+            return
+            
+        elif path == "/api/profiles":
+            try:
+                profiles_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "profiles.json")
+                profiles = {}
+                if os.path.exists(profiles_path):
+                    with open(profiles_path, "r", encoding="utf-8") as f:
+                        profiles = json.load(f)
+                self.send_success_response({"success": True, "profiles": profiles})
+            except Exception as e:
+                self.send_error_response(500, f"Error reading profiles: {str(e)}")
             return
             
         # Fall back to standard static file serving
         super().do_GET()
+
+    def do_POST(self):
+        parsed_url = urllib.parse.urlparse(self.path)
+        path = parsed_url.path
+        
+        if path == "/api/save-profile":
+            content_length = int(self.headers['Content-Length'])
+            post_data = self.rfile.read(content_length)
+            try:
+                data = json.loads(post_data.decode('utf-8'))
+                profile_name = data.get("name")
+                if not profile_name:
+                    self.send_error_response(400, "Profile name is required.")
+                    return
+                    
+                profiles_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "profiles.json")
+                profiles = {}
+                if os.path.exists(profiles_path):
+                    with open(profiles_path, "r", encoding="utf-8") as f:
+                        try:
+                            profiles = json.load(f)
+                        except Exception:
+                            profiles = {}
+                            
+                profiles[profile_name] = data
+                
+                with open(profiles_path, "w", encoding="utf-8") as f:
+                    json.dump(profiles, f, indent=2)
+                    
+                self.send_success_response({"success": True, "message": f"Profile '{profile_name}' saved successfully."})
+            except Exception as e:
+                self.send_error_response(500, f"Error saving profile: {str(e)}")
+            return
+            
+        elif path == "/api/delete-profile":
+            content_length = int(self.headers['Content-Length'])
+            post_data = self.rfile.read(content_length)
+            try:
+                data = json.loads(post_data.decode('utf-8'))
+                profile_name = data.get("name")
+                if not profile_name:
+                    self.send_error_response(400, "Profile name is required.")
+                    return
+                    
+                profiles_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "profiles.json")
+                if os.path.exists(profiles_path):
+                    with open(profiles_path, "r", encoding="utf-8") as f:
+                        try:
+                            profiles = json.load(f)
+                        except Exception:
+                            profiles = {}
+                    if profile_name in profiles:
+                        del profiles[profile_name]
+                        with open(profiles_path, "w", encoding="utf-8") as f:
+                            json.dump(profiles, f, indent=2)
+                        self.send_success_response({"success": True, "message": f"Profile '{profile_name}' deleted."})
+                        return
+                self.send_error_response(404, f"Profile '{profile_name}' not found.")
+            except Exception as e:
+                self.send_error_response(500, f"Error deleting profile: {str(e)}")
+            return
+            
+        self.send_error_response(404, "Endpoint not found.")
 
     def send_success_response(self, data):
         self.send_response(200)

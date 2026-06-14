@@ -1,0 +1,9 @@
+# Local user profiles
+profiles.json
+
+# Python caches
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store

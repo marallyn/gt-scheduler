@@ -43,14 +43,14 @@
         </div>
         <div class="controls">
             <div class="school-select">
+                <span id="active-profile-indicator" class="profile-indicator" title="Currently loaded profile">Profile: None</span>
                 <label for="gt-major">Major:</label>
                 <select id="gt-major">
                     <option value="biology">Biology</option>
                     <option value="neuroscience">Neuroscience</option>
                     <option value="bme">Biomedical Engineering</option>
                 </select>
-                <button id="load-suggested-btn" class="action-btn" title="Reset this semester layout to the official suggested plan of study">Load Suggested Plan</button>
-                <button id="open-utilities-btn" class="settings-btn" title="Open Planner Utilities & Catalog Updater">⚙️ Utilities</button>
+                <button id="open-utilities-btn" class="settings-btn" title="Open Planner Utilities, Profiles & Catalog Tools">⚙️ Utilities</button>
             </div>
         </div>
     </header>
@@ -111,8 +111,33 @@
         <div class="modal-content">
             <span class="close-modal" id="close-utilities-btn">&times;</span>
             <h2>Planner Utilities</h2>
-            <p class="modal-subtitle">Tools to update and manage course catalogs from Georgia Tech.</p>
+            <p class="modal-subtitle">Manage degree planner profiles, study plans, and course catalogs.</p>
             
+            <!-- Profiles Section -->
+            <div class="utility-section" style="border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                <h3>Saved Profiles</h3>
+                <p class="utility-desc">Save your current view (AP credits, Dual Enrollment, Major, and planned semesters) as a profile, or load an existing one.</p>
+                
+                <!-- Save profile actions -->
+                <div class="profile-actions-group" style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                    <button id="profile-save-btn" class="modal-btn" style="flex: 1; background-color: var(--gt-navy);" disabled title="Overwrite current active profile">Save</button>
+                    <button id="profile-save-as-btn" class="modal-btn" style="flex: 1;" title="Save current schedule as a new profile">Save as New...</button>
+                </div>
+                
+                <!-- Profile list -->
+                <div id="profile-list-container" class="profile-list">
+                    <p style="font-size: 0.85rem; color: #666; font-style: italic; text-align: center; margin: 0.5rem 0;">Loading profiles...</p>
+                </div>
+            </div>
+
+            <!-- Suggested Study Plan Section -->
+            <div class="utility-section" style="border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                <h3>Suggested Plan</h3>
+                <p class="utility-desc">Reset the semester grid layout to the official suggested plan of study for the selected major. (Transfer credits will be preserved).</p>
+                <button id="load-suggested-btn" class="modal-btn" style="width: 100%; display: block; background-color: #555;" title="Reset this semester layout to the official suggested plan of study">Load Suggested Plan</button>
+            </div>
+
+            <!-- Fetch Subject Catalog Section -->
             <div class="utility-section">
                 <h3>Fetch Subject Catalog</h3>
                 <p class="utility-desc">Download and merge the latest course titles, hours, and descriptions directly from the official Georgia Tech catalog (e.g., APPH, CS, MATH, LCC, HIST).</p>

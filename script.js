@@ -6,10 +6,18 @@ let activeMajor = 'biology';
 let activeSchedule = {}; // semesterName -> array of courseCodes
 const collapsedCategories = new Set();
 
+let activeProfileName = null;
+let profiles = {};
+
 const gtMajorSelect = document.getElementById('gt-major');
 const rowsContainer = document.getElementById('semester-rows-container');
 const catalogSearchInput = document.getElementById('catalog-search-input');
 const loadSuggestedBtn = document.getElementById('load-suggested-btn');
+
+const activeProfileIndicator = document.getElementById('active-profile-indicator');
+const profileSaveBtn = document.getElementById('profile-save-btn');
+const profileSaveAsBtn = document.getElementById('profile-save-as-btn');
+const profileListContainer = document.getElementById('profile-list-container');
 
 function init() {
     // Populate data from data.js variables
@@ -84,9 +92,10 @@ function init() {
         renderSearchCatalog();
     });
 
-    // Initialize searches and planner
+    // Initialize searches, profiles and planner
     renderSearchCatalog();
     updatePlanner();
+    initProfiles();
 }
 
 function saveState() {
@@ -1102,12 +1111,21 @@ const fetchStatusContainer = document.getElementById('fetch-status-container');
 const fetchStatusText = document.getElementById('fetch-status-text');
 
 if (openUtilitiesBtn && utilitiesModal && closeUtilitiesBtn) {
-    openUtilitiesBtn.addEventListener('click', () => {
+    const openModalFn = () => {
         utilitiesModal.classList.add('active');
         fetchSubjectInput.value = '';
         fetchStatusContainer.className = 'status-container hidden';
+    };
+
+    openUtilitiesBtn.addEventListener('click', () => {
+        openModalFn();
         fetchSubjectInput.focus();
     });
+
+    if (activeProfileIndicator) {
+        activeProfileIndicator.style.cursor = 'pointer';
+        activeProfileIndicator.addEventListener('click', openModalFn);
+    }
 
     closeUtilitiesBtn.addEventListener('click', () => {
         utilitiesModal.classList.remove('active');
@@ -1282,6 +1300,224 @@ function showChoicesInCatalog(choices, title) {
         animation: 150,
         sort: false,
         ghostClass: 'sortable-ghost'
+    });
+}
+
+// Profile Management Logic
+async function initProfiles() {
+    activeProfileName = localStorage.getItem('gt_planner_active_profile_name') || null;
+    
+    // Update indicator
+    updateProfileIndicator();
+    
+    // Fetch profiles
+    await fetchProfiles();
+    
+    // Set up save and save as event listeners
+    if (profileSaveBtn) {
+        profileSaveBtn.addEventListener('click', async () => {
+            if (activeProfileName) {
+                await saveProfile(activeProfileName, true);
+            }
+        });
+    }
+    
+    if (profileSaveAsBtn) {
+        profileSaveAsBtn.addEventListener('click', async () => {
+            const defaultName = activeProfileName ? `${activeProfileName} (Copy)` : '';
+            const name = prompt("Enter a name for the new profile:", defaultName);
+            if (name && name.trim()) {
+                await saveProfile(name.trim(), false);
+            }
+        });
+    }
+}
+
+async function fetchProfiles() {
+    try {
+        const response = await fetch('/api/profiles');
+        const data = await response.json();
+        if (data.success && data.profiles) {
+            profiles = data.profiles;
+            // Backup to local storage
+            localStorage.setItem('gt_planner_profiles', JSON.stringify(profiles));
+        } else {
+            throw new Error("API failed");
+        }
+    } catch (e) {
+        console.warn("Could not fetch profiles from server, falling back to local storage:", e);
+        try {
+            profiles = JSON.parse(localStorage.getItem('gt_planner_profiles') || '{}');
+        } catch (err) {
+            profiles = {};
+        }
+    }
+    renderProfileList();
+}
+
+async function saveProfile(name, overwriteActive = false) {
+    const data = {
+        name: name,
+        major: activeMajor,
+        schedule: activeSchedule,
+        apScores: JSON.parse(localStorage.getItem('gt_ap_scores') || '{}'),
+        apSelections: JSON.parse(localStorage.getItem('gt_ap_selections') || '{}')
+    };
+    
+    profiles[name] = data;
+    localStorage.setItem('gt_planner_profiles', JSON.stringify(profiles));
+    
+    activeProfileName = name;
+    localStorage.setItem('gt_planner_active_profile_name', name);
+    
+    updateProfileIndicator();
+    renderProfileList();
+    
+    try {
+        await fetch('/api/save-profile', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+    } catch (e) {
+        console.warn("Failed to sync profile to server:", e);
+    }
+}
+
+async function deleteProfile(name) {
+    if (confirm(`Are you sure you want to delete the profile "${name}"?`)) {
+        if (activeProfileName === name) {
+            activeProfileName = null;
+            localStorage.removeItem('gt_planner_active_profile_name');
+        }
+        
+        delete profiles[name];
+        localStorage.setItem('gt_planner_profiles', JSON.stringify(profiles));
+        
+        updateProfileIndicator();
+        renderProfileList();
+        
+        try {
+            await fetch('/api/delete-profile', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name: name })
+            });
+        } catch (e) {
+            console.warn("Failed to delete profile from server:", e);
+        }
+    }
+}
+
+function loadProfile(name) {
+    const profile = profiles[name];
+    if (!profile) {
+        alert(`Profile "${name}" not found.`);
+        return;
+    }
+    
+    activeMajor = profile.major || 'biology';
+    activeSchedule = profile.schedule || {};
+    
+    localStorage.setItem('gt_planner_major', activeMajor);
+    localStorage.setItem('gt_planner_active_schedule', JSON.stringify(activeSchedule));
+    localStorage.setItem('gt_ap_scores', JSON.stringify(profile.apScores || {}));
+    localStorage.setItem('gt_ap_selections', JSON.stringify(profile.apSelections || {}));
+    
+    gtMajorSelect.value = activeMajor;
+    
+    activeProfileName = name;
+    localStorage.setItem('gt_planner_active_profile_name', name);
+    
+    updateProfileIndicator();
+    renderProfileList();
+    
+    // Fully refresh the planner view and credit mappings
+    initDataAndRefresh();
+    
+    // Close the utilities modal after loading
+    const utilitiesModal = document.getElementById('utilities-modal');
+    if (utilitiesModal) {
+        utilitiesModal.classList.remove('active');
+    }
+}
+
+function updateProfileIndicator() {
+    if (activeProfileIndicator) {
+        if (activeProfileName) {
+            activeProfileIndicator.textContent = `Profile: ${activeProfileName}`;
+            activeProfileIndicator.classList.add('active');
+        } else {
+            activeProfileIndicator.textContent = `Profile: None`;
+            activeProfileIndicator.classList.remove('active');
+        }
+    }
+    
+    if (profileSaveBtn) {
+        if (activeProfileName) {
+            profileSaveBtn.removeAttribute('disabled');
+            profileSaveBtn.title = `Overwrite changes to "${activeProfileName}"`;
+        } else {
+            profileSaveBtn.setAttribute('disabled', 'true');
+            profileSaveBtn.title = "No profile currently loaded. Use 'Save as New...' to create one.";
+        }
+    }
+}
+
+function renderProfileList() {
+    if (!profileListContainer) return;
+    
+    const names = Object.keys(profiles);
+    if (names.length === 0) {
+        profileListContainer.innerHTML = `<p style="font-size: 0.85rem; color: #666; font-style: italic; text-align: center; margin: 0.5rem 0;">No profiles saved yet.</p>`;
+        return;
+    }
+    
+    profileListContainer.innerHTML = '';
+    names.forEach(name => {
+        const item = document.createElement('div');
+        item.className = 'profile-item';
+        if (activeProfileName === name) {
+            item.style.borderColor = 'var(--gt-link-blue)';
+            item.style.backgroundColor = 'rgba(0, 79, 159, 0.02)';
+        }
+        
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'profile-item-name';
+        nameSpan.textContent = name;
+        if (activeProfileName === name) {
+            nameSpan.textContent += ' (active)';
+            nameSpan.style.color = 'var(--gt-link-blue)';
+        }
+        nameSpan.addEventListener('click', () => loadProfile(name));
+        
+        const actionsDiv = document.createElement('div');
+        actionsDiv.className = 'profile-item-actions';
+        
+        const loadBtn = document.createElement('button');
+        loadBtn.className = 'profile-action-icon';
+        loadBtn.title = 'Load Profile';
+        loadBtn.innerHTML = '📁';
+        loadBtn.addEventListener('click', () => loadProfile(name));
+        
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = 'profile-action-icon profile-action-delete';
+        deleteBtn.title = 'Delete Profile';
+        deleteBtn.innerHTML = '🗑️';
+        deleteBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            deleteProfile(name);
+        });
+        
+        actionsDiv.appendChild(loadBtn);
+        actionsDiv.appendChild(deleteBtn);
+        item.appendChild(nameSpan);
+        item.appendChild(actionsDiv);
+        profileListContainer.appendChild(item);
     });
 }
 

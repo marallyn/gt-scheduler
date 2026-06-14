@@ -853,3 +853,90 @@ main {
     to { transform: rotate(360deg); }
 }
 
+/* Profile Indicator Styles */
+.profile-indicator {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gt-gold);
+    background-color: rgba(179, 163, 105, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid rgba(179, 163, 105, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-right: 0.75rem;
+}
+
+.profile-indicator.active {
+    color: white;
+    background-color: var(--gt-link-blue);
+    border-color: var(--gt-link-blue);
+}
+
+/* Profile List Styles */
+.profile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.5rem;
+    background-color: #fafafa;
+}
+
+.profile-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.profile-item:hover {
+    border-color: var(--gt-gold);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.profile-item-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.profile-item-name:hover {
+    color: var(--gt-link-blue);
+    text-decoration: underline;
+}
+
+.profile-item-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.profile-action-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.2rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.profile-action-icon:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.profile-action-delete:hover {
+    background-color: rgba(211, 47, 47, 0.1);
+    color: #d32f2f;
+}
+
