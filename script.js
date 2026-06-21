@@ -44,6 +44,16 @@ function init() {
         gtMajorSelect.value = savedMajor;
     }
 
+    // Collapse all categories by default on load
+    collapsedCategories.clear();
+    const major = majorData[activeMajor];
+    if (major && major.requirements) {
+        for (let category in major.requirements) {
+            collapsedCategories.add(category);
+        }
+        collapsedCategories.add("Legislative Requirements");
+    }
+
     // Load active schedule from localStorage
     try {
         activeSchedule = JSON.parse(localStorage.getItem('gt_planner_active_schedule') || '{}');
@@ -87,6 +97,17 @@ function init() {
     gtMajorSelect.addEventListener('change', () => {
         activeMajor = gtMajorSelect.value;
         localStorage.setItem('gt_planner_major', activeMajor);
+        
+        // Collapse all categories for the new major
+        collapsedCategories.clear();
+        const newMajor = majorData[activeMajor];
+        if (newMajor && newMajor.requirements) {
+            for (let category in newMajor.requirements) {
+                collapsedCategories.add(category);
+            }
+            collapsedCategories.add("Legislative Requirements");
+        }
+        
         updatePlanner();
     });
 
@@ -221,7 +242,7 @@ function getCourseCategory(code) {
     if (code.startsWith("SPAN") || code.startsWith("FREN") || code.startsWith("GRMN") || code.startsWith("JAPN") || code.startsWith("CHIN") || code.startsWith("LATN") || code === "ID 2242" || code === "MUSI 2700" || code.startsWith("HUM") || code.startsWith("ARCH")) {
         return "HUM";
     }
-    if (code.startsWith("ECON") || code.startsWith("PSYC") || code.startsWith("SOCI") || code.startsWith("HTS") || code.startsWith("POL") || code.startsWith("INTA") || code.startsWith("SS") || code === "PUBP 3000") {
+    if (code.startsWith("ECON") || code.startsWith("PSYC") || code.startsWith("SOC") || code.startsWith("HTS") || code.startsWith("POL") || code.startsWith("INTA") || code.startsWith("SS") || code === "PUBP 3000") {
         return "SS";
     }
     return null;
@@ -244,6 +265,13 @@ function auditRequirements(majorKey, schedule, transferCredits) {
     
     const major = majorData[majorKey];
     const auditResults = {};
+    
+    // Detect AP Biology Score of 5 for Biology majors
+    let apScores = {};
+    try {
+        apScores = JSON.parse(localStorage.getItem('gt_ap_scores') || '{}');
+    } catch (e) {}
+    const hasAPBio5 = (majorKey === 'biology' && apScores["Biology"] === 5);
     
     // Helper to find and consume a course from planned
     function consumeCourse(matchFn) {
@@ -281,6 +309,9 @@ function auditRequirements(majorKey, schedule, transferCredits) {
             } else if (slotKey.includes("ELECTIVE") || slotKey.includes("DEPTH") || slotKey.includes("BREADTH")) {
                 // Elective placeholders are skipped in the first specific pass
                 satisfiedBy = null;
+            } else if (hasAPBio5 && (slotKey === "BIOS 1208" || slotKey === "BIOS 1208L")) {
+                // AP Biology 5 substitution: skip exact match in Pass 1 to treat as general biology electives
+                satisfiedBy = null;
             } else {
                 satisfiedBy = consumeCourse(c => c.code === slotKey);
             }
@@ -301,10 +332,13 @@ function auditRequirements(majorKey, schedule, transferCredits) {
             if (slot.satisfiedBy) return;
             
             const slotKey = slot.slotKey;
-            if (slotKey.includes("ELECTIVE") || slotKey.includes("DEPTH") || slotKey.includes("BREADTH") || slotKey === "RESEARCH") {
+            if (slotKey.includes("ELECTIVE") || slotKey.includes("DEPTH") || slotKey.includes("BREADTH") || slotKey === "RESEARCH" || (hasAPBio5 && (slotKey === "BIOS 1208" || slotKey === "BIOS 1208L"))) {
                 let matchFn = null;
                 
-                if (slotKey === "RESEARCH") {
+                if (hasAPBio5 && (slotKey === "BIOS 1208" || slotKey === "BIOS 1208L")) {
+                    matchFn = c => c.code.startsWith("BIOS");
+                    slot.displayName = slotKey === "BIOS 1208" ? "AP Bio 5 Sub Elective (3h)" : "AP Bio 5 Sub Elective (1h)";
+                } else if (slotKey === "RESEARCH") {
                     matchFn = c => c.code === slotKey || c.code === "BIOS 4590" || c.code === "BIOS 4690";
                 } else if (slotKey.startsWith("BIOS DEPTH")) {
                     matchFn = c => {
@@ -358,13 +392,46 @@ function auditRequirements(majorKey, schedule, transferCredits) {
         isExtra: true
     }));
     
+    // 3. Compute Legislative Requirements in parallel (they don't consume courses)
+    const allPlannedCodes = new Set();
+    transferCredits.forEach(c => allPlannedCodes.add(c.code));
+    for (let semName in schedule) {
+        schedule[semName].forEach(code => allPlannedCodes.add(code));
+    }
+    
+    const hasHist = allPlannedCodes.has("HIST 2111") || allPlannedCodes.has("HIST 2112");
+    const hasConst = allPlannedCodes.has("POL 1101") || allPlannedCodes.has("INTA 1200") || allPlannedCodes.has("PUBP 3000");
+    
+    auditResults["Legislative Requirements"] = [
+        { 
+            slotKey: "GLR_US_HIST", 
+            displayName: "US History", 
+            satisfiedBy: hasHist ? { code: Array.from(allPlannedCodes).find(c => c === "HIST 2111" || c === "HIST 2112"), source: "Course" } : null 
+        },
+        { 
+            slotKey: "GLR_GA_HIST", 
+            displayName: "GA History", 
+            satisfiedBy: hasHist ? { code: Array.from(allPlannedCodes).find(c => c === "HIST 2111" || c === "HIST 2112"), source: "Course" } : null 
+        },
+        { 
+            slotKey: "GLR_US_CONST", 
+            displayName: "US Constitution", 
+            satisfiedBy: hasConst ? { code: Array.from(allPlannedCodes).find(c => c === "POL 1101" || c === "INTA 1200" || c === "PUBP 3000"), source: "Course" } : null 
+        },
+        { 
+            slotKey: "GLR_GA_CONST", 
+            displayName: "GA Constitution", 
+            satisfiedBy: hasConst ? { code: Array.from(allPlannedCodes).find(c => c === "POL 1101" || c === "INTA 1200" || c === "PUBP 3000"), source: "Course" } : null 
+        }
+    ];
+    
     return auditResults;
 }
 
 function buildCourseToRequirementMap(auditResults) {
     const mapping = new Map();
     for (let category in auditResults) {
-        if (category === "Unused Courses") continue;
+        if (category === "Unused Courses" || category === "Legislative Requirements") continue;
         auditResults[category].forEach(slot => {
             if (slot.satisfiedBy) {
                 const key = `${slot.satisfiedBy.source}|${slot.satisfiedBy.code}`;
@@ -749,6 +816,7 @@ function renderChecklist(auditResults) {
         let requiredHours = 0;
         
         categoryData.forEach(slot => {
+            if (slot.slotKey.startsWith("GLR_")) return; // GLR slots have 0 hours for graduation audits
             let slotHours = 3; // default fallback
             if (COURSES_DB[slot.slotKey]) {
                 slotHours = COURSES_DB[slot.slotKey].hours || 3;
@@ -766,10 +834,14 @@ function renderChecklist(auditResults) {
         const catEl = document.createElement('div');
         catEl.className = `checklist-category ${isCollapsed ? 'collapsed' : ''}`;
         
+        const progressText = category === "Legislative Requirements"
+            ? `${categoryData.filter(s => s.satisfiedBy).length}/4 Met`
+            : `${satisfiedHours}/${requiredHours}h`;
+            
         catEl.innerHTML = `
             <div class="category-header">
                 <span class="category-title"><span class="collapse-arrow">▼</span>${category}</span>
-                <span class="category-progress">${satisfiedHours}/${requiredHours}h</span>
+                <span class="category-progress">${progressText}</span>
             </div>
             <div class="checklist-category-list class-list" data-category="${category}">
                 <!-- Slots will be injected here -->
@@ -871,6 +943,31 @@ function renderChecklist(auditResults) {
                 listEl.appendChild(satisfiedSlot);
             } else {
                 // Render remaining draggable card
+                if (slot.slotKey.startsWith("GLR_")) {
+                    const glrItem = document.createElement('div');
+                    glrItem.className = 'requirement-slot unsatisfied glr-slot';
+                    glrItem.style.background = '#fafafa';
+                    glrItem.style.borderStyle = 'dashed';
+                    glrItem.style.cursor = 'default';
+                    glrItem.style.display = 'flex';
+                    glrItem.style.justifyContent = 'space-between';
+                    glrItem.style.alignItems = 'center';
+                    glrItem.style.padding = '0.5rem';
+                    glrItem.style.borderWidth = '1px';
+                    glrItem.style.borderColor = '#ccc';
+                    glrItem.style.borderRadius = '6px';
+                    glrItem.style.marginBottom = '0.5rem';
+                    glrItem.innerHTML = `
+                        <div class="satisfied-details">
+                            <span class="satisfied-title" style="color: #666; font-size: 0.9rem; font-weight: 500;">${slot.displayName}</span>
+                            <span class="satisfied-source" style="font-size: 0.72rem; color: #888; display: block; margin-top: 0.15rem;">Unmet (Take exam or plan HIST/POL course)</span>
+                        </div>
+                        <span class="satisfied-icon" style="color: #ccc; font-weight: bold; font-size: 1rem;">○</span>
+                    `;
+                    listEl.appendChild(glrItem);
+                    return;
+                }
+                
                 let card;
                 if (slot.isChoice) {
                     card = createChoiceCard(slot);
@@ -1078,15 +1175,38 @@ function renderSearchCatalog() {
     });
 }
 
+function isUpperDivision(code) {
+    if (code.includes("DEPTH") || code === "RESEARCH" || code === "BIOS 4460" || code === "QUANT/BIO" || code === "BIOS 3450" || code === "BIOS 3600") {
+        return true;
+    }
+    const match = code.match(/\d{4}/);
+    if (match) {
+        const num = parseInt(match[0], 10);
+        return num >= 3000;
+    }
+    return false;
+}
+
 function updateStats(auditResults) {
     const major = majorData[activeMajor];
     const transferCredits = getTransferCredits();
     
     let totalSatisfiedHours = transferCredits.reduce((sum, c) => sum + c.hours, 0);
+    let upperHours = 0;
+    
+    transferCredits.forEach(c => {
+        if (isUpperDivision(c.code)) {
+            upperHours += c.hours;
+        }
+    });
     
     for (let semName in activeSchedule) {
         activeSchedule[semName].forEach(code => {
-            totalSatisfiedHours += getCourseHours(code);
+            const hrs = getCourseHours(code);
+            totalSatisfiedHours += hrs;
+            if (isUpperDivision(code)) {
+                upperHours += hrs;
+            }
         });
     }
 
@@ -1118,6 +1238,21 @@ function updateStats(auditResults) {
     
     const remaining = Math.max(0, targetHours - totalSatisfiedHours);
     document.getElementById('gt-core-remaining').textContent = `Remaining: ${remaining}h left`;
+    
+    // Update upper division stats
+    const upperEl = document.getElementById('gt-upper-division');
+    if (upperEl) {
+        upperEl.textContent = `Upper-Div: ${upperHours}/39h`;
+        if (upperHours >= 39) {
+            upperEl.style.color = '#2e7d32'; // var(--success-green)
+            upperEl.style.fontWeight = 'bold';
+            upperEl.title = 'Satisfied 39-hour upper-division requirement!';
+        } else {
+            upperEl.style.color = '#f57c00'; // var(--warning-amber)
+            upperEl.style.fontWeight = 'normal';
+            upperEl.title = 'Need at least 39 credit hours at 3000-level or higher.';
+        }
+    }
 }
 
 // Utilities Modal Logic

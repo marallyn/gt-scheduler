@@ -352,10 +352,10 @@ const DE_DATA = {
       "description": "Introduction to psychological science, covering research methods, biological bases of behavior, and social dynamics."
     },
     {
-      "code": "SOCI 1101",
+      "code": "SOC 1101",
       "name": "Introduction to Sociology",
       "grade": "A",
-      "gt_credit": "SOCI 1101",
+      "gt_credit": "SOC 1101",
       "gt_hours": 3,
       "category": "SS",
       "description": "Scientific study of human society, including social institutions, culture, and group dynamics."
@@ -1659,7 +1659,7 @@ const COURSES_DB = {
   "PUBP 3000": {"name": "American Constitutional Issues", "hours": 3, "description": "U.S. Constitution, civil liberties, and federalism issues."},
   "QUANT/BIO": {"name": "Quantitative / Bioinformatics", "hours": 3, "choices": ["BIOS 3400", "BIOS 4150", "BIOS 4401"], "description": "Choose one quantitative biology or genomics course."},
   "RESEARCH": {"name": "BIOS Research Project", "hours": 3, "choices": ["BIOS 4590", "BIOS 4690"], "description": "Senior-level biological research project."},
-  "SOCI 1101": {"name": "Introduction to Sociology", "hours": 3, "description": "Scientific study of human society, group behaviors, and culture."},
+  "SOC 1101": {"name": "Introduction to Sociology", "hours": 3, "description": "A survey of the discipline of sociology. Topics will include sociological theory, methods and selected substantive area, including social structure and functions, analysis of social processes, the foundations of personality, and analysis of social organization."},
   "SPAN 1001": {"name": "Elementary Spanish I", "hours": 3, "description": "Elementary Spanish speaking, reading, and grammar."},
   "SPAN 1002": {"name": "Elementary Spanish II", "hours": 3, "description": "Continuation of elementary Spanish."},
   "SPAN 2001": {"name": "Intermediate Spanish I", "hours": 3, "description": "Intermediate Spanish conversation and culture."},
@@ -1675,7 +1675,7 @@ const MAJOR_DATA = {
   "gt": {
     "biology": {
       "name": "Biology (B.S.)",
-      "target_hours": 121,
+      "target_hours": 122,
       "requirements": {
         "Core Biology": ["BIOS 1207", "BIOS 1207L", "BIOS 1208", "BIOS 1208L", "ECOLOGY", "GENETICS", "ECOL/GENE LAB", "BIOS 3450", "BIOS 3451", "BIOS 3600", "QUANT/BIO", "BIOS 4460", "RESEARCH"],
         "Biology Breadth & Depth": ["BIOS DEPTH 1", "BIOS DEPTH 2", "BIOS DEPTH 3", "BIOS DEPTH 4", "BIOS BREADTH 1", "BIOS BREADTH 2", "BIOS BREADTH 3"],
@@ -1684,15 +1684,15 @@ const MAJOR_DATA = {
         "General Core": ["GT 1000", "ENGL 1101", "ENGL 1102", "WELLNESS", "COMPUTING", "HIST/GOVT", "HUM ELECTIVE", "HUM ELECTIVE", "SS ELECTIVE", "SS ELECTIVE", "SS ELECTIVE", "FREE ELECTIVE", "FREE ELECTIVE", "FREE ELECTIVE"]
       },
       "suggested_semesters": {
-        "Summer 2026": ["GT 1000", "MATH 1551", "ENGL 1101", "WELLNESS"],
-        "Fall 2026": ["BIOS 1207", "BIOS 1207L", "CHEM 1211K", "ENGL 1102"],
-        "Spring 2027": ["BIOS 1208", "BIOS 1208L", "CHEM 1212K", "MATH 1552", "COMPUTING"],
-        "Fall 2027": ["ECOLOGY", "ECOL/GENE LAB", "CHEM 2311", "MATH 1553", "PHYS 2211"],
-        "Spring 2028": ["GENETICS", "CHEM 2312", "CHEM 2380", "PHYS 2212", "HIST/GOVT"],
-        "Fall 2028": ["BIOS 3450", "BIOS 3451", "BIOS 3600", "QUANT/BIO", "HUM ELECTIVE", "SS ELECTIVE"],
-        "Spring 2029": ["BIOS DEPTH 1", "BIOS DEPTH 2", "HUM ELECTIVE", "SS ELECTIVE", "FREE ELECTIVE"],
-        "Fall 2029": ["BIOS DEPTH 3", "BIOS BREADTH 1", "BIOS BREADTH 2", "SS ELECTIVE", "BIOS 4460"],
-        "Spring 2030": ["BIOS DEPTH 4", "BIOS BREADTH 3", "RESEARCH", "FREE ELECTIVE", "FREE ELECTIVE"]
+        "Summer 2026": [],
+        "Fall 2026": ["GT 1000", "ENGL 1101", "MATH 1551", "BIOS 1207", "BIOS 1207L", "CHEM 1211K"],
+        "Spring 2027": ["ENGL 1102", "MATH 1552", "BIOS 1208", "BIOS 1208L", "CHEM 1212K"],
+        "Fall 2027": ["ECOLOGY", "ECOL/GENE LAB", "CHEM 2311", "MATH 1553", "COMPUTING", "SS ELECTIVE"],
+        "Spring 2028": ["GENETICS", "CHEM 2312", "CHEM 2380", "QUANT/BIO", "HIST/GOVT", "FREE ELECTIVE"],
+        "Fall 2028": ["PHYS 2211", "BIOS 3450", "BIOS 3451", "BIOS DEPTH 1", "HUM ELECTIVE", "WELLNESS"],
+        "Spring 2029": ["PHYS 2212", "BIOS 3600", "BIOS DEPTH 2", "SS ELECTIVE", "FREE ELECTIVE"],
+        "Fall 2029": ["BIOS DEPTH 3", "BIOS DEPTH 4", "FREE ELECTIVE", "SS ELECTIVE", "RESEARCH", "BIOS 4460"],
+        "Spring 2030": ["BIOS BREADTH 1", "BIOS BREADTH 2", "BIOS BREADTH 3", "FREE ELECTIVE", "HUM ELECTIVE"]
       }
     },
     "neuroscience": {
