@@ -79,6 +79,33 @@ python3 server.py 8085
 ```
 Then open **[http://localhost:8085](http://localhost:8085)** in your web browser.
 
+## Deploying to Cloudflare Workers
+
+The project is configured to run serverless on Cloudflare Workers. It uses Wrangler to host static assets and a worker script with Cloudflare KV to save planner profiles to the cloud.
+
+### Local Development (Worker)
+To run a local development server of the Cloudflare Worker:
+```bash
+npx wrangler dev
+```
+Open **[http://localhost:8787](http://localhost:8787)** in your browser.
+
+### Cloud Profiles Setup (KV Namespace)
+If you want profiles to sync across devices (like the local Python server does), create a Cloudflare KV namespace:
+```bash
+npx wrangler kv:namespace create PROFILES_KV
+```
+Then, update [wrangler.jsonc](file:///Users/jeffmartin/personal/gt-scheduler/wrangler.jsonc) by uncommenting the `kv_namespaces` section and pasting your generated KV namespace ID.
+
+*(Note: If you skip KV setup, the worker will automatically fall back to saving planner profiles in the user's browser `localStorage`).*
+
+### Deploying
+To deploy the planner directly to your workers.dev subdomain:
+```bash
+npx wrangler@latest deploy
+```
+
+
 ## Major Curriculums Supported
 - **Biology (B.S.)**
 - **Neuroscience (B.S.)**
