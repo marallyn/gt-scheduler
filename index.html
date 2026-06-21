@@ -50,6 +50,7 @@
                     <option value="neuroscience">Neuroscience</option>
                     <option value="bme">Biomedical Engineering</option>
                 </select>
+                <button id="open-tutorial-btn" class="settings-btn" style="background-color: transparent; border-color: rgba(255, 255, 255, 0.25);" title="Show Tutorial Guide">❓ Help</button>
                 <button id="open-utilities-btn" class="settings-btn" title="Open Planner Utilities, Profiles & Catalog Tools">⚙️ Utilities</button>
             </div>
         </div>
@@ -156,6 +157,49 @@
                     <div class="spinner" id="fetch-spinner"></div>
                     <span id="fetch-status-text">Fetching courses...</span>
                 </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tutorial Modal -->
+    <div id="tutorial-modal" class="modal">
+        <div class="modal-content" style="max-width: 520px;">
+            <span class="close-modal" id="close-tutorial-btn">&times;</span>
+            <h2 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">Welcome to GT Degree Planner! 🐝</h2>
+            <p class="modal-subtitle" style="margin-bottom: 1.5rem; padding-bottom: 0.75rem;">A quick guide to help you build your 4-year academic plan.</p>
+            
+            <div class="tutorial-steps" style="display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 1.5rem;">
+                <div class="tutorial-step" style="display: flex; gap: 1rem; align-items: flex-start;">
+                    <div style="font-size: 1.15rem; background: var(--gt-navy); color: white; border-radius: 50%; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-family: 'Roboto Condensed', sans-serif;">1</div>
+                    <div>
+                        <h4 style="margin: 0 0 0.25rem 0; color: var(--gt-navy); font-size: 0.95rem; font-weight: 700;">Drag & Drop Courses</h4>
+                        <p style="margin: 0; font-size: 0.82rem; color: #555; line-height: 1.45;">Drag course cards from the left-hand requirements list or search catalog and drop them directly into your semester blocks on the right.</p>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step" style="display: flex; gap: 1rem; align-items: flex-start;">
+                    <div style="font-size: 1.15rem; background: var(--gt-navy); color: white; border-radius: 50%; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-family: 'Roboto Condensed', sans-serif;">2</div>
+                    <div>
+                        <h4 style="margin: 0 0 0.25rem 0; color: var(--gt-navy); font-size: 0.95rem; font-weight: 700;">Transfer Credits (AP & DE)</h4>
+                        <p style="margin: 0; font-size: 0.82rem; color: #555; line-height: 1.45;">Click the ✏️ edit links on <strong>AP Credits</strong> or <strong>Dual Enrollment</strong> inside the <strong>Transfer Credits</strong> box to configure prior exam scores or college classes.</p>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step" style="display: flex; gap: 1rem; align-items: flex-start;">
+                    <div style="font-size: 1.15rem; background: var(--gt-navy); color: white; border-radius: 50%; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-family: 'Roboto Condensed', sans-serif;">3</div>
+                    <div>
+                        <h4 style="margin: 0 0 0.25rem 0; color: var(--gt-navy); font-size: 0.95rem; font-weight: 700;">Planner Profiles & Utilities</h4>
+                        <p style="margin: 0; font-size: 0.82rem; color: #555; line-height: 1.45;">Click the ⚙️ utilities gear in the header to save/load planner profiles, import subject catalogs, or load suggested paths of study.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; border-top: 1px solid var(--border-color); padding-top: 1.25rem;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: #555; cursor: pointer; user-select: none;">
+                    <input type="checkbox" id="tutorial-dont-show-checkbox" style="accent-color: var(--gt-navy); cursor: pointer; width: 15px; height: 15px; margin: 0;">
+                    <span>Don't show this tutorial again</span>
+                </label>
+                <button id="tutorial-start-btn" class="modal-btn" style="width: 100%; background-color: var(--gt-navy); color: white; font-weight: bold; padding: 0.75rem; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem;">Get Started!</button>
             </div>
         </div>
     </div>

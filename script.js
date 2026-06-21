@@ -108,6 +108,7 @@ function init() {
     renderSearchCatalog();
     updatePlanner();
     initProfiles();
+    initTutorial();
 }
 
 function saveState() {
@@ -1616,5 +1617,55 @@ function renderProfileList() {
     });
 }
 
+// Tutorial Modal Event Logic
+function initTutorial() {
+    const tutorialModal = document.getElementById('tutorial-modal');
+    const openTutorialBtn = document.getElementById('open-tutorial-btn');
+    const closeTutorialBtn = document.getElementById('close-tutorial-btn');
+    const tutorialStartBtn = document.getElementById('tutorial-start-btn');
+    const dontShowCheckbox = document.getElementById('tutorial-dont-show-checkbox');
+
+    if (tutorialModal) {
+        // Show tutorial modal on load if preference is not set
+        const hideTutorial = localStorage.getItem('gt_planner_hide_tutorial');
+        if (!hideTutorial) {
+            tutorialModal.classList.add('active');
+        }
+
+        const handleClose = () => {
+            tutorialModal.classList.remove('active');
+            if (dontShowCheckbox && dontShowCheckbox.checked) {
+                localStorage.setItem('gt_planner_hide_tutorial', 'true');
+            }
+        };
+
+        if (closeTutorialBtn) {
+            closeTutorialBtn.addEventListener('click', handleClose);
+        }
+
+        if (tutorialStartBtn) {
+            tutorialStartBtn.addEventListener('click', handleClose);
+        }
+
+        if (openTutorialBtn) {
+            openTutorialBtn.addEventListener('click', () => {
+                // Reset checkbox state when manually requested
+                if (dontShowCheckbox) {
+                    dontShowCheckbox.checked = false;
+                }
+                tutorialModal.classList.add('active');
+            });
+        }
+
+        // Close when clicking outside content area
+        tutorialModal.addEventListener('click', (e) => {
+            if (e.target === tutorialModal) {
+                handleClose();
+            }
+        });
+    }
+}
+
 // Kick off planner init
 init();
+
