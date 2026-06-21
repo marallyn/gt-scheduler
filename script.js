@@ -19,10 +19,22 @@ const profileSaveBtn = document.getElementById('profile-save-btn');
 const profileSaveAsBtn = document.getElementById('profile-save-as-btn');
 const profileListContainer = document.getElementById('profile-list-container');
 
+function loadDEData() {
+    try {
+        const savedDE = localStorage.getItem('gt_de_credits');
+        if (savedDE !== null) {
+            return JSON.parse(savedDE);
+        }
+    } catch (e) {
+        console.error("Error reading Dual Enrollment credits:", e);
+    }
+    return [];
+}
+
 function init() {
     // Populate data from data.js variables
     apData = AP_DATA.classes;
-    deData = DE_DATA.classes;
+    deData = loadDEData();
     majorData = MAJOR_DATA.gt;
 
     // Load saved major
@@ -485,8 +497,9 @@ function createSemesterCell(semName, fulfilledMap) {
             </div>
             
             <div class="transfer-section" style="margin-top: 1rem;">
-                <div class="transfer-section-header" id="de-header">
+                <div class="transfer-section-header clickable" id="de-header" title="Click to manage Dual Enrollment credits">
                     <span>Dual Enrollment <span class="semester-credits">(${deHours}h)</span></span>
+                    <span class="edit-link">✏️ Edit</span>
                 </div>
                 <div class="class-list" id="de-transfer-list"></div>
             </div>
@@ -505,6 +518,11 @@ function createSemesterCell(semName, fulfilledMap) {
         const apHeader = semEl.querySelector('#ap-header');
         apHeader.addEventListener('click', () => {
             window.location.href = 'ap-credits.html';
+        });
+
+        const deHeader = semEl.querySelector('#de-header');
+        deHeader.addEventListener('click', () => {
+            window.location.href = 'de-credits.html';
         });
 
         cell.appendChild(semEl);
@@ -1110,16 +1128,34 @@ const fetchSubjectBtn = document.getElementById('fetch-subject-btn');
 const fetchStatusContainer = document.getElementById('fetch-status-container');
 const fetchStatusText = document.getElementById('fetch-status-text');
 
+const modalTabProfiles = document.getElementById('modal-tab-profiles');
+const modalTabSuggested = document.getElementById('modal-tab-suggested');
+const modalTabFetch = document.getElementById('modal-tab-fetch');
+const panelProfiles = document.getElementById('modal-panel-profiles');
+const panelSuggested = document.getElementById('modal-panel-suggested');
+const panelFetch = document.getElementById('modal-panel-fetch');
+
 if (openUtilitiesBtn && utilitiesModal && closeUtilitiesBtn) {
     const openModalFn = () => {
         utilitiesModal.classList.add('active');
         fetchSubjectInput.value = '';
         fetchStatusContainer.className = 'status-container hidden';
+        
+        // Reset to Saved Profiles tab by default when opening
+        if (modalTabProfiles && panelProfiles) {
+            [modalTabProfiles, modalTabSuggested, modalTabFetch].forEach(tab => {
+                if (tab) tab.classList.remove('active');
+            });
+            [panelProfiles, panelSuggested, panelFetch].forEach(panel => {
+                if (panel) panel.classList.remove('active');
+            });
+            modalTabProfiles.classList.add('active');
+            panelProfiles.classList.add('active');
+        }
     };
 
     openUtilitiesBtn.addEventListener('click', () => {
         openModalFn();
-        fetchSubjectInput.focus();
     });
 
     if (activeProfileIndicator) {
@@ -1137,6 +1173,29 @@ if (openUtilitiesBtn && utilitiesModal && closeUtilitiesBtn) {
             utilitiesModal.classList.remove('active');
         }
     });
+
+    // Modal Tab switching
+    if (modalTabProfiles && modalTabSuggested && modalTabFetch) {
+        const switchModalTab = (activeTab, activePanel) => {
+            [modalTabProfiles, modalTabSuggested, modalTabFetch].forEach(tab => {
+                if (tab) tab.classList.remove('active');
+            });
+            [panelProfiles, panelSuggested, panelFetch].forEach(panel => {
+                if (panel) panel.classList.remove('active');
+            });
+            activeTab.classList.add('active');
+            activePanel.classList.add('active');
+        };
+
+        modalTabProfiles.addEventListener('click', () => switchModalTab(modalTabProfiles, panelProfiles));
+        modalTabSuggested.addEventListener('click', () => switchModalTab(modalTabSuggested, panelSuggested));
+        modalTabFetch.addEventListener('click', () => {
+            switchModalTab(modalTabFetch, panelFetch);
+            setTimeout(() => {
+                if (fetchSubjectInput) fetchSubjectInput.focus();
+            }, 50);
+        });
+    }
 }
 
 if (fetchSubjectBtn && fetchSubjectInput) {
@@ -1247,7 +1306,7 @@ function showFetchStatus(message, type) {
 function initDataAndRefresh() {
     // Re-populate global data variables
     apData = AP_DATA.classes;
-    deData = DE_DATA.classes;
+    deData = loadDEData();
     majorData = MAJOR_DATA.gt;
     
     // Refresh UI
@@ -1361,7 +1420,8 @@ async function saveProfile(name, overwriteActive = false) {
         major: activeMajor,
         schedule: activeSchedule,
         apScores: JSON.parse(localStorage.getItem('gt_ap_scores') || '{}'),
-        apSelections: JSON.parse(localStorage.getItem('gt_ap_selections') || '{}')
+        apSelections: JSON.parse(localStorage.getItem('gt_ap_selections') || '{}'),
+        deCredits: JSON.parse(localStorage.getItem('gt_de_credits') || 'null')
     };
     
     profiles[name] = data;
@@ -1374,15 +1434,22 @@ async function saveProfile(name, overwriteActive = false) {
     renderProfileList();
     
     try {
-        await fetch('/api/save-profile', {
+        const response = await fetch('/api/save-profile', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
         });
+        const resData = await response.json();
+        if (resData.success) {
+            showProfileFeedback(`Profile "${name}" saved successfully!`);
+        } else {
+            showProfileFeedback(`Saved locally, server error: ${resData.error}`, true);
+        }
     } catch (e) {
         console.warn("Failed to sync profile to server:", e);
+        showProfileFeedback(`Profile "${name}" saved locally.`);
     }
 }
 
@@ -1400,17 +1467,40 @@ async function deleteProfile(name) {
         renderProfileList();
         
         try {
-            await fetch('/api/delete-profile', {
+            const response = await fetch('/api/delete-profile', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ name: name })
             });
+            const resData = await response.json();
+            if (resData.success) {
+                showProfileFeedback(`Profile "${name}" deleted.`);
+            } else {
+                showProfileFeedback(`Deleted locally, server error: ${resData.error}`, true);
+            }
         } catch (e) {
             console.warn("Failed to delete profile from server:", e);
+            showProfileFeedback(`Profile "${name}" deleted locally.`);
         }
     }
+}
+
+function showProfileFeedback(message, isError = false) {
+    const el = document.getElementById('profile-status-message');
+    if (!el) return;
+    el.textContent = message;
+    el.style.color = isError ? '#c62828' : 'var(--success-green)';
+    el.style.opacity = '1';
+    
+    if (window.profileFeedbackTimeout) {
+        clearTimeout(window.profileFeedbackTimeout);
+    }
+    
+    window.profileFeedbackTimeout = setTimeout(() => {
+        el.style.opacity = '0';
+    }, 2500);
 }
 
 function loadProfile(name) {
@@ -1427,6 +1517,11 @@ function loadProfile(name) {
     localStorage.setItem('gt_planner_active_schedule', JSON.stringify(activeSchedule));
     localStorage.setItem('gt_ap_scores', JSON.stringify(profile.apScores || {}));
     localStorage.setItem('gt_ap_selections', JSON.stringify(profile.apSelections || {}));
+    if (profile.deCredits !== undefined && profile.deCredits !== null) {
+        localStorage.setItem('gt_de_credits', JSON.stringify(profile.deCredits));
+    } else {
+        localStorage.removeItem('gt_de_credits');
+    }
     
     gtMajorSelect.value = activeMajor;
     

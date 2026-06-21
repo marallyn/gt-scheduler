@@ -4,17 +4,15 @@ A web-based tool for planning a 4-year degree schedule at Georgia Tech. It handl
 
 ## Features
 - **Flexible Schedule Storage:** Schedules are saved locally in the browser's `localStorage` and persist even when switching majors, allowing you to audit the same plan against different degree requirements.
-- **Planner Profiles:** Create, load, overwrite, and delete multiple degree planning profiles. Each profile captures:
-  - Selected Major
-  - 4-Year Planned Schedule (semester courses)
-  - AP Exam Scores
-  - AP Credit Selection Paths
+- **Planner Profiles:** Create, load, overwrite, and delete multiple degree planning profiles. Each profile captures the selected major, planned schedule, and AP scores/choices. Features include:
+  - Dynamic status feedback messages confirming save, load, and deletion results.
+  - Automatic error reporting if server synchronization encounters issues.
 - **Suggested Plan Study Reset:** Instantly load or reset your semester grid layout to the official suggested study plan of study for your major (relocated inside the Utilities modal).
 - **Dynamic Degree Audit:** Automatically audits completed/planned courses against major requirements, showing checkmarks for satisfied slots and listing unused courses.
 - **Drag-and-Drop Scheduling:** Drag courses directly from the requirements checklist or catalog search results into semesters using [SortableJS](https://sortablejs.github.io/Sortable/).
 - **AP / Dual Enrollment Credit Mapper:** An interactive side panel (`ap-credits.html`) allows you to input your AP scores and Dual Enrollment credits to automatically map them to Georgia Tech course codes.
 - **Dynamic Course Catalog Fetcher:** A Python command-line utility (`update_courses.py`) downloads course details directly from the official Georgia Tech catalog and merges them into the local database.
-- **Integrated Utilities Menu:** Exposes catalog fetching, profile management, and suggested plans directly inside the browser using a custom server. You can import any subject prefix (e.g. `CS`, `MATH`, `APPH`, `LCC`) and hot-reload the catalog database dynamically without refreshing the page.
+- **Integrated Utilities Menu:** Exposes catalog fetching, profile management, and suggested plans directly inside the browser using a custom server. Includes a clean, compact tabbed layout (Saved Profiles, Suggested Plan, Fetch Catalog) matching the header design to reduce modal height.
 - **Clean Responsive Styling:** Beautiful Georgia Tech themed design (Gold, Navy, and White) with collapsible requirement cards, exact course search placeholders, and full mobile-friendly layouts.
 
 ## Architecture & Data Flows
@@ -49,6 +47,7 @@ graph TD
   - Simultaneously, a backup copy is saved to `localStorage` under `gt_planner_profiles`.
   - If the server is offline or not running (e.g., opening `index.html` as a file in the browser), the frontend seamlessly falls back to reading/writing from `localStorage` so the application remains 100% functional.
 - **Indicator:** An active profile pill badge is displayed in the header controls (e.g., `Profile: Pre-Med Neuroscience`). Clicking this pill opens the utilities modal to the profiles panel immediately.
+- **User Feedback:** The utilities modal displays animated confirmation feedback (saved/deleted/errors) below the profile action buttons to give instant status confirmation.
 
 ### 3. Server Endpoints (`server.py`)
 - `GET /api/profiles`: Returns all profiles saved in `profiles.json`.

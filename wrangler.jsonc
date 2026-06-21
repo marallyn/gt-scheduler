@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gt-scheduler",
+  "main": "worker.js",
+  "compatibility_date": "2026-06-21",
+  "assets": {
+    "directory": "."
+  },
+  "kv_namespaces": [
+    // To sync profiles across devices, run:
+    //   npx wrangler kv:namespace create PROFILES_KV
+    // Then uncomment the block below and replace <YOUR_KV_NAMESPACE_ID> with the generated ID:
+    /*
+    {
+      "binding": "PROFILES_KV",
+      "id": "<YOUR_KV_NAMESPACE_ID>"
+    }
+    */
+  ]
+}

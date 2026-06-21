@@ -1,0 +1,21 @@
+# Exclude python scripts and server configuration
+server.py
+update_courses.py
+profiles.json
+__pycache__/
+
+# Exclude git configuration
+.git
+.gitignore
+
+# Exclude configuration files
+wrangler.jsonc
+.assetsignore
+worker.js
+package.json
+package-lock.json
+node_modules/
+
+# Exclude documentation and project-scoped rules
+ANTIGRAVITY.md
+.agents/
