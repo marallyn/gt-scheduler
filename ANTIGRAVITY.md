@@ -11,13 +11,14 @@ A web-based tool for planning a 4-year degree schedule at Georgia Tech. It handl
 - **Dynamic Degree Audit:** Automatically audits completed/planned courses against major requirements, showing checkmarks for satisfied slots and listing unused courses.
 - **Drag-and-Drop Scheduling:** Drag courses directly from the requirements checklist or catalog search results into semesters using [SortableJS](https://sortablejs.github.io/Sortable/).
 - **AP / Dual Enrollment Credit Mapper:** An interactive side panel (`ap-credits.html`) allows you to input your AP scores and Dual Enrollment credits to automatically map them to Georgia Tech course codes.
-- **Dynamic Course Catalog Fetcher:** A Python command-line utility (`update_courses.py`) downloads course details directly from the official Georgia Tech catalog and merges them into the local database.
+- **Dynamic Course Catalog Harvester:** A Python command-line utility (`update_courses.py`) downloads full course details across all ~90 GT subject codes directly from the official Georgia Tech catalog and merges them into the local database (`--all`).
+- **Major Requirements & Catalog Link Harvester:** A Python utility (`scrape_majors.py`) extracts degree requirements and official catalog URLs for 204 GT undergraduate majors, providing direct **`🔗 Catalog Page`** links in the UI.
 - **Integrated Utilities Menu:** Exposes catalog fetching, profile management, and suggested plans directly inside the browser using a custom server. Includes a clean, compact tabbed layout (Saved Profiles, Suggested Plan, Fetch Catalog) matching the header design to reduce modal height.
-- **Clean Responsive Styling:** Beautiful Georgia Tech themed design (Gold, Navy, and White) with collapsible requirement cards, exact course search placeholders, and full mobile-friendly layouts.
+- **Clean Responsive Styling:** Beautiful Georgia Tech themed design (Gold, Navy, and White) with collapsible requirement cards, exact course search placeholders, alphabetized major select dropdowns, and full mobile-friendly layouts.
 
 ## Architecture & Data Flows
 
-The project is structured to keep database updates and profile syncing decoupled and fast, with browser localStorage serving as a robust fallback for offline runs.
+The project is structured to keep database updates and profile syncing decoupled and fast, with browser localStorage serving as a robust fallback for offline runs. Static assets for Cloudflare Workers are served from `./public` to prevent file-watching reloads.
 
 ```mermaid
 graph TD
@@ -29,7 +30,7 @@ graph TD
 ```
 
 ### 1. Database & Profile Layout
-- **Course Catalog (`data.js`):** Unified database containing catalogs, AP mappings, and curriculum requirements.
+- **Course Catalog (`data.js` & `public/data.js`):** Unified database containing course descriptions (`COURSES_DB`), AP/DE credit mappings (`AP_DATA`), and major curriculum requirements (`MAJOR_DATA`).
 - **Profile Data Format:**
   ```json
   {
@@ -43,70 +44,53 @@ graph TD
 
 ### 2. Profile Synchronization Flow
 - **Dual Storage Strategy:** 
-  - When the Python server is running, saving a profile sends a `POST` request to `/api/save-profile`, persisting it to a local `profiles.json` file in the project folder (this protects your plans from browser cache clears).
+  - When the Python server is running, saving a profile sends a `POST` request to `/api/save-profile`, persisting it to a local `profiles.json` file in the project folder.
   - Simultaneously, a backup copy is saved to `localStorage` under `gt_planner_profiles`.
-  - If the server is offline or not running (e.g., opening `index.html` as a file in the browser), the frontend seamlessly falls back to reading/writing from `localStorage` so the application remains 100% functional.
+  - If the server is offline or not running, the frontend seamlessly falls back to reading/writing from `localStorage`.
 - **Indicator:** An active profile pill badge is displayed in the header controls (e.g., `Profile: Pre-Med Neuroscience`). Clicking this pill opens the utilities modal to the profiles panel immediately.
-- **User Feedback:** The utilities modal displays animated confirmation feedback (saved/deleted/errors) below the profile action buttons to give instant status confirmation.
 
-### 3. Server Endpoints (`server.py`)
-- `GET /api/profiles`: Returns all profiles saved in `profiles.json`.
-- `POST /api/save-profile`: Saves or overwrites a profile.
-- `POST /api/delete-profile`: Deletes a profile from `profiles.json`.
-- `GET /api/fetch-subject`: Runs catalog updater script.
-
-### 4. Catalog Scraping Logic (`update_courses.py`)
-- Scrapes the Georgia Tech courses pages (`https://catalog.gatech.edu/coursesaz/{subject_code}/`).
-- Uses unverified SSL context to bypass macOS local Python root certificate validation errors.
-- Syncs and prunes: matches description updates, logs additions, and deletes local database items if they are no longer in the catalog fetch (catalog is the source of truth). Exits with code `1` on error to prevent data loss.
+### 3. Server Endpoints & Utility Scripts
+- `server.py`: Custom HTTP server on port 8085 (`python3 server.py 8085`).
+- `update_courses.py`: Scrapes GT course catalog pages (`python3 update_courses.py --all`).
+- `scrape_majors.py`: Scrapes major requirements and catalog URLs (`python3 scrape_majors.py --all`).
 
 ## File Structure
-- `index.html`: Main planner layout (checklist side pane, calendar grid, utilities modal, active profile indicator).
+- `index.html`: Main planner layout (checklist side pane, calendar grid, utilities modal, active profile indicator, catalog links).
 - `ap-credits.html`: AP Exam Score and Dual Enrollment credit configuration manager.
-- `style.css`: Modern styling tokens, layout grids, animations, and profile list layout designs.
-- `script.js`: Core planner state manager, Sortable drag-and-drop binding, dynamic stats formatter, and profile management event loop.
+- `style.css`: Modern styling tokens, layout grids, animations, header controls, and profile list layout designs.
+- `script.js`: Core planner state manager, Sortable drag-and-drop binding, dynamic stats formatter, dynamic major select populator, and profile management event loop.
 - `data.js`: Unified course database, AP equivalencies, and major curriculum requirements.
 - `update_courses.py`: Scraping script that extracts course data from the GT catalog.
+- `scrape_majors.py`: Harvester script for GT major degree requirements and URLs.
 - `server.py`: Custom HTTP server that integrates the static front-end, catalog-scraping script, and profile storage endpoints.
+- `package.json`: NPM scripts (`npm run sync`, `npm run dev`, `npm run deploy`).
+- `public/`: Static asset build directory served by Cloudflare Worker (`wrangler dev`).
 - `profiles.json`: Git-ignored file-system database of planning profiles.
-- `.gitignore`: Configured to ignore local `profiles.json` and Python temporary cache directories.
 - `ANTIGRAVITY.md`: Project documentation and architecture guide.
 
 ## Running the Project
-To start the degree planner locally:
+To start the degree planner locally using the Python server:
 ```bash
 python3 server.py 8085
 ```
 Then open **[http://localhost:8085](http://localhost:8085)** in your web browser.
 
-## Deploying to Cloudflare Workers
-
-The project is configured to run serverless on Cloudflare Workers. It uses Wrangler to host static assets and a worker script with Cloudflare KV to save planner profiles to the cloud.
-
-### Local Development (Worker)
-To run a local development server of the Cloudflare Worker:
+### Cloudflare Worker Local Dev
+To run via Wrangler:
 ```bash
-npx wrangler dev
+npm run dev
 ```
 Open **[http://localhost:8787](http://localhost:8787)** in your browser.
 
-### Cloud Profiles Setup (KV Namespace)
-If you want profiles to sync across devices (like the local Python server does), create a Cloudflare KV namespace:
-```bash
-npx wrangler kv:namespace create PROFILES_KV
-```
-Then, update [wrangler.jsonc](file:///Users/jeffmartin/personal/gt-scheduler/wrangler.jsonc) by uncommenting the `kv_namespaces` section and pasting your generated KV namespace ID.
+---
 
-*(Note: If you skip KV setup, the worker will automatically fall back to saving planner profiles in the user's browser `localStorage`).*
+## ⚠️ NEXT SESSION ACTION ITEMS / TODO (READ ON STARTUP)
 
-### Deploying
-To deploy the planner directly to your workers.dev subdomain:
-```bash
-npx wrangler@latest deploy
-```
+> [!IMPORTANT]
+> **Priority Tasks for Next Coding Session:**
+> 1. **Fix Major Requirements (Biology & Others)**:
+>    - Biology degree requirements were previously working correctly and must be carefully reviewed and restored to the exact official GT School of Biological Sciences curriculum layout (Core Biology, Biology Breadth & Depth, Chemistry, Math & Physics, General Core).
+>    - Verify requirements parsing across scraped majors to ensure all categories, course codes, and choices match official degree requirements sheets accurately without missing requirements or duplicating slots.
+> 2. **Scheduler & Suggested Plan Parsing**:
+>    - The scheduler currently relies on a fallback course-level sequencing algorithm for `suggested_semesters`. Update `scrape_majors.py` / degree parser to extract the **exact official suggested plan of study / 4-year schedule** directly from each major's department website / catalog page tables (or departmental advising flowcharts) so that loading the suggested plan renders the department's precise semester-by-semester layout.
 
-
-## Major Curriculums Supported
-- **Biology (B.S.)**
-- **Neuroscience (B.S.)**
-- **Biomedical Engineering (B.S.)**

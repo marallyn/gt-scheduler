@@ -145,18 +145,44 @@ def save_db(db):
     header = content[:db_start_idx]
     footer = content[major_data_idx:]
     
+    full_content = header + new_db_js + "\n\n" + footer
     with open(DATA_JS_PATH, "w", encoding="utf-8") as f:
-        f.write(header + new_db_js + "\n\n" + footer)
+        f.write(full_content)
+        
+    public_data_js = os.path.join(os.path.dirname(os.path.abspath(__file__)), "public", "data.js")
+    if os.path.exists(os.path.dirname(public_data_js)):
+        with open(public_data_js, "w", encoding="utf-8") as f:
+            f.write(full_content)
         
     print(f"Saved {len(db)} courses to data.js successfully!")
     return True
+
+def fetch_all_subjects():
+    url = "https://catalog.gatech.edu/coursesaz/"
+    print(f"Discovering all GT subject codes from {url}...")
+    try:
+        import ssl
+        ctx = ssl._create_unverified_context()
+        req = urllib.request.Request(
+            url, 
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+        )
+        with urllib.request.urlopen(req, context=ctx) as response:
+            html = response.read().decode('utf-8')
+        subjects = sorted(list(set(re.findall(r'href="/coursesaz/([a-z0-9]+)/"', html))))
+        print(f"Discovered {len(subjects)} subject codes in GT catalog.")
+        return subjects
+    except Exception as e:
+        print(f"Error fetching subject index: {e}", file=sys.stderr)
+        return []
 
 def main():
     parser = argparse.ArgumentParser(description="Georgia Tech Catalog Course Extractor Tool")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--subject", help="Fetch and merge all courses for a subject code (e.g. math, chem, phys)")
     group.add_argument("--course", help="Fetch and merge details for a specific course code (e.g. MATH 1551)")
-    group.add_argument("--all-required", action="store_true", help="Fetch and merge all default major subjects (bios, bme, neur, psyc, math, chem, phys)")
+    group.add_argument("--all-required", action="store_true", help="Fetch and merge default major subjects (bios, bme, neur, psyc, math, chem, phys)")
+    group.add_argument("--all", action="store_true", help="Discover and fetch entire Georgia Tech course catalog across all subject codes")
     
     args = parser.parse_args()
     
@@ -238,13 +264,16 @@ def main():
                 else:
                     print(f"Error: Course {course_code} not found on the subject page.")
                     
-    elif args.all_required:
-        required_subjects = ["bios", "bme", "neur", "psyc", "math", "chem", "phys"]
-        for subj in required_subjects:
+    elif args.all_required or args.all:
+        subjects = fetch_all_subjects() if args.all else ["bios", "bme", "neur", "psyc", "math", "chem", "phys"]
+        total_fetched = 0
+        for subj in subjects:
             new_courses = fetch_subject_courses(subj)
             if new_courses:
                 existing_db.update(new_courses)
+                total_fetched += len(new_courses)
         save_db(existing_db)
+        print(f"Successfully cataloged {total_fetched} total courses across {len(subjects)} subjects!")
 
 if __name__ == "__main__":
     main()

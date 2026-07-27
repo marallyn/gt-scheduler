@@ -1,0 +1,14 @@
+{
+  "name": "gt-scheduler",
+  "version": "1.0.0",
+  "description": "Georgia Tech Degree Planner",
+  "main": "worker.js",
+  "scripts": {
+    "sync": "mkdir -p public && cp index.html ap-credits.html de-credits.html data.js script.js style.css favicon.ico *.png public/",
+    "dev": "npm run sync && wrangler dev",
+    "deploy": "npm run sync && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degree Planner</title>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="#" onclick="location.reload(); return false;" class="app-logo-link">
+                <img src="apple-touch-icon-120x120.png" alt="App Logo" class="app-logo">
+            </a>
+            <a href="https://www.gatech.edu" target="_blank" rel="noopener noreferrer" class="gt-logo-link">
+                <img src="https://catalog.gatech.edu/images/logo.svg" alt="Georgia Tech Logo" class="gt-logo">
+            </a>
+            <h1 class="logo-title">Degree Planner</h1>
+        </div>
+        <div class="controls">
+            <div class="school-select">
+                <span id="active-profile-indicator" class="profile-indicator" title="Currently loaded profile">Profile: None</span>
+                <label for="gt-major">Major:</label>
+                <select id="gt-major">
+                    <option value="biology">Biology</option>
+                    <option value="neuroscience">Neuroscience</option>
+                    <option value="bme">Biomedical Engineering</option>
+                </select>
+                <a id="major-catalog-link" href="#" target="_blank" rel="noopener noreferrer" class="settings-btn catalog-link-btn" title="View official GT catalog degree requirements page" style="text-decoration: none; background: rgba(255, 255, 255, 0.15);">🔗 Catalog Page</a>
+                <button id="open-tutorial-btn" class="settings-btn" style="background-color: transparent; border-color: rgba(255, 255, 255, 0.25);" title="Show Tutorial Guide">❓ Help</button>
+                <button id="open-utilities-btn" class="settings-btn" title="Open Planner Utilities, Profiles & Catalog Tools">⚙️ Utilities</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="planner-grid">
+        <!-- Requirements Bank (Left Sidebar) -->
+        <aside id="requirements-bank">
+            <div class="sidebar-tabs">
+                <button class="tab-btn active" id="tab-checklist">Requirements</button>
+                <button class="tab-btn" id="tab-search">Search Catalog</button>
+            </div>
+            
+            <!-- Checklist Tab Content -->
+            <div id="checklist-view" class="tab-content active">
+                <div class="checklist-header">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                        <h3 style="margin: 0;">Degree Audit</h3>
+                        <a id="checklist-catalog-link" href="#" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; color: #b3a369; text-decoration: underline; font-weight: 500;" title="View official GT catalog degree page">Official Catalog ↗</a>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="audit-progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text" id="audit-progress-text">0 / 0 Credits Satisfied</span>
+                </div>
+                <div id="checklist-categories">
+                    <!-- Categories and slots will be dynamically generated -->
+                </div>
+            </div>
+            
+            <!-- Search Tab Content -->
+            <div id="search-view" class="tab-content">
+                <div class="search-box">
+                    <input type="text" id="catalog-search-input" placeholder="Search 200+ courses...">
+                    <div class="search-results-info">
+                        <span class="search-count" id="search-results-count">Showing all courses</span>
+                    </div>
+                </div>
+                <div id="catalog-search-results" class="class-list search-results-container">
+                    <!-- Matching courses will be injected here -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Calendar Area -->
+        <div id="calendar-area">
+            <!-- Header/Stats -->
+            <div class="calendar-header">
+                <div class="stats-bar" id="gt-stats">
+                    <span id="gt-total-credits">Total: 0h</span> | 
+                    <span id="gt-core-remaining">0h left</span> | 
+                    <span id="gt-upper-division" title="Need at least 39 credit hours at 3000-level or higher.">Upper-Div: 0/39h</span>
+                </div>
+            </div>
+
+            <!-- Semester Rows will be injected here by JS -->
+            <div id="semester-rows-container"></div>
+        </div>
+    </main>
+
+    <!-- Utilities Modal -->
+    <div id="utilities-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-utilities-btn">&times;</span>
+            <h2>Planner Utilities</h2>
+            <p class="modal-subtitle">Manage degree planner profiles, study plans, and course catalogs.</p>
+            
+            <!-- Modal Tabs -->
+            <div class="sidebar-tabs" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+                <button class="tab-btn active" id="modal-tab-profiles">Saved Profiles</button>
+                <button class="tab-btn" id="modal-tab-suggested">Suggested Plan</button>
+                <button class="tab-btn" id="modal-tab-fetch">Fetch Catalog</button>
+            </div>
+            
+            <!-- Profiles Panel -->
+            <div id="modal-panel-profiles" class="tab-content active">
+                <p class="utility-desc">Save your current view (AP credits, Dual Enrollment, Major, and planned semesters) as a profile, or load an existing one.</p>
+                
+                <!-- Save profile actions -->
+                <div class="profile-actions-group" style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
+                    <button id="profile-save-btn" class="modal-btn" style="flex: 1; background-color: var(--gt-navy);" disabled title="Overwrite current active profile">Save</button>
+                    <button id="profile-save-as-btn" class="modal-btn" style="flex: 1;" title="Save current schedule as a new profile">Save as New...</button>
+                </div>
+                
+                <!-- Feedback message -->
+                <div id="profile-status-message" style="font-size: 0.82rem; margin-bottom: 0.75rem; text-align: center; color: var(--success-green); font-weight: 600; opacity: 0; transition: opacity 0.3s ease; height: 1.1rem; line-height: 1.1rem;"></div>
+                
+                <!-- Profile list -->
+                <div id="profile-list-container" class="profile-list">
+                    <p style="font-size: 0.85rem; color: #666; font-style: italic; text-align: center; margin: 0.5rem 0;">Loading profiles...</p>
+                </div>
+            </div>
+
+            <!-- Suggested Study Plan Panel -->
+            <div id="modal-panel-suggested" class="tab-content">
+                <p class="utility-desc">Reset the semester grid layout to the official suggested plan of study for the selected major. (Transfer credits will be preserved).</p>
+                <button id="load-suggested-btn" class="modal-btn" style="width: 100%; display: block; background-color: #555;" title="Reset this semester layout to the official suggested plan of study">Load Suggested Plan</button>
+            </div>
+
+            <!-- Fetch Subject Catalog Panel -->
+            <div id="modal-panel-fetch" class="tab-content">
+                <p class="utility-desc">Download and merge the latest course titles, hours, and descriptions directly from the official Georgia Tech catalog (e.g., APPH, CS, MATH, LCC, HIST).</p>
+                <div class="fetch-input-group">
+                    <input type="text" id="fetch-subject-input" placeholder="e.g. CS" maxlength="8">
+                    <button id="fetch-subject-btn" class="modal-btn">Fetch & Merge</button>
+                </div>
+                <div id="fetch-status-container" class="status-container hidden">
+                    <div class="spinner" id="fetch-spinner"></div>
+                    <span id="fetch-status-text">Fetching courses...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tutorial Modal -->
+    <div id="tutorial-modal" class="modal">
+        <div class="modal-content" style="max-width: 520px;">
+            <span class="close-modal" id="close-tutorial-btn">&times;</span>
+            <h2 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">Welcome to GT Degree Planner! 🐝</h2>
+            <p class="modal-subtitle" style="margin-bottom: 1.5rem; padding-bottom: 0.75rem;">A quick guide to help you build your 4-year academic plan.</p>
+            
+            <div class="tutorial-steps" style="display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 1.5rem;">
+                <div class="tutorial-step" style="display: flex; gap: 1rem; align-items: flex-start;">
+                    <div style="font-size: 1.15rem; background: var(--gt-navy); color: white; border-radius: 50%; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-family: 'Roboto Condensed', sans-serif;">1</div>
+                    <div>
+                        <h4 style="margin: 0 0 0.25rem 0; color: var(--gt-navy); font-size: 0.95rem; font-weight: 700;">Transfer Credits (AP & DE)</h4>
+                        <p style="margin: 0; font-size: 0.82rem; color: #555; line-height: 1.45;">Click the ✏️ edit links on <strong>AP Credits</strong> or <strong>Dual Enrollment</strong> inside the <strong>Transfer Credits</strong> box to configure prior exam scores or college classes.</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-step" style="display: flex; gap: 1rem; align-items: flex-start;">
+                    <div style="font-size: 1.15rem; background: var(--gt-navy); color: white; border-radius: 50%; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-family: 'Roboto Condensed', sans-serif;">2</div>
+                    <div>
+                        <h4 style="margin: 0 0 0.25rem 0; color: var(--gt-navy); font-size: 0.95rem; font-weight: 700;">Drag & Drop Courses</h4>
+                        <p style="margin: 0; font-size: 0.82rem; color: #555; line-height: 1.45;">Drag course cards from the left-hand requirements list or search catalog and drop them directly into your semester blocks on the right.</p>
+                        <p style="margin: 0.35rem 0 0 0; font-size: 0.78rem; color: var(--warning-amber); font-weight: 600; line-height: 1.4;">💡 Tip: If a requirement has a dropdown selection list (e.g. "pick one from the list"), select your desired class from the list before dragging it over!</p>
+                    </div>
+                </div>
+                
+                <div class="tutorial-step" style="display: flex; gap: 1rem; align-items: flex-start;">
+                    <div style="font-size: 1.15rem; background: var(--gt-navy); color: white; border-radius: 50%; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-family: 'Roboto Condensed', sans-serif;">3</div>
+                    <div>
+                        <h4 style="margin: 0 0 0.25rem 0; color: var(--gt-navy); font-size: 0.95rem; font-weight: 700;">Planner Profiles & Utilities</h4>
+                        <p style="margin: 0; font-size: 0.82rem; color: #555; line-height: 1.45;">Click the ⚙️ utilities gear in the header to save/load planner profiles, import subject catalogs, or load suggested paths of study.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; border-top: 1px solid var(--border-color); padding-top: 1.25rem;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: #555; cursor: pointer; user-select: none;">
+                    <input type="checkbox" id="tutorial-dont-show-checkbox" style="accent-color: var(--gt-navy); cursor: pointer; width: 15px; height: 15px; margin: 0;">
+                    <span>Don't show this tutorial again</span>
+                </label>
+                <button id="tutorial-start-btn" class="modal-btn" style="width: 100%; background-color: var(--gt-navy); color: white; font-weight: bold; padding: 0.75rem; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem;">Get Started!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

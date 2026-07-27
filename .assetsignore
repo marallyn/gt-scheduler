@@ -1,21 +1,41 @@
 # Exclude python scripts and server configuration
+*.py
+scrape_majors.py
 server.py
 update_courses.py
 profiles.json
-__pycache__/
+__pycache__
+__pycache__/**
+**/__pycache__/**
 
-# Exclude git configuration
+# Exclude wrangler cache and state (prevents wrangler dev infinite reload loop)
+.wrangler
+.wrangler/**
+**/.wrangler/**
+*.log
+
+# Exclude git & IDE configuration
 .git
+.git/**
+**/.git/**
 .gitignore
+.idea
+.idea/**
+**/.idea/**
+.DS_Store
 
-# Exclude configuration files
+# Exclude worker and deployment files
 wrangler.jsonc
 .assetsignore
 worker.js
 package.json
 package-lock.json
-node_modules/
+node_modules
+node_modules/**
+**/node_modules/**
 
-# Exclude documentation and project-scoped rules
+# Exclude documentation and meta files
 ANTIGRAVITY.md
-.agents/
+.agents
+.agents/**
+

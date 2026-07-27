@@ -73,8 +73,13 @@ header {
 }
 
 .controls { display: flex; gap: 2rem; align-items: center; }
-.school-select { display: flex; align-items: center; gap: 0.5rem; }
 select { padding: 0.5rem; border-radius: 4px; border: 1px solid #ddd; }
+#gt-major {
+    max-width: 320px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
 main {
     display: grid;

@@ -2,9 +2,9 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "gt-scheduler",
   "main": "worker.js",
-  "compatibility_date": "2026-06-21",
+  "compatibility_date": "2026-05-03",
   "assets": {
-    "directory": "."
+    "directory": "./public"
   },
   "kv_namespaces": [
     // To sync profiles across devices, run:

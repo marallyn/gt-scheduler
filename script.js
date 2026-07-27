@@ -31,11 +31,47 @@ function loadDEData() {
     return [];
 }
 
+function formatMajorName(name) {
+    if (!name) return '';
+    let cleaned = name.replace(/&amp;/g, '&')
+                      .replace(/&lt;/g, '<')
+                      .replace(/&gt;/g, '>')
+                      .replace(/&quot;/g, '"')
+                      .replace(/&#039;/g, "'")
+                      .replace(/&#8203;/g, '');
+    
+    cleaned = cleaned.replace(/^Bachelor\s+of\s+Science\s+in\s+/i, '')
+                     .replace(/^Bachelor\s+of\s+Science\s+/i, '')
+                     .replace(/\s*\(B\.S\.\)/i, '');
+    
+    cleaned = cleaned.replace(/-\s*Thread:\s*/i, '- ')
+                     .replace(/Thread:\s*/i, '');
+    
+    return cleaned.trim();
+}
+
 function init() {
     // Populate data from data.js variables
     apData = AP_DATA.classes;
     deData = loadDEData();
     majorData = MAJOR_DATA.gt;
+
+    // Dynamically populate major dropdown from MAJOR_DATA (alphabetized)
+    if (gtMajorSelect && majorData) {
+        gtMajorSelect.innerHTML = '';
+        const sortedKeys = Object.keys(majorData).sort((a, b) => {
+            const nameA = formatMajorName(majorData[a].name || a).toLowerCase();
+            const nameB = formatMajorName(majorData[b].name || b).toLowerCase();
+            return nameA.localeCompare(nameB);
+        });
+
+        sortedKeys.forEach(key => {
+            const opt = document.createElement('option');
+            opt.value = key;
+            opt.textContent = formatMajorName(majorData[key].name || key);
+            gtMajorSelect.appendChild(opt);
+        });
+    }
 
     // Load saved major
     const savedMajor = localStorage.getItem('gt_planner_major');
@@ -106,6 +142,13 @@ function init() {
                 collapsedCategories.add(category);
             }
             collapsedCategories.add("Legislative Requirements");
+        }
+        
+        // Auto-load suggested plan of study if schedule is currently empty
+        const plannedCourseCount = Object.values(activeSchedule).reduce((sum, arr) => sum + (Array.isArray(arr) ? arr.length : 0), 0);
+        if (plannedCourseCount === 0 && newMajor && newMajor.suggested_semesters) {
+            activeSchedule = JSON.parse(JSON.stringify(newMajor.suggested_semesters));
+            localStorage.setItem('gt_planner_active_schedule', JSON.stringify(activeSchedule));
         }
         
         updatePlanner();
@@ -455,26 +498,59 @@ function removeCourseFromSemester(semName, courseCode) {
     updatePlanner();
 }
 
+function updateCatalogLinks() {
+    const major = majorData[activeMajor];
+    const headerLink = document.getElementById('major-catalog-link');
+    const checklistLink = document.getElementById('checklist-catalog-link');
+    let url = 'https://catalog.gatech.edu/programs/';
+    if (major && major.url) {
+        url = major.url;
+    } else if (activeMajor) {
+        url = `https://catalog.gatech.edu/programs/${activeMajor.replace(/_/g, '-')}-bs/`;
+    }
+
+    if (headerLink) {
+        headerLink.href = url;
+        headerLink.style.display = 'inline-flex';
+    }
+    if (checklistLink) {
+        checklistLink.href = url;
+        checklistLink.style.display = 'inline-flex';
+    }
+}
+
 function updatePlanner() {
+    updateCatalogLinks();
     const transferCredits = getTransferCredits();
     
-    // 1. Identify all placeholder codes (keys in COURSES_DB with a choices array)
-    const placeholderKeys = [];
-    for (let code in COURSES_DB) {
-        if (COURSES_DB[code].choices) {
-            placeholderKeys.push(code);
-        }
-    }
-    
-    // 2. Gather all planned specific courses (excluding the placeholder keys themselves) and transfer credits
+    // 1. Collect all specific courses currently planned across all semesters
     const plannedSpecificCodes = new Set();
-    transferCredits.forEach(c => plannedSpecificCodes.add(c.code));
     for (let semName in activeSchedule) {
         activeSchedule[semName].forEach(code => {
-            if (!placeholderKeys.includes(code)) {
+            if (!code.includes("DEPTH") && !code.includes("BREADTH") && !code.includes("ELECTIVE") && !code.includes("ECOLOGY") && !code.includes("GENETICS") && !code.includes("RESEARCH")) {
                 plannedSpecificCodes.add(code);
             }
         });
+    }
+    
+    // Add transfer credits to specific planned courses
+    transferCredits.forEach(c => {
+        if (!c.code.includes("DEPTH") && !c.code.includes("BREADTH") && !c.code.includes("ELECTIVE")) {
+            plannedSpecificCodes.add(c.code);
+        }
+    });
+
+    // 2. Collect all active placeholder keys for current major
+    const major = majorData[activeMajor];
+    const placeholderKeys = new Set();
+    if (major && major.requirements) {
+        for (let category in major.requirements) {
+            major.requirements[category].forEach(code => {
+                if (COURSES_DB[code] && COURSES_DB[code].choices) {
+                    placeholderKeys.add(code);
+                }
+            });
+        }
     }
     
     // 3. Find placeholders that are satisfied by any of these planned specific courses

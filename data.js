@@ -1673,70 +1673,26860 @@ const COURSES_DB = {
 
 const MAJOR_DATA = {
   "gt": {
-    "biology": {
-      "name": "Biology (B.S.)",
-      "target_hours": 122,
+    "aerospace_engineering": {
+      "name": "Aerospace Engineering",
+      "url": "https://catalog.gatech.edu/programs/aerospace-engineering-bs/",
+      "target_hours": 120,
       "requirements": {
-        "Core Biology": ["BIOS 1207", "BIOS 1207L", "BIOS 1208", "BIOS 1208L", "ECOLOGY", "GENETICS", "ECOL/GENE LAB", "BIOS 3450", "BIOS 3451", "BIOS 3600", "QUANT/BIO", "BIOS 4460", "RESEARCH"],
-        "Biology Breadth & Depth": ["BIOS DEPTH 1", "BIOS DEPTH 2", "BIOS DEPTH 3", "BIOS DEPTH 4", "BIOS BREADTH 1", "BIOS BREADTH 2", "BIOS BREADTH 3"],
-        "Chemistry": ["CHEM 1211K", "CHEM 1212K", "CHEM 2311", "CHEM 2312", "CHEM 2380"],
-        "Math & Physics": ["MATH 1551", "MATH 1552", "MATH 1553", "PHYS 2211", "PHYS 2212"],
-        "General Core": ["GT 1000", "ENGL 1101", "ENGL 1102", "WELLNESS", "COMPUTING", "HIST/GOVT", "HUM ELECTIVE", "HUM ELECTIVE", "SS ELECTIVE", "SS ELECTIVE", "SS ELECTIVE", "FREE ELECTIVE", "FREE ELECTIVE", "FREE ELECTIVE"]
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001",
+          "CHEM 1310",
+          "AE 1601",
+          "COE 2001"
+        ],
+        "Major Requirements": [
+          "AE 2010",
+          "AE 2220",
+          "COE 3001",
+          "AE 2610",
+          "AE 2611",
+          "AE 3330",
+          "AE 3030",
+          "AE 3140",
+          "AE 3530",
+          "AE 3531",
+          "AE 3610",
+          "AE 4311",
+          "AE 4312",
+          "AE 4531",
+          "AE 4451",
+          "AE 4610"
+        ],
+        "Non-AE Required Courses": [
+          "ME 1670",
+          "ECE 3710",
+          "ECE 3741"
+        ]
       },
       "suggested_semesters": {
         "Summer 2026": [],
-        "Fall 2026": ["GT 1000", "ENGL 1101", "MATH 1551", "BIOS 1207", "BIOS 1207L", "CHEM 1211K"],
-        "Spring 2027": ["ENGL 1102", "MATH 1552", "BIOS 1208", "BIOS 1208L", "CHEM 1212K"],
-        "Fall 2027": ["ECOLOGY", "ECOL/GENE LAB", "CHEM 2311", "MATH 1553", "COMPUTING", "SS ELECTIVE"],
-        "Spring 2028": ["GENETICS", "CHEM 2312", "CHEM 2380", "QUANT/BIO", "HIST/GOVT", "FREE ELECTIVE"],
-        "Fall 2028": ["PHYS 2211", "BIOS 3450", "BIOS 3451", "BIOS DEPTH 1", "HUM ELECTIVE", "WELLNESS"],
-        "Spring 2029": ["PHYS 2212", "BIOS 3600", "BIOS DEPTH 2", "SS ELECTIVE", "FREE ELECTIVE"],
-        "Fall 2029": ["BIOS DEPTH 3", "BIOS DEPTH 4", "FREE ELECTIVE", "SS ELECTIVE", "RESEARCH", "BIOS 4460"],
-        "Spring 2030": ["BIOS BREADTH 1", "BIOS BREADTH 2", "BIOS BREADTH 3", "FREE ELECTIVE", "HUM ELECTIVE"]
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "AE 1601"
+        ],
+        "Spring 2027": [
+          "ME 1670",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "MSE 2001",
+          "COE 2001",
+          "AE 2010",
+          "AE 2220",
+          "AE 2610"
+        ],
+        "Fall 2028": [
+          "AE 2611",
+          "COE 3001",
+          "AE 3330",
+          "AE 3030",
+          "AE 3140"
+        ],
+        "Spring 2029": [
+          "AE 3530",
+          "AE 3531",
+          "AE 3610",
+          "ECE 3710",
+          "ECE 3741"
+        ],
+        "Fall 2029": [
+          "AE 4311",
+          "AE 4312",
+          "AE 4531",
+          "AE 4451",
+          "AE 4610"
+        ],
+        "Spring 2030": []
       }
     },
-    "neuroscience": {
-      "name": "Neuroscience (B.S.)",
-      "target_hours": 124,
+    "applied_language_intercultural_studies_chinese": {
+      "name": "Applied Languages and Intercultural Studies - Chinese",
+      "url": "https://catalog.gatech.edu/programs/applied-language-intercultural-studies-chinese-bs/",
+      "target_hours": 120,
       "requirements": {
-        "Core Neuroscience": ["NEUR 2001", "NEUR 3001", "NEUR 3010", "NEUR 4001", "PSYC 3013", "PSYC 2020"],
-        "Core Biology & Chemistry": ["BIOS 1107", "BIOS 1107L", "BIOS 1108", "BIOS 1108L", "CHEM 1211K", "CHEM 1212K", "CHEM 2311"],
-        "Math & Physics": ["MATH 1551", "MATH 1552", "MATH 1553", "MATH 2550", "PHYS 2211", "PHYS 2212"],
-        "Breadth Electives": ["NEUR BREADTH 1", "NEUR BREADTH 2", "NEUR BREADTH 3", "NEUR BREADTH 4", "NEUR BREADTH 5"],
-        "General Core": ["GT 1000", "ENGL 1101", "ENGL 1102", "WELLNESS", "COMPUTING", "HIST/GOVT", "HUM ELECTIVE", "HUM ELECTIVE", "SS ELECTIVE", "SS ELECTIVE", "SS ELECTIVE", "FREE ELECTIVE", "FREE ELECTIVE", "FREE ELECTIVE", "FREE ELECTIVE", "FREE ELECTIVE", "FREE ELECTIVE", "FREE ELECTIVE"]
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111",
+          "HIST 2112",
+          "INTA 1200",
+          "POL 1101",
+          "PUBP 3000"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "CHIN 2001",
+          "CHIN 2002"
+        ],
+        "ALIS Major Requirements": [
+          "CHIN 4500"
+        ]
       },
       "suggested_semesters": {
-        "Summer 2026": ["GT 1000", "MATH 1551", "ENGL 1101", "WELLNESS"],
-        "Fall 2026": ["BIOS 1107", "BIOS 1107L", "CHEM 1211K", "ENGL 1102", "PSYC 1101"],
-        "Spring 2027": ["BIOS 1108", "BIOS 1108L", "CHEM 1212K", "MATH 1552", "COMPUTING"],
-        "Fall 2027": ["NEUR 2001", "CHEM 2311", "MATH 1553", "PHYS 2211", "SS ELECTIVE"],
-        "Spring 2028": ["NEUR 3001", "PHYS 2212", "MATH 2550", "HIST/GOVT", "HUM ELECTIVE"],
-        "Fall 2028": ["NEUR 3010", "PSYC 2020", "NEUR BREADTH 1", "SS ELECTIVE", "FREE ELECTIVE"],
-        "Spring 2029": ["PSYC 3013", "NEUR BREADTH 2", "NEUR BREADTH 3", "HUM ELECTIVE", "FREE ELECTIVE"],
-        "Fall 2029": ["NEUR 4001", "NEUR BREADTH 4", "FREE ELECTIVE", "FREE ELECTIVE", "FREE ELECTIVE"],
-        "Spring 2030": ["NEUR BREADTH 5", "FREE ELECTIVE", "FREE ELECTIVE"]
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101"
+        ],
+        "Spring 2027": [
+          "MATH 1712",
+          "INTA 1200"
+        ],
+        "Fall 2027": [
+          "POL 1101",
+          "MATH 1711"
+        ],
+        "Spring 2028": [
+          "ENGL 1102",
+          "CS 1301"
+        ],
+        "Fall 2028": [
+          "HIST 2111",
+          "HIST 2112"
+        ],
+        "Spring 2029": [
+          "CHIN 2001",
+          "CHIN 2002"
+        ],
+        "Fall 2029": [
+          "PUBP 3000",
+          "CHIN 4500"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "applied_language_intercultural_studies_german": {
+      "name": "Applied Languages and Intercultural Studies - German",
+      "url": "https://catalog.gatech.edu/programs/applied-language-intercultural-studies-german-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "GRMN 2001",
+          "GRMN 2002"
+        ],
+        "ALIS Major Requirements": [
+          "GRMN 4500"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101"
+        ],
+        "Spring 2027": [
+          "MATH 1712",
+          "MATH 1711"
+        ],
+        "Fall 2027": [
+          "ENGL 1102",
+          "CS 1301"
+        ],
+        "Spring 2028": [
+          "HIST 2111",
+          "GRMN 2001"
+        ],
+        "Fall 2028": [
+          "GRMN 2002",
+          "GRMN 4500"
+        ],
+        "Spring 2029": [],
+        "Fall 2029": [],
+        "Spring 2030": []
+      }
+    },
+    "applied_language_intercultural_studies_japanese": {
+      "name": "Applied Languages and Intercultural Studies - Japanese",
+      "url": "https://catalog.gatech.edu/programs/applied-language-intercultural-studies-japanese-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "JAPN 2001",
+          "JAPN 2002"
+        ],
+        "ALIS Major Requirements": [
+          "JAPN 4500"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101"
+        ],
+        "Spring 2027": [
+          "MATH 1712",
+          "MATH 1711"
+        ],
+        "Fall 2027": [
+          "ENGL 1102",
+          "CS 1301"
+        ],
+        "Spring 2028": [
+          "HIST 2111",
+          "JAPN 2001"
+        ],
+        "Fall 2028": [
+          "JAPN 2002",
+          "JAPN 4500"
+        ],
+        "Spring 2029": [],
+        "Fall 2029": [],
+        "Spring 2030": []
+      }
+    },
+    "applied_languages_intercultural_studies_korean": {
+      "name": "Applied Languages and Intercultural Studies - Korean",
+      "url": "https://catalog.gatech.edu/programs/applied-languages-intercultural-studies-korean-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "KOR 2001",
+          "KOR 2002"
+        ],
+        "ALIS Major Requirements": [
+          "KOR 4500"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101"
+        ],
+        "Spring 2027": [
+          "MATH 1712",
+          "MATH 1711"
+        ],
+        "Fall 2027": [
+          "ENGL 1102",
+          "CS 1301"
+        ],
+        "Spring 2028": [
+          "HIST 2111",
+          "KOR 2001"
+        ],
+        "Fall 2028": [
+          "KOR 2002",
+          "KOR 4500"
+        ],
+        "Spring 2029": [],
+        "Fall 2029": [],
+        "Spring 2030": []
+      }
+    },
+    "applied_language_intercultural_studies_russian": {
+      "name": "Applied Languages and Intercultural Studies - Russian",
+      "url": "https://catalog.gatech.edu/programs/applied-language-intercultural-studies-russian-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "RUSS 2001",
+          "RUSS 2002"
+        ],
+        "ALIS Major Requirements": [
+          "RUSS 4500"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101"
+        ],
+        "Spring 2027": [
+          "MATH 1712",
+          "MATH 1711"
+        ],
+        "Fall 2027": [
+          "ENGL 1102",
+          "CS 1301"
+        ],
+        "Spring 2028": [
+          "HIST 2111",
+          "RUSS 2001"
+        ],
+        "Fall 2028": [
+          "RUSS 2002",
+          "RUSS 4500"
+        ],
+        "Spring 2029": [],
+        "Fall 2029": [],
+        "Spring 2030": []
+      }
+    },
+    "applied_language_intercultural_studies_spanish": {
+      "name": "Applied Languages and Intercultural Studies - Spanish",
+      "url": "https://catalog.gatech.edu/programs/applied-language-intercultural-studies-spanish-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "SPAN 2001",
+          "SPAN 2002"
+        ],
+        "ALIS Major Requirements": [
+          "SPAN 4500"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101"
+        ],
+        "Spring 2027": [
+          "MATH 1712",
+          "MATH 1711"
+        ],
+        "Fall 2027": [
+          "ENGL 1102",
+          "CS 1301"
+        ],
+        "Spring 2028": [
+          "HIST 2111",
+          "SPAN 2001"
+        ],
+        "Fall 2028": [
+          "SPAN 2002",
+          "SPAN 4500"
+        ],
+        "Spring 2029": [],
+        "Fall 2029": [],
+        "Spring 2030": []
+      }
+    },
+    "applied_language_intercultural_studies_french": {
+      "name": "Applied Languages and Intercultural Studies -\u200b French",
+      "url": "https://catalog.gatech.edu/programs/applied-language-intercultural-studies-french-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "FREN 2001",
+          "FREN 2002"
+        ],
+        "ALIS Major Requirements": [
+          "FREN 4500"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101"
+        ],
+        "Spring 2027": [
+          "MATH 1712",
+          "MATH 1711"
+        ],
+        "Fall 2027": [
+          "ENGL 1102",
+          "CS 1301"
+        ],
+        "Spring 2028": [
+          "HIST 2111",
+          "FREN 2001"
+        ],
+        "Fall 2028": [
+          "FREN 2002",
+          "FREN 4500"
+        ],
+        "Spring 2029": [],
+        "Fall 2029": [],
+        "Spring 2030": []
+      }
+    },
+    "applied_physics_business_option": {
+      "name": "Applied Physics - Business Option",
+      "url": "https://catalog.gatech.edu/programs/applied-physics-business-option-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "PHYS 2303",
+          "PHYS 2304"
+        ],
+        "Upper-Level Physics": [
+          "PHYS 3120",
+          "PHYS 3122",
+          "PHYS 3123",
+          "PHYS 3141",
+          "PHYS 3143",
+          "PHYS 3201",
+          "PHYS 3208",
+          "PHYS 3209",
+          "PHYS 4321",
+          "PHYS 4604",
+          "PHYS 4605"
+        ],
+        "Applied Electives": [
+          "NRE 2120",
+          "NRE 3301",
+          "NRE 3208",
+          "NRE 3112",
+          "ECE 3040",
+          "ECE 3400"
+        ],
+        "Business Option": [
+          "ECON 2106",
+          "ACCT 2101",
+          "MGT 3101",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4029",
+          "MGT 4030",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335",
+          "MGT 4670"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Spring 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "PHYS 2303"
+        ],
+        "Fall 2027": [
+          "PHYS 2304",
+          "NRE 2120",
+          "ECON 2106",
+          "ACCT 2101",
+          "PHYS 3120",
+          "PHYS 3122",
+          "PHYS 3123"
+        ],
+        "Spring 2028": [
+          "PHYS 3141",
+          "PHYS 3143",
+          "PHYS 3201",
+          "PHYS 3208",
+          "PHYS 3209",
+          "NRE 3301",
+          "NRE 3208"
+        ],
+        "Fall 2028": [
+          "NRE 3112",
+          "ECE 3040",
+          "ECE 3400",
+          "MGT 3101",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300"
+        ],
+        "Spring 2029": [
+          "MGT 3660",
+          "PHYS 4321",
+          "PHYS 4604",
+          "PHYS 4605",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4029"
+        ],
+        "Fall 2029": [
+          "MGT 4030",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304"
+        ],
+        "Spring 2030": [
+          "MGT 4307",
+          "MGT 4335",
+          "MGT 4670"
+        ]
+      }
+    },
+    "applied_physics_general": {
+      "name": "Applied Physics - General",
+      "url": "https://catalog.gatech.edu/programs/applied-physics-general-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111",
+          "HIST 2112",
+          "INTA 1200",
+          "POL 1101",
+          "PUBP 3000"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "PHYS 2303",
+          "PHYS 2304"
+        ],
+        "Upper-Level Physics": [
+          "PHYS 3120",
+          "PHYS 3122",
+          "PHYS 3123",
+          "PHYS 3141",
+          "PHYS 3143",
+          "PHYS 3201",
+          "PHYS 3208",
+          "PHYS 3209",
+          "PHYS 4321",
+          "PHYS 4604",
+          "PHYS 4605"
+        ],
+        "Applied Electives": [
+          "NRE 2120",
+          "NRE 3301",
+          "NRE 3208",
+          "NRE 3112",
+          "ECE 3040",
+          "ECE 3400"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "INTA 1200",
+          "POL 1101",
+          "MATH 1553"
+        ],
+        "Spring 2027": [
+          "CHEM 1310",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "HIST 2112",
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551"
+        ],
+        "Spring 2028": [
+          "MATH 2552",
+          "PHYS 2303",
+          "PHYS 2304",
+          "NRE 2120",
+          "PUBP 3000"
+        ],
+        "Fall 2028": [
+          "PHYS 3120",
+          "PHYS 3122",
+          "PHYS 3123",
+          "PHYS 3141",
+          "PHYS 3143"
+        ],
+        "Spring 2029": [
+          "PHYS 3201",
+          "PHYS 3208",
+          "PHYS 3209",
+          "NRE 3301",
+          "NRE 3208"
+        ],
+        "Fall 2029": [
+          "NRE 3112",
+          "ECE 3040",
+          "ECE 3400",
+          "PHYS 4321",
+          "PHYS 4604"
+        ],
+        "Spring 2030": [
+          "PHYS 4605"
+        ]
+      }
+    },
+    "applied_physics_physics_living_systems": {
+      "name": "Applied Physics - Physics of Living Systems",
+      "url": "https://catalog.gatech.edu/programs/applied-physics-physics-living-systems-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "PHYS 2303",
+          "PHYS 2304"
+        ],
+        "Upper-Level Physics": [
+          "PHYS 3120",
+          "PHYS 3122",
+          "PHYS 3123",
+          "PHYS 3141",
+          "PHYS 3143",
+          "PHYS 3201",
+          "PHYS 3208",
+          "PHYS 3209",
+          "PHYS 4321",
+          "PHYS 4604",
+          "PHYS 4605"
+        ],
+        "Physics of Living Systems Concentration": [
+          "PHYS 3207",
+          "PHYS 4251",
+          "PHYS 4250",
+          "PHYS 4301",
+          "PHYS 4699",
+          "PHYS 4745",
+          "PHYS 4801"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "PHYS 2303",
+          "PHYS 2304"
+        ],
+        "Spring 2028": [
+          "PHYS 3120",
+          "PHYS 3122",
+          "PHYS 3123",
+          "PHYS 3141",
+          "PHYS 3143"
+        ],
+        "Fall 2028": [
+          "PHYS 3201",
+          "PHYS 3208",
+          "PHYS 3209",
+          "PHYS 3207",
+          "PHYS 4321"
+        ],
+        "Spring 2029": [
+          "PHYS 4604",
+          "PHYS 4605",
+          "PHYS 4251",
+          "PHYS 4250",
+          "PHYS 4301"
+        ],
+        "Fall 2029": [
+          "PHYS 4699",
+          "PHYS 4745",
+          "PHYS 4801"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "architecture": {
+      "name": "Architecture",
+      "url": "https://catalog.gatech.edu/programs/architecture-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111",
+          "HIST 2112",
+          "INTA 1200",
+          "POL 1101",
+          "PUBP 3000"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "ARCH 1016",
+          "ARCH 1017",
+          "ARCH 1020",
+          "ARCH 1060",
+          "ARCH 2111"
+        ],
+        "Major Requirements": [
+          "ARCH 2016",
+          "ARCH 2017",
+          "ARCH 2020",
+          "ARCH 2112",
+          "ARCH 2211",
+          "ARCH 3016",
+          "ARCH 3017",
+          "ARCH 3231",
+          "ARCH 4015",
+          "ARCH 4016",
+          "ARCH 4017",
+          "ARCH 3010"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "INTA 1200",
+          "POL 1101"
+        ],
+        "Spring 2027": [
+          "MATH 1553",
+          "ARCH 1016",
+          "ARCH 1017",
+          "ARCH 1020"
+        ],
+        "Fall 2027": [
+          "ARCH 1060",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Spring 2028": [
+          "MATH 1552",
+          "HIST 2111",
+          "HIST 2112",
+          "ARCH 2111"
+        ],
+        "Fall 2028": [
+          "ARCH 2016",
+          "ARCH 2017",
+          "ARCH 2020",
+          "ARCH 2112"
+        ],
+        "Spring 2029": [
+          "ARCH 2211",
+          "PUBP 3000",
+          "ARCH 3016",
+          "ARCH 3017"
+        ],
+        "Fall 2029": [
+          "ARCH 3231",
+          "ARCH 3010",
+          "ARCH 4015",
+          "ARCH 4016"
+        ],
+        "Spring 2030": [
+          "ARCH 4017"
+        ]
+      }
+    },
+    "arts_entertainment_creative_technologies": {
+      "name": "Arts, Entertainment, and Creative Technologies",
+      "url": "https://catalog.gatech.edu/programs/arts-entertainment-creative-technologies-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1315"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "AECT 1000",
+          "AECT 1500",
+          "AECT 2030",
+          "ECE 2806",
+          "ECE 2026",
+          "AECT 2000"
+        ],
+        "Major Requirements": [
+          "AECT 3000",
+          "AECT 3100",
+          "AECT 3200",
+          "AECT 3400",
+          "AECT 3500",
+          "AECT 4000",
+          "AECT 4500"
+        ],
+        "Arts, History, Theory and Aesthetics Elective Options": [
+          "ARCH 1060",
+          "ARCH 3010",
+          "ARCH 3007",
+          "ARCH 3008",
+          "ARCH 3009",
+          "ARCH 4143",
+          "ARCH 4833",
+          "FREN 3697",
+          "FREN 4011",
+          "FREN 4160",
+          "FREN 4242",
+          "GRMN 3055",
+          "GRMN 3110",
+          "GRMN 4010",
+          "GRMN 4025",
+          "GRMN 4026",
+          "ID 2241",
+          "ID 2242",
+          "ID 4206",
+          "JAPN 4165",
+          "JAPN 4173",
+          "JAPN 4813",
+          "KOR 3415",
+          "KOR 3813",
+          "LMC 2400",
+          "LMC 2410",
+          "LMC 2450",
+          "LMC 2500",
+          "LMC 2600",
+          "LMC 2720",
+          "LMC 2730",
+          "LMC 3253",
+          "LMC 3254",
+          "LMC 3255",
+          "LMC 3256",
+          "LMC 3257",
+          "LMC 3258",
+          "LMC 3259",
+          "LMC 3262",
+          "LMC 3263",
+          "LMC 3352",
+          "LMC 3405",
+          "LMC 3450",
+          "LMC 3451",
+          "LMC 3705",
+          "LMC 3710",
+          "LMC 4720",
+          "LMC 4725",
+          "LMC 4730",
+          "MUSI 2700",
+          "MUSI 3450",
+          "MUSI 3621",
+          "MUSI 3630",
+          "MUSI 4456"
+        ],
+        "Arts Practice Elective Options": [
+          "ARCH 1020",
+          "CS 4455",
+          "CS 4731",
+          "CS 4496",
+          "ID 2101",
+          "ID 2102",
+          "ID 3510",
+          "ID 4062",
+          "LMC 3402",
+          "LMC 3406",
+          "LMC 3407",
+          "LMC 3454",
+          "LMC 4407",
+          "LMC 4710",
+          "LMC 4733",
+          "LMC 4720",
+          "MUSI 2015",
+          "MUSI 3541",
+          "MUSI 3770",
+          "MUSI 4450",
+          "MUSI 4458",
+          "MUSI 4670",
+          "ARCH 4413",
+          "ARCH 4833",
+          "ID 1418",
+          "ID 1419",
+          "ID 4418",
+          "LMC 2661",
+          "LMC 2662",
+          "LMC 3062",
+          "LMC 3236",
+          "LMC 4602",
+          "MUSI 3019",
+          "MUSI 3121",
+          "MUSI 3131",
+          "MUSI 3231",
+          "MUSI 3241",
+          "MUSI 3251",
+          "MUSI 3261",
+          "MUSI 3311",
+          "MUSI 3321",
+          "MUSI 3411",
+          "MUSI 3531",
+          "MUSI 3511",
+          "MUSI 3551",
+          "MUSI 3611"
+        ],
+        "Arts + Tech Ethics/Law Course Options": [
+          "MGT 4803",
+          "MGT 2106",
+          "PHIL 3101"
+        ],
+        "Entrepreneurship and Business Elecive Options": [
+          "MGT 4803",
+          "MGT 3101",
+          "MGT 3150",
+          "MGT 4450",
+          "MGT 4670"
+        ],
+        "Technology Major Elective": [
+          "CS 2110",
+          "CS 2261",
+          "CS 3600",
+          "CS 4455",
+          "CS 4496",
+          "CS 4625",
+          "CS 4635",
+          "CS 4641",
+          "CS 4644",
+          "CS 4731",
+          "ECE 2026",
+          "ECE 3077",
+          "ECE 3084",
+          "ECE 3251",
+          "ECE 3710",
+          "ECE 4252",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4270"
+        ],
+        "Additional Major Electives": [
+          "ARCH 3200",
+          "ARCH 4508/ID 4803/CS 4803",
+          "CS 2110",
+          "CS 3790",
+          "FREN 3110",
+          "FREN 4013",
+          "FREN 4105",
+          "FREN 4246",
+          "GT 1000",
+          "ID 2325",
+          "ID 2401",
+          "ID 3320",
+          "LMC 3403",
+          "LMC 3451",
+          "MGT 2250",
+          "MGT 3000",
+          "MGT 3103",
+          "MGT 3150",
+          "MGT 3300",
+          "MGT 3607",
+          "MGT 3614",
+          "MGT 3743",
+          "MGT 4311",
+          "MGT 4726",
+          "MGT 4803",
+          "MUSI 2525",
+          "MUSI 2526",
+          "MUSI 4459",
+          "MUSI 4630",
+          "MUSI 4670",
+          "MUSI 4677",
+          "PHIL 3101",
+          "PSYC 2280",
+          "PSYC 3750",
+          "PSYC 3790",
+          "PSYC 4010",
+          "PSYC 4011",
+          "PSYC 4090"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "CS 1315",
+          "ENGL 1101",
+          "MATH 1553",
+          "AECT 1000",
+          "AECT 1500",
+          "ARCH 1060",
+          "ARCH 1020",
+          "ID 1418",
+          "ID 1419",
+          "GT 1000",
+          "ENGL 1102",
+          "MATH 1551",
+          "MATH 1552",
+          "HIST 2111",
+          "AECT 2030",
+          "ECE 2806",
+          "ECE 2026",
+          "AECT 2000",
+          "ID 2241",
+          "ID 2242",
+          "LMC 2400"
+        ],
+        "Spring 2027": [
+          "LMC 2410",
+          "LMC 2450",
+          "LMC 2500",
+          "LMC 2600",
+          "LMC 2720",
+          "LMC 2730",
+          "MUSI 2700",
+          "ID 2101",
+          "ID 2102",
+          "MUSI 2015",
+          "LMC 2661",
+          "LMC 2662",
+          "MGT 2106",
+          "CS 2110",
+          "CS 2261",
+          "ID 2325",
+          "ID 2401",
+          "MGT 2250",
+          "MUSI 2525",
+          "MUSI 2526",
+          "PSYC 2280",
+          "AECT 3000"
+        ],
+        "Fall 2027": [
+          "AECT 3100",
+          "AECT 3200",
+          "AECT 3400",
+          "AECT 3500",
+          "ARCH 3010",
+          "ARCH 3007",
+          "ARCH 3008",
+          "ARCH 3009",
+          "FREN 3697",
+          "GRMN 3055",
+          "GRMN 3110",
+          "KOR 3415",
+          "KOR 3813",
+          "LMC 3253",
+          "LMC 3254",
+          "LMC 3255",
+          "LMC 3256",
+          "LMC 3257",
+          "LMC 3258",
+          "LMC 3259",
+          "LMC 3262",
+          "LMC 3263"
+        ],
+        "Spring 2028": [
+          "LMC 3352",
+          "LMC 3405",
+          "LMC 3450",
+          "LMC 3451",
+          "LMC 3705",
+          "LMC 3710",
+          "MUSI 3450",
+          "MUSI 3621",
+          "MUSI 3630",
+          "ID 3510",
+          "LMC 3402",
+          "LMC 3406",
+          "LMC 3407",
+          "LMC 3454",
+          "MUSI 3541",
+          "MUSI 3770",
+          "LMC 3062",
+          "LMC 3236",
+          "MUSI 3019",
+          "MUSI 3121",
+          "MUSI 3131",
+          "MUSI 3231"
+        ],
+        "Fall 2028": [
+          "MUSI 3241",
+          "MUSI 3251",
+          "MUSI 3261",
+          "MUSI 3311",
+          "MUSI 3321",
+          "MUSI 3411",
+          "MUSI 3531",
+          "MUSI 3511",
+          "MUSI 3551",
+          "MUSI 3611",
+          "PHIL 3101",
+          "MGT 3101",
+          "MGT 3150",
+          "CS 3600",
+          "ECE 3077",
+          "ECE 3084",
+          "ECE 3251",
+          "ECE 3710",
+          "ARCH 3200",
+          "CS 3790",
+          "FREN 3110",
+          "ID 3320"
+        ],
+        "Spring 2029": [
+          "LMC 3403",
+          "MGT 3000",
+          "MGT 3103",
+          "MGT 3300",
+          "MGT 3607",
+          "MGT 3614",
+          "MGT 3743",
+          "PSYC 3750",
+          "PSYC 3790",
+          "AECT 4000",
+          "AECT 4500",
+          "ARCH 4143",
+          "ARCH 4833",
+          "FREN 4011",
+          "FREN 4160",
+          "FREN 4242",
+          "GRMN 4010",
+          "GRMN 4025",
+          "GRMN 4026",
+          "ID 4206",
+          "JAPN 4165",
+          "JAPN 4173"
+        ],
+        "Fall 2029": [
+          "JAPN 4813",
+          "LMC 4720",
+          "LMC 4725",
+          "LMC 4730",
+          "MUSI 4456",
+          "CS 4455",
+          "CS 4731",
+          "CS 4496",
+          "ID 4062",
+          "LMC 4407",
+          "LMC 4710",
+          "LMC 4733",
+          "MUSI 4450",
+          "MUSI 4458",
+          "MUSI 4670",
+          "ARCH 4413",
+          "ID 4418",
+          "LMC 4602",
+          "MGT 4803",
+          "MGT 4450",
+          "MGT 4670",
+          "CS 4625"
+        ],
+        "Spring 2030": [
+          "CS 4635",
+          "CS 4641",
+          "CS 4644",
+          "ECE 4252",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4270",
+          "ARCH 4508/ID 4803/CS 4803",
+          "FREN 4013",
+          "FREN 4105",
+          "FREN 4246",
+          "MGT 4311",
+          "MGT 4726",
+          "MUSI 4459",
+          "MUSI 4630",
+          "MUSI 4677",
+          "PSYC 4010",
+          "PSYC 4011",
+          "PSYC 4090"
+        ]
+      }
+    },
+    "astrophysics": {
+      "name": "Astrophysics",
+      "url": "https://catalog.gatech.edu/programs/astrophysics-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "PHYS 2304",
+          "PHYS 2303"
+        ],
+        "Major Requirements": [
+          "PHYS 2210",
+          "PHYS 3201",
+          "PHYS 3122",
+          "PHYS 3123",
+          "PHYS 3141",
+          "PHYS 3143",
+          "PHYS 4142",
+          "PHYS 4143",
+          "PHYS 3022",
+          "PHYS 3210",
+          "PHYS 4147",
+          "PHYS 4247",
+          "PHYS 4347"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551"
+        ],
+        "Spring 2028": [
+          "MATH 2552",
+          "PHYS 2304",
+          "PHYS 2303",
+          "PHYS 2210"
+        ],
+        "Fall 2028": [
+          "PHYS 3201",
+          "PHYS 3122",
+          "PHYS 3123",
+          "PHYS 3141"
+        ],
+        "Spring 2029": [
+          "PHYS 3143",
+          "PHYS 3022",
+          "PHYS 3210",
+          "PHYS 4142"
+        ],
+        "Fall 2029": [
+          "PHYS 4143",
+          "PHYS 4147",
+          "PHYS 4247",
+          "PHYS 4347"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "atmospheric_oceanic_sciences": {
+      "name": "Atmospheric and Oceanic Sciences",
+      "url": "https://catalog.gatech.edu/programs/atmospheric-oceanic-sciences-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111",
+          "HIST 2112",
+          "INTA 1200",
+          "POL 1101",
+          "PUBP 3000"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "EAS 1600",
+          "EAS 2551"
+        ],
+        "Major Requirements": [
+          "EAS 2655",
+          "EAS 2750",
+          "EAS 3603",
+          "EAS 4655",
+          "EAS 4740",
+          "EAS 4801",
+          "EAS 4420",
+          "EAS 4814",
+          "EAS 4610"
+        ],
+        "AOS Technical Electives": [
+          "CHEM 1212K",
+          "CHEM 1211K",
+          "CS 1301",
+          "CS 1371",
+          "EAS 3110",
+          "EAS 4300",
+          "EAS 4305",
+          "EAS 4410",
+          "EAS 4450",
+          "EAS 4525",
+          "EAS 4470",
+          "EAS 4740",
+          "EAS 4420",
+          "EAS 4480",
+          "EAS 4610",
+          "EAS 4651",
+          "EAS 4670",
+          "EAS 4695",
+          "EAS 4698",
+          "EAS 4699",
+          "EAS 4803",
+          "EAS 4813",
+          "EAS 4814"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "INTA 1200",
+          "POL 1101",
+          "MATH 1553",
+          "EAS 1600"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CHEM 1211K",
+          "CS 1301",
+          "MATH 1552",
+          "CS 1371"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "HIST 2112",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "EAS 2551"
+        ],
+        "Spring 2028": [
+          "EAS 2655",
+          "EAS 2750",
+          "CHEM 1212K",
+          "PUBP 3000",
+          "EAS 3603",
+          "EAS 3110"
+        ],
+        "Fall 2028": [
+          "EAS 4655",
+          "EAS 4740",
+          "EAS 4801",
+          "EAS 4420",
+          "EAS 4814",
+          "EAS 4610"
+        ],
+        "Spring 2029": [
+          "EAS 4300",
+          "EAS 4305",
+          "EAS 4410",
+          "EAS 4450",
+          "EAS 4525",
+          "EAS 4470"
+        ],
+        "Fall 2029": [
+          "EAS 4480",
+          "EAS 4651",
+          "EAS 4670",
+          "EAS 4695",
+          "EAS 4698",
+          "EAS 4699"
+        ],
+        "Spring 2030": [
+          "EAS 4803",
+          "EAS 4813"
+        ]
+      }
+    },
+    "business_administration_strategy_and_innovation": {
+      "name": "Bachelor of Business Administration - Strategy and Innovation",
+      "url": "https://catalog.gatech.edu/programs/business-administration-strategy-and-innovation-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551"
+        ],
+        "Field of Study": [
+          "ACCT 2101",
+          "ACCT 2102",
+          "ECON 2105",
+          "ECON 2106",
+          "MGT 2106",
+          "MGT 2210"
+        ],
+        "Major Requirements": [
+          "LMC 3403",
+          "MGT 2250",
+          "MGT 2255",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300",
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659"
+        ],
+        "Strategy and Innovation Concentration": [
+          "MGT 3664",
+          "MGT 4196",
+          "MGT 4220"
+        ],
+        "Concentration electives:": [
+          "MGT 3661",
+          "MGT 3662",
+          "MGT 3663",
+          "MGT 4667",
+          "MGT 4803",
+          "MGT 3510",
+          "MGT 3743",
+          "MGT 3744",
+          "MGT 4050",
+          "MGT 4072",
+          "MGT 4341",
+          "MGT 4369",
+          "MGT 4670"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Spring 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "ACCT 2101",
+          "ACCT 2102",
+          "ECON 2105"
+        ],
+        "Fall 2027": [
+          "ECON 2106",
+          "MGT 2106",
+          "MGT 2210",
+          "MGT 2250",
+          "MGT 2255"
+        ],
+        "Spring 2028": [
+          "LMC 3403",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300"
+        ],
+        "Fall 2028": [
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659",
+          "MGT 3664"
+        ],
+        "Spring 2029": [
+          "MGT 3661",
+          "MGT 3662",
+          "MGT 3663",
+          "MGT 3510",
+          "MGT 3743"
+        ],
+        "Fall 2029": [
+          "MGT 3744",
+          "MGT 4196",
+          "MGT 4220",
+          "MGT 4667",
+          "MGT 4803"
+        ],
+        "Spring 2030": [
+          "MGT 4050",
+          "MGT 4072",
+          "MGT 4341",
+          "MGT 4369",
+          "MGT 4670"
+        ]
+      }
+    },
+    "biochemistry": {
+      "name": "Biochemistry",
+      "url": "https://catalog.gatech.edu/programs/biochemistry-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "General Core": [
+          "CHEM 4698/4699",
+          "LMC 4701",
+          "LMC 4702"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "CHEM 4698/4699"
+        ],
+        "Spring 2027": [
+          "LMC 4701"
+        ],
+        "Fall 2027": [
+          "LMC 4702"
+        ],
+        "Spring 2028": [],
+        "Fall 2028": [],
+        "Spring 2029": [],
+        "Fall 2029": [],
+        "Spring 2030": []
+      }
+    },
+    "biochemistry_business_option": {
+      "name": "Biochemistry - Business Option",
+      "url": "https://catalog.gatech.edu/programs/biochemistry-business-option-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "CHEM 1212K",
+          "CHEM 2380",
+          "MATH 2551",
+          "BIOS 1107"
+        ],
+        "Major Requirements": [
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312",
+          "CHEM 3216",
+          "CHEM 3371",
+          "CHEM 3411",
+          "CHEM 4511",
+          "CHEM 4512",
+          "CHEM 4521",
+          "CHEM 4581",
+          "CHEM 4582",
+          "CHEM 4601"
+        ],
+        "Biology Electives": [
+          "BIOS 2600",
+          "BIOS 3450",
+          "BIOS 3380",
+          "BIOS 4015",
+          "BIOS 4340",
+          "BIOS 4400",
+          "BIOS 4401",
+          "BIOS 4418",
+          "BIOS 4464",
+          "BIOS 4570",
+          "BIOS 4607",
+          "CHEM 4765"
+        ],
+        "Business Option": [
+          "ECON 2106",
+          "ACCT 2101",
+          "MGT 3101",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4030",
+          "MGT 4190",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335",
+          "MGT 4610",
+          "MGT 4670"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "BIOS 1107",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552"
+        ],
+        "Spring 2027": [
+          "HIST 2111",
+          "PHYS 2212",
+          "CHEM 2380",
+          "MATH 2551",
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312",
+          "BIOS 2600"
+        ],
+        "Fall 2027": [
+          "ECON 2106",
+          "ACCT 2101",
+          "CHEM 1212K",
+          "CHEM 3216",
+          "CHEM 3371",
+          "CHEM 3411",
+          "BIOS 3450",
+          "BIOS 3380"
+        ],
+        "Spring 2028": [
+          "MGT 3101",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "CHEM 4511",
+          "CHEM 4512",
+          "CHEM 4521"
+        ],
+        "Fall 2028": [
+          "CHEM 4581",
+          "CHEM 4582",
+          "CHEM 4601",
+          "BIOS 4015",
+          "BIOS 4340",
+          "BIOS 4400",
+          "BIOS 4401",
+          "BIOS 4418"
+        ],
+        "Spring 2029": [
+          "BIOS 4464",
+          "BIOS 4570",
+          "BIOS 4607",
+          "CHEM 4765",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4030",
+          "MGT 4190"
+        ],
+        "Fall 2029": [
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335"
+        ],
+        "Spring 2030": [
+          "MGT 4610",
+          "MGT 4670"
+        ]
+      }
+    },
+    "biochemistry_general": {
+      "name": "Biochemistry - General",
+      "url": "https://catalog.gatech.edu/programs/biochemistry-general-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111",
+          "HIST 2112",
+          "INTA 1200",
+          "POL 1101",
+          "PUBP 3000"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "CHEM 1212K",
+          "CHEM 2380",
+          "MATH 2551",
+          "BIOS 1107"
+        ],
+        "Major Requirements": [
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312",
+          "CHEM 3216",
+          "CHEM 3371",
+          "CHEM 3411",
+          "CHEM 4511",
+          "CHEM 4512",
+          "CHEM 4521",
+          "CHEM 4581",
+          "CHEM 4582",
+          "CHEM 4601"
+        ],
+        "Biology Electives": [
+          "BIOS 2600",
+          "BIOS 3450",
+          "BIOS 3380",
+          "BIOS 4015",
+          "BIOS 4340",
+          "BIOS 4401",
+          "BIOS 4418",
+          "BIOS 4464",
+          "BIOS 4570",
+          "BIOS 4607",
+          "CHEM 4765"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "INTA 1200",
+          "POL 1101",
+          "MATH 1553"
+        ],
+        "Spring 2027": [
+          "BIOS 1107",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "HIST 2112",
+          "PHYS 2212",
+          "CHEM 2380",
+          "MATH 2551"
+        ],
+        "Spring 2028": [
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312",
+          "BIOS 2600",
+          "CHEM 1212K"
+        ],
+        "Fall 2028": [
+          "PUBP 3000",
+          "CHEM 3216",
+          "CHEM 3371",
+          "CHEM 3411",
+          "BIOS 3450"
+        ],
+        "Spring 2029": [
+          "BIOS 3380",
+          "CHEM 4511",
+          "CHEM 4512",
+          "CHEM 4521",
+          "CHEM 4581"
+        ],
+        "Fall 2029": [
+          "CHEM 4582",
+          "CHEM 4601",
+          "BIOS 4015",
+          "BIOS 4340",
+          "BIOS 4401"
+        ],
+        "Spring 2030": [
+          "BIOS 4418",
+          "BIOS 4464",
+          "BIOS 4570",
+          "BIOS 4607",
+          "CHEM 4765"
+        ]
+      }
+    },
+    "biochemistry_prehealth_option": {
+      "name": "Biochemistry - Pre-Health Option",
+      "url": "https://catalog.gatech.edu/programs/biochemistry-prehealth-option-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "CHEM 1212K",
+          "CHEM 2380",
+          "BIOS 1107",
+          "BIOS 1108"
+        ],
+        "Major Requirements": [
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312",
+          "CHEM 3216",
+          "CHEM 3371",
+          "CHEM 3411",
+          "CHEM 4511",
+          "CHEM 4512",
+          "CHEM 4581",
+          "CHEM 4582",
+          "CHEM 4601"
+        ],
+        "Pre-Health Electives": [
+          "BIOS 2600",
+          "BIOS 2601",
+          "BIOS 2610",
+          "BIOS 3380",
+          "BIOS 3381",
+          "BIOS 3450",
+          "BIOS 3451",
+          "BIOS 3753",
+          "BIOS 3754",
+          "BIOS 3755",
+          "BIOS 3756",
+          "BIOS 4012",
+          "BIOS 4015",
+          "BIOS 4150/BIOL 6150",
+          "BIOS 4200",
+          "BIOS 4238/APPH 6238",
+          "BIOS 4340",
+          "BIOS 4400",
+          "BIOS 4401",
+          "BIOS 4440",
+          "BIOS 4464",
+          "BIOS 4471",
+          "BIOS 4500",
+          "BIOS 4510/BIOL 8510",
+          "BIOS 4520",
+          "BIOS 4530/BIOL 8530",
+          "BIOS 4545",
+          "BIOS 4560/BIOL 8560",
+          "BIOS 4570",
+          "BIOS 4744",
+          "BIOS 4607/BIOL 6607",
+          "BMED 3100",
+          "BMED 3600",
+          "CHEM 4521",
+          "CHEM 4765"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "BIOS 1107",
+          "BIOS 1108",
+          "BIOS 4238/APPH 6238",
+          "ENGL 1102",
+          "MATH 1551"
+        ],
+        "Spring 2027": [
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2212",
+          "CHEM 2380",
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312"
+        ],
+        "Fall 2027": [
+          "BIOS 2600",
+          "BIOS 2601",
+          "BIOS 2610",
+          "CHEM 1212K",
+          "CHEM 3216",
+          "CHEM 3371",
+          "CHEM 3411",
+          "BIOS 3380"
+        ],
+        "Spring 2028": [
+          "BIOS 3381",
+          "BIOS 3450",
+          "BIOS 3451",
+          "BIOS 3753",
+          "BIOS 3754",
+          "BIOS 3755",
+          "BIOS 3756",
+          "BMED 3100"
+        ],
+        "Fall 2028": [
+          "BMED 3600",
+          "CHEM 4511",
+          "CHEM 4512",
+          "CHEM 4581",
+          "CHEM 4582",
+          "CHEM 4601",
+          "BIOS 4012",
+          "BIOS 4015"
+        ],
+        "Spring 2029": [
+          "BIOS 4150/BIOL 6150",
+          "BIOS 4200",
+          "BIOS 4340",
+          "BIOS 4400",
+          "BIOS 4401",
+          "BIOS 4440",
+          "BIOS 4464",
+          "BIOS 4471"
+        ],
+        "Fall 2029": [
+          "BIOS 4500",
+          "BIOS 4510/BIOL 8510",
+          "BIOS 4520",
+          "BIOS 4530/BIOL 8530",
+          "BIOS 4545",
+          "BIOS 4560/BIOL 8560",
+          "BIOS 4570",
+          "BIOS 4744"
+        ],
+        "Spring 2030": [
+          "BIOS 4607/BIOL 6607",
+          "CHEM 4521",
+          "CHEM 4765"
+        ]
+      }
+    },
+    "biology": {
+      "name": "Biology",
+      "url": "https://catalog.gatech.edu/programs/biology-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "General Core": [
+          "BIOS 4699",
+          "BIOS 4698",
+          "BIOS 4690",
+          "LMC 4701"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "BIOS 4699"
+        ],
+        "Spring 2027": [
+          "BIOS 4698"
+        ],
+        "Fall 2027": [
+          "BIOS 4690"
+        ],
+        "Spring 2028": [
+          "LMC 4701"
+        ],
+        "Fall 2028": [],
+        "Spring 2029": [],
+        "Fall 2029": [],
+        "Spring 2030": []
+      }
+    },
+    "biology_business": {
+      "name": "Biology - Business Option",
+      "url": "https://catalog.gatech.edu/programs/biology-business-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "BIOS 1207",
+          "CHEM 1211K",
+          "CHEM 1212K",
+          "CHEM 2311",
+          "CHEM 2312"
+        ],
+        "Major Requirements": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "BIOS 1208",
+          "BIOS 2300",
+          "BIOS 3450",
+          "BIOS 2600",
+          "BIOS 3600",
+          "BIOS 4460",
+          "BIOS 4590",
+          "BIOS 4690"
+        ],
+        "Non-Biology Courses": [
+          "CHEM 2380",
+          "BIOS 3400",
+          "BIOS 4150",
+          "BIOS 4401"
+        ],
+        "Business Option": [
+          "ECON 2106",
+          "ACCT 2101",
+          "MGT 3101",
+          "MGT 3150",
+          "PSYC 2220",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4029",
+          "MGT 4030",
+          "MGT 4190",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335",
+          "MGT 4610",
+          "MGT 4670"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "BIOS 1207",
+          "BIOS 1208",
+          "ENGL 1102",
+          "MATH 1551"
+        ],
+        "Spring 2027": [
+          "CHEM 1211K",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CHEM 2311"
+        ],
+        "Fall 2027": [
+          "CHEM 2312",
+          "BIOS 2300",
+          "BIOS 2600",
+          "CHEM 2380",
+          "ECON 2106",
+          "ACCT 2101",
+          "PSYC 2220"
+        ],
+        "Spring 2028": [
+          "CHEM 1212K",
+          "BIOS 3450",
+          "BIOS 3600",
+          "BIOS 3400",
+          "MGT 3101",
+          "MGT 3150",
+          "MGT 3062"
+        ],
+        "Fall 2028": [
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "BIOS 4460",
+          "BIOS 4590",
+          "BIOS 4690",
+          "BIOS 4150"
+        ],
+        "Spring 2029": [
+          "BIOS 4401",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4029",
+          "MGT 4030",
+          "MGT 4190",
+          "MGT 4191"
+        ],
+        "Fall 2029": [
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335"
+        ],
+        "Spring 2030": [
+          "MGT 4610",
+          "MGT 4670"
+        ]
+      }
+    },
+    "biology_general": {
+      "name": "Biology - General",
+      "url": "https://catalog.gatech.edu/programs/biology-general-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priortiy": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Science": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "BIOS 1207",
+          "CHEM 1211K",
+          "CHEM 1212K",
+          "CHEM 2311",
+          "CHEM 2312"
+        ],
+        "Major Requirements": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "BIOS 1208",
+          "BIOS 2300",
+          "BIOS 3450",
+          "BIOS 2600",
+          "BIOS 3600",
+          "BIOS 4460",
+          "BIOS 4590",
+          "BIOS 4690"
+        ],
+        "Non-Biology Courses": [
+          "CHEM 2380",
+          "BIOS 3400",
+          "BIOS 4150",
+          "BIOS 4401"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "BIOS 1207",
+          "BIOS 1208"
+        ],
+        "Spring 2027": [
+          "MATH 1553",
+          "ENGL 1102",
+          "CHEM 1211K",
+          "MATH 1551"
+        ],
+        "Fall 2027": [
+          "MATH 1552",
+          "CS 1301",
+          "HIST 2111",
+          "CHEM 2311"
+        ],
+        "Spring 2028": [
+          "CHEM 2312",
+          "PHYS 2211",
+          "PHYS 2212",
+          "BIOS 2300"
+        ],
+        "Fall 2028": [
+          "BIOS 2600",
+          "CHEM 2380",
+          "CHEM 1212K",
+          "BIOS 3450"
+        ],
+        "Spring 2029": [
+          "BIOS 3600",
+          "BIOS 3400",
+          "BIOS 4460",
+          "BIOS 4590"
+        ],
+        "Fall 2029": [
+          "BIOS 4690",
+          "BIOS 4150",
+          "BIOS 4401"
+        ],
+        "Spring 2030": []
       }
     },
     "bme": {
-      "name": "Biomedical Engineering (B.S.)",
+      "name": "Biomedical Engineering",
+      "url": "https://catalog.gatech.edu/programs/biomedical-engineering-bs/",
       "target_hours": 128,
       "requirements": {
-        "Core BME": ["BMED 1000", "BMED 2110", "COE 2001", "BMED 2250", "BMED 2310", "BMED 3100", "BMED 3110", "BMED 3310", "BMED 3410", "BMED 3520", "BMED 3600", "BMED 3610", "BMED 4000", "BMED 4602"],
-        "Sciences & Math": ["CHEM 1211K", "CHEM 1315", "PHYS 2211", "PHYS 2212", "MATH 1551", "MATH 1552", "MATH 1553", "MATH 2551", "MATH 2552"],
-        "Engineering Breadth & Depth": ["BMED DEPTH 1", "BMED DEPTH 2", "BMED DEPTH 3", "BMED BREADTH 1", "BMED BREADTH 2", "BMED BREADTH 3", "BMED BREADTH 4", "BMED BREADTH 5"],
-        "General Core": ["GT 1000", "ENGL 1101", "ENGL 1102", "WELLNESS", "COMPUTING", "HIST/GOVT", "HUM ELECTIVE", "HUM ELECTIVE", "SS ELECTIVE", "SS ELECTIVE", "SS ELECTIVE"],
-        "Other Requirements": ["BMED 2400", "MSE 2001", "ECE 3710", "ECE 3741"]
+        "Core BME": [
+          "BMED 1000",
+          "BMED 2110",
+          "COE 2001",
+          "BMED 2250",
+          "BMED 2310",
+          "BMED 3100",
+          "BMED 3110",
+          "BMED 3310",
+          "BMED 3410",
+          "BMED 3520",
+          "BMED 3600",
+          "BMED 3610",
+          "BMED 4000",
+          "BMED 4602"
+        ],
+        "Sciences & Math": [
+          "CHEM 1211K",
+          "CHEM 1315",
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1552",
+          "MATH 1553",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Engineering Breadth & Depth": [
+          "BMED DEPTH 1",
+          "BMED DEPTH 2",
+          "BMED DEPTH 3",
+          "BMED BREADTH 1",
+          "BMED BREADTH 2",
+          "BMED BREADTH 3",
+          "BMED BREADTH 4",
+          "BMED BREADTH 5"
+        ],
+        "General Core": [
+          "GT 1000",
+          "ENGL 1101",
+          "ENGL 1102",
+          "WELLNESS",
+          "COMPUTING",
+          "HIST/GOVT",
+          "HUM ELECTIVE",
+          "HUM ELECTIVE",
+          "SS ELECTIVE",
+          "SS ELECTIVE",
+          "SS ELECTIVE"
+        ],
+        "Other Requirements": [
+          "BMED 2400",
+          "MSE 2001",
+          "ECE 3710",
+          "ECE 3741"
+        ]
       },
       "suggested_semesters": {
-        "Summer 2026": ["GT 1000", "MATH 1551", "ENGL 1101", "WELLNESS"],
-        "Fall 2026": ["CHEM 1211K", "MATH 1552", "COMPUTING", "ENGL 1102"],
-        "Spring 2027": ["PHYS 2211", "MATH 1553", "BMED 1000", "BMED 2110", "HIST/GOVT"],
-        "Fall 2027": ["PHYS 2212", "MATH 2551", "COE 2001", "BMED 2250", "HUM ELECTIVE"],
-        "Spring 2028": ["MATH 2552", "BMED 2310", "CHEM 1315", "BMED 2400", "MSE 2001"],
-        "Fall 2028": ["BMED 3100", "BMED 3110", "BMED 3310", "ECE 3710", "ECE 3741", "SS ELECTIVE"],
-        "Spring 2029": ["BMED 3410", "BMED 3520", "BMED 3600", "BMED 3610", "HUM ELECTIVE", "SS ELECTIVE"],
-        "Fall 2029": ["BMED 4000", "BMED DEPTH 1", "BMED BREADTH 1", "BMED BREADTH 2", "BMED BREADTH 3", "SS ELECTIVE"],
-        "Spring 2030": ["BMED 4602", "BMED DEPTH 2", "BMED DEPTH 3", "BMED BREADTH 4", "BMED BREADTH 5"]
+        "Summer 2026": [],
+        "Fall 2026": [
+          "GT 1000",
+          "ENGL 1101",
+          "WELLNESS",
+          "BMED 1000",
+          "CHEM 1315",
+          "MATH 1553"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "CHEM 1211K",
+          "MATH 1551",
+          "MATH 1552",
+          "BMED 2110",
+          "COE 2001"
+        ],
+        "Fall 2027": [
+          "BMED 2250",
+          "BMED 2310",
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "BMED 2400",
+          "MSE 2001",
+          "COMPUTING",
+          "HIST/GOVT",
+          "BMED 3100",
+          "BMED 3110"
+        ],
+        "Fall 2028": [
+          "BMED 3310",
+          "BMED 3410",
+          "BMED 3520",
+          "BMED 3600",
+          "BMED 3610",
+          "ECE 3710"
+        ],
+        "Spring 2029": [
+          "ECE 3741",
+          "HUM ELECTIVE",
+          "SS ELECTIVE",
+          "BMED DEPTH 1",
+          "BMED DEPTH 2",
+          "BMED DEPTH 3"
+        ],
+        "Fall 2029": [
+          "BMED BREADTH 1",
+          "BMED BREADTH 2",
+          "BMED BREADTH 3",
+          "BMED BREADTH 4",
+          "BMED BREADTH 5",
+          "BMED 4000"
+        ],
+        "Spring 2030": [
+          "BMED 4602"
+        ]
+      }
+    },
+    "biomedical_engineering": {
+      "name": "Biomedical Engineering",
+      "url": "https://catalog.gatech.edu/programs/biomedical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "BMED 1000",
+          "BMED 2110",
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1211K"
+        ],
+        "Major Requirements": [
+          "BMED 2250",
+          "BMED 2310",
+          "BMED 3100",
+          "BMED 3110",
+          "BMED 3310",
+          "BMED 3410",
+          "BMED 3520",
+          "BMED 3600",
+          "BMED 3610",
+          "BMED 4000",
+          "BMED 4602"
+        ],
+        "Other Engineering and Science Requirements": [
+          "CHEM 1315",
+          "BMED 2400",
+          "MSE 2001",
+          "ECE 3710",
+          "ECE 3741"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "BMED 1000"
+        ],
+        "Spring 2027": [
+          "CHEM 1315",
+          "ENGL 1102",
+          "MATH 1551",
+          "CHEM 1211K"
+        ],
+        "Fall 2027": [
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Spring 2028": [
+          "PHYS 2212",
+          "BMED 2110",
+          "COE 2001",
+          "MATH 2551"
+        ],
+        "Fall 2028": [
+          "MATH 2552",
+          "BMED 2250",
+          "BMED 2310",
+          "BMED 2400"
+        ],
+        "Spring 2029": [
+          "MSE 2001",
+          "BMED 3100",
+          "BMED 3110",
+          "BMED 3310"
+        ],
+        "Fall 2029": [
+          "BMED 3410",
+          "BMED 3520",
+          "BMED 3600",
+          "BMED 3610"
+        ],
+        "Spring 2030": [
+          "ECE 3710",
+          "ECE 3741",
+          "BMED 4000",
+          "BMED 4602"
+        ]
+      }
+    },
+    "business_administration_accounting": {
+      "name": "Business Administration - Accounting",
+      "url": "https://catalog.gatech.edu/programs/business-administration-accounting-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551"
+        ],
+        "Field of Study": [
+          "ACCT 2101",
+          "ACCT 2102",
+          "MGT 2106",
+          "ECON 2105",
+          "ECON 2106",
+          "MGT 2210"
+        ],
+        "Major Requirements": [
+          "LMC 3403",
+          "MGT 2250",
+          "MGT 2255",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300",
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659"
+        ],
+        "Accounting Concentration": [
+          "MGT 4010",
+          "MGT 4026",
+          "MGT 4027",
+          "MGT 4041",
+          "MGT 4029",
+          "MGT 4046",
+          "MGT 4015",
+          "MGT 4030",
+          "MGT 4043",
+          "MGT 4045",
+          "MGT 4047",
+          "MGT 4803"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Spring 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "ACCT 2101",
+          "ACCT 2102",
+          "MGT 2106"
+        ],
+        "Fall 2027": [
+          "ECON 2105",
+          "ECON 2106",
+          "MGT 2210",
+          "MGT 2250",
+          "MGT 2255"
+        ],
+        "Spring 2028": [
+          "LMC 3403",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300"
+        ],
+        "Fall 2028": [
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659",
+          "MGT 4010"
+        ],
+        "Spring 2029": [
+          "MGT 4026",
+          "MGT 4027",
+          "MGT 4041",
+          "MGT 4029",
+          "MGT 4046"
+        ],
+        "Fall 2029": [
+          "MGT 4015",
+          "MGT 4030",
+          "MGT 4043",
+          "MGT 4045",
+          "MGT 4047"
+        ],
+        "Spring 2030": [
+          "MGT 4803"
+        ]
+      }
+    },
+    "business_administration_finance": {
+      "name": "Business Administration - Finance",
+      "url": "https://catalog.gatech.edu/programs/business-administration-finance-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551"
+        ],
+        "Field of Study": [
+          "ACCT 2101",
+          "ACCT 2102",
+          "ECON 2105",
+          "MGT 2106",
+          "ECON 2106",
+          "MGT 2210"
+        ],
+        "Major Requirements": [
+          "LMC 3403",
+          "MGT 3062",
+          "MGT 2250",
+          "MGT 2255",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300",
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659"
+        ],
+        "Finance Concentration": [
+          "MGT 3076",
+          "MGT 3079",
+          "MGT 4070",
+          "MGT 3075",
+          "MGT 3082",
+          "MGT 3084",
+          "MGT 4026",
+          "MGT 4066",
+          "MGT 4067",
+          "MGT 4068",
+          "MGT 4072",
+          "MGT 4073",
+          "MGT 4074"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Spring 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "ACCT 2101",
+          "ACCT 2102",
+          "ECON 2105"
+        ],
+        "Fall 2027": [
+          "MGT 2106",
+          "ECON 2106",
+          "MGT 2210",
+          "MGT 2250",
+          "MGT 2255"
+        ],
+        "Spring 2028": [
+          "LMC 3403",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300"
+        ],
+        "Fall 2028": [
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659",
+          "MGT 3076"
+        ],
+        "Spring 2029": [
+          "MGT 3079",
+          "MGT 3075",
+          "MGT 3082",
+          "MGT 3084",
+          "MGT 4070"
+        ],
+        "Fall 2029": [
+          "MGT 4026",
+          "MGT 4066",
+          "MGT 4067",
+          "MGT 4068",
+          "MGT 4072"
+        ],
+        "Spring 2030": [
+          "MGT 4073",
+          "MGT 4074"
+        ]
+      }
+    },
+    "business_administration_general_management": {
+      "name": "Business Administration - General Management",
+      "url": "https://catalog.gatech.edu/programs/business-administration-general-management-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551"
+        ],
+        "Field of Study": [
+          "ACCT 2101",
+          "ACCT 2102",
+          "ECON 2105",
+          "ECON 2106",
+          "MGT 2106",
+          "MGT 2210"
+        ],
+        "Major Requirements": [
+          "LMC 3403",
+          "MGT 2250",
+          "MGT 2255",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300",
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659"
+        ],
+        "General Management Concentration": [
+          "MGT 3075",
+          "MGT 3076",
+          "MGT 3079",
+          "MGT 3082",
+          "MGT 3084",
+          "MGT 3103",
+          "MGT 3310",
+          "MGT 3510",
+          "MGT 3605",
+          "MGT 3606",
+          "MGT 3607",
+          "MGT 3608",
+          "MGT 3609",
+          "MGT 3661",
+          "MGT 3662",
+          "MGT 3663",
+          "MGT 3743",
+          "MGT 3744",
+          "MGT 4010",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4027",
+          "MGT 4030",
+          "MGT 4041",
+          "MGT 4043",
+          "MGT 4045",
+          "MGT 4047",
+          "MGT 4052",
+          "MGT 4053",
+          "MGT 4056",
+          "MGT 4057",
+          "MGT 4058",
+          "MGT 4066",
+          "MGT 4067",
+          "MGT 4068",
+          "MGT 4070",
+          "MGT 4072",
+          "MGT 4102",
+          "MGT 4116",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4308",
+          "MGT 4309",
+          "MGT 4311",
+          "MGT 4331",
+          "MGT 4332",
+          "MGT 4335",
+          "MGT 4352",
+          "MGT 4353",
+          "MGT 4360",
+          "MGT 4366",
+          "MGT 4401",
+          "MGT 4670",
+          "MGT 4803",
+          "MGT 4910"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "ACCT 2101",
+          "ACCT 2102",
+          "ECON 2105",
+          "ECON 2106"
+        ],
+        "Spring 2027": [
+          "MGT 2106",
+          "MGT 2210",
+          "MGT 2250",
+          "MGT 2255",
+          "LMC 3403",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300",
+          "MGT 3501",
+          "MGT 3599"
+        ],
+        "Fall 2027": [
+          "MGT 3660",
+          "MGT 3659",
+          "MGT 3075",
+          "MGT 3076",
+          "MGT 3079",
+          "MGT 3082",
+          "MGT 3084",
+          "MGT 3103",
+          "MGT 3310",
+          "MGT 3510",
+          "MGT 3605"
+        ],
+        "Spring 2028": [
+          "MGT 3606",
+          "MGT 3607",
+          "MGT 3608",
+          "MGT 3609",
+          "MGT 3661",
+          "MGT 3662",
+          "MGT 3663",
+          "MGT 3743",
+          "MGT 3744",
+          "MGT 4010",
+          "MGT 4015"
+        ],
+        "Fall 2028": [
+          "MGT 4026",
+          "MGT 4027",
+          "MGT 4030",
+          "MGT 4041",
+          "MGT 4043",
+          "MGT 4045",
+          "MGT 4047",
+          "MGT 4052",
+          "MGT 4053",
+          "MGT 4056",
+          "MGT 4057"
+        ],
+        "Spring 2029": [
+          "MGT 4058",
+          "MGT 4066",
+          "MGT 4067",
+          "MGT 4068",
+          "MGT 4070",
+          "MGT 4072",
+          "MGT 4102",
+          "MGT 4116",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193"
+        ],
+        "Fall 2029": [
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4308",
+          "MGT 4309",
+          "MGT 4311",
+          "MGT 4331",
+          "MGT 4332",
+          "MGT 4335",
+          "MGT 4352",
+          "MGT 4353"
+        ],
+        "Spring 2030": [
+          "MGT 4360",
+          "MGT 4366",
+          "MGT 4401",
+          "MGT 4670",
+          "MGT 4803",
+          "MGT 4910"
+        ]
+      }
+    },
+    "business_administration_information_technology_management": {
+      "name": "Business Administration - Information Technology Management",
+      "url": "https://catalog.gatech.edu/programs/business-administration-information-technology-management-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551"
+        ],
+        "Field of Study": [
+          "ACCT 2101",
+          "ACCT 2102",
+          "ECON 2105",
+          "ECON 2106",
+          "MGT 2106",
+          "MGT 2210"
+        ],
+        "Major Requirements": [
+          "LMC 3403",
+          "MGT 2250",
+          "MGT 2255",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300",
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659"
+        ],
+        "IT Management Concentration": [
+          "MGT 3745",
+          "MGT 4052",
+          "MGT 4058",
+          "MGT 4450",
+          "MGT 3103",
+          "MGT 3310",
+          "MGT 3663",
+          "MGT 3743",
+          "MGT 3744",
+          "MGT 4041",
+          "MGT 4050",
+          "MGT 4056",
+          "MGT 4057",
+          "MGT 4102",
+          "MGT 4119",
+          "MGT 4193",
+          "MGT 4311",
+          "MGT 4341",
+          "MGT 4360",
+          "MGT 4366",
+          "MGT 4452",
+          "MGT 4655",
+          "MGT 4670",
+          "MGT 4725",
+          "MGT 4726",
+          "MGT 4803",
+          "CS 3251",
+          "CS 4235",
+          "VIP 2601",
+          "VIP 3601",
+          "VIP 3602",
+          "VIP 4601",
+          "VIP 4602"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "ACCT 2101"
+        ],
+        "Spring 2027": [
+          "ACCT 2102",
+          "ECON 2105",
+          "ECON 2106",
+          "MGT 2106",
+          "MGT 2210",
+          "MGT 2250",
+          "MGT 2255",
+          "VIP 2601"
+        ],
+        "Fall 2027": [
+          "LMC 3403",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300",
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660"
+        ],
+        "Spring 2028": [
+          "MGT 3659",
+          "MGT 3745",
+          "MGT 3103",
+          "MGT 3310",
+          "MGT 3663",
+          "MGT 3743",
+          "MGT 3744",
+          "CS 3251"
+        ],
+        "Fall 2028": [
+          "VIP 3601",
+          "VIP 3602",
+          "MGT 4052",
+          "MGT 4058",
+          "MGT 4450",
+          "MGT 4041",
+          "MGT 4050",
+          "MGT 4056"
+        ],
+        "Spring 2029": [
+          "MGT 4057",
+          "MGT 4102",
+          "MGT 4119",
+          "MGT 4193",
+          "MGT 4311",
+          "MGT 4341",
+          "MGT 4360",
+          "MGT 4366"
+        ],
+        "Fall 2029": [
+          "MGT 4452",
+          "MGT 4655",
+          "MGT 4670",
+          "MGT 4725",
+          "MGT 4726",
+          "MGT 4803",
+          "CS 4235",
+          "VIP 4601"
+        ],
+        "Spring 2030": [
+          "VIP 4602"
+        ]
+      }
+    },
+    "business_administration_leadership_organizational_change": {
+      "name": "Business Administration - Leadership and Organizational Change",
+      "url": "https://catalog.gatech.edu/programs/business-administration-leadership-organizational-change-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551"
+        ],
+        "Field of Study": [
+          "ACCT 2101",
+          "ACCT 2102",
+          "ECON 2105",
+          "ECON 2106",
+          "MGT 2106",
+          "MGT 2210"
+        ],
+        "Major Requirements": [
+          "MGT 2250",
+          "MGT 2255",
+          "LMC 3403",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300",
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659"
+        ],
+        "Leadership and Organizational Change Concentration": [
+          "MGT 3103",
+          "MGT 3118",
+          "MGT 3607",
+          "MGT 4102",
+          "MGT 4117",
+          "MGT 4119",
+          "MGT 4182",
+          "MGT 3744",
+          "MGT 4116",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4670"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Spring 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "ACCT 2101",
+          "ACCT 2102",
+          "ECON 2105"
+        ],
+        "Fall 2027": [
+          "ECON 2106",
+          "MGT 2106",
+          "MGT 2210",
+          "MGT 2250",
+          "MGT 2255"
+        ],
+        "Spring 2028": [
+          "LMC 3403",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300"
+        ],
+        "Fall 2028": [
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659",
+          "MGT 3103"
+        ],
+        "Spring 2029": [
+          "MGT 3118",
+          "MGT 3607",
+          "MGT 3744",
+          "MGT 4102",
+          "MGT 4117"
+        ],
+        "Fall 2029": [
+          "MGT 4119",
+          "MGT 4182",
+          "MGT 4116",
+          "MGT 4192",
+          "MGT 4193"
+        ],
+        "Spring 2030": [
+          "MGT 4194",
+          "MGT 4670"
+        ]
+      }
+    },
+    "business_administration_marketing": {
+      "name": "Business Administration - Marketing",
+      "url": "https://catalog.gatech.edu/programs/business-administration-marketing-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551"
+        ],
+        "Field of Study": [
+          "ACCT 2101",
+          "ACCT 2102",
+          "ECON 2105",
+          "ECON 2106",
+          "MGT 2106",
+          "MGT 2210"
+        ],
+        "Major Requirements": [
+          "LMC 3403",
+          "MGT 2250",
+          "MGT 2255",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300",
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659"
+        ],
+        "Marketing Concentration": [
+          "MGT 3310",
+          "MGT 4311",
+          "MGT 4312",
+          "MGT 4345",
+          "MGT 3312",
+          "MGT 3313",
+          "MGT 3325",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4308",
+          "MGT 4309",
+          "MGT 4314",
+          "MGT 4331",
+          "MGT 4332",
+          "MGT 4335",
+          "MGT 4803",
+          "MGT 3744",
+          "MGT 4050",
+          "MGT 4367"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552"
+        ],
+        "Spring 2027": [
+          "HIST 2111",
+          "ACCT 2101",
+          "ACCT 2102",
+          "ECON 2105",
+          "ECON 2106",
+          "MGT 2106"
+        ],
+        "Fall 2027": [
+          "MGT 2210",
+          "MGT 2250",
+          "MGT 2255",
+          "LMC 3403",
+          "MGT 3062",
+          "MGT 3101"
+        ],
+        "Spring 2028": [
+          "MGT 3102",
+          "MGT 3300",
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659"
+        ],
+        "Fall 2028": [
+          "MGT 3310",
+          "MGT 3312",
+          "MGT 3313",
+          "MGT 3325",
+          "MGT 3744",
+          "MGT 4311"
+        ],
+        "Spring 2029": [
+          "MGT 4312",
+          "MGT 4345",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4308",
+          "MGT 4309"
+        ],
+        "Fall 2029": [
+          "MGT 4314",
+          "MGT 4331",
+          "MGT 4332",
+          "MGT 4335",
+          "MGT 4803",
+          "MGT 4050"
+        ],
+        "Spring 2030": [
+          "MGT 4367"
+        ]
+      }
+    },
+    "business_administration_operations_supply_chain_management": {
+      "name": "Business Administration - Operations and Supply Chain Management",
+      "url": "https://catalog.gatech.edu/programs/business-administration-operations-supply-chain-management-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551"
+        ],
+        "Field of Study": [
+          "ACCT 2101",
+          "ACCT 2102",
+          "ECON 2105",
+          "ECON 2106",
+          "MGT 2106",
+          "MGT 2210"
+        ],
+        "Major Requirements": [
+          "LMC 3403",
+          "MGT 2250",
+          "MGT 2255",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300",
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659"
+        ],
+        "Operations and Supply Chain Management Concentration": [
+          "MGT 3510",
+          "MGT 3744",
+          "MGT 4352",
+          "MGT 4353",
+          "MGT 4360",
+          "MGT 4366",
+          "MGT 4401",
+          "MGT 3743",
+          "MGT 4056",
+          "MGT 4057",
+          "MGT 4193",
+          "MGT 4309",
+          "MGT 4670",
+          "MGT 4803"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Spring 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "ACCT 2101",
+          "ACCT 2102",
+          "ECON 2105"
+        ],
+        "Fall 2027": [
+          "ECON 2106",
+          "MGT 2106",
+          "MGT 2210",
+          "MGT 2250",
+          "MGT 2255"
+        ],
+        "Spring 2028": [
+          "LMC 3403",
+          "MGT 3062",
+          "MGT 3101",
+          "MGT 3102",
+          "MGT 3300"
+        ],
+        "Fall 2028": [
+          "MGT 3501",
+          "MGT 3599",
+          "MGT 3660",
+          "MGT 3659",
+          "MGT 3510"
+        ],
+        "Spring 2029": [
+          "MGT 3744",
+          "MGT 3743",
+          "MGT 4352",
+          "MGT 4353",
+          "MGT 4360"
+        ],
+        "Fall 2029": [
+          "MGT 4366",
+          "MGT 4401",
+          "MGT 4056",
+          "MGT 4057",
+          "MGT 4193"
+        ],
+        "Spring 2030": [
+          "MGT 4309",
+          "MGT 4670",
+          "MGT 4803"
+        ]
+      }
+    },
+    "chemical_biomolecular_biotechnology_option": {
+      "name": "Chemical and Biomolecular Engineering - Biotechnology Option",
+      "url": "https://catalog.gatech.edu/programs/chemical-biomolecular-biotechnology-option-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "BIOS 1107",
+          "CHEM 1211K",
+          "CHEM 2380",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHBE 2100",
+          "CHBE 2140",
+          "CHBE 3205",
+          "CHBE 3215",
+          "CHBE 3225",
+          "CHBE 3300",
+          "CHBE 4210",
+          "CHBE 4310",
+          "CHBE 4320",
+          "CHBE 4411",
+          "CHBE 4412",
+          "CHBE 4510",
+          "CHBE 4515",
+          "CHBE 4520"
+        ],
+        "Other Engineering and Science Requirements": [
+          "BIOS 3450",
+          "CHEM 1212K",
+          "CHEM 2311",
+          "CHEM 2312",
+          "CHEM 3521",
+          "CHEM 3522",
+          "MSE 2001"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "BIOS 1107",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CHEM 1211K",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "CHEM 2380",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "CHBE 2100",
+          "CHBE 2140",
+          "CHEM 2311",
+          "CHEM 2312",
+          "MSE 2001"
+        ],
+        "Fall 2028": [
+          "CHEM 1212K",
+          "CHBE 3205",
+          "CHBE 3215",
+          "CHBE 3225",
+          "CHBE 3300"
+        ],
+        "Spring 2029": [
+          "BIOS 3450",
+          "CHEM 3521",
+          "CHEM 3522",
+          "CHBE 4210",
+          "CHBE 4310"
+        ],
+        "Fall 2029": [
+          "CHBE 4320",
+          "CHBE 4411",
+          "CHBE 4412",
+          "CHBE 4510",
+          "CHBE 4515"
+        ],
+        "Spring 2030": [
+          "CHBE 4520"
+        ]
+      }
+    },
+    "chemical_biomolecular_standard": {
+      "name": "Chemical and Biomolecular Engineering - Standard Option",
+      "url": "https://catalog.gatech.edu/programs/chemical-biomolecular-standard-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "BIOS 1107",
+          "CHEM 1211K",
+          "CHEM 2380",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHBE 2100",
+          "CHBE 2140",
+          "CHBE 3205",
+          "CHBE 3215",
+          "CHBE 3225",
+          "CHBE 3300",
+          "CHBE 4200",
+          "CHBE 4320",
+          "CHBE 4411",
+          "CHBE 4412",
+          "CHBE 4510",
+          "CHBE 4515",
+          "CHBE 4520"
+        ],
+        "Other Engineering and Science Requirements": [
+          "CHEM 1212K",
+          "CHEM 2311",
+          "CHEM 2312",
+          "MSE 2001",
+          "CHEM 3111",
+          "CHEM 3412",
+          "CHEM 3511",
+          "CHEM 3521",
+          "CHEM 3522",
+          "CHEM 4311",
+          "CHEM 4341"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "BIOS 1107",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CHEM 1211K",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "CHEM 2380",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "CHBE 2100",
+          "CHBE 2140",
+          "CHEM 2311",
+          "CHEM 2312",
+          "MSE 2001"
+        ],
+        "Fall 2028": [
+          "CHEM 1212K",
+          "CHBE 3205",
+          "CHBE 3215",
+          "CHBE 3225",
+          "CHBE 3300"
+        ],
+        "Spring 2029": [
+          "CHEM 3111",
+          "CHEM 3412",
+          "CHEM 3511",
+          "CHEM 3521",
+          "CHEM 3522"
+        ],
+        "Fall 2029": [
+          "CHBE 4200",
+          "CHBE 4320",
+          "CHBE 4411",
+          "CHBE 4412",
+          "CHBE 4510"
+        ],
+        "Spring 2030": [
+          "CHBE 4515",
+          "CHBE 4520",
+          "CHEM 4311",
+          "CHEM 4341"
+        ]
+      }
+    },
+    "chemistry": {
+      "name": "Chemistry",
+      "url": "https://catalog.gatech.edu/programs/chemistry-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "General Core": [
+          "CHEM 4698/4699",
+          "LMC 4701",
+          "LMC 4702"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "CHEM 4698/4699"
+        ],
+        "Spring 2027": [
+          "LMC 4701"
+        ],
+        "Fall 2027": [
+          "LMC 4702"
+        ],
+        "Spring 2028": [],
+        "Fall 2028": [],
+        "Spring 2029": [],
+        "Fall 2029": [],
+        "Spring 2030": []
+      }
+    },
+    "chemistry_biochemistry_option": {
+      "name": "Chemistry - Biochemistry Option",
+      "url": "https://catalog.gatech.edu/programs/chemistry-biochemistry-option-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "CHEM 1212K",
+          "CHEM 2380",
+          "MATH 2551",
+          "BIOS 1107"
+        ],
+        "Major Requirements": [
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312",
+          "CHEM 2601",
+          "CHEM 3111",
+          "CHEM 3216",
+          "CHEM 3380",
+          "CHEM 3411",
+          "CHEM 3412",
+          "CHEM 3481"
+        ],
+        "Biochemistry Option": [
+          "CHEM 4511",
+          "CHEM 4512",
+          "CHEM 4581",
+          "CHEM 4601",
+          "CHEM 4521",
+          "CHEM 4582",
+          "CHEM 4765",
+          "BIOS 3380",
+          "BIOS 3450",
+          "BIOS 4340",
+          "BIOS 4418",
+          "BIOS 4401",
+          "BIOS 4464",
+          "BIOS 4570"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "BIOS 1107",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "CHEM 2380",
+          "MATH 2551",
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312"
+        ],
+        "Spring 2028": [
+          "CHEM 2601",
+          "CHEM 1212K",
+          "CHEM 3111",
+          "CHEM 3216",
+          "CHEM 3380"
+        ],
+        "Fall 2028": [
+          "CHEM 3411",
+          "CHEM 3412",
+          "CHEM 3481",
+          "BIOS 3380",
+          "BIOS 3450"
+        ],
+        "Spring 2029": [
+          "CHEM 4511",
+          "CHEM 4512",
+          "CHEM 4581",
+          "CHEM 4601",
+          "CHEM 4521"
+        ],
+        "Fall 2029": [
+          "CHEM 4582",
+          "CHEM 4765",
+          "BIOS 4340",
+          "BIOS 4418",
+          "BIOS 4401"
+        ],
+        "Spring 2030": [
+          "BIOS 4464",
+          "BIOS 4570"
+        ]
+      }
+    },
+    "chemistry_business_option": {
+      "name": "Chemistry - Business Option",
+      "url": "https://catalog.gatech.edu/programs/chemistry-business-option-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "CHEM 1212K",
+          "CHEM 2380",
+          "MATH 2551",
+          "BIOS 1107"
+        ],
+        "Major Requirements": [
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312",
+          "CHEM 2601",
+          "CHEM 3111",
+          "CHEM 3216",
+          "CHEM 3380",
+          "CHEM 3411",
+          "CHEM 3412",
+          "CHEM 3481"
+        ],
+        "Additional Major Required": [
+          "CHEM 4695",
+          "CHEM 4699",
+          "CHEM 3511"
+        ],
+        "Business Option": [
+          "ECON 2106",
+          "ACCT 2101",
+          "MGT 3101",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4029",
+          "MGT 4030",
+          "MGT 4190",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335",
+          "MGT 4610",
+          "MGT 4670"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "BIOS 1107",
+          "ENGL 1102",
+          "MATH 1551"
+        ],
+        "Spring 2027": [
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2212",
+          "CHEM 2380",
+          "MATH 2551"
+        ],
+        "Fall 2027": [
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312",
+          "CHEM 2601",
+          "ECON 2106",
+          "ACCT 2101"
+        ],
+        "Spring 2028": [
+          "CHEM 1212K",
+          "CHEM 3111",
+          "CHEM 3216",
+          "CHEM 3380",
+          "CHEM 3411",
+          "CHEM 3412"
+        ],
+        "Fall 2028": [
+          "CHEM 3481",
+          "CHEM 3511",
+          "MGT 3101",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300"
+        ],
+        "Spring 2029": [
+          "MGT 3660",
+          "CHEM 4695",
+          "CHEM 4699",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4029"
+        ],
+        "Fall 2029": [
+          "MGT 4030",
+          "MGT 4190",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194"
+        ],
+        "Spring 2030": [
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335",
+          "MGT 4610",
+          "MGT 4670"
+        ]
+      }
+    },
+    "chemistry_general": {
+      "name": "Chemistry - General",
+      "url": "https://catalog.gatech.edu/programs/chemistry-general-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "CHEM 1212K",
+          "CHEM 2380",
+          "MATH 2551",
+          "BIOS 1107"
+        ],
+        "Major Requirements": [
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312",
+          "CHEM 2601",
+          "CHEM 3111",
+          "CHEM 3216",
+          "CHEM 3380",
+          "CHEM 3411",
+          "CHEM 3412",
+          "CHEM 3481"
+        ],
+        "Additional Major Requirements": [
+          "CHEM 4695",
+          "CHEM 4699",
+          "CHEM 3511"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "BIOS 1107"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2212",
+          "CHEM 2380",
+          "MATH 2551"
+        ],
+        "Spring 2028": [
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312",
+          "CHEM 2601"
+        ],
+        "Fall 2028": [
+          "CHEM 1212K",
+          "CHEM 3111",
+          "CHEM 3216",
+          "CHEM 3380"
+        ],
+        "Spring 2029": [
+          "CHEM 3411",
+          "CHEM 3412",
+          "CHEM 3481",
+          "CHEM 3511"
+        ],
+        "Fall 2029": [
+          "CHEM 4695",
+          "CHEM 4699"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "chemistry_polymers_materials_option": {
+      "name": "Chemistry - Polymers and Materials Option",
+      "url": "https://catalog.gatech.edu/programs/chemistry-polymers-materials-option-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "CHEM 1212K",
+          "CHEM 2380",
+          "MATH 2551",
+          "BIOS 1107"
+        ],
+        "Major Requirements": [
+          "CHEM 2601",
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312",
+          "CHEM 3111",
+          "CHEM 3216",
+          "CHEM 3380",
+          "CHEM 3411",
+          "CHEM 3412",
+          "CHEM 3481"
+        ],
+        "Additional Major Requirements": [
+          "CHEM 4695",
+          "CHEM 4699",
+          "CHEM 3511"
+        ],
+        "Polymers and Materials Courses": [
+          "MSE 2001",
+          "CHEM/MSE 4775",
+          "MSE 4025",
+          "MSE 4335",
+          "MSE 4751",
+          "MSE 4793",
+          "CHEM/MSE 6750",
+          "CHEM/MSE 6751",
+          "CHEM/MSE 6752",
+          "CHEM/MSE 6757",
+          "MSE 2021",
+          "MSE 3015",
+          "MSE 4010",
+          "MSE 4325",
+          "MSE 4330",
+          "CHEM/MSE/CHBE/ME 4759"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "BIOS 1107",
+          "ENGL 1102",
+          "MATH 1551"
+        ],
+        "Spring 2027": [
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2212",
+          "CHEM 2380",
+          "MATH 2551"
+        ],
+        "Fall 2027": [
+          "CHEM 2601",
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312",
+          "MSE 2001",
+          "MSE 2021"
+        ],
+        "Spring 2028": [
+          "CHEM 1212K",
+          "CHEM/MSE 6750",
+          "CHEM/MSE 6751",
+          "CHEM/MSE 6752",
+          "CHEM/MSE 6757",
+          "CHEM 3111"
+        ],
+        "Fall 2028": [
+          "CHEM 3216",
+          "CHEM 3380",
+          "CHEM 3411",
+          "CHEM 3412",
+          "CHEM 3481",
+          "CHEM 3511"
+        ],
+        "Spring 2029": [
+          "MSE 3015",
+          "CHEM 4695",
+          "CHEM 4699",
+          "CHEM/MSE 4775",
+          "MSE 4025",
+          "MSE 4335"
+        ],
+        "Fall 2029": [
+          "MSE 4751",
+          "MSE 4793",
+          "MSE 4010",
+          "MSE 4325",
+          "MSE 4330",
+          "CHEM/MSE/CHBE/ME 4759"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "chemistry_prehealth_option": {
+      "name": "Chemistry - Pre-Health Option",
+      "url": "https://catalog.gatech.edu/programs/chemistry-prehealth-option-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "CHEM 1212K",
+          "CHEM 2380",
+          "BIOS 1107",
+          "BIOS 1108"
+        ],
+        "Major Requirements": [
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312",
+          "CHEM 2601",
+          "CHEM 3111",
+          "CHEM 3216",
+          "CHEM 3411",
+          "CHEM 3412",
+          "CHEM 3511"
+        ],
+        "Pre-Health Option": [
+          "CHEM 3380",
+          "CHEM 3481",
+          "CHEM 4699",
+          "BIOS 2600",
+          "BIOS 2601",
+          "BIOS 2610",
+          "BIOS 3380",
+          "BIOS 3381",
+          "BIOS 3450",
+          "BIOS 3451",
+          "BIOS 3753",
+          "BIOS 3754",
+          "BIOS 3755",
+          "BIOS 3756",
+          "BIOS 4012",
+          "BIOS 4015",
+          "BIOS 4150/BIOL 6150",
+          "BIOS 4200",
+          "BIOS 4238/APPH 6238",
+          "BIOS 4340",
+          "BIOS 4400",
+          "BIOS 4401",
+          "BIOS 4440",
+          "BIOS 4464",
+          "BIOS 4471",
+          "BIOS 4500",
+          "BIOS 4510/BIOL 8510",
+          "BIOS 4520",
+          "BIOS 4530/BIOL 8530",
+          "BIOS 4560/BIOL 8560",
+          "BIOS 4545",
+          "BIOS 4570",
+          "BIOS 4607/BIOL 6607",
+          "BIOS 4651",
+          "BMED 3100",
+          "BMED 3600",
+          "CHEM 4521",
+          "CHEM 4765"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "BIOS 1107",
+          "BIOS 1108",
+          "BIOS 4238/APPH 6238",
+          "ENGL 1102",
+          "MATH 1551"
+        ],
+        "Spring 2027": [
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2212",
+          "CHEM 2380",
+          "CHEM 2216",
+          "CHEM 2311",
+          "CHEM 2312"
+        ],
+        "Fall 2027": [
+          "CHEM 2601",
+          "BIOS 2600",
+          "BIOS 2601",
+          "BIOS 2610",
+          "CHEM 1212K",
+          "CHEM 3111",
+          "CHEM 3216",
+          "CHEM 3411"
+        ],
+        "Spring 2028": [
+          "CHEM 3412",
+          "CHEM 3511",
+          "CHEM 3380",
+          "CHEM 3481",
+          "BIOS 3380",
+          "BIOS 3381",
+          "BIOS 3450",
+          "BIOS 3451"
+        ],
+        "Fall 2028": [
+          "BIOS 3753",
+          "BIOS 3754",
+          "BIOS 3755",
+          "BIOS 3756",
+          "BMED 3100",
+          "BMED 3600",
+          "CHEM 4699",
+          "BIOS 4012"
+        ],
+        "Spring 2029": [
+          "BIOS 4015",
+          "BIOS 4150/BIOL 6150",
+          "BIOS 4200",
+          "BIOS 4340",
+          "BIOS 4400",
+          "BIOS 4401",
+          "BIOS 4440",
+          "BIOS 4464"
+        ],
+        "Fall 2029": [
+          "BIOS 4471",
+          "BIOS 4500",
+          "BIOS 4510/BIOL 8510",
+          "BIOS 4520",
+          "BIOS 4530/BIOL 8530",
+          "BIOS 4560/BIOL 8560",
+          "BIOS 4545",
+          "BIOS 4570"
+        ],
+        "Spring 2030": [
+          "BIOS 4607/BIOL 6607",
+          "BIOS 4651",
+          "CHEM 4521",
+          "CHEM 4765"
+        ]
+      }
+    },
+    "civil_engineering": {
+      "name": "Civil Engineering",
+      "url": "https://catalog.gatech.edu/programs/civil-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "General Core": [
+          "MATH 1551",
+          "MATH 1552",
+          "MATH 1553",
+          "MATH 2552",
+          "PHYS 2211",
+          "CHEM 1310",
+          "COE 2001"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "MATH 1553"
+        ],
+        "Spring 2027": [
+          "CHEM 1310"
+        ],
+        "Fall 2027": [
+          "MATH 1551"
+        ],
+        "Spring 2028": [
+          "MATH 1552"
+        ],
+        "Fall 2028": [
+          "MATH 2552"
+        ],
+        "Spring 2029": [
+          "PHYS 2211"
+        ],
+        "Fall 2029": [
+          "COE 2001"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "civil_engineering_standard": {
+      "name": "Civil Engineering (Standard)",
+      "url": "https://catalog.gatech.edu/programs/civil-engineering-standard-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "BIOS 1107",
+          "BIOS 1108",
+          "EAS 2600"
+        ],
+        "Major Requirements": [
+          "CEE 1070",
+          "CEE 1090",
+          "CEE 2040",
+          "CEE 2090",
+          "CEE 2300",
+          "CEE 3020",
+          "CEE 3040",
+          "CEE 3090",
+          "CEE 3770",
+          "ISYE 3770",
+          "MATH 3670",
+          "CEE 4090"
+        ],
+        "College of Engineering Requirements": [
+          "COE 3001"
+        ],
+        "CE Breadth Electives": [
+          "CEE 3051",
+          "CEE 4100",
+          "CEE 4200",
+          "CEE 4300",
+          "CEE 3400",
+          "CEE 4600"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "BIOS 1107"
+        ],
+        "Spring 2027": [
+          "BIOS 1108",
+          "CEE 1070",
+          "CEE 1090",
+          "ENGL 1102",
+          "MATH 1551"
+        ],
+        "Fall 2027": [
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Spring 2028": [
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552",
+          "EAS 2600",
+          "CEE 2040"
+        ],
+        "Fall 2028": [
+          "CEE 2090",
+          "CEE 2300",
+          "CEE 3020",
+          "CEE 3040",
+          "CEE 3090"
+        ],
+        "Spring 2029": [
+          "CEE 3770",
+          "ISYE 3770",
+          "MATH 3670",
+          "COE 3001",
+          "CEE 3051"
+        ],
+        "Fall 2029": [
+          "CEE 3400",
+          "CEE 4090",
+          "CEE 4100",
+          "CEE 4200",
+          "CEE 4300"
+        ],
+        "Spring 2030": [
+          "CEE 4600"
+        ]
+      }
+    },
+    "civil_engineering_construction_infrastructure_systems_engineering": {
+      "name": "Civil Engineering - Construction and Infrastructure Systems Engineering",
+      "url": "https://catalog.gatech.edu/programs/civil-engineering-construction-infrastructure-systems-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "BIOS 1107",
+          "BIOS 1108",
+          "EAS 2600"
+        ],
+        "Major Requirements": [
+          "CEE 1070",
+          "CEE 1090",
+          "CEE 2040",
+          "CEE 2090",
+          "CEE 2300",
+          "CEE 3020",
+          "CEE 3040",
+          "CEE 3090",
+          "CEE 3770",
+          "ISYE 3770",
+          "MATH 3670",
+          "CEE 4090"
+        ],
+        "College of Engineering Requirements": [
+          "COE 3001"
+        ],
+        "Construction and Infrastructure Systems Engineering Concentration": [
+          "CEE 4100",
+          "CEE 4050",
+          "CEE 4110",
+          "CEE 4120",
+          "CEE 4130",
+          "CEE 4140",
+          "CEE 4150",
+          "CEE 4160",
+          "CEE 4161",
+          "CEE 4170",
+          "CEE 4180",
+          "CEE 4005",
+          "CEE 4803",
+          "CEE 6125",
+          "CEE 6651",
+          "CEE 6652",
+          "CEE 6185",
+          "CEE 8813"
+        ],
+        "CE Breadth Electives": [
+          "CEE 3051",
+          "CEE 4200",
+          "CEE 4300",
+          "CEE 3400",
+          "CEE 4600"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "BIOS 1107",
+          "BIOS 1108",
+          "CEE 1070"
+        ],
+        "Spring 2027": [
+          "CEE 1090",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "PHYS 2212",
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552",
+          "EAS 2600",
+          "CEE 2040",
+          "CEE 2090"
+        ],
+        "Spring 2028": [
+          "CEE 2300",
+          "CEE 6125",
+          "CEE 6651",
+          "CEE 6652",
+          "CEE 6185",
+          "CEE 8813",
+          "CEE 3020"
+        ],
+        "Fall 2028": [
+          "CEE 3040",
+          "CEE 3090",
+          "CEE 3770",
+          "ISYE 3770",
+          "MATH 3670",
+          "COE 3001",
+          "CEE 3051"
+        ],
+        "Spring 2029": [
+          "CEE 3400",
+          "CEE 4090",
+          "CEE 4100",
+          "CEE 4050",
+          "CEE 4110",
+          "CEE 4120",
+          "CEE 4130"
+        ],
+        "Fall 2029": [
+          "CEE 4140",
+          "CEE 4150",
+          "CEE 4160",
+          "CEE 4161",
+          "CEE 4170",
+          "CEE 4180",
+          "CEE 4005"
+        ],
+        "Spring 2030": [
+          "CEE 4803",
+          "CEE 4200",
+          "CEE 4300",
+          "CEE 4600"
+        ]
+      }
+    },
+    "civil_engineering_geosystems_engineering": {
+      "name": "Civil Engineering - Geosystems Engineering",
+      "url": "https://catalog.gatech.edu/programs/civil-engineering-geosystems-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "BIOS 1107",
+          "BIOS 1108",
+          "EAS 2600"
+        ],
+        "Major Requirements": [
+          "CEE 1070",
+          "CEE 1090",
+          "CEE 2040",
+          "CEE 2090",
+          "CEE 2300",
+          "CEE 3020",
+          "CEE 3040",
+          "CEE 3090",
+          "CEE 3770",
+          "ISYE 3770",
+          "MATH 3670",
+          "CEE 4090"
+        ],
+        "College of Engineering Requirements": [
+          "COE 3001"
+        ],
+        "Geosystems Engineering Concentration": [
+          "CEE 3400",
+          "CEE 4406",
+          "CEE 4420",
+          "CEE 4430",
+          "CEE 4450",
+          "CEE 4460",
+          "CEE 4803",
+          "CEE 3051",
+          "EAS 4610",
+          "CEE 4200",
+          "CEE 4300"
+        ],
+        "CE Breadth Electives": [
+          "CEE 3051",
+          "CEE 4100",
+          "CEE 4200",
+          "CEE 4300",
+          "CEE 4600"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "BIOS 1107",
+          "BIOS 1108"
+        ],
+        "Spring 2027": [
+          "CEE 1070",
+          "CEE 1090",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "EAS 2600",
+          "CEE 2040",
+          "CEE 2090",
+          "CEE 2300",
+          "CEE 3020",
+          "CEE 3040"
+        ],
+        "Fall 2028": [
+          "CEE 3090",
+          "CEE 3770",
+          "ISYE 3770",
+          "MATH 3670",
+          "COE 3001",
+          "CEE 3400"
+        ],
+        "Spring 2029": [
+          "CEE 3051",
+          "CEE 4090",
+          "CEE 4406",
+          "CEE 4420",
+          "CEE 4430",
+          "CEE 4450"
+        ],
+        "Fall 2029": [
+          "CEE 4460",
+          "CEE 4803",
+          "EAS 4610",
+          "CEE 4200",
+          "CEE 4300",
+          "CEE 4100"
+        ],
+        "Spring 2030": [
+          "CEE 4600"
+        ]
+      }
+    },
+    "civil_engineering_transportation_systems_engineering": {
+      "name": "Civil Engineering - Transportation Systems Engineering",
+      "url": "https://catalog.gatech.edu/programs/civil-engineering-transportation-systems-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "BIOS 1107",
+          "BIOS 1108",
+          "EAS 2600"
+        ],
+        "Major Requirements": [
+          "CEE 1070",
+          "CEE 1090",
+          "CEE 2040",
+          "CEE 2090",
+          "CEE 2300",
+          "CEE 3020",
+          "CEE 3040",
+          "CEE 3090",
+          "CEE 3770",
+          "ISYE 3770",
+          "MATH 3670",
+          "CEE 4090"
+        ],
+        "College of Engineering Requirements": [
+          "COE 3001"
+        ],
+        "Transporation Systems Engineering Concentration": [
+          "CEE 4600"
+        ],
+        "Concentration Electives": [
+          "CEE 4161",
+          "CEE 4610",
+          "CEE 4620",
+          "CEE 4650",
+          "CEE 4803",
+          "CEE 4699",
+          "CEE 6603",
+          "CEE 6651",
+          "CEE 6636",
+          "CEE 8813"
+        ],
+        "CE Breadth Electives": [
+          "CEE 3051",
+          "CEE 4100",
+          "CEE 4200",
+          "CEE 4300",
+          "CEE 3400"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "BIOS 1107",
+          "BIOS 1108"
+        ],
+        "Spring 2027": [
+          "CEE 1070",
+          "CEE 1090",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "EAS 2600",
+          "CEE 2040",
+          "CEE 2090",
+          "CEE 2300",
+          "CEE 6603",
+          "CEE 6651"
+        ],
+        "Fall 2028": [
+          "CEE 6636",
+          "CEE 8813",
+          "CEE 3020",
+          "CEE 3040",
+          "CEE 3090",
+          "CEE 3770"
+        ],
+        "Spring 2029": [
+          "ISYE 3770",
+          "MATH 3670",
+          "COE 3001",
+          "CEE 3051",
+          "CEE 3400",
+          "CEE 4090"
+        ],
+        "Fall 2029": [
+          "CEE 4600",
+          "CEE 4161",
+          "CEE 4610",
+          "CEE 4620",
+          "CEE 4650",
+          "CEE 4803"
+        ],
+        "Spring 2030": [
+          "CEE 4699",
+          "CEE 4100",
+          "CEE 4200",
+          "CEE 4300"
+        ]
+      }
+    },
+    "civil_engineering_structural_engineering_mechanics_materials": {
+      "name": "Civil Engineering \u2013 Structural Engineering, Mechanics, and Materials",
+      "url": "https://catalog.gatech.edu/programs/civil-engineering-structural-engineering-mechanics-materials-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "BIOS 1107",
+          "BIOS 1108",
+          "EAS 2600"
+        ],
+        "Major Requirements": [
+          "CEE 1070",
+          "CEE 1090",
+          "CEE 2040",
+          "CEE 2090",
+          "CEE 2300",
+          "CEE 3020",
+          "CEE 3040",
+          "CEE 3090",
+          "CEE 3770",
+          "ISYE 3770",
+          "MATH 3670",
+          "CEE 4090"
+        ],
+        "College of Engineering Requirements": [
+          "COE 3001"
+        ],
+        "Structural Engineering, Mechanics, and Materials Concentration": [
+          "CEE 3051",
+          "CEE 3055",
+          "CEE 4510",
+          "CEE 4520",
+          "CEE 4530",
+          "CEE 4406",
+          "CEE 4540",
+          "CEE 4550",
+          "CEE 4551",
+          "CEE 4552",
+          "CEE 4560",
+          "CEE 4791",
+          "CEE 4793"
+        ],
+        "CE Breadth Electives": [
+          "CEE 4100",
+          "CEE 4200",
+          "CEE 4300",
+          "CEE 3400",
+          "CEE 4600"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "BIOS 1107",
+          "BIOS 1108"
+        ],
+        "Spring 2027": [
+          "CEE 1070",
+          "CEE 1090",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "EAS 2600",
+          "CEE 2040",
+          "CEE 2090",
+          "CEE 2300",
+          "CEE 3020",
+          "CEE 3040"
+        ],
+        "Fall 2028": [
+          "CEE 3090",
+          "CEE 3770",
+          "ISYE 3770",
+          "MATH 3670",
+          "COE 3001",
+          "CEE 3051"
+        ],
+        "Spring 2029": [
+          "CEE 3055",
+          "CEE 3400",
+          "CEE 4090",
+          "CEE 4510",
+          "CEE 4520",
+          "CEE 4530"
+        ],
+        "Fall 2029": [
+          "CEE 4406",
+          "CEE 4540",
+          "CEE 4550",
+          "CEE 4551",
+          "CEE 4552",
+          "CEE 4560"
+        ],
+        "Spring 2030": [
+          "CEE 4791",
+          "CEE 4793",
+          "CEE 4100",
+          "CEE 4200",
+          "CEE 4300",
+          "CEE 4600"
+        ]
+      }
+    },
+    "civil_engineering_water_resources_engineering": {
+      "name": "Civil Engineering \u2013 Water Resources Engineering",
+      "url": "https://catalog.gatech.edu/programs/civil-engineering-water-resources-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "BIOS 1107",
+          "BIOS 1108",
+          "EAS 2600"
+        ],
+        "Major Requirements": [
+          "CEE 1070",
+          "CEE 1090",
+          "CEE 2040",
+          "CEE 2090",
+          "CEE 2300",
+          "CEE 3020",
+          "CEE 3040",
+          "CEE 3090",
+          "CEE 3770",
+          "ISYE 3770",
+          "MATH 3670",
+          "CEE 4090"
+        ],
+        "College of Engineering Requirements": [
+          "COE 3001"
+        ],
+        "Water Resources Engineering Concentration": [
+          "CEE 4200",
+          "CEE 4210",
+          "CEE 4211",
+          "CEE 6271",
+          "CEE 8813",
+          "CEE 4699",
+          "CEE 4225",
+          "CEE 6210",
+          "CEE 6215",
+          "CEE 4310",
+          "CEE 4803",
+          "CEE 6251",
+          "CEE 6261",
+          "CEE 6281"
+        ],
+        "CE Breadth Electives": [
+          "CEE 3051",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 3400",
+          "CEE 4600"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "BIOS 1107",
+          "BIOS 1108",
+          "CEE 1070"
+        ],
+        "Spring 2027": [
+          "CEE 1090",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "PHYS 2212",
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552",
+          "EAS 2600",
+          "CEE 2040",
+          "CEE 2090"
+        ],
+        "Spring 2028": [
+          "CEE 2300",
+          "CEE 6271",
+          "CEE 8813",
+          "CEE 6210",
+          "CEE 6215",
+          "CEE 6251",
+          "CEE 6261"
+        ],
+        "Fall 2028": [
+          "CEE 6281",
+          "CEE 3020",
+          "CEE 3040",
+          "CEE 3090",
+          "CEE 3770",
+          "ISYE 3770",
+          "MATH 3670"
+        ],
+        "Spring 2029": [
+          "COE 3001",
+          "CEE 3051",
+          "CEE 3400",
+          "CEE 4090",
+          "CEE 4200",
+          "CEE 4210",
+          "CEE 4211"
+        ],
+        "Fall 2029": [
+          "CEE 4699",
+          "CEE 4225",
+          "CEE 4310",
+          "CEE 4803",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "computational_media_artificial_intelligence_games": {
+      "name": "Computational Media - Artificial Intelligence - Games",
+      "url": "https://catalog.gatech.edu/programs/computational-media-artificial-intelligence-games-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2110",
+          "CS 4001"
+        ],
+        "Artificial Intelligence Requirements": [
+          "CS 3510",
+          "CS 3600",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 4476",
+          "CS 4510",
+          "CS 4635",
+          "CS 4641",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731"
+        ],
+        "Games Requirements": [
+          "LMC 2410",
+          "LMC 4710",
+          "LMC 2730",
+          "LMC 3710",
+          "LMC 4720",
+          "LMC 4725",
+          "LMC 4730",
+          "LMC 4731",
+          "LMC 2400",
+          "LMC 2500",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 3406",
+          "LMC 3402"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "CS 2050",
+          "CS 2340"
+        ],
+        "Fall 2027": [
+          "LMC 2700",
+          "MATH 2550",
+          "CS 2110",
+          "LMC 2410",
+          "LMC 2730",
+          "LMC 2400"
+        ],
+        "Spring 2028": [
+          "LMC 2500",
+          "CS 3510",
+          "CS 3600",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040"
+        ],
+        "Fall 2028": [
+          "LMC 3710",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 3406",
+          "LMC 3402",
+          "CS 4001"
+        ],
+        "Spring 2029": [
+          "CS 4476",
+          "CS 4510",
+          "CS 4635",
+          "CS 4641",
+          "CS 4649",
+          "CS 4650"
+        ],
+        "Fall 2029": [
+          "CS 4731",
+          "LMC 4710",
+          "LMC 4720",
+          "LMC 4725",
+          "LMC 4730",
+          "LMC 4731"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "computational_media_artificial_intelligence_film_media_studies": {
+      "name": "Computational Media - Artificial Intelligence-Film & Media Studies",
+      "url": "https://catalog.gatech.edu/programs/computational-media-artificial-intelligence-film-media-studies-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550"
+        ],
+        "Major Requirement": [
+          "CS 2110",
+          "CS 4001"
+        ],
+        "Artificial Intelligence Requirements": [
+          "CS 3510",
+          "CS 3600",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 4476",
+          "CS 4510",
+          "CS 4635",
+          "CS 4641",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731"
+        ],
+        "Film &amp; Media Studies Requirements": [
+          "LMC 2400",
+          "LMC 4813",
+          "LMC 4720",
+          "LMC 2500",
+          "LMC 2600",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 3352",
+          "LMC 3402",
+          "LMC 3406"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550",
+          "CS 2110"
+        ],
+        "Spring 2028": [
+          "LMC 2400",
+          "LMC 2500",
+          "LMC 2600",
+          "CS 3510",
+          "CS 3600"
+        ],
+        "Fall 2028": [
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "LMC 3206",
+          "LMC 3314"
+        ],
+        "Spring 2029": [
+          "LMC 3352",
+          "LMC 3402",
+          "LMC 3406",
+          "CS 4001",
+          "CS 4476"
+        ],
+        "Fall 2029": [
+          "CS 4510",
+          "CS 4635",
+          "CS 4641",
+          "CS 4649",
+          "CS 4650"
+        ],
+        "Spring 2030": [
+          "CS 4731",
+          "LMC 4813",
+          "LMC 4720"
+        ]
+      }
+    },
+    "computational_media_artificial_intelligence_interaction_design": {
+      "name": "Computational Media - Artificial Intelligence-Interaction Design",
+      "url": "https://catalog.gatech.edu/programs/computational-media-artificial-intelligence-interaction-design-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550"
+        ],
+        "Major Requirement": [
+          "CS 2110",
+          "CS 4001"
+        ],
+        "Artificial Intelligence Requirements": [
+          "CS 3510",
+          "CS 3600",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 4476",
+          "CS 4510",
+          "CS 4635",
+          "CS 4641",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731"
+        ],
+        "Interaction Design Requirements": [
+          "LMC 3710",
+          "LMC 4813",
+          "LMC 2720",
+          "LMC 3705",
+          "LMC 4730",
+          "LMC 2730",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 2400",
+          "LMC 2500",
+          "LMC 3406",
+          "LMC 3402"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550",
+          "CS 2110"
+        ],
+        "Spring 2028": [
+          "LMC 2720",
+          "LMC 2730",
+          "LMC 2400",
+          "LMC 2500",
+          "CS 3510"
+        ],
+        "Fall 2028": [
+          "CS 3600",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "LMC 3710"
+        ],
+        "Spring 2029": [
+          "LMC 3705",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 3406",
+          "LMC 3402"
+        ],
+        "Fall 2029": [
+          "CS 4001",
+          "CS 4476",
+          "CS 4510",
+          "CS 4635",
+          "CS 4641"
+        ],
+        "Spring 2030": [
+          "CS 4649",
+          "CS 4650",
+          "CS 4731",
+          "LMC 4813",
+          "LMC 4730"
+        ]
+      }
+    },
+    "computational_media_media_film_media_studies": {
+      "name": "Computational Media - Media-Film & Media Studies",
+      "url": "https://catalog.gatech.edu/programs/computational-media-media-film-media-studies-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550"
+        ],
+        "Major Requirement": [
+          "CS 2261",
+          "CS 4001"
+        ],
+        "Media Requirements": [
+          "CS 3451",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590"
+        ],
+        "Film &amp; Media Studies Requirements": [
+          "LMC 2400",
+          "LMC 4813",
+          "LMC 4720",
+          "LMC 2500",
+          "LMC 2600",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 3352",
+          "LMC 3402",
+          "LMC 3406"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550",
+          "CS 2261"
+        ],
+        "Spring 2028": [
+          "LMC 2400",
+          "LMC 2500",
+          "LMC 2600",
+          "CS 3451",
+          "LMC 3206"
+        ],
+        "Fall 2028": [
+          "LMC 3314",
+          "LMC 3352",
+          "LMC 3402",
+          "LMC 3406",
+          "CS 4001"
+        ],
+        "Spring 2029": [
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488"
+        ],
+        "Fall 2029": [
+          "CS 4496",
+          "CS 4590",
+          "LMC 4813",
+          "LMC 4720"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "computational_media_media_games": {
+      "name": "Computational Media - Media-Games",
+      "url": "https://catalog.gatech.edu/programs/computational-media-media-games-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550"
+        ],
+        "Major Requirement": [
+          "CS 2261",
+          "CS 4001"
+        ],
+        "Media Requirements": [
+          "CS 3451",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590"
+        ],
+        "Games Requirements": [
+          "LMC 2410",
+          "LMC 4710",
+          "CS 3600",
+          "LMC 2730",
+          "LMC 3710",
+          "LMC 4720",
+          "LMC 4725",
+          "LMC 4730",
+          "LMC 4731",
+          "LMC 2400",
+          "LMC 2500",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 3406",
+          "LMC 3402"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550",
+          "CS 2261"
+        ],
+        "Spring 2028": [
+          "LMC 2410",
+          "LMC 2730",
+          "LMC 2400",
+          "LMC 2500",
+          "CS 3451"
+        ],
+        "Fall 2028": [
+          "CS 3600",
+          "LMC 3710",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 3406"
+        ],
+        "Spring 2029": [
+          "LMC 3402",
+          "CS 4001",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464"
+        ],
+        "Fall 2029": [
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590",
+          "LMC 4710"
+        ],
+        "Spring 2030": [
+          "LMC 4720",
+          "LMC 4725",
+          "LMC 4730",
+          "LMC 4731"
+        ]
+      }
+    },
+    "computational_media_media_interaction_design": {
+      "name": "Computational Media - Media-Interaction Design",
+      "url": "https://catalog.gatech.edu/programs/computational-media-media-interaction-design-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550"
+        ],
+        "Major Requirement": [
+          "CS 2261",
+          "CS 4001"
+        ],
+        "Media Requirements": [
+          "CS 3451",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590"
+        ],
+        "Interaction Design Requirements": [
+          "LMC 3710",
+          "LMC 4813",
+          "LMC 2720",
+          "LMC 3705",
+          "LMC 4730",
+          "LMC 2730",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 2400",
+          "LMC 2500",
+          "LMC 3406",
+          "LMC 3402"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550",
+          "CS 2261"
+        ],
+        "Spring 2028": [
+          "LMC 2720",
+          "LMC 2730",
+          "LMC 2400",
+          "LMC 2500",
+          "CS 3451"
+        ],
+        "Fall 2028": [
+          "LMC 3710",
+          "LMC 3705",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 3406"
+        ],
+        "Spring 2029": [
+          "LMC 3402",
+          "CS 4001",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464"
+        ],
+        "Fall 2029": [
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590",
+          "LMC 4813"
+        ],
+        "Spring 2030": [
+          "LMC 4730"
+        ]
+      }
+    },
+    "computational_media_music_technology_people": {
+      "name": "Computational Media - Music Technology-People",
+      "url": "https://catalog.gatech.edu/programs/computational-media-music-technology-people-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550"
+        ],
+        "Major Requirement": [
+          "CS 2261",
+          "CS 4001"
+        ],
+        "People Requirements": [
+          "PSYC 2012",
+          "CS 3750",
+          "PSYC 2210",
+          "PSYC 2760",
+          "PSYC 3040",
+          "CS 3790",
+          "CS 4660",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605",
+          "CS 4745"
+        ],
+        "Music Technology Requirements": [
+          "MUSI 2010",
+          "MUSI 2011",
+          "MUSI 2525",
+          "MUSI 2526",
+          "MUSI 3770",
+          "MUSI 4450",
+          "MUSI 4456",
+          "MUSI 4457",
+          "MUSI 4458",
+          "MUSI 4459",
+          "MUSI 4630",
+          "MUSI 4670",
+          "MUSI 4677"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550",
+          "CS 2261"
+        ],
+        "Spring 2028": [
+          "PSYC 2012",
+          "PSYC 2210",
+          "PSYC 2760",
+          "MUSI 2010",
+          "MUSI 2011"
+        ],
+        "Fall 2028": [
+          "MUSI 2525",
+          "MUSI 2526",
+          "CS 3750",
+          "PSYC 3040",
+          "CS 3790"
+        ],
+        "Spring 2029": [
+          "MUSI 3770",
+          "CS 4001",
+          "CS 4660",
+          "CS 4470",
+          "CS 4472"
+        ],
+        "Fall 2029": [
+          "CS 4605",
+          "CS 4745",
+          "MUSI 4450",
+          "MUSI 4456",
+          "MUSI 4457"
+        ],
+        "Spring 2030": [
+          "MUSI 4458",
+          "MUSI 4459",
+          "MUSI 4630",
+          "MUSI 4670",
+          "MUSI 4677"
+        ]
+      }
+    },
+    "computational_media_people_film_media_studies": {
+      "name": "Computational Media - People-Film & Media Studies",
+      "url": "https://catalog.gatech.edu/programs/computational-media-people-film-media-studies-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550"
+        ],
+        "Major Requirement": [
+          "CS 2261",
+          "CS 4001"
+        ],
+        "People Requirements": [
+          "PSYC 2012",
+          "CS 3750",
+          "PSYC 2210",
+          "PSYC 2760",
+          "PSYC 3040",
+          "CS 3790",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605",
+          "CS 4660",
+          "CS 4745"
+        ],
+        "Film &amp; Media Studies Requirements": [
+          "LMC 2400",
+          "LMC 4813",
+          "LMC 4720",
+          "LMC 2500",
+          "LMC 2600",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 3352",
+          "LMC 3402",
+          "LMC 3406"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550",
+          "CS 2261"
+        ],
+        "Spring 2028": [
+          "PSYC 2012",
+          "PSYC 2210",
+          "PSYC 2760",
+          "LMC 2400",
+          "LMC 2500"
+        ],
+        "Fall 2028": [
+          "LMC 2600",
+          "CS 3750",
+          "PSYC 3040",
+          "CS 3790",
+          "LMC 3206"
+        ],
+        "Spring 2029": [
+          "LMC 3314",
+          "LMC 3352",
+          "LMC 3402",
+          "LMC 3406",
+          "CS 4001"
+        ],
+        "Fall 2029": [
+          "CS 4460",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605",
+          "CS 4660"
+        ],
+        "Spring 2030": [
+          "CS 4745",
+          "LMC 4813",
+          "LMC 4720"
+        ]
+      }
+    },
+    "computational_media_people_games": {
+      "name": "Computational Media - People-Games",
+      "url": "https://catalog.gatech.edu/programs/computational-media-people-games-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550"
+        ],
+        "Major Requirement": [
+          "CS 2261",
+          "CS 4001"
+        ],
+        "People Requirements": [
+          "PSYC 2012",
+          "CS 3750",
+          "PSYC 2210",
+          "PSYC 2760",
+          "PSYC 3040",
+          "CS 3790",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605",
+          "CS 4660",
+          "CS 4745"
+        ],
+        "Games Requirements": [
+          "LMC 2410",
+          "LMC 4710",
+          "CS 3600",
+          "LMC 2730",
+          "LMC 3710",
+          "LMC 4720",
+          "LMC 4725",
+          "LMC 4730",
+          "LMC 4731",
+          "LMC 2400",
+          "LMC 2500",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 3406",
+          "LMC 3402"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "CS 2050",
+          "CS 2340"
+        ],
+        "Fall 2027": [
+          "LMC 2700",
+          "MATH 2550",
+          "CS 2261",
+          "PSYC 2012",
+          "PSYC 2210",
+          "PSYC 2760"
+        ],
+        "Spring 2028": [
+          "LMC 2410",
+          "LMC 2730",
+          "LMC 2400",
+          "LMC 2500",
+          "CS 3750",
+          "PSYC 3040"
+        ],
+        "Fall 2028": [
+          "CS 3790",
+          "CS 3600",
+          "LMC 3710",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 3406"
+        ],
+        "Spring 2029": [
+          "LMC 3402",
+          "CS 4001",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605"
+        ],
+        "Fall 2029": [
+          "CS 4660",
+          "CS 4745",
+          "LMC 4710",
+          "LMC 4720",
+          "LMC 4725",
+          "LMC 4730"
+        ],
+        "Spring 2030": [
+          "LMC 4731"
+        ]
+      }
+    },
+    "computational_media_people_interaction_design": {
+      "name": "Computational Media - People-Interaction Design",
+      "url": "https://catalog.gatech.edu/programs/computational-media-people-interaction-design-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550"
+        ],
+        "Major Requirement": [
+          "CS 2261",
+          "CS 4001"
+        ],
+        "People Requirements": [
+          "PSYC 2012",
+          "CS 3750",
+          "PSYC 2210",
+          "PSYC 2760",
+          "PSYC 3040",
+          "CS 3790",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605",
+          "CS 4660",
+          "CS 4745"
+        ],
+        "Interaction Design Requirements": [
+          "LMC 3710",
+          "LMC 4813",
+          "LMC 2720",
+          "LMC 3705",
+          "LMC 4730",
+          "LMC 2730",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 2400",
+          "LMC 2500",
+          "LMC 3406",
+          "LMC 3402"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550",
+          "CS 2261"
+        ],
+        "Spring 2028": [
+          "PSYC 2012",
+          "PSYC 2210",
+          "PSYC 2760",
+          "LMC 2720",
+          "LMC 2730"
+        ],
+        "Fall 2028": [
+          "LMC 2400",
+          "LMC 2500",
+          "CS 3750",
+          "PSYC 3040",
+          "CS 3790"
+        ],
+        "Spring 2029": [
+          "LMC 3710",
+          "LMC 3705",
+          "LMC 3206",
+          "LMC 3314",
+          "LMC 3406"
+        ],
+        "Fall 2029": [
+          "LMC 3402",
+          "CS 4001",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472"
+        ],
+        "Spring 2030": [
+          "CS 4605",
+          "CS 4660",
+          "CS 4745",
+          "LMC 4813",
+          "LMC 4730"
+        ]
+      }
+    },
+    "computational_media_music_technology_artificial_intelligence": {
+      "name": "Computational Media- Music Technology-Artificial Intelligence",
+      "url": "https://catalog.gatech.edu/programs/computational-media-music-technology-artificial-intelligence-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550"
+        ],
+        "CS Artificial Intelligence Requirements": [
+          "CS 2110",
+          "CS 4001",
+          "CS 3510",
+          "CS 3600",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 4476",
+          "CS 4510",
+          "CS 4635",
+          "CS 4641",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731"
+        ],
+        "Music Technology Requirements": [
+          "MUSI 2010",
+          "MUSI 2011",
+          "MUSI 2525",
+          "MUSI 2526",
+          "MUSI 3770",
+          "MUSI 4450",
+          "MUSI 4456",
+          "MUSI 4457",
+          "MUSI 4458",
+          "MUSI 4459",
+          "MUSI 4630",
+          "MUSI 4670",
+          "MUSI 4677"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "CS 2050",
+          "CS 2340"
+        ],
+        "Fall 2027": [
+          "LMC 2700",
+          "MATH 2550",
+          "CS 2110",
+          "MUSI 2010",
+          "MUSI 2011",
+          "MUSI 2525"
+        ],
+        "Spring 2028": [
+          "MUSI 2526",
+          "CS 3510",
+          "CS 3600",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040"
+        ],
+        "Fall 2028": [
+          "MUSI 3770",
+          "CS 4001",
+          "CS 4476",
+          "CS 4510",
+          "CS 4635",
+          "CS 4641"
+        ],
+        "Spring 2029": [
+          "CS 4649",
+          "CS 4650",
+          "CS 4731",
+          "MUSI 4450",
+          "MUSI 4456",
+          "MUSI 4457"
+        ],
+        "Fall 2029": [
+          "MUSI 4458",
+          "MUSI 4459",
+          "MUSI 4630",
+          "MUSI 4670",
+          "MUSI 4677"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "computational_media_music_technology_media": {
+      "name": "Computational Media- Music Technology-Media",
+      "url": "https://catalog.gatech.edu/programs/computational-media-music-technology-media-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550"
+        ],
+        "Media Requirements": [
+          "CS 2261",
+          "CS 4001",
+          "CS 3451",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590"
+        ],
+        "Music Technology Requirements": [
+          "MUSI 2010",
+          "MUSI 2011",
+          "MUSI 2525",
+          "MUSI 2526",
+          "MUSI 3770",
+          "MUSI 4450",
+          "MUSI 4456",
+          "MUSI 4457",
+          "MUSI 4458",
+          "MUSI 4459",
+          "MUSI 4630",
+          "MUSI 4670",
+          "MUSI 4677"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "CS 2340",
+          "LMC 2700",
+          "MATH 2550",
+          "CS 2261"
+        ],
+        "Spring 2028": [
+          "MUSI 2010",
+          "MUSI 2011",
+          "MUSI 2525",
+          "MUSI 2526",
+          "CS 3451"
+        ],
+        "Fall 2028": [
+          "MUSI 3770",
+          "CS 4001",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464"
+        ],
+        "Spring 2029": [
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590",
+          "MUSI 4450"
+        ],
+        "Fall 2029": [
+          "MUSI 4456",
+          "MUSI 4457",
+          "MUSI 4458",
+          "MUSI 4459",
+          "MUSI 4630"
+        ],
+        "Spring 2030": [
+          "MUSI 4670",
+          "MUSI 4677"
+        ]
+      }
+    },
+    "computing_hardware_emerging_architectures_embedded_devices_computer_engineering": {
+      "name": "Computer Engineering - Computing Hardware & Emerging Architectures and Embedded Devices",
+      "url": "https://catalog.gatech.edu/programs/computing-hardware-emerging-architectures-embedded-devices-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Computing Hardware &amp; Emerging Architectures": [
+          "ECE 3150",
+          "ECE 3030",
+          "CS 4220",
+          "ECE 4180",
+          "ECE 4130",
+          "ECE 4420",
+          "ECE 4452",
+          "ECE 4460",
+          "ECE 4100",
+          "ECE 4150"
+        ],
+        "Embedded Devices": [
+          "CS 2340",
+          "CS 3251",
+          "CS 3510",
+          "CS 3651",
+          "ECE 4180",
+          "CS 3630",
+          "CS 4261",
+          "CS 4476",
+          "CS 4605"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "CS 2340",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Fall 2028": [
+          "ECE 3150",
+          "ECE 3030",
+          "CS 3251",
+          "CS 3510",
+          "CS 3651",
+          "CS 3630"
+        ],
+        "Spring 2029": [
+          "CS 4220",
+          "ECE 4180",
+          "ECE 4130",
+          "ECE 4420",
+          "ECE 4452",
+          "ECE 4460"
+        ],
+        "Fall 2029": [
+          "ECE 4100",
+          "ECE 4150",
+          "CS 4261",
+          "CS 4476",
+          "CS 4605"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "computing_hardware_emerging_architectures_information_internetworks_computer_engineering": {
+      "name": "Computer Engineering - Computing Hardware & Emerging Architectures and Information Internetworks",
+      "url": "https://catalog.gatech.edu/programs/computing-hardware-emerging-architectures-information-internetworks-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Computing Hardware &amp; Emerging Architectures": [
+          "ECE 3150",
+          "ECE 3030",
+          "CS 4220",
+          "ECE 4180",
+          "ECE 4130",
+          "ECE 4420",
+          "ECE 4452",
+          "ECE 4460",
+          "ECE 4100",
+          "ECE 4150"
+        ],
+        "Information Internetworks": [
+          "CS 2340",
+          "CS 3510",
+          "CS 3235",
+          "CS 3251",
+          "CS 4400",
+          "CS 4251",
+          "CS 4262",
+          "CS 4261",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "ECE 2020",
+          "CS 2050",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "CS 2340",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Fall 2028": [
+          "ECE 3150",
+          "ECE 3030",
+          "CS 3510",
+          "CS 3235",
+          "CS 3251",
+          "CS 4220"
+        ],
+        "Spring 2029": [
+          "ECE 4180",
+          "ECE 4130",
+          "ECE 4420",
+          "ECE 4452",
+          "ECE 4460",
+          "ECE 4100"
+        ],
+        "Fall 2029": [
+          "ECE 4150",
+          "CS 4400",
+          "CS 4251",
+          "CS 4262",
+          "CS 4261",
+          "CS 4365"
+        ],
+        "Spring 2030": [
+          "CS 4420",
+          "CS 4440",
+          "CS 4675"
+        ]
+      }
+    },
+    "computing_hardware_emerging_architectures_robotics_autonomous_systems_computer_engineering": {
+      "name": "Computer Engineering - Computing Hardware & Emerging Architectures and Robotics & Autonomous Systems",
+      "url": "https://catalog.gatech.edu/programs/computing-hardware-emerging-architectures-robotics-autonomous-systems-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Computing Hardware &amp; Emerging Architectures": [
+          "ECE 3150",
+          "ECE 3030",
+          "CS 4220",
+          "ECE 4180",
+          "ECE 4130",
+          "ECE 4420",
+          "ECE 4452",
+          "ECE 4460",
+          "ECE 4100",
+          "ECE 4150"
+        ],
+        "Robotics &amp; Autonomous Systems": [
+          "ECE 2026",
+          "ECE 3550",
+          "ECE 4550",
+          "ECE 3084",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4580",
+          "ECE 4570"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 2026",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Fall 2028": [
+          "ECE 3150",
+          "ECE 3030",
+          "ECE 3550",
+          "ECE 3084",
+          "CS 4220",
+          "ECE 4180"
+        ],
+        "Spring 2029": [
+          "ECE 4130",
+          "ECE 4420",
+          "ECE 4452",
+          "ECE 4460",
+          "ECE 4100",
+          "ECE 4150"
+        ],
+        "Fall 2029": [
+          "ECE 4550",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4580",
+          "ECE 4570"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "computing_hardware_emerging_architectures_signal_information_processing_computer_engineering": {
+      "name": "Computer Engineering - Computing Hardware & Emerging Architectures and Signal & Information Processing",
+      "url": "https://catalog.gatech.edu/programs/computing-hardware-emerging-architectures-signal-information-processing-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 3005",
+          "ECE 2040",
+          "ECE 3058"
+        ],
+        "Computing Hardware &amp; Emerging Architectures": [
+          "ECE 3150",
+          "ECE 3030",
+          "CS 4220",
+          "ECE 4180",
+          "ECE 4130",
+          "ECE 4420",
+          "ECE 4452",
+          "ECE 4460",
+          "ECE 4100",
+          "ECE 4150"
+        ],
+        "Signal &amp; Information Processing": [
+          "ECE 2026",
+          "ECE 3251",
+          "ECE 4252",
+          "ECE 4270",
+          "ECE 3084",
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 2026",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Fall 2028": [
+          "ECE 3150",
+          "ECE 3030",
+          "ECE 3251",
+          "ECE 3084",
+          "CS 4220",
+          "ECE 4180"
+        ],
+        "Spring 2029": [
+          "ECE 4130",
+          "ECE 4420",
+          "ECE 4452",
+          "ECE 4460",
+          "ECE 4100",
+          "ECE 4150"
+        ],
+        "Fall 2029": [
+          "ECE 4252",
+          "ECE 4270",
+          "ECE 4122",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271"
+        ],
+        "Spring 2030": [
+          "ECE 4783"
+        ]
+      }
+    },
+    "computing_hardware_emerging_architectures_systems_architecture_computer_engineering": {
+      "name": "Computer Engineering - Computing Hardware & Emerging Architectures and Systems & Architecture",
+      "url": "https://catalog.gatech.edu/programs/computing-hardware-emerging-architectures-systems-architecture-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Computing Hardware &amp; Emerging Architectures": [
+          "ECE 3150",
+          "ECE 3030",
+          "CS 4220",
+          "ECE 4180",
+          "ECE 4130",
+          "ECE 4420",
+          "ECE 4452",
+          "ECE 4460",
+          "ECE 4100",
+          "ECE 4150"
+        ],
+        "Systems &amp; Architecture": [
+          "CS 2340",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510",
+          "CS 3300",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "ECE 4100"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Fall 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050"
+        ],
+        "Spring 2028": [
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Fall 2028": [
+          "ECE 2040",
+          "CS 2340",
+          "ECE 3005",
+          "ECE 3058",
+          "ECE 3150"
+        ],
+        "Spring 2029": [
+          "ECE 3030",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510",
+          "CS 3300"
+        ],
+        "Fall 2029": [
+          "CS 4220",
+          "ECE 4180",
+          "ECE 4130",
+          "ECE 4420",
+          "ECE 4452"
+        ],
+        "Spring 2030": [
+          "ECE 4460",
+          "ECE 4100",
+          "ECE 4150",
+          "CS 4240",
+          "CS 4210"
+        ]
+      }
+    },
+    "computing_hardware_emerging_architectures_telecommunications_computer_engineering": {
+      "name": "Computer Engineering - Computing Hardware & Emerging Architectures and Telecommunications",
+      "url": "https://catalog.gatech.edu/programs/computing-hardware-emerging-architectures-telecommunications-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Computing Hardware &amp; Emerging Architectures": [
+          "ECE 3150",
+          "ECE 3030",
+          "CS 4220",
+          "ECE 4180",
+          "ECE 4130",
+          "ECE 4420",
+          "ECE 4452",
+          "ECE 4460",
+          "ECE 4100",
+          "ECE 4150"
+        ],
+        "Telecommunications": [
+          "ECE 2026",
+          "ECE 3600",
+          "CS 3251",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 2026",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Fall 2028": [
+          "ECE 3150",
+          "ECE 3030",
+          "ECE 3600",
+          "CS 3251",
+          "ECE 3084",
+          "CS 4220"
+        ],
+        "Spring 2029": [
+          "ECE 4180",
+          "ECE 4130",
+          "ECE 4420",
+          "ECE 4452",
+          "ECE 4460",
+          "ECE 4100"
+        ],
+        "Fall 2029": [
+          "ECE 4150",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4500"
+        ],
+        "Spring 2030": [
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ]
+      }
+    },
+    "cybersecurity_distributed_system_software_design_computer_engineering": {
+      "name": "Computer Engineering - Cybersecurity and Distributed System & Software Design",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-distributed-system-software-design-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Cybersecurity": [
+          "ECE 4115",
+          "CS 3251",
+          "ECE 3600",
+          "ECE 3170",
+          "ECE 4112",
+          "ECE 4117",
+          "ECE 4147",
+          "ECE 4156"
+        ],
+        "Distributed System &amp; Software Design": [
+          "CS 3251",
+          "ECE 3600",
+          "CS 4220",
+          "ECE 4122",
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605",
+          "CS 3651"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Fall 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050"
+        ],
+        "Spring 2028": [
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Fall 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058",
+          "CS 3251",
+          "ECE 3600"
+        ],
+        "Spring 2029": [
+          "ECE 3170",
+          "CS 3651",
+          "ECE 4115",
+          "ECE 4112",
+          "ECE 4117"
+        ],
+        "Fall 2029": [
+          "ECE 4147",
+          "ECE 4156",
+          "CS 4220",
+          "ECE 4122",
+          "ECE 4795"
+        ],
+        "Spring 2030": [
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605"
+        ]
+      }
+    },
+    "cybersecurity_embedded_devices_computer_engineering": {
+      "name": "Computer Engineering - Cybersecurity and Embedded Devices",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-embedded-devices-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Cybersecurity": [
+          "ECE 4115",
+          "CS 3251",
+          "ECE 3600",
+          "ECE 3170",
+          "ECE 4112",
+          "ECE 4117",
+          "ECE 4147"
+        ],
+        "Embedded Devices": [
+          "CS 2340",
+          "CS 3251",
+          "CS 3510",
+          "CS 3651",
+          "ECE 4180",
+          "CS 3630",
+          "CS 4261",
+          "CS 4476",
+          "CS 4605"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Fall 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050"
+        ],
+        "Spring 2028": [
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Fall 2028": [
+          "ECE 2040",
+          "CS 2340",
+          "ECE 3005",
+          "ECE 3058",
+          "CS 3251"
+        ],
+        "Spring 2029": [
+          "ECE 3600",
+          "ECE 3170",
+          "CS 3510",
+          "CS 3651",
+          "CS 3630"
+        ],
+        "Fall 2029": [
+          "ECE 4115",
+          "ECE 4112",
+          "ECE 4117",
+          "ECE 4147",
+          "ECE 4180"
+        ],
+        "Spring 2030": [
+          "CS 4261",
+          "CS 4476",
+          "CS 4605"
+        ]
+      }
+    },
+    "cybersecurity_information_internetworks_computer_engineering": {
+      "name": "Computer Engineering - Cybersecurity and Information Internetworks",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-information-internetworks-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Cybersecurity": [
+          "ECE 4115",
+          "CS 3251",
+          "ECE 3600",
+          "ECE 3170",
+          "ECE 4112",
+          "ECE 4117",
+          "ECE 4147",
+          "ECE 4156"
+        ],
+        "Information Internetworks": [
+          "CS 2340",
+          "CS 3510",
+          "CS 3251",
+          "CS 3235",
+          "CS 4400",
+          "CS 4262",
+          "CS 4251",
+          "CS 4261",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "CS 2340",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Fall 2028": [
+          "CS 3251",
+          "ECE 3600",
+          "ECE 3170",
+          "CS 3510",
+          "CS 3235",
+          "ECE 4115"
+        ],
+        "Spring 2029": [
+          "ECE 4112",
+          "ECE 4117",
+          "ECE 4147",
+          "ECE 4156",
+          "CS 4400",
+          "CS 4262"
+        ],
+        "Fall 2029": [
+          "CS 4251",
+          "CS 4261",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "cybersecurity_robotics_autonomous_systems_computer_engineering": {
+      "name": "Computer Engineering - Cybersecurity and Robotics & Autonomous Systems",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-robotics-autonomous-systems-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Cybersecurity": [
+          "ECE 4115",
+          "CS 3251",
+          "ECE 3600",
+          "ECE 3170",
+          "ECE 4112",
+          "ECE 4117",
+          "ECE 4147",
+          "ECE 4156"
+        ],
+        "Robotics &amp; Autonomous Systems": [
+          "ECE 2026",
+          "ECE 3550",
+          "ECE 4550",
+          "ECE 3084",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Fall 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050"
+        ],
+        "Spring 2028": [
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Fall 2028": [
+          "ECE 2040",
+          "ECE 2026",
+          "ECE 3005",
+          "ECE 3058",
+          "CS 3251"
+        ],
+        "Spring 2029": [
+          "ECE 3600",
+          "ECE 3170",
+          "ECE 3550",
+          "ECE 3084",
+          "ECE 4115"
+        ],
+        "Fall 2029": [
+          "ECE 4112",
+          "ECE 4117",
+          "ECE 4147",
+          "ECE 4156",
+          "ECE 4550"
+        ],
+        "Spring 2030": [
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580"
+        ]
+      }
+    },
+    "cybersecurity_signal_information_processing_computer_engineering": {
+      "name": "Computer Engineering - Cybersecurity and Signal & Information Processing",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-signal-information-processing-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Cybersecurity": [
+          "ECE 4115",
+          "CS 3251",
+          "ECE 3600",
+          "ECE 3170",
+          "ECE 4112",
+          "ECE 4117",
+          "ECE 4147",
+          "ECE 4156"
+        ],
+        "Signal &amp; Information Processing": [
+          "ECE 2026",
+          "ECE 3251",
+          "ECE 4252",
+          "ECE 4270",
+          "ECE 3084",
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 2026",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Fall 2028": [
+          "CS 3251",
+          "ECE 3600",
+          "ECE 3170",
+          "ECE 3251",
+          "ECE 3084",
+          "ECE 4115"
+        ],
+        "Spring 2029": [
+          "ECE 4112",
+          "ECE 4117",
+          "ECE 4147",
+          "ECE 4156",
+          "ECE 4252",
+          "ECE 4270"
+        ],
+        "Fall 2029": [
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "cybersecurity_systems_architecture_computer_engineering": {
+      "name": "Computer Engineering - Cybersecurity and Systems & Architecture",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-systems-architecture-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 3005",
+          "ECE 2040",
+          "ECE 3058"
+        ],
+        "Cybersecurity": [
+          "ECE 4115",
+          "CS 3251",
+          "ECE 3600",
+          "ECE 3170",
+          "ECE 4112",
+          "ECE 4117",
+          "ECE 4147",
+          "ECE 4156"
+        ],
+        "Systems &amp; Architecture": [
+          "CS 2340",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510",
+          "CS 3300",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "ECE 4100"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Fall 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050"
+        ],
+        "Spring 2028": [
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Fall 2028": [
+          "ECE 2040",
+          "CS 2340",
+          "ECE 3005",
+          "ECE 3058",
+          "CS 3251"
+        ],
+        "Spring 2029": [
+          "ECE 3600",
+          "ECE 3170",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510"
+        ],
+        "Fall 2029": [
+          "CS 3300",
+          "ECE 4115",
+          "ECE 4112",
+          "ECE 4117",
+          "ECE 4147"
+        ],
+        "Spring 2030": [
+          "ECE 4156",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "ECE 4100"
+        ]
+      }
+    },
+    "cybersecurity_telecommunications_computer_engineering": {
+      "name": "Computer Engineering - Cybersecurity and Telecommunications",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-telecommunications-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Cybersecurity": [
+          "ECE 4115",
+          "CS 3251",
+          "ECE 3600",
+          "ECE 3170",
+          "ECE 4112",
+          "ECE 4117",
+          "ECE 4147",
+          "ECE 4156"
+        ],
+        "Telecommunications": [
+          "ECE 2026",
+          "ECE 3600",
+          "CS 3251",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 2026",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Fall 2028": [
+          "CS 3251",
+          "ECE 3600",
+          "ECE 3170",
+          "ECE 3084",
+          "ECE 4115",
+          "ECE 4112"
+        ],
+        "Spring 2029": [
+          "ECE 4117",
+          "ECE 4147",
+          "ECE 4156",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 4350"
+        ],
+        "Fall 2029": [
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "distributed_system_software_design_computing_hardware_emerging_architectures_computer_engineering": {
+      "name": "Computer Engineering - Distributed System & Software Design and Computing Hardware & Emerging Architectures",
+      "url": "https://catalog.gatech.edu/programs/distributed-system-software-design-computing-hardware-emerging-architectures-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Distributed System &amp; Software Design": [
+          "CS 3251",
+          "ECE 3600",
+          "CS 4220",
+          "ECE 4122",
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605",
+          "CS 3651"
+        ],
+        "Computing Hardware &amp; Emerging Architectures": [
+          "ECE 3150",
+          "ECE 3030",
+          "CS 4220",
+          "ECE 4180",
+          "ECE 4130",
+          "ECE 4420",
+          "ECE 4452",
+          "ECE 4460",
+          "ECE 4100",
+          "ECE 4150"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Fall 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050"
+        ],
+        "Spring 2028": [
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Fall 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058",
+          "CS 3251",
+          "ECE 3600"
+        ],
+        "Spring 2029": [
+          "CS 3651",
+          "ECE 3150",
+          "ECE 3030",
+          "CS 4220",
+          "ECE 4122"
+        ],
+        "Fall 2029": [
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605",
+          "ECE 4130"
+        ],
+        "Spring 2030": [
+          "ECE 4420",
+          "ECE 4452",
+          "ECE 4460",
+          "ECE 4100"
+        ]
+      }
+    },
+    "distributed_system_software_design_embedded_devices_computer_engineering": {
+      "name": "Computer Engineering - Distributed System & Software Design and Embedded Devices",
+      "url": "https://catalog.gatech.edu/programs/distributed-system-software-design-embedded-devices-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Distributed System &amp; Software Design": [
+          "CS 3251",
+          "ECE 3600",
+          "CS 4220",
+          "ECE 4122",
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605",
+          "CS 3651"
+        ],
+        "Embedded Devices": [
+          "CS 2340",
+          "CS 3251",
+          "CS 3510",
+          "CS 3651",
+          "ECE 4180",
+          "CS 3630",
+          "CS 4261",
+          "CS 4476",
+          "CS 4605"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Fall 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050"
+        ],
+        "Spring 2028": [
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Fall 2028": [
+          "ECE 2040",
+          "CS 2340",
+          "ECE 3005",
+          "ECE 3058",
+          "CS 3251"
+        ],
+        "Spring 2029": [
+          "ECE 3600",
+          "CS 3651",
+          "CS 3510",
+          "CS 3630",
+          "CS 4220"
+        ],
+        "Fall 2029": [
+          "ECE 4122",
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605"
+        ],
+        "Spring 2030": [
+          "CS 4261",
+          "CS 4476"
+        ]
+      }
+    },
+    "distributed_system_software_design_information_internetworks_computer_engineering": {
+      "name": "Computer Engineering - Distributed System & Software Design and Information Internetworks",
+      "url": "https://catalog.gatech.edu/programs/distributed-system-software-design-information-internetworks-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Distributed System &amp; Software Design": [
+          "CS 3251",
+          "ECE 3600",
+          "CS 4220",
+          "ECE 4122",
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605",
+          "CS 3651"
+        ],
+        "Information Internetworks": [
+          "CS 2340",
+          "CS 3510",
+          "CS 3251",
+          "CS 4400",
+          "CS 3235",
+          "CS 4262",
+          "CS 4251",
+          "CS 4261",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "CS 2340",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Fall 2028": [
+          "CS 3251",
+          "ECE 3600",
+          "CS 3651",
+          "CS 3510",
+          "CS 3235",
+          "CS 4220"
+        ],
+        "Spring 2029": [
+          "ECE 4122",
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605",
+          "CS 4400"
+        ],
+        "Fall 2029": [
+          "CS 4262",
+          "CS 4251",
+          "CS 4261",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440"
+        ],
+        "Spring 2030": [
+          "CS 4675"
+        ]
+      }
+    },
+    "distributed_system_software_design_robotics_autonomous_systems_computer_engineering": {
+      "name": "Computer Engineering - Distributed System & Software Design and Robotics & Autonomous Systems",
+      "url": "https://catalog.gatech.edu/programs/distributed-system-software-design-robotics-autonomous-systems-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Distributed System &amp; Software Design": [
+          "CS 3251",
+          "ECE 3600",
+          "CS 4220",
+          "ECE 4122",
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605",
+          "CS 3651"
+        ],
+        "Robotics &amp; Autonomous Systems": [
+          "ECE 2026",
+          "ECE 3550",
+          "ECE 4550",
+          "ECE 3084",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Fall 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050"
+        ],
+        "Spring 2028": [
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Fall 2028": [
+          "ECE 2040",
+          "ECE 2026",
+          "ECE 3005",
+          "ECE 3058",
+          "CS 3251"
+        ],
+        "Spring 2029": [
+          "ECE 3600",
+          "CS 3651",
+          "ECE 3550",
+          "ECE 3084",
+          "CS 4220"
+        ],
+        "Fall 2029": [
+          "ECE 4122",
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605"
+        ],
+        "Spring 2030": [
+          "ECE 4550",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580"
+        ]
+      }
+    },
+    "distributed_system_software_design_signal_information_processing_computer_engineering": {
+      "name": "Computer Engineering - Distributed System & Software Design and Signal & Information Processing",
+      "url": "https://catalog.gatech.edu/programs/distributed-system-software-design-signal-information-processing-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 3005",
+          "ECE 2040",
+          "ECE 3058"
+        ],
+        "Distributed System &amp; Software Design": [
+          "CS 3251",
+          "ECE 3600",
+          "CS 4220",
+          "ECE 4122",
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605",
+          "CS 3651"
+        ],
+        "Signal &amp; Information Processing": [
+          "ECE 2026",
+          "ECE 3251",
+          "ECE 4252",
+          "ECE 4270",
+          "ECE 3084",
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 2026",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Fall 2028": [
+          "CS 3251",
+          "ECE 3600",
+          "CS 3651",
+          "ECE 3251",
+          "ECE 3084",
+          "CS 4220"
+        ],
+        "Spring 2029": [
+          "ECE 4122",
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605",
+          "ECE 4252"
+        ],
+        "Fall 2029": [
+          "ECE 4270",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "distributed_system_software_design_systems_architecture_computer_engineering": {
+      "name": "Computer Engineering - Distributed System & Software Design and Systems & Architecture",
+      "url": "https://catalog.gatech.edu/programs/distributed-system-software-design-systems-architecture-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Distributed System &amp; Software Design": [
+          "CS 3251",
+          "ECE 3600",
+          "CS 4220",
+          "ECE 4122",
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605",
+          "CS 3651"
+        ],
+        "Systems &amp; Architecture": [
+          "CS 2340",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510",
+          "CS 3300",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "ECE 4100"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Fall 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050"
+        ],
+        "Spring 2028": [
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Fall 2028": [
+          "ECE 2040",
+          "CS 2340",
+          "ECE 3005",
+          "ECE 3058",
+          "CS 3251"
+        ],
+        "Spring 2029": [
+          "ECE 3600",
+          "CS 3651",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510"
+        ],
+        "Fall 2029": [
+          "CS 3300",
+          "CS 4220",
+          "ECE 4122",
+          "ECE 4795",
+          "ECE 4150"
+        ],
+        "Spring 2030": [
+          "ECE 4180",
+          "CS 4605",
+          "CS 4240",
+          "CS 4210",
+          "ECE 4100"
+        ]
+      }
+    },
+    "distributed_system_software_design_telecommunications_computer_engineering": {
+      "name": "Computer Engineering - Distributed System & Software Design and Telecommunications",
+      "url": "https://catalog.gatech.edu/programs/distributed-system-software-design-telecommunications-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Distributed System &amp; Software Design": [
+          "CS 3251",
+          "ECE 3600",
+          "CS 4220",
+          "ECE 4122",
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605",
+          "CS 3651"
+        ],
+        "Telecommunications": [
+          "ECE 2026",
+          "ECE 3600",
+          "CS 3251",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2050",
+          "ECE 2020",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 2026",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Fall 2028": [
+          "CS 3251",
+          "ECE 3600",
+          "CS 3651",
+          "ECE 3084",
+          "CS 4220",
+          "ECE 4122"
+        ],
+        "Spring 2029": [
+          "ECE 4795",
+          "ECE 4150",
+          "ECE 4180",
+          "CS 4605",
+          "ECE 4601",
+          "ECE 4606"
+        ],
+        "Fall 2029": [
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "cybersecurity_computing_hardware_emerging_architectures_computer_engineering": {
+      "name": "Computer Engineering- Cybersecurity and Computing Hardware & Emerging Architectures",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-computing-hardware-emerging-architectures-computer-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "CHEM 1310",
+          "ECE 1100",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058"
+        ],
+        "Cybersecurity": [
+          "ECE 4115",
+          "CS 3251",
+          "ECE 3600",
+          "ECE 3170",
+          "ECE 4112",
+          "ECE 4117",
+          "ECE 4147",
+          "ECE 4156"
+        ],
+        "Computing Hardware &amp; Emerging Architectures": [
+          "ECE 3150",
+          "ECE 3030",
+          "CS 4220",
+          "ECE 4180",
+          "ECE 4130",
+          "ECE 4452",
+          "ECE 4420",
+          "ECE 4460",
+          "ECE 4100",
+          "ECE 4150"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ECE 1100",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "ECE 2020",
+          "CS 2050",
+          "MATH 2550",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3058",
+          "CS 3251"
+        ],
+        "Fall 2028": [
+          "ECE 3600",
+          "ECE 3170",
+          "ECE 3150",
+          "ECE 3030",
+          "ECE 4115",
+          "ECE 4112"
+        ],
+        "Spring 2029": [
+          "ECE 4117",
+          "ECE 4147",
+          "ECE 4156",
+          "CS 4220",
+          "ECE 4180",
+          "ECE 4130"
+        ],
+        "Fall 2029": [
+          "ECE 4452",
+          "ECE 4420",
+          "ECE 4460",
+          "ECE 4100",
+          "ECE 4150"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "computer_science": {
+      "name": "Computer Science",
+      "url": "https://catalog.gatech.edu/programs/computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "General Core": [
+          "CS 2699",
+          "CS 4699",
+          "CS 4980",
+          "CS 2698",
+          "CS 4698"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "CS 2699"
+        ],
+        "Spring 2027": [
+          "CS 2698"
+        ],
+        "Fall 2027": [
+          "CS 4699"
+        ],
+        "Spring 2028": [
+          "CS 4980"
+        ],
+        "Fall 2028": [
+          "CS 4698"
+        ],
+        "Spring 2029": [],
+        "Fall 2029": [],
+        "Spring 2030": []
+      }
+    },
+    "cybersecurity_privacy_artificial_intelligence_computer_science": {
+      "name": "Computer Science - Artificial Intelligence & Cybersecurity and Privacy",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-privacy-artificial-intelligence-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3235",
+          "CS 3237",
+          "CS 3510",
+          "CS 3600",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 4510",
+          "CS 4635",
+          "CS 4476",
+          "CS 4641",
+          "CS 4644",
+          "CS 4646",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731",
+          "CS 4117",
+          "CS 4238",
+          "CS 4239",
+          "CS 4243",
+          "CS 4262",
+          "CS 4263",
+          "CS 4265",
+          "CS 4267",
+          "CS 4725",
+          "CS 4726"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Fall 2027": [
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "CS 3001",
+          "SLS 3110",
+          "CS 3235",
+          "CS 3237"
+        ],
+        "Spring 2028": [
+          "CS 3510",
+          "CS 3600",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "MATH 3012",
+          "MATH 3215"
+        ],
+        "Fall 2028": [
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726"
+        ],
+        "Spring 2029": [
+          "CS 4510",
+          "CS 4635",
+          "CS 4476",
+          "CS 4641",
+          "CS 4644",
+          "CS 4646",
+          "CS 4649"
+        ],
+        "Fall 2029": [
+          "CS 4650",
+          "CS 4731",
+          "CS 4117",
+          "CS 4238",
+          "CS 4239",
+          "CS 4243",
+          "CS 4262"
+        ],
+        "Spring 2030": [
+          "CS 4263",
+          "CS 4265",
+          "CS 4267",
+          "CS 4725"
+        ]
+      }
+    },
+    "media_artificial_intelligence_computer_science": {
+      "name": "Computer Science - Artificial Intelligence & Media",
+      "url": "https://catalog.gatech.edu/programs/media-artificial-intelligence-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 3510",
+          "CS 3600",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 4510",
+          "CS 4635",
+          "CS 4476",
+          "CS 4641",
+          "CS 4644",
+          "CS 4646",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731",
+          "CS 3451",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Fall 2027": [
+          "CS 2340",
+          "CS 2110",
+          "CS 3001",
+          "SLS 3110",
+          "CS 3510",
+          "CS 3600",
+          "CS 3630"
+        ],
+        "Spring 2028": [
+          "CS 3790",
+          "PSYC 3040",
+          "CS 3451",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770"
+        ],
+        "Fall 2028": [
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "CS 4510",
+          "CS 4635"
+        ],
+        "Spring 2029": [
+          "CS 4476",
+          "CS 4641",
+          "CS 4644",
+          "CS 4646",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731"
+        ],
+        "Fall 2029": [
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "people_artificial_intelligence_computer_science": {
+      "name": "Computer Science - Artificial Intelligence & People",
+      "url": "https://catalog.gatech.edu/programs/people-artificial-intelligence-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 3510",
+          "CS 3600",
+          "PSYC 2012",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 4635",
+          "CS 4476",
+          "CS 4510",
+          "CS 4641",
+          "CS 4644",
+          "CS 4646",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731",
+          "CS 3750",
+          "CS 4660",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605",
+          "CS 4711",
+          "CS 4745",
+          "PSYC 2210",
+          "PSYC 2760"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Fall 2027": [
+          "CS 2340",
+          "CS 2110",
+          "PSYC 2012",
+          "PSYC 2210",
+          "PSYC 2760",
+          "CS 3001",
+          "SLS 3110"
+        ],
+        "Spring 2028": [
+          "CS 3510",
+          "CS 3600",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 3750",
+          "MATH 3012"
+        ],
+        "Fall 2028": [
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003"
+        ],
+        "Spring 2029": [
+          "CS 4726",
+          "CS 4635",
+          "CS 4476",
+          "CS 4510",
+          "CS 4641",
+          "CS 4644",
+          "CS 4646"
+        ],
+        "Fall 2029": [
+          "CS 4649",
+          "CS 4650",
+          "CS 4731",
+          "CS 4660",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472"
+        ],
+        "Spring 2030": [
+          "CS 4605",
+          "CS 4711",
+          "CS 4745"
+        ]
+      }
+    },
+    "systems_architecture_artificial_intelligence_computer_science": {
+      "name": "Computer Science - Artificial Intelligence & Systems and Architecture",
+      "url": "https://catalog.gatech.edu/programs/systems-architecture-artificial-intelligence-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510",
+          "ECE 2031",
+          "CS 3600",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 4635",
+          "CS 4476",
+          "CS 4510",
+          "CS 4641",
+          "CS 4644",
+          "CS 4646",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731",
+          "CS 3300",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "CS 4290"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Fall 2027": [
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031",
+          "CS 3001",
+          "SLS 3110",
+          "CS 3210"
+        ],
+        "Spring 2028": [
+          "CS 3220",
+          "CS 3510",
+          "CS 3600",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 3300"
+        ],
+        "Fall 2028": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002"
+        ],
+        "Spring 2029": [
+          "CS 4003",
+          "CS 4726",
+          "CS 4635",
+          "CS 4476",
+          "CS 4510",
+          "CS 4641",
+          "CS 4644"
+        ],
+        "Fall 2029": [
+          "CS 4646",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220"
+        ],
+        "Spring 2030": [
+          "CS 4290"
+        ]
+      }
+    },
+    "artificial_intelligence_embedded_devices_computer_science": {
+      "name": "Computer Science - Embedded Devices & Artificial Intelligence",
+      "url": "https://catalog.gatech.edu/programs/artificial-intelligence-embedded-devices-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3251",
+          "CS 3510",
+          "CS 3600",
+          "ECE 2031",
+          "CS 3651",
+          "ECE 4180",
+          "CS 3630",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 4510",
+          "CS 4635",
+          "CS 4641",
+          "CS 4644",
+          "CS 4646",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3251",
+          "CS 3510",
+          "CS 3600",
+          "CS 3651"
+        ],
+        "Fall 2028": [
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670"
+        ],
+        "Spring 2029": [
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726"
+        ],
+        "Fall 2029": [
+          "ECE 4180",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476",
+          "CS 4510",
+          "CS 4635"
+        ],
+        "Spring 2030": [
+          "CS 4641",
+          "CS 4644",
+          "CS 4646",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731"
+        ]
+      }
+    },
+    "cybersecurity_privacy_embedded_devices_computer_science": {
+      "name": "Computer Science - Embedded Devices & Cybersecurity and Privacy",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-privacy-embedded-devices-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3235",
+          "CS 3237",
+          "CS 3251",
+          "CS 3510",
+          "ECE 2031",
+          "CS 4117",
+          "CS 4238",
+          "CS 4239",
+          "CS 4243",
+          "CS 4262",
+          "CS 4263",
+          "CS 4265",
+          "CS 4267",
+          "CS 4725",
+          "CS 4726",
+          "CS 3651",
+          "ECE 4180",
+          "CS 3630",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3235",
+          "CS 3237",
+          "CS 3251",
+          "CS 3510"
+        ],
+        "Fall 2028": [
+          "CS 3651",
+          "CS 3630",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770"
+        ],
+        "Spring 2029": [
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "CS 4117"
+        ],
+        "Fall 2029": [
+          "CS 4238",
+          "CS 4239",
+          "CS 4243",
+          "CS 4262",
+          "CS 4263",
+          "CS 4265"
+        ],
+        "Spring 2030": [
+          "CS 4267",
+          "CS 4725",
+          "ECE 4180",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476"
+        ]
+      }
+    },
+    "embedded_devices_information_internetworks_computer_science": {
+      "name": "Computer Science - Embedded Devices & Information Internetworks",
+      "url": "https://catalog.gatech.edu/programs/embedded-devices-information-internetworks-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3251",
+          "CS 3510",
+          "ECE 2031",
+          "CS 3651",
+          "ECE 4180",
+          "CS 3630",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476",
+          "CS 3235",
+          "CS 4400",
+          "CS 4251",
+          "CS 4262",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675",
+          "CS 3220",
+          "CS 3240",
+          "CS 3600",
+          "CS 4210",
+          "CS 4220",
+          "CS 4470",
+          "CS 4641",
+          "CS 4649"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Fall 2027": [
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031",
+          "CS 3001",
+          "SLS 3110",
+          "CS 3251"
+        ],
+        "Spring 2028": [
+          "CS 3510",
+          "CS 3651",
+          "CS 3630",
+          "CS 3235",
+          "CS 3220",
+          "CS 3240",
+          "CS 3600"
+        ],
+        "Fall 2028": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002"
+        ],
+        "Spring 2029": [
+          "CS 4003",
+          "CS 4726",
+          "ECE 4180",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476",
+          "CS 4400"
+        ],
+        "Fall 2029": [
+          "CS 4251",
+          "CS 4262",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675",
+          "CS 4210"
+        ],
+        "Spring 2030": [
+          "CS 4220",
+          "CS 4470",
+          "CS 4641",
+          "CS 4649"
+        ]
+      }
+    },
+    "media_embedded_devices_computer_science": {
+      "name": "Computer Science - Embedded Devices & Media",
+      "url": "https://catalog.gatech.edu/programs/media-embedded-devices-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3251",
+          "ECE 2031",
+          "CS 3651",
+          "ECE 4180",
+          "CS 3630",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476",
+          "CS 3240",
+          "CS 3510",
+          "CS 3511",
+          "CS 3451",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3251",
+          "CS 3651",
+          "CS 3630",
+          "CS 3240"
+        ],
+        "Fall 2028": [
+          "CS 3510",
+          "CS 3511",
+          "CS 3451",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670"
+        ],
+        "Spring 2029": [
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726"
+        ],
+        "Fall 2029": [
+          "ECE 4180",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476",
+          "CS 4455",
+          "CS 4460"
+        ],
+        "Spring 2030": [
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590"
+        ]
+      }
+    },
+    "people_embedded_devices_computer_science": {
+      "name": "Computer Science - Embedded Devices & People",
+      "url": "https://catalog.gatech.edu/programs/people-embedded-devices-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3251",
+          "ECE 2031",
+          "PSYC 2012",
+          "CS 3651",
+          "ECE 4180",
+          "CS 3630",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476",
+          "CS 3240",
+          "CS 3510",
+          "CS 3511",
+          "PSYC 2210",
+          "PSYC 2760",
+          "PSYC 3040",
+          "CS 3750",
+          "CS 3790",
+          "CS 4660",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472",
+          "CS 4711",
+          "CS 4745"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Fall 2027": [
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031",
+          "PSYC 2012",
+          "PSYC 2210",
+          "PSYC 2760"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3251",
+          "CS 3651",
+          "CS 3630",
+          "CS 3240",
+          "CS 3510"
+        ],
+        "Fall 2028": [
+          "CS 3511",
+          "PSYC 3040",
+          "CS 3750",
+          "CS 3790",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670"
+        ],
+        "Spring 2029": [
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "ECE 4180"
+        ],
+        "Fall 2029": [
+          "CS 4261",
+          "CS 4605",
+          "CS 4476",
+          "CS 4660",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472"
+        ],
+        "Spring 2030": [
+          "CS 4711",
+          "CS 4745"
+        ]
+      }
+    },
+    "systems_architecture_embedded_devices_computer_science": {
+      "name": "Computer Science - Embedded Devices & Systems and Architecture",
+      "url": "https://catalog.gatech.edu/programs/systems-architecture-embedded-devices-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3210",
+          "CS 3220",
+          "CS 3251",
+          "CS 3510",
+          "ECE 2031",
+          "CS 3651",
+          "ECE 4180",
+          "CS 3630",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476",
+          "CS 3300",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "CS 4290"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3210",
+          "CS 3220",
+          "CS 3251",
+          "CS 3510"
+        ],
+        "Fall 2028": [
+          "CS 3651",
+          "CS 3630",
+          "CS 3300",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670"
+        ],
+        "Spring 2029": [
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726"
+        ],
+        "Fall 2029": [
+          "ECE 4180",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476",
+          "CS 4240",
+          "CS 4210"
+        ],
+        "Spring 2030": [
+          "CS 4220",
+          "CS 4290"
+        ]
+      }
+    },
+    "theory_embedded_devices_computer_science": {
+      "name": "Computer Science - Embedded Devices & Theory",
+      "url": "https://catalog.gatech.edu/programs/theory-embedded-devices-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3251",
+          "CS 3510",
+          "CS 4510",
+          "CS 4540",
+          "ECE 2031",
+          "CS 3651",
+          "ECE 4180",
+          "MATH 3406",
+          "CS 3630",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476",
+          "MATH 4022",
+          "MATH 4150",
+          "MATH 4032"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3251",
+          "CS 3510",
+          "CS 3651",
+          "MATH 3406"
+        ],
+        "Fall 2028": [
+          "CS 3630",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ],
+        "Spring 2029": [
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "CS 4510",
+          "CS 4540"
+        ],
+        "Fall 2029": [
+          "ECE 4180",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476",
+          "MATH 4022",
+          "MATH 4150"
+        ],
+        "Spring 2030": [
+          "MATH 4032"
+        ]
+      }
+    },
+    "artificial_intelligence_information_internetworks_computer_science": {
+      "name": "Computer Science - Information Internetworks & Artificial Intelligence",
+      "url": "https://catalog.gatech.edu/programs/artificial-intelligence-information-internetworks-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3510",
+          "CS 3600",
+          "CS 3235",
+          "CS 3251",
+          "CS 4400",
+          "CS 4251",
+          "CS 4261",
+          "CS 4262",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675",
+          "CS 4476",
+          "CS 4510",
+          "CS 4635",
+          "CS 4641",
+          "CS 4644",
+          "CS 4646",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Fall 2027": [
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "CS 3001",
+          "SLS 3110",
+          "CS 3510",
+          "CS 3600"
+        ],
+        "Spring 2028": [
+          "CS 3235",
+          "CS 3251",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "MATH 3012",
+          "MATH 3215"
+        ],
+        "Fall 2028": [
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726"
+        ],
+        "Spring 2029": [
+          "CS 4400",
+          "CS 4251",
+          "CS 4261",
+          "CS 4262",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440"
+        ],
+        "Fall 2029": [
+          "CS 4675",
+          "CS 4476",
+          "CS 4510",
+          "CS 4635",
+          "CS 4641",
+          "CS 4644",
+          "CS 4646"
+        ],
+        "Spring 2030": [
+          "CS 4649",
+          "CS 4650",
+          "CS 4731"
+        ]
+      }
+    },
+    "cybersecurity_privacy_information_internetworks_computer_science": {
+      "name": "Computer Science - Information Internetworks & Cybersecurity and Privacy",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-privacy-information-internetworks-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3235",
+          "CS 3237",
+          "CS 3510",
+          "CS 3251",
+          "CS 4400",
+          "CS 4251",
+          "CS 4261",
+          "CS 4262",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675",
+          "CS 4117",
+          "CS 4238",
+          "CS 4239",
+          "CS 4243",
+          "CS 4263",
+          "CS 4265",
+          "CS 4267",
+          "CS 4725",
+          "CS 4726"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "CS 3001"
+        ],
+        "Spring 2028": [
+          "SLS 3110",
+          "CS 3235",
+          "CS 3237",
+          "CS 3510",
+          "CS 3251",
+          "MATH 3012"
+        ],
+        "Fall 2028": [
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002"
+        ],
+        "Spring 2029": [
+          "CS 4003",
+          "CS 4726",
+          "CS 4400",
+          "CS 4251",
+          "CS 4261",
+          "CS 4262"
+        ],
+        "Fall 2029": [
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675",
+          "CS 4117",
+          "CS 4238"
+        ],
+        "Spring 2030": [
+          "CS 4239",
+          "CS 4243",
+          "CS 4263",
+          "CS 4265",
+          "CS 4267",
+          "CS 4725"
+        ]
+      }
+    },
+    "media_information_internetworks_computer_science": {
+      "name": "Computer Science - Information Internetworks & Media",
+      "url": "https://catalog.gatech.edu/programs/media-information-internetworks-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3510",
+          "CS 3235",
+          "CS 3251",
+          "CS 4400",
+          "CS 4251",
+          "CS 4261",
+          "CS 4262",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675",
+          "CS 3451",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "CS 3001"
+        ],
+        "Spring 2028": [
+          "SLS 3110",
+          "CS 3510",
+          "CS 3235",
+          "CS 3251",
+          "CS 3451",
+          "MATH 3012"
+        ],
+        "Fall 2028": [
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002"
+        ],
+        "Spring 2029": [
+          "CS 4003",
+          "CS 4726",
+          "CS 4400",
+          "CS 4251",
+          "CS 4261",
+          "CS 4262"
+        ],
+        "Fall 2029": [
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675",
+          "CS 4455",
+          "CS 4460"
+        ],
+        "Spring 2030": [
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590"
+        ]
+      }
+    },
+    "people_information_internetworks_computer_science": {
+      "name": "Computer Science - Information Internetworks & People",
+      "url": "https://catalog.gatech.edu/programs/people-information-internetworks-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3510",
+          "PSYC 2012",
+          "CS 3235",
+          "CS 3251",
+          "CS 4400",
+          "CS 4251",
+          "CS 4261",
+          "CS 4262",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675",
+          "CS 3750",
+          "CS 3790",
+          "CS 4460",
+          "CS 4660",
+          "CS 4470",
+          "CS 4605",
+          "CS 4472",
+          "CS 4711",
+          "CS 4745",
+          "PSYC 2210",
+          "PSYC 2760",
+          "PSYC 3040"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Fall 2027": [
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "PSYC 2012",
+          "PSYC 2210",
+          "PSYC 2760",
+          "CS 3001"
+        ],
+        "Spring 2028": [
+          "SLS 3110",
+          "CS 3510",
+          "CS 3235",
+          "CS 3251",
+          "CS 3750",
+          "CS 3790",
+          "PSYC 3040"
+        ],
+        "Fall 2028": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002"
+        ],
+        "Spring 2029": [
+          "CS 4003",
+          "CS 4726",
+          "CS 4400",
+          "CS 4251",
+          "CS 4261",
+          "CS 4262",
+          "CS 4365"
+        ],
+        "Fall 2029": [
+          "CS 4420",
+          "CS 4440",
+          "CS 4675",
+          "CS 4460",
+          "CS 4660",
+          "CS 4470",
+          "CS 4605"
+        ],
+        "Spring 2030": [
+          "CS 4472",
+          "CS 4711",
+          "CS 4745"
+        ]
+      }
+    },
+    "systems_architecture_information_internetworks_computer_science": {
+      "name": "Computer Science - Information Internetworks & Systems and Architecture",
+      "url": "https://catalog.gatech.edu/programs/systems-architecture-information-internetworks-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510",
+          "ECE 2031",
+          "CS 3235",
+          "CS 3251",
+          "CS 4400",
+          "CS 4251",
+          "CS 4261",
+          "CS 4262",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675",
+          "CS 3300",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "CS 4290"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510",
+          "CS 3235"
+        ],
+        "Fall 2028": [
+          "CS 3251",
+          "CS 3300",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770"
+        ],
+        "Spring 2029": [
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "CS 4400"
+        ],
+        "Fall 2029": [
+          "CS 4251",
+          "CS 4261",
+          "CS 4262",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440"
+        ],
+        "Spring 2030": [
+          "CS 4675",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "CS 4290"
+        ]
+      }
+    },
+    "media_people_computer_science": {
+      "name": "Computer Science - Media & People",
+      "url": "https://catalog.gatech.edu/programs/media-people-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 3750",
+          "CS 2110",
+          "CS 2261",
+          "PSYC 2012",
+          "CS 3451",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590",
+          "CS 3790",
+          "CS 4660",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605",
+          "CS 4711",
+          "CS 4745",
+          "PSYC 2210",
+          "PSYC 2760",
+          "PSYC 3040"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2261",
+          "PSYC 2012"
+        ],
+        "Spring 2028": [
+          "PSYC 2210",
+          "PSYC 2760",
+          "CS 3001",
+          "SLS 3110",
+          "CS 3750",
+          "CS 3451"
+        ],
+        "Fall 2028": [
+          "CS 3790",
+          "PSYC 3040",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770"
+        ],
+        "Spring 2029": [
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "CS 4455"
+        ],
+        "Fall 2029": [
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590"
+        ],
+        "Spring 2030": [
+          "CS 4660",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605",
+          "CS 4711",
+          "CS 4745"
+        ]
+      }
+    },
+    "media_systems_architecture_computer_science": {
+      "name": "Computer Science - Media & Systems and Architecture",
+      "url": "https://catalog.gatech.edu/programs/media-systems-architecture-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3210",
+          "CS 3220",
+          "ECE 2031",
+          "CS 3510",
+          "CS 3451",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590",
+          "CS 4210",
+          "CS 4220",
+          "CS 4290",
+          "CS 3300",
+          "CS 4240"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510",
+          "CS 3451"
+        ],
+        "Fall 2028": [
+          "CS 3300",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ],
+        "Spring 2029": [
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "CS 4455",
+          "CS 4460"
+        ],
+        "Fall 2029": [
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590",
+          "CS 4210"
+        ],
+        "Spring 2030": [
+          "CS 4220",
+          "CS 4290",
+          "CS 4240"
+        ]
+      }
+    },
+    "cybersecurity_privacy_media_computer_science": {
+      "name": "Computer Science - Media and Cybersecurity & Privacy",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-privacy-media-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3235",
+          "CS 3237",
+          "CS 3451",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590",
+          "CS 4117",
+          "CS 4238",
+          "CS 4239",
+          "CS 4243",
+          "CS 4262",
+          "CS 4263",
+          "CS 4265",
+          "CS 4267",
+          "CS 4725",
+          "CS 4726"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "CS 3001"
+        ],
+        "Spring 2028": [
+          "SLS 3110",
+          "CS 3235",
+          "CS 3237",
+          "CS 3451",
+          "MATH 3012",
+          "MATH 3215"
+        ],
+        "Fall 2028": [
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003"
+        ],
+        "Spring 2029": [
+          "CS 4726",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488"
+        ],
+        "Fall 2029": [
+          "CS 4496",
+          "CS 4590",
+          "CS 4117",
+          "CS 4238",
+          "CS 4239",
+          "CS 4243"
+        ],
+        "Spring 2030": [
+          "CS 4262",
+          "CS 4263",
+          "CS 4265",
+          "CS 4267",
+          "CS 4725"
+        ]
+      }
+    },
+    "modeling_simulation_systems_architecture_computer_science": {
+      "name": "Computer Science - Modeling - Simulation & Systems and Architecture",
+      "url": "https://catalog.gatech.edu/programs/modeling-simulation-systems-architecture-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510",
+          "ECE 2031",
+          "MATH 2552",
+          "CS 4641",
+          "CX 4140",
+          "CX 4220",
+          "CX 4230",
+          "CX 4640",
+          "CS 3300",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "CS 4290"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031"
+        ],
+        "Spring 2028": [
+          "MATH 2552",
+          "CS 3001",
+          "SLS 3110",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510"
+        ],
+        "Fall 2028": [
+          "CS 3300",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ],
+        "Spring 2029": [
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "CS 4641",
+          "CX 4140"
+        ],
+        "Fall 2029": [
+          "CX 4220",
+          "CX 4230",
+          "CX 4640",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220"
+        ],
+        "Spring 2030": [
+          "CS 4290"
+        ]
+      }
+    },
+    "modeling_simulation_media_computer_science": {
+      "name": "Computer Science - Modeling and Simulation & Media",
+      "url": "https://catalog.gatech.edu/programs/modeling-simulation-media-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3510",
+          "MATH 2552",
+          "CS 3451",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590",
+          "CS 4641",
+          "CX 4140",
+          "CX 4220",
+          "CX 4230",
+          "CX 4640"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3510",
+          "CS 3451",
+          "MATH 3012",
+          "MATH 3215"
+        ],
+        "Fall 2028": [
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003"
+        ],
+        "Spring 2029": [
+          "CS 4726",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488"
+        ],
+        "Fall 2029": [
+          "CS 4496",
+          "CS 4590",
+          "CS 4641",
+          "CX 4140",
+          "CX 4220",
+          "CX 4230"
+        ],
+        "Spring 2030": [
+          "CX 4640"
+        ]
+      }
+    },
+    "modeling_simulation_artificial_intelligence_computer_science": {
+      "name": "Computer Science - Modeling-Simulation & Artificial Intelligence",
+      "url": "https://catalog.gatech.edu/programs/modeling-simulation-artificial-intelligence-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3510",
+          "CS 3600",
+          "MATH 2552",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 4635",
+          "CS 4476",
+          "CS 4510",
+          "CS 4641",
+          "CS 4644",
+          "CS 4646",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731",
+          "CX 4140",
+          "CX 4220",
+          "CX 4230",
+          "CX 4640"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3510",
+          "CS 3600",
+          "CS 3630",
+          "CS 3790"
+        ],
+        "Fall 2028": [
+          "PSYC 3040",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ],
+        "Spring 2029": [
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "CS 4635",
+          "CS 4476"
+        ],
+        "Fall 2029": [
+          "CS 4510",
+          "CS 4641",
+          "CS 4644",
+          "CS 4646",
+          "CS 4649",
+          "CS 4650"
+        ],
+        "Spring 2030": [
+          "CS 4731",
+          "CX 4140",
+          "CX 4220",
+          "CX 4230",
+          "CX 4640"
+        ]
+      }
+    },
+    "modeling_simulation_embedded_devices_computer_science": {
+      "name": "Computer Science - Modeling-Simulation & Embedded Devices",
+      "url": "https://catalog.gatech.edu/programs/modeling-simulation-embedded-devices-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3251",
+          "CS 3510",
+          "ECE 2031",
+          "MATH 2552",
+          "CS 3651",
+          "ECE 4180",
+          "CS 3630",
+          "CS 4261",
+          "CS 4605",
+          "CS 4476",
+          "CS 4641",
+          "CX 4140",
+          "CX 4220",
+          "CX 4230",
+          "CX 4640"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031"
+        ],
+        "Spring 2028": [
+          "MATH 2552",
+          "CS 3001",
+          "SLS 3110",
+          "CS 3251",
+          "CS 3510",
+          "CS 3651"
+        ],
+        "Fall 2028": [
+          "CS 3630",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ],
+        "Spring 2029": [
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "ECE 4180",
+          "CS 4261"
+        ],
+        "Fall 2029": [
+          "CS 4605",
+          "CS 4476",
+          "CS 4641",
+          "CX 4140",
+          "CX 4220",
+          "CX 4230"
+        ],
+        "Spring 2030": [
+          "CX 4640"
+        ]
+      }
+    },
+    "modeling_simulation_information_internetworks_computer_science": {
+      "name": "Computer Science - Modeling-Simulation & Information Internetworks",
+      "url": "https://catalog.gatech.edu/programs/modeling-simulation-information-internetworks-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3510",
+          "MATH 2552",
+          "CS 3235",
+          "CS 3251",
+          "CS 4400",
+          "CS 4251",
+          "CS 4261",
+          "CS 4262",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675",
+          "CS 4641",
+          "CX 4140",
+          "CX 4220",
+          "CX 4230",
+          "CX 4640"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3510",
+          "CS 3235",
+          "CS 3251",
+          "MATH 3012"
+        ],
+        "Fall 2028": [
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002"
+        ],
+        "Spring 2029": [
+          "CS 4003",
+          "CS 4726",
+          "CS 4400",
+          "CS 4251",
+          "CS 4261",
+          "CS 4262"
+        ],
+        "Fall 2029": [
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675",
+          "CS 4641",
+          "CX 4140"
+        ],
+        "Spring 2030": [
+          "CX 4220",
+          "CX 4230",
+          "CX 4640"
+        ]
+      }
+    },
+    "modeling_simulation_people_computer_science": {
+      "name": "Computer Science - Modeling-Simulation & People",
+      "url": "https://catalog.gatech.edu/programs/modeling-simulation-people-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3510",
+          "MATH 2552",
+          "PSYC 2012",
+          "CS 3750",
+          "CS 4641",
+          "CX 4140",
+          "CX 4220",
+          "CX 4230",
+          "CX 4640",
+          "CS 3790",
+          "CS 4660",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605",
+          "CS 4711",
+          "CS 4745",
+          "PSYC 2210",
+          "PSYC 2760",
+          "PSYC 3040"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "PSYC 2012",
+          "PSYC 2210",
+          "PSYC 2760",
+          "CS 3001",
+          "SLS 3110",
+          "CS 3510"
+        ],
+        "Fall 2028": [
+          "CS 3750",
+          "CS 3790",
+          "PSYC 3040",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670"
+        ],
+        "Spring 2029": [
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726"
+        ],
+        "Fall 2029": [
+          "CS 4641",
+          "CX 4140",
+          "CX 4220",
+          "CX 4230",
+          "CX 4640",
+          "CS 4660"
+        ],
+        "Spring 2030": [
+          "CS 4460",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605",
+          "CS 4711",
+          "CS 4745"
+        ]
+      }
+    },
+    "modeling_simulation_theory_computer_science": {
+      "name": "Computer Science - Modeling-Simulation & Theory",
+      "url": "https://catalog.gatech.edu/programs/modeling-simulation-theory-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3510",
+          "CS 4510",
+          "CS 4540",
+          "MATH 2552",
+          "MATH 3406",
+          "CS 4641",
+          "CX 4140",
+          "CX 4220",
+          "CX 4230",
+          "CX 4640",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4150"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "APPH 1040"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3510",
+          "MATH 3406",
+          "MATH 3012",
+          "MATH 3215"
+        ],
+        "Fall 2028": [
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003"
+        ],
+        "Spring 2029": [
+          "CS 4726",
+          "CS 4510",
+          "CS 4540",
+          "CS 4641",
+          "CX 4140",
+          "CX 4220"
+        ],
+        "Fall 2029": [
+          "CX 4230",
+          "CX 4640",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4150"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "cybersecurity_privacy_modeling_simulation_computer_science": {
+      "name": "Computer Science - Modeling-Simulation Cybersecurity and Privacy",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-privacy-modeling-simulation-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3235",
+          "CS 3237",
+          "CS 3510",
+          "MATH 2552",
+          "CS 4117",
+          "CS 4238",
+          "CS 4239",
+          "CS 4243",
+          "CS 4262",
+          "CS 4263",
+          "CS 4265",
+          "CS 4267",
+          "CS 4725",
+          "CS 4726",
+          "CS 4641",
+          "CX 4140",
+          "CX 4220",
+          "CX 4230",
+          "CX 4640"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3235",
+          "CS 3237",
+          "CS 3510",
+          "MATH 3012"
+        ],
+        "Fall 2028": [
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002"
+        ],
+        "Spring 2029": [
+          "CS 4003",
+          "CS 4726",
+          "CS 4117",
+          "CS 4238",
+          "CS 4239",
+          "CS 4243"
+        ],
+        "Fall 2029": [
+          "CS 4262",
+          "CS 4263",
+          "CS 4265",
+          "CS 4267",
+          "CS 4725",
+          "CS 4641"
+        ],
+        "Spring 2030": [
+          "CX 4140",
+          "CX 4220",
+          "CX 4230",
+          "CX 4640"
+        ]
+      }
+    },
+    "systems_architecture_people_computer_science": {
+      "name": "Computer Science - People & Systems and Architecture",
+      "url": "https://catalog.gatech.edu/programs/systems-architecture-people-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510",
+          "ECE 2031",
+          "PSYC 2012",
+          "CS 3750",
+          "CS 3790",
+          "CS 4660",
+          "CS 4460",
+          "CS 4470",
+          "CS 4605",
+          "CS 4711",
+          "CS 4472",
+          "CS 4745",
+          "PSYC 2210",
+          "PSYC 2760",
+          "PSYC 3040",
+          "CS 3300",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "CS 4290"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Fall 2027": [
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031",
+          "PSYC 2012",
+          "PSYC 2210",
+          "PSYC 2760"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510",
+          "CS 3750",
+          "CS 3790"
+        ],
+        "Fall 2028": [
+          "PSYC 3040",
+          "CS 3300",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ],
+        "Spring 2029": [
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "CS 4660",
+          "CS 4460",
+          "CS 4470"
+        ],
+        "Fall 2029": [
+          "CS 4605",
+          "CS 4711",
+          "CS 4472",
+          "CS 4745",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220"
+        ],
+        "Spring 2030": [
+          "CS 4290"
+        ]
+      }
+    },
+    "cybersecurity_privacy_people_computer_science": {
+      "name": "Computer Science - People and Cybersecurity & Privacy",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-privacy-people-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3235",
+          "CS 3237",
+          "CS 3750",
+          "PSYC 2012",
+          "CS 4117",
+          "CS 4238",
+          "CS 4239",
+          "CS 4243",
+          "CS 4262",
+          "CS 4263",
+          "CS 4265",
+          "CS 4267",
+          "CS 4725",
+          "CS 4726",
+          "CS 3790",
+          "CS 4660",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605",
+          "CS 4711",
+          "CS 4745",
+          "PSYC 2210",
+          "PSYC 2760",
+          "PSYC 3040"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Fall 2027": [
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "PSYC 2012",
+          "PSYC 2210",
+          "PSYC 2760",
+          "CS 3001"
+        ],
+        "Spring 2028": [
+          "SLS 3110",
+          "CS 3235",
+          "CS 3237",
+          "CS 3750",
+          "CS 3790",
+          "PSYC 3040",
+          "MATH 3012"
+        ],
+        "Fall 2028": [
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003"
+        ],
+        "Spring 2029": [
+          "CS 4726",
+          "CS 4117",
+          "CS 4238",
+          "CS 4239",
+          "CS 4243",
+          "CS 4262",
+          "CS 4263"
+        ],
+        "Fall 2029": [
+          "CS 4265",
+          "CS 4267",
+          "CS 4725",
+          "CS 4660",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472"
+        ],
+        "Spring 2030": [
+          "CS 4605",
+          "CS 4711",
+          "CS 4745"
+        ]
+      }
+    },
+    "cybersecurity_privacy_systems_architecture_computer_science": {
+      "name": "Computer Science - Systems and Architecture & Cybersecurity and Privacy",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-privacy-systems-architecture-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3210",
+          "CS 3220",
+          "CS 3235",
+          "CS 3237",
+          "CS 3510",
+          "ECE 2031",
+          "CS 4117",
+          "CS 4238",
+          "CS 4239",
+          "CS 4243",
+          "CS 4262",
+          "CS 4263",
+          "CS 4265",
+          "CS 4267",
+          "CS 4725",
+          "CS 4726",
+          "CS 3300",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "CS 4290"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3210",
+          "CS 3220",
+          "CS 3235",
+          "CS 3237"
+        ],
+        "Fall 2028": [
+          "CS 3510",
+          "CS 3300",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770"
+        ],
+        "Spring 2029": [
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "CS 4117"
+        ],
+        "Fall 2029": [
+          "CS 4238",
+          "CS 4239",
+          "CS 4243",
+          "CS 4262",
+          "CS 4263",
+          "CS 4265"
+        ],
+        "Spring 2030": [
+          "CS 4267",
+          "CS 4725",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "CS 4290"
+        ]
+      }
+    },
+    "theory_artificial_intelligence_computer_science": {
+      "name": "Computer Science - Theory & Artificial Intelligence",
+      "url": "https://catalog.gatech.edu/programs/theory-artificial-intelligence-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 3510",
+          "CS 3600",
+          "CS 4510",
+          "CS 4540",
+          "MATH 3406",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4150",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 4476",
+          "CS 4635",
+          "CS 4641",
+          "CS 4644",
+          "CS 4646",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 3001",
+          "SLS 3110"
+        ],
+        "Spring 2028": [
+          "CS 3510",
+          "CS 3600",
+          "MATH 3406",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040"
+        ],
+        "Fall 2028": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001"
+        ],
+        "Spring 2029": [
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "CS 4510",
+          "CS 4540",
+          "MATH 4022"
+        ],
+        "Fall 2029": [
+          "MATH 4032",
+          "MATH 4150",
+          "CS 4476",
+          "CS 4635",
+          "CS 4641",
+          "CS 4644"
+        ],
+        "Spring 2030": [
+          "CS 4646",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731"
+        ]
+      }
+    },
+    "cybersecurity_privacy_theory_computer_science": {
+      "name": "Computer Science - Theory & Cybersecurity and Privacy",
+      "url": "https://catalog.gatech.edu/programs/cybersecurity-privacy-theory-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3235",
+          "CS 3237",
+          "CS 3510",
+          "CS 4510",
+          "CS 4540",
+          "MATH 3406",
+          "CS 4117",
+          "CS 4238",
+          "CS 4239",
+          "CS 4243",
+          "CS 4262",
+          "CS 4263",
+          "CS 4265",
+          "CS 4267",
+          "CS 4725",
+          "CS 4726",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4150"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "CS 3001"
+        ],
+        "Spring 2028": [
+          "SLS 3110",
+          "CS 3235",
+          "CS 3237",
+          "CS 3510",
+          "MATH 3406",
+          "MATH 3012"
+        ],
+        "Fall 2028": [
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002"
+        ],
+        "Spring 2029": [
+          "CS 4003",
+          "CS 4726",
+          "CS 4510",
+          "CS 4540",
+          "CS 4117",
+          "CS 4238"
+        ],
+        "Fall 2029": [
+          "CS 4239",
+          "CS 4243",
+          "CS 4262",
+          "CS 4263",
+          "CS 4265",
+          "CS 4267"
+        ],
+        "Spring 2030": [
+          "CS 4725",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4150"
+        ]
+      }
+    },
+    "theory_information_internetworks_computer_science": {
+      "name": "Computer Science - Theory & Information Internetworks",
+      "url": "https://catalog.gatech.edu/programs/theory-information-internetworks-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3510",
+          "CS 4510",
+          "CS 4540",
+          "MATH 3406",
+          "CS 3235",
+          "CS 3251",
+          "CS 4400",
+          "CS 4251",
+          "CS 4261",
+          "CS 4262",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4150"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "CS 3001"
+        ],
+        "Spring 2028": [
+          "SLS 3110",
+          "CS 3510",
+          "MATH 3406",
+          "CS 3235",
+          "CS 3251",
+          "MATH 3012"
+        ],
+        "Fall 2028": [
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002"
+        ],
+        "Spring 2029": [
+          "CS 4003",
+          "CS 4726",
+          "CS 4510",
+          "CS 4540",
+          "CS 4400",
+          "CS 4251"
+        ],
+        "Fall 2029": [
+          "CS 4261",
+          "CS 4262",
+          "CS 4365",
+          "CS 4420",
+          "CS 4440",
+          "CS 4675"
+        ],
+        "Spring 2030": [
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4150"
+        ]
+      }
+    },
+    "theory_media_computer_science": {
+      "name": "Computer Science - Theory & Media",
+      "url": "https://catalog.gatech.edu/programs/theory-media-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 3510",
+          "CS 4510",
+          "CS 4540",
+          "MATH 3406",
+          "CS 3451",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475",
+          "CS 4488",
+          "CS 4496",
+          "CS 4590",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4150"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 3001",
+          "SLS 3110"
+        ],
+        "Spring 2028": [
+          "CS 3510",
+          "MATH 3406",
+          "CS 3451",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670"
+        ],
+        "Fall 2028": [
+          "CEE 3770",
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726"
+        ],
+        "Spring 2029": [
+          "CS 4510",
+          "CS 4540",
+          "CS 4455",
+          "CS 4460",
+          "CS 4464",
+          "CS 4475"
+        ],
+        "Fall 2029": [
+          "CS 4488",
+          "CS 4496",
+          "CS 4590",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4150"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "theory_people_computer_science": {
+      "name": "Computer Science - Theory & People",
+      "url": "https://catalog.gatech.edu/programs/theory-people-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 3510",
+          "CS 4510",
+          "CS 4540",
+          "MATH 3406",
+          "PSYC 2012",
+          "CS 3750",
+          "CS 3790",
+          "CS 4660",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605",
+          "CS 4711",
+          "CS 4745",
+          "PSYC 2210",
+          "PSYC 2760",
+          "PSYC 3040",
+          "MATH 4022",
+          "MATH 4150",
+          "MATH 4032"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "APPH 1040"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "PSYC 2012",
+          "PSYC 2210"
+        ],
+        "Spring 2028": [
+          "PSYC 2760",
+          "CS 3001",
+          "SLS 3110",
+          "CS 3510",
+          "MATH 3406",
+          "CS 3750"
+        ],
+        "Fall 2028": [
+          "CS 3790",
+          "PSYC 3040",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770"
+        ],
+        "Spring 2029": [
+          "ISYE 3770",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "CS 4510"
+        ],
+        "Fall 2029": [
+          "CS 4540",
+          "CS 4660",
+          "CS 4460",
+          "CS 4470",
+          "CS 4472",
+          "CS 4605"
+        ],
+        "Spring 2030": [
+          "CS 4711",
+          "CS 4745",
+          "MATH 4022",
+          "MATH 4150",
+          "MATH 4032"
+        ]
+      }
+    },
+    "theory_systems_architecture_computer_science": {
+      "name": "Computer Science - Theory & Systems and Architecture",
+      "url": "https://catalog.gatech.edu/programs/theory-systems-architecture-computer-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "PHYS 2211",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "CS 2050",
+          "MATH 2550"
+        ],
+        "Major Requirements": [
+          "CS 2340",
+          "CS 3001",
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "SLS 3110"
+        ],
+        "Concentration": [
+          "CS 2110",
+          "CS 2200",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510",
+          "ECE 2031",
+          "CS 4510",
+          "CS 4540",
+          "CS 3300",
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "CS 4290",
+          "MATH 3406",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4150"
+        ],
+        "Other Required Courses": [
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1100",
+          "CS 1331",
+          "CS 1332",
+          "APPH 1040"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "CS 2050",
+          "MATH 2550",
+          "CS 2340",
+          "CS 2110",
+          "CS 2200",
+          "ECE 2031"
+        ],
+        "Spring 2028": [
+          "CS 3001",
+          "SLS 3110",
+          "CS 3210",
+          "CS 3220",
+          "CS 3510",
+          "CS 3300"
+        ],
+        "Fall 2028": [
+          "MATH 3406",
+          "MATH 3012",
+          "MATH 3215",
+          "MATH 3670",
+          "CEE 3770",
+          "ISYE 3770"
+        ],
+        "Spring 2029": [
+          "CS 4001",
+          "CS 4002",
+          "CS 4003",
+          "CS 4726",
+          "CS 4510",
+          "CS 4540"
+        ],
+        "Fall 2029": [
+          "CS 4240",
+          "CS 4210",
+          "CS 4220",
+          "CS 4290",
+          "MATH 4022",
+          "MATH 4032"
+        ],
+        "Spring 2030": [
+          "MATH 4150"
+        ]
+      }
+    },
+    "construction_science_and_management": {
+      "name": "Construction Science and Management",
+      "url": "https://catalog.gatech.edu/programs/construction-science-and-management-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "ECON 2100",
+          "BC 2610",
+          "BC 2620",
+          "BC 2631",
+          "BC 2632",
+          "BC 2634"
+        ],
+        "Major Requirements": [
+          "BC 2636",
+          "BC 3600",
+          "BC 3610",
+          "BC 3630",
+          "BC 3640",
+          "BC 4050",
+          "BC 4130",
+          "BC 4600",
+          "BC 4630",
+          "BC 4660",
+          "BC 4672",
+          "BC 4680",
+          "BC 4710",
+          "MGT 2106",
+          "MGT 3000",
+          "MGT 3078",
+          "MGT 3101"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "ECON 2100",
+          "BC 2610",
+          "BC 2620",
+          "BC 2631"
+        ],
+        "Spring 2028": [
+          "BC 2632",
+          "BC 2634",
+          "BC 2636",
+          "MGT 2106"
+        ],
+        "Fall 2028": [
+          "BC 3600",
+          "BC 3610",
+          "BC 3630",
+          "BC 3640"
+        ],
+        "Spring 2029": [
+          "MGT 3000",
+          "MGT 3078",
+          "MGT 3101",
+          "BC 4050"
+        ],
+        "Fall 2029": [
+          "BC 4130",
+          "BC 4600",
+          "BC 4630",
+          "BC 4660"
+        ],
+        "Spring 2030": [
+          "BC 4672",
+          "BC 4680",
+          "BC 4710"
+        ]
+      }
+    },
+    "economics": {
+      "name": "Economics",
+      "url": "https://catalog.gatech.edu/programs/economics-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1315"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "ECON 2105",
+          "ECON 2106",
+          "ECON 2250"
+        ],
+        "Major Requirements": [
+          "ECON 3110",
+          "ECON 3120",
+          "ECON 3161",
+          "ECON 4010"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "CS 1315"
+        ],
+        "Spring 2027": [
+          "ENGL 1101",
+          "MATH 1712"
+        ],
+        "Fall 2027": [
+          "MATH 1711",
+          "ENGL 1102"
+        ],
+        "Spring 2028": [
+          "HIST 2111",
+          "ECON 2105"
+        ],
+        "Fall 2028": [
+          "ECON 2106",
+          "ECON 2250"
+        ],
+        "Spring 2029": [
+          "ECON 3110",
+          "ECON 3120"
+        ],
+        "Fall 2029": [
+          "ECON 3161",
+          "ECON 4010"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "economics_international_affairs": {
+      "name": "Economics and International Affairs",
+      "url": "https://catalog.gatech.edu/programs/economics-international-affairs-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1315"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "ECON 2105",
+          "ECON 2106"
+        ],
+        "Major Requirements": [
+          "ECON 2250",
+          "ECON 3110",
+          "ECON 3120",
+          "ECON 3161",
+          "ECON 4351",
+          "INTA 1110",
+          "INTA 2040",
+          "INTA 2001",
+          "INTA 3203",
+          "INTA 3110",
+          "INTA 3301",
+          "INTA 4740"
+        ],
+        "HTS Elective (non-US History):": [
+          "HTS 1031",
+          "HTS 2036",
+          "HTS 2037",
+          "HTS 2040",
+          "HTS 2041",
+          "HTS 2061",
+          "HTS 2062",
+          "HTS 3028",
+          "HTS 3029",
+          "HTS 3030",
+          "HTS 3031",
+          "HTS 3032",
+          "HTS 3033",
+          "HTS 3035",
+          "HTS 3036",
+          "HTS 3038",
+          "HTS 3039",
+          "HTS 3041",
+          "HTS 3046",
+          "HTS 3051",
+          "HTS 3061",
+          "HTS 3062",
+          "HTS 3064",
+          "HTS 3065",
+          "HTS 3067"
+        ],
+        "Technical Requirement": [
+          "BMED 2400",
+          "CP 4510",
+          "CS 1301",
+          "CS 1316",
+          "CS 2316",
+          "CS 1331",
+          "EAS 3110",
+          "EAS 4480",
+          "ID 3103",
+          "ME 2016",
+          "MGT 2210",
+          "MGT 4051",
+          "MGT 4052"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "CS 1315",
+          "ENGL 1101",
+          "MATH 1712",
+          "MATH 1711",
+          "INTA 1110",
+          "HTS 1031",
+          "CS 1316"
+        ],
+        "Spring 2027": [
+          "CS 1331",
+          "ENGL 1102",
+          "CS 1301",
+          "HIST 2111",
+          "ECON 2105",
+          "ECON 2106",
+          "ECON 2250",
+          "INTA 2040"
+        ],
+        "Fall 2027": [
+          "INTA 2001",
+          "HTS 2036",
+          "HTS 2037",
+          "HTS 2040",
+          "HTS 2041",
+          "HTS 2061",
+          "HTS 2062",
+          "BMED 2400"
+        ],
+        "Spring 2028": [
+          "CS 2316",
+          "ME 2016",
+          "MGT 2210",
+          "ECON 3110",
+          "ECON 3120",
+          "ECON 3161",
+          "INTA 3203",
+          "INTA 3110"
+        ],
+        "Fall 2028": [
+          "INTA 3301",
+          "HTS 3028",
+          "HTS 3029",
+          "HTS 3030",
+          "HTS 3031",
+          "HTS 3032",
+          "HTS 3033",
+          "HTS 3035"
+        ],
+        "Spring 2029": [
+          "HTS 3036",
+          "HTS 3038",
+          "HTS 3039",
+          "HTS 3041",
+          "HTS 3046",
+          "HTS 3051",
+          "HTS 3061",
+          "HTS 3062"
+        ],
+        "Fall 2029": [
+          "HTS 3064",
+          "HTS 3065",
+          "HTS 3067",
+          "EAS 3110",
+          "ID 3103",
+          "ECON 4351",
+          "INTA 4740",
+          "CP 4510"
+        ],
+        "Spring 2030": [
+          "EAS 4480",
+          "MGT 4051",
+          "MGT 4052"
+        ]
+      }
+    },
+    "bioengineering_sensing_exploration_electrical_engineering": {
+      "name": "Electrical Engineering - Bioengineering and Sensing & Exploration",
+      "url": "https://catalog.gatech.edu/programs/bioengineering-sensing-exploration-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Bioengineering": [
+          "ECE 4781",
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4435"
+        ],
+        "Sensing &amp; Exploration": [
+          "ECE 4370",
+          "ECE 4390",
+          "ECE 3084",
+          "ECE 4260",
+          "ECE 4350",
+          "ECE 4371",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4580",
+          "ECE 4781"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005"
+        ],
+        "Fall 2028": [
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3084",
+          "ECE 4781"
+        ],
+        "Spring 2029": [
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4435"
+        ],
+        "Fall 2029": [
+          "ECE 4390",
+          "ECE 4260",
+          "ECE 4371",
+          "ECE 4445",
+          "ECE 4446"
+        ],
+        "Spring 2030": [
+          "ECE 4580"
+        ]
+      }
+    },
+    "telecommunications_bioengineering_electrical_engineering": {
+      "name": "Electrical Engineering - Bioengineering and Telecommunications",
+      "url": "https://catalog.gatech.edu/programs/telecommunications-bioengineering-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "ECE 2020"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Bioengineering": [
+          "ECE 4781",
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4435"
+        ],
+        "Telecommunications": [
+          "ECE 3600",
+          "CS 3251",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4502",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2020"
+        ],
+        "Spring 2028": [
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005"
+        ],
+        "Fall 2028": [
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3084",
+          "ECE 3600"
+        ],
+        "Spring 2029": [
+          "CS 3251",
+          "ECE 4781",
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 4350"
+        ],
+        "Fall 2029": [
+          "ECE 4370",
+          "ECE 4435",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 4500"
+        ],
+        "Spring 2030": [
+          "ECE 4502",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ]
+      }
+    },
+    "circuit_technology_bioengineering_electrical_engineering": {
+      "name": "Electrical Engineering - Circuit Technology and Bioengineering",
+      "url": "https://catalog.gatech.edu/programs/circuit-technology-bioengineering-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Bioengineering": [
+          "ECE 4781",
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4435"
+        ],
+        "Circuit Technology": [
+          "ECE 3400",
+          "ECE 4043",
+          "ECE 4415",
+          "ECE 4420",
+          "ECE 4430",
+          "ECE 4435",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4452",
+          "ECE 4502",
+          "ECE 4450",
+          "ECE 4448",
+          "ECE 4370",
+          "ECE 4391"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3084"
+        ],
+        "Fall 2028": [
+          "ECE 3400",
+          "ECE 4781",
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 4350",
+          "ECE 4370"
+        ],
+        "Spring 2029": [
+          "ECE 4435",
+          "ECE 4043",
+          "ECE 4415",
+          "ECE 4420",
+          "ECE 4430",
+          "ECE 4445"
+        ],
+        "Fall 2029": [
+          "ECE 4446",
+          "ECE 4452",
+          "ECE 4502",
+          "ECE 4450",
+          "ECE 4448",
+          "ECE 4391"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "circuit_technology_sensing_exploration_electrical_engineering": {
+      "name": "Electrical Engineering - Circuit Technology and Sensing & Exploration",
+      "url": "https://catalog.gatech.edu/programs/circuit-technology-sensing-exploration-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Circuit Technology": [
+          "ECE 3400",
+          "ECE 4043",
+          "ECE 4415",
+          "ECE 4420",
+          "ECE 4430",
+          "ECE 4435",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4452",
+          "ECE 4502",
+          "ECE 4450",
+          "ECE 4448",
+          "ECE 4370",
+          "ECE 4391"
+        ],
+        "Sensing &amp; Exploration": [
+          "ECE 4390",
+          "ECE 4370",
+          "ECE 3084",
+          "ECE 4260",
+          "ECE 4350",
+          "ECE 4371",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4580",
+          "ECE 4781"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3400"
+        ],
+        "Fall 2028": [
+          "ECE 3084",
+          "ECE 4043",
+          "ECE 4415",
+          "ECE 4420",
+          "ECE 4430",
+          "ECE 4435"
+        ],
+        "Spring 2029": [
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4452",
+          "ECE 4502",
+          "ECE 4450",
+          "ECE 4448"
+        ],
+        "Fall 2029": [
+          "ECE 4370",
+          "ECE 4391",
+          "ECE 4390",
+          "ECE 4260",
+          "ECE 4350",
+          "ECE 4371"
+        ],
+        "Spring 2030": [
+          "ECE 4580",
+          "ECE 4781"
+        ]
+      }
+    },
+    "telecommunications_circuit_technology_electrical_engineering": {
+      "name": "Electrical Engineering - Circuit Technology and Telecommunications",
+      "url": "https://catalog.gatech.edu/programs/telecommunications-circuit-technology-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Circuit Technology": [
+          "ECE 3400",
+          "ECE 4043",
+          "ECE 4415",
+          "ECE 4420",
+          "ECE 4430",
+          "ECE 4435",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4452",
+          "ECE 4502",
+          "ECE 4450",
+          "ECE 4448",
+          "ECE 4370",
+          "ECE 4391"
+        ],
+        "Telecommunications": [
+          "ECE 3600",
+          "CS 3251",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3400"
+        ],
+        "Fall 2028": [
+          "ECE 3600",
+          "CS 3251",
+          "ECE 3084",
+          "ECE 4043",
+          "ECE 4415",
+          "ECE 4420"
+        ],
+        "Spring 2029": [
+          "ECE 4430",
+          "ECE 4435",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4452",
+          "ECE 4502"
+        ],
+        "Fall 2029": [
+          "ECE 4450",
+          "ECE 4448",
+          "ECE 4370",
+          "ECE 4391",
+          "ECE 4601",
+          "ECE 4606"
+        ],
+        "Spring 2030": [
+          "ECE 4350",
+          "ECE 4500",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ]
+      }
+    },
+    "electric_energy_systems_bioengineering_electrical_engineering": {
+      "name": "Electrical Engineering - Electric Energy Systems and Bioengineering",
+      "url": "https://catalog.gatech.edu/programs/electric-energy-systems-bioengineering-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Bioengineering": [
+          "ECE 4781",
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4435"
+        ],
+        "Electric Energy Systems": [
+          "ECE 3072",
+          "ECE 3300",
+          "ECE 4320",
+          "ECE 4321",
+          "ECE 4330",
+          "ECE 4335"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005"
+        ],
+        "Fall 2028": [
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3084",
+          "ECE 3072"
+        ],
+        "Spring 2029": [
+          "ECE 3300",
+          "ECE 4781",
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 4350"
+        ],
+        "Fall 2029": [
+          "ECE 4370",
+          "ECE 4435",
+          "ECE 4320",
+          "ECE 4321",
+          "ECE 4330"
+        ],
+        "Spring 2030": [
+          "ECE 4335"
+        ]
+      }
+    },
+    "electric_energy_systems_circuit_technology_electrical_engineering": {
+      "name": "Electrical Engineering - Electric Energy Systems and Circuit Technology",
+      "url": "https://catalog.gatech.edu/programs/electric-energy-systems-circuit-technology-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Circuit Technology": [
+          "ECE 3400",
+          "ECE 4043",
+          "ECE 4415",
+          "ECE 4420",
+          "ECE 4430",
+          "ECE 4435",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4452",
+          "ECE 4502",
+          "ECE 4450",
+          "ECE 4448",
+          "ECE 4370",
+          "ECE 4391"
+        ],
+        "Electric Energy Systems": [
+          "ECE 3072",
+          "ECE 3300",
+          "ECE 4320",
+          "ECE 4321",
+          "ECE 4330",
+          "ECE 4335"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3400"
+        ],
+        "Fall 2028": [
+          "ECE 3072",
+          "ECE 3300",
+          "ECE 4043",
+          "ECE 4415",
+          "ECE 4420",
+          "ECE 4430"
+        ],
+        "Spring 2029": [
+          "ECE 4435",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4452",
+          "ECE 4502",
+          "ECE 4450"
+        ],
+        "Fall 2029": [
+          "ECE 4448",
+          "ECE 4370",
+          "ECE 4391",
+          "ECE 4320",
+          "ECE 4321",
+          "ECE 4330"
+        ],
+        "Spring 2030": [
+          "ECE 4335"
+        ]
+      }
+    },
+    "electric_energy_systems_electronic_devices_electrical_engineering": {
+      "name": "Electrical Engineering - Electric Energy Systems and Electronic Devices",
+      "url": "https://catalog.gatech.edu/programs/electric-energy-systems-electronic-devices-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "CHEM 1310",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Electronic Devices": [
+          "ECE 3450",
+          "ECE 4452",
+          "ECE 4350",
+          "ECE 4460",
+          "ECE 4470",
+          "ECE 4500",
+          "ECE 4751",
+          "ECE 4754",
+          "ECE 4755"
+        ],
+        "Electric Energy Systems": [
+          "ECE 3072",
+          "ECE 3300",
+          "ECE 4320",
+          "ECE 4321",
+          "ECE 4330",
+          "ECE 4335"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005"
+        ],
+        "Fall 2028": [
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3450",
+          "ECE 3072"
+        ],
+        "Spring 2029": [
+          "ECE 3300",
+          "ECE 4452",
+          "ECE 4350",
+          "ECE 4460",
+          "ECE 4470"
+        ],
+        "Fall 2029": [
+          "ECE 4500",
+          "ECE 4751",
+          "ECE 4754",
+          "ECE 4755",
+          "ECE 4320"
+        ],
+        "Spring 2030": [
+          "ECE 4321",
+          "ECE 4330",
+          "ECE 4335"
+        ]
+      }
+    },
+    "electric_energy_systems_sensing_exploration_electrical_engineering": {
+      "name": "Electrical Engineering - Electric Energy Systems and Sensing & Exploration",
+      "url": "https://catalog.gatech.edu/programs/electric-energy-systems-sensing-exploration-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Electric Energy Systems": [
+          "ECE 3072",
+          "ECE 3300",
+          "ECE 4320",
+          "ECE 4321",
+          "ECE 4330",
+          "ECE 4335"
+        ],
+        "Sensing &amp; Exploration": [
+          "ECE 4390",
+          "ECE 4370",
+          "ECE 3084",
+          "ECE 4260",
+          "ECE 4350",
+          "ECE 4371",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4580",
+          "ECE 4781"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005"
+        ],
+        "Fall 2028": [
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3072",
+          "ECE 3300"
+        ],
+        "Spring 2029": [
+          "ECE 3084",
+          "ECE 4320",
+          "ECE 4321",
+          "ECE 4330",
+          "ECE 4335"
+        ],
+        "Fall 2029": [
+          "ECE 4390",
+          "ECE 4370",
+          "ECE 4260",
+          "ECE 4350",
+          "ECE 4371"
+        ],
+        "Spring 2030": [
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4580",
+          "ECE 4781"
+        ]
+      }
+    },
+    "electric_energy_systems_signal_information_processing_electrical_engineering": {
+      "name": "Electrical Engineering - Electric Energy Systems and Signal & Information Processing",
+      "url": "https://catalog.gatech.edu/programs/electric-energy-systems-signal-information-processing-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "CHEM 1310",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Electric Energy Systems": [
+          "ECE 3072",
+          "ECE 3300",
+          "ECE 4320",
+          "ECE 4321",
+          "ECE 4330",
+          "ECE 4335"
+        ],
+        "Signal &amp; Information Processing": [
+          "ECE 3251",
+          "ECE 4270",
+          "ECE 4252",
+          "ECE 3084",
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005"
+        ],
+        "Fall 2028": [
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3072",
+          "ECE 3300"
+        ],
+        "Spring 2029": [
+          "ECE 3251",
+          "ECE 3084",
+          "ECE 4320",
+          "ECE 4321",
+          "ECE 4330"
+        ],
+        "Fall 2029": [
+          "ECE 4335",
+          "ECE 4270",
+          "ECE 4252",
+          "ECE 4122",
+          "ECE 4180"
+        ],
+        "Spring 2030": [
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ]
+      }
+    },
+    "electric_energy_systems_telecommunications_electrical_engineering": {
+      "name": "Electrical Engineering - Electric Energy Systems and Telecommunications",
+      "url": "https://catalog.gatech.edu/programs/electric-energy-systems-telecommunications-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "ECE 2020"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Electric Energy Systems": [
+          "ECE 3072",
+          "ECE 3300",
+          "ECE 4320",
+          "ECE 4321",
+          "ECE 4330",
+          "ECE 4335"
+        ],
+        "Telecommunications": [
+          "ECE 3600",
+          "CS 3251",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4502",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2020",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3072"
+        ],
+        "Fall 2028": [
+          "ECE 3300",
+          "ECE 3600",
+          "CS 3251",
+          "ECE 3084",
+          "ECE 4320",
+          "ECE 4321"
+        ],
+        "Spring 2029": [
+          "ECE 4330",
+          "ECE 4335",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 4350",
+          "ECE 4370"
+        ],
+        "Fall 2029": [
+          "ECE 4500",
+          "ECE 4502",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "electronic_devices_bioengineering_electrical_engineering": {
+      "name": "Electrical Engineering - Electronic Devices and Bioengineering",
+      "url": "https://catalog.gatech.edu/programs/electronic-devices-bioengineering-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Bioengineering": [
+          "ECE 4781",
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4435"
+        ],
+        "Electronic Devices": [
+          "ECE 3450",
+          "ECE 4452",
+          "ECE 4350",
+          "ECE 4460",
+          "ECE 4470",
+          "ECE 4500",
+          "ECE 4751",
+          "ECE 4754",
+          "ECE 4755"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005"
+        ],
+        "Fall 2028": [
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3084",
+          "ECE 3450"
+        ],
+        "Spring 2029": [
+          "ECE 4781",
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 4350",
+          "ECE 4370"
+        ],
+        "Fall 2029": [
+          "ECE 4435",
+          "ECE 4452",
+          "ECE 4460",
+          "ECE 4470",
+          "ECE 4500"
+        ],
+        "Spring 2030": [
+          "ECE 4751",
+          "ECE 4754",
+          "ECE 4755"
+        ]
+      }
+    },
+    "electronic_devices_circuit_technology_electrical_engineering": {
+      "name": "Electrical Engineering - Electronic Devices and Circuit Technology",
+      "url": "https://catalog.gatech.edu/programs/electronic-devices-circuit-technology-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "CHEM 1310",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Circuit Technology": [
+          "ECE 3400",
+          "ECE 4043",
+          "ECE 4415",
+          "ECE 4420",
+          "ECE 4430",
+          "ECE 4435",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4452",
+          "ECE 4502",
+          "ECE 4450",
+          "ECE 4448",
+          "ECE 4370",
+          "ECE 4391"
+        ],
+        "Electronic Devices": [
+          "ECE 3450",
+          "ECE 4452",
+          "ECE 4350",
+          "ECE 4460",
+          "ECE 4470",
+          "ECE 4751",
+          "ECE 4754",
+          "ECE 4755"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3400"
+        ],
+        "Fall 2028": [
+          "ECE 3450",
+          "ECE 4043",
+          "ECE 4415",
+          "ECE 4420",
+          "ECE 4430",
+          "ECE 4435"
+        ],
+        "Spring 2029": [
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4452",
+          "ECE 4502",
+          "ECE 4450",
+          "ECE 4448"
+        ],
+        "Fall 2029": [
+          "ECE 4370",
+          "ECE 4391",
+          "ECE 4350",
+          "ECE 4460",
+          "ECE 4470",
+          "ECE 4751"
+        ],
+        "Spring 2030": [
+          "ECE 4754",
+          "ECE 4755"
+        ]
+      }
+    },
+    "electronic_devices_sensing_exploration_electrical_engineering": {
+      "name": "Electrical Engineering - Electronic Devices and Sensing & Exploration",
+      "url": "https://catalog.gatech.edu/programs/electronic-devices-sensing-exploration-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Electronic Devices": [
+          "ECE 3450",
+          "ECE 4452",
+          "ECE 4350",
+          "ECE 4460",
+          "ECE 4470",
+          "ECE 4500",
+          "ECE 4751",
+          "ECE 4754",
+          "ECE 4755"
+        ],
+        "Sensing &amp; Exploration": [
+          "ECE 4390",
+          "ECE 4370",
+          "ECE 3084",
+          "ECE 4260",
+          "ECE 4350",
+          "ECE 4371",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4580",
+          "ECE 4781"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3450"
+        ],
+        "Fall 2028": [
+          "ECE 3084",
+          "ECE 4452",
+          "ECE 4350",
+          "ECE 4460",
+          "ECE 4470",
+          "ECE 4500"
+        ],
+        "Spring 2029": [
+          "ECE 4751",
+          "ECE 4754",
+          "ECE 4755",
+          "ECE 4390",
+          "ECE 4370",
+          "ECE 4260"
+        ],
+        "Fall 2029": [
+          "ECE 4371",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4580",
+          "ECE 4781"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "telecommunications_electronic_devices_electrical_engineering": {
+      "name": "Electrical Engineering - Electronic Devices and Telecommunications",
+      "url": "https://catalog.gatech.edu/programs/telecommunications-electronic-devices-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Electronic Devices": [
+          "ECE 3450",
+          "ECE 4452",
+          "ECE 4350",
+          "ECE 4460",
+          "ECE 4470",
+          "ECE 4500",
+          "ECE 4751",
+          "ECE 4754",
+          "ECE 4755"
+        ],
+        "Telecommunications": [
+          "ECE 3600",
+          "CS 3251",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3450"
+        ],
+        "Fall 2028": [
+          "ECE 3600",
+          "CS 3251",
+          "ECE 3084",
+          "ECE 4452",
+          "ECE 4350",
+          "ECE 4460"
+        ],
+        "Spring 2029": [
+          "ECE 4470",
+          "ECE 4500",
+          "ECE 4751",
+          "ECE 4754",
+          "ECE 4755",
+          "ECE 4601"
+        ],
+        "Fall 2029": [
+          "ECE 4606",
+          "ECE 4370",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "robotics_autonomous_systems_bioengineering_electrical_engineering": {
+      "name": "Electrical Engineering - Robotics & Autonomous Systems and Bioengineering",
+      "url": "https://catalog.gatech.edu/programs/robotics-autonomous-systems-bioengineering-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Bioengineering": [
+          "ECE 4781",
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4435"
+        ],
+        "Robotics &amp; Autonomous Systems": [
+          "ECE 3550",
+          "ECE 4550",
+          "ECE 3084",
+          "ECE 3251",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005"
+        ],
+        "Fall 2028": [
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3084",
+          "ECE 3550"
+        ],
+        "Spring 2029": [
+          "ECE 3251",
+          "ECE 4781",
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 4350"
+        ],
+        "Fall 2029": [
+          "ECE 4370",
+          "ECE 4435",
+          "ECE 4550",
+          "ECE 4252",
+          "ECE 4560"
+        ],
+        "Spring 2030": [
+          "ECE 4570",
+          "ECE 4580"
+        ]
+      }
+    },
+    "robotics_autonomous_systems_circuit_technology_electrical_engineering": {
+      "name": "Electrical Engineering - Robotics & Autonomous Systems and Circuit Technology",
+      "url": "https://catalog.gatech.edu/programs/robotics-autonomous-systems-circuit-technology-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "CHEM 1310",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Circuit Technology": [
+          "ECE 3400",
+          "ECE 4043",
+          "ECE 4415",
+          "ECE 4420",
+          "ECE 4430",
+          "ECE 4435",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4502",
+          "ECE 4452",
+          "ECE 4450",
+          "ECE 4448",
+          "ECE 4370",
+          "ECE 4391"
+        ],
+        "Robotics &amp; Autonomous Systems": [
+          "ECE 3550",
+          "ECE 4550",
+          "ECE 3084",
+          "ECE 3251",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3400"
+        ],
+        "Fall 2028": [
+          "ECE 3550",
+          "ECE 3084",
+          "ECE 3251",
+          "ECE 4043",
+          "ECE 4415",
+          "ECE 4420"
+        ],
+        "Spring 2029": [
+          "ECE 4430",
+          "ECE 4435",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4502",
+          "ECE 4452"
+        ],
+        "Fall 2029": [
+          "ECE 4450",
+          "ECE 4448",
+          "ECE 4370",
+          "ECE 4391",
+          "ECE 4550",
+          "ECE 4252"
+        ],
+        "Spring 2030": [
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580"
+        ]
+      }
+    },
+    "electric_energy_systems_robotics_autonomous_systems_electrical_engineering": {
+      "name": "Electrical Engineering - Robotics & Autonomous Systems and Electric Energy Systems",
+      "url": "https://catalog.gatech.edu/programs/electric-energy-systems-robotics-autonomous-systems-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "CHEM 1310",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Electric Energy Systems": [
+          "ECE 3072",
+          "ECE 3300",
+          "ECE 4320",
+          "ECE 4321",
+          "ECE 4330",
+          "ECE 4335"
+        ],
+        "Robotics &amp; Autonomous Systems": [
+          "ECE 4550",
+          "ECE 3550",
+          "ECE 3084",
+          "ECE 3251",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005"
+        ],
+        "Fall 2028": [
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3072",
+          "ECE 3300"
+        ],
+        "Spring 2029": [
+          "ECE 3550",
+          "ECE 3084",
+          "ECE 3251",
+          "ECE 4320",
+          "ECE 4321"
+        ],
+        "Fall 2029": [
+          "ECE 4330",
+          "ECE 4335",
+          "ECE 4550",
+          "ECE 4252",
+          "ECE 4560"
+        ],
+        "Spring 2030": [
+          "ECE 4570",
+          "ECE 4580"
+        ]
+      }
+    },
+    "robotics_autonomous_systems_electronic_devices_electrical_engineering": {
+      "name": "Electrical Engineering - Robotics & Autonomous Systems and Electronic Devices",
+      "url": "https://catalog.gatech.edu/programs/robotics-autonomous-systems-electronic-devices-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "CHEM 1310",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Electronic Devices": [
+          "ECE 3450",
+          "ECE 4452",
+          "ECE 4350",
+          "ECE 4460",
+          "ECE 4470",
+          "ECE 4500",
+          "ECE 4751",
+          "ECE 4754",
+          "ECE 4755"
+        ],
+        "Robotics &amp; Autonomous Systems": [
+          "ECE 3550",
+          "ECE 4550",
+          "ECE 3084",
+          "ECE 3251",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005"
+        ],
+        "Fall 2028": [
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3450",
+          "ECE 3550"
+        ],
+        "Spring 2029": [
+          "ECE 3084",
+          "ECE 3251",
+          "ECE 4452",
+          "ECE 4350",
+          "ECE 4460"
+        ],
+        "Fall 2029": [
+          "ECE 4470",
+          "ECE 4500",
+          "ECE 4751",
+          "ECE 4754",
+          "ECE 4755"
+        ],
+        "Spring 2030": [
+          "ECE 4550",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580"
+        ]
+      }
+    },
+    "robotics_autonomous_systems_sensing_exploration_electrical_engineering": {
+      "name": "Electrical Engineering - Robotics & Autonomous Systems and Sensing & Exploration",
+      "url": "https://catalog.gatech.edu/programs/robotics-autonomous-systems-sensing-exploration-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Robotics &amp; Autonomous Systems": [
+          "ECE 4550",
+          "ECE 3550",
+          "ECE 3084",
+          "ECE 3251",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580"
+        ],
+        "Sensing &amp; Exploration": [
+          "ECE 4390",
+          "ECE 4370",
+          "ECE 3084",
+          "ECE 4260",
+          "ECE 4350",
+          "ECE 4371",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4580",
+          "ECE 4781"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005"
+        ],
+        "Fall 2028": [
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3550",
+          "ECE 3084"
+        ],
+        "Spring 2029": [
+          "ECE 3251",
+          "ECE 4550",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570"
+        ],
+        "Fall 2029": [
+          "ECE 4580",
+          "ECE 4390",
+          "ECE 4370",
+          "ECE 4260",
+          "ECE 4350"
+        ],
+        "Spring 2030": [
+          "ECE 4371",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4781"
+        ]
+      }
+    },
+    "robotics_autonomous_systems_telecommunications_electrical_engineering": {
+      "name": "Electrical Engineering - Robotics & Autonomous Systems and Telecommunications",
+      "url": "https://catalog.gatech.edu/programs/robotics-autonomous-systems-telecommunications-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Robotics &amp; Autonomous Systems": [
+          "ECE 4550",
+          "ECE 3550",
+          "ECE 3084",
+          "ECE 3251",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580"
+        ],
+        "Telecommunications": [
+          "ECE 3600",
+          "CS 3251",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4502",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3550"
+        ],
+        "Fall 2028": [
+          "ECE 3084",
+          "ECE 3251",
+          "ECE 3600",
+          "CS 3251",
+          "ECE 4550",
+          "ECE 4252"
+        ],
+        "Spring 2029": [
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 4350"
+        ],
+        "Fall 2029": [
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4502",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "telecommunications_sensing_exploration_electrical_engineering": {
+      "name": "Electrical Engineering - Sensing & Exploration and Telecommunications",
+      "url": "https://catalog.gatech.edu/programs/telecommunications-sensing-exploration-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Telecommunications": [
+          "ECE 3600",
+          "CS 3251",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4502",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ],
+        "Sensing &amp; Exploration": [
+          "ECE 4390",
+          "ECE 4370",
+          "ECE 3084",
+          "ECE 4260",
+          "ECE 4350",
+          "ECE 4371",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4580",
+          "ECE 4781"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3600"
+        ],
+        "Fall 2028": [
+          "CS 3251",
+          "ECE 3084",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 4350",
+          "ECE 4370"
+        ],
+        "Spring 2029": [
+          "ECE 4500",
+          "ECE 4502",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612",
+          "ECE 4390"
+        ],
+        "Fall 2029": [
+          "ECE 4260",
+          "ECE 4371",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4580",
+          "ECE 4781"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "signal_information_processing_bioengineering_electrical_engineering": {
+      "name": "Electrical Engineering - Signal & Information Processing and Bioengineering",
+      "url": "https://catalog.gatech.edu/programs/signal-information-processing-bioengineering-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "CHEM 1310",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Bioengineering": [
+          "ECE 4781",
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4435"
+        ],
+        "Signal &amp; Information Processing": [
+          "ECE 3251",
+          "ECE 4270",
+          "ECE 4252",
+          "ECE 3084",
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005"
+        ],
+        "Fall 2028": [
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3084",
+          "ECE 3251"
+        ],
+        "Spring 2029": [
+          "ECE 4781",
+          "ECE 4782",
+          "ECE 4784",
+          "ECE 4350",
+          "ECE 4370"
+        ],
+        "Fall 2029": [
+          "ECE 4435",
+          "ECE 4270",
+          "ECE 4252",
+          "ECE 4122",
+          "ECE 4180"
+        ],
+        "Spring 2030": [
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ]
+      }
+    },
+    "signal_information_processing_circuit_technology_electrical_engieering": {
+      "name": "Electrical Engineering - Signal & Information Processing and Circuit Technology",
+      "url": "https://catalog.gatech.edu/programs/signal-information-processing-circuit-technology-electrical-engieering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "CHEM 1310",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Circuit Technology": [
+          "ECE 3400",
+          "ECE 4043",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4415",
+          "ECE 4420",
+          "ECE 4430",
+          "ECE 4435",
+          "ECE 4502",
+          "ECE 4452",
+          "ECE 4450",
+          "ECE 4448",
+          "ECE 4370",
+          "ECE 4391"
+        ],
+        "Signal &amp; Information Processing": [
+          "ECE 3251",
+          "ECE 4252",
+          "ECE 4270",
+          "ECE 3084",
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3400"
+        ],
+        "Fall 2028": [
+          "ECE 3251",
+          "ECE 3084",
+          "ECE 4043",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4415"
+        ],
+        "Spring 2029": [
+          "ECE 4420",
+          "ECE 4430",
+          "ECE 4435",
+          "ECE 4502",
+          "ECE 4452",
+          "ECE 4450"
+        ],
+        "Fall 2029": [
+          "ECE 4448",
+          "ECE 4370",
+          "ECE 4391",
+          "ECE 4252",
+          "ECE 4270",
+          "ECE 4122"
+        ],
+        "Spring 2030": [
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ]
+      }
+    },
+    "signal_information_processing_electronic_devices_electrical_engineering": {
+      "name": "Electrical Engineering - Signal & Information Processing and Electronic Devices",
+      "url": "https://catalog.gatech.edu/programs/signal-information-processing-electronic-devices-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "CHEM 1310",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Electronic Devices": [
+          "ECE 3450",
+          "ECE 4452",
+          "ECE 4350",
+          "ECE 4460",
+          "ECE 4470",
+          "ECE 4500",
+          "ECE 4751",
+          "ECE 4754",
+          "ECE 4755"
+        ],
+        "Signal &amp; Information Processing": [
+          "ECE 3251",
+          "ECE 4270",
+          "ECE 4252",
+          "ECE 3084",
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3450"
+        ],
+        "Fall 2028": [
+          "ECE 3251",
+          "ECE 3084",
+          "ECE 4452",
+          "ECE 4350",
+          "ECE 4460",
+          "ECE 4470"
+        ],
+        "Spring 2029": [
+          "ECE 4500",
+          "ECE 4751",
+          "ECE 4754",
+          "ECE 4755",
+          "ECE 4270",
+          "ECE 4252"
+        ],
+        "Fall 2029": [
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "signal_information_processing_robotics_autonomous_systems_electrical_engineering": {
+      "name": "Electrical Engineering - Signal & Information Processing and Robotics & Autonomous Systems",
+      "url": "https://catalog.gatech.edu/programs/signal-information-processing-robotics-autonomous-systems-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "ECE 2020"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Robotics &amp; Autonomous Systems": [
+          "ECE 4550",
+          "ECE 3550",
+          "ECE 3084",
+          "ECE 3251",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570",
+          "ECE 4580"
+        ],
+        "Signal &amp; Information Processing": [
+          "ECE 3251",
+          "ECE 4270",
+          "ECE 4252",
+          "ECE 3084",
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2020"
+        ],
+        "Spring 2028": [
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005"
+        ],
+        "Fall 2028": [
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3550",
+          "ECE 3084"
+        ],
+        "Spring 2029": [
+          "ECE 3251",
+          "ECE 4550",
+          "ECE 4252",
+          "ECE 4560",
+          "ECE 4570"
+        ],
+        "Fall 2029": [
+          "ECE 4580",
+          "ECE 4270",
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258"
+        ],
+        "Spring 2030": [
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ]
+      }
+    },
+    "signal_information_processing_sensing_exploration_electrical_engineering": {
+      "name": "Electrical Engineering - Signal & Information Processing and Sensing & Exploration",
+      "url": "https://catalog.gatech.edu/programs/signal-information-processing-sensing-exploration-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "ECE 2020",
+          "CHEM 1310",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Signal &amp; Information Processing": [
+          "ECE 3251",
+          "ECE 4270",
+          "ECE 4252",
+          "ECE 3084",
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ],
+        "Sensing &amp; Exploration": [
+          "ECE 4390",
+          "ECE 4370",
+          "ECE 3084",
+          "ECE 4260",
+          "ECE 4350",
+          "ECE 4371",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4580",
+          "ECE 4781"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "ECE 2020",
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3251"
+        ],
+        "Fall 2028": [
+          "ECE 3084",
+          "ECE 4270",
+          "ECE 4252",
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258"
+        ],
+        "Spring 2029": [
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783",
+          "ECE 4390",
+          "ECE 4370",
+          "ECE 4350"
+        ],
+        "Fall 2029": [
+          "ECE 4371",
+          "ECE 4445",
+          "ECE 4446",
+          "ECE 4580",
+          "ECE 4781"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "signal_information_processing_telecommunications_electrical_engineering": {
+      "name": "Electrical Engineering - Signal & Information Processing and Telecommunications",
+      "url": "https://catalog.gatech.edu/programs/signal-information-processing-telecommunications-electrical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "ECE 2020"
+        ],
+        "Major Requirements": [
+          "ECE 1100",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035",
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043"
+        ],
+        "Signal &amp; Information Processing": [
+          "ECE 3251",
+          "ECE 4252",
+          "ECE 4270",
+          "ECE 3084",
+          "ECE 4122",
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783"
+        ],
+        "Telecommunications": [
+          "ECE 3600",
+          "CS 3251",
+          "ECE 4601",
+          "ECE 4606",
+          "ECE 3084",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4502",
+          "ECE 4605",
+          "ECE 4607",
+          "ECE 4612"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CHEM 1310",
+          "ECE 1100",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "MATH 2551",
+          "MATH 2552",
+          "ECE 2020",
+          "ECE 2026",
+          "ECE 2031",
+          "ECE 2035"
+        ],
+        "Spring 2028": [
+          "ECE 2040",
+          "ECE 3005",
+          "ECE 3025",
+          "ECE 3040",
+          "ECE 3043",
+          "ECE 3251"
+        ],
+        "Fall 2028": [
+          "ECE 3084",
+          "ECE 3600",
+          "CS 3251",
+          "ECE 4252",
+          "ECE 4270",
+          "ECE 4122"
+        ],
+        "Spring 2029": [
+          "ECE 4180",
+          "ECE 4258",
+          "ECE 4260",
+          "ECE 4271",
+          "ECE 4783",
+          "ECE 4601"
+        ],
+        "Fall 2029": [
+          "ECE 4606",
+          "ECE 4350",
+          "ECE 4370",
+          "ECE 4500",
+          "ECE 4502",
+          "ECE 4605"
+        ],
+        "Spring 2030": [
+          "ECE 4607",
+          "ECE 4612"
+        ]
+      }
+    },
+    "environmental_engineering": {
+      "name": "Environmental Engineering",
+      "url": "https://catalog.gatech.edu/programs/environmental-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "General Core": [
+          "PHYS 2211",
+          "MATH 1551",
+          "MATH 1552",
+          "MATH 1553",
+          "MATH 1554",
+          "MATH 2552",
+          "CHEM 1310",
+          "COE 2001"
+        ],
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "BIOS 1107"
+        ],
+        "Major Requirements": [
+          "CEE 1070",
+          "CEE 1090",
+          "CEE 2040",
+          "CEE 2090",
+          "CEE 2300",
+          "CEE 3040",
+          "CEE 3090",
+          "CEE 3340",
+          "CEE 3770",
+          "CEE 4090",
+          "CEE 4200",
+          "COE 3001"
+        ],
+        "Additional Requirements": [
+          "CHEM 1315",
+          "EAS 2600",
+          "CHBE 2130",
+          "CHEM 3411",
+          "EAS 3603",
+          "ME 3322"
+        ],
+        "Environmental Engineering Technical Elective": [
+          "CEE 4210",
+          "CEE 3400",
+          "CEE 4620",
+          "CEE 4795"
+        ],
+        "Design Elective": [
+          "CEE 4310",
+          "CEE 4320",
+          "CEE 4330",
+          "CEE 4340",
+          "CEE 4370",
+          "CEE 4395"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "MATH 1554",
+          "CHEM 1310",
+          "BIOS 1107"
+        ],
+        "Spring 2027": [
+          "CEE 1070",
+          "CEE 1090",
+          "CHEM 1315",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371"
+        ],
+        "Fall 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2552",
+          "COE 2001"
+        ],
+        "Spring 2028": [
+          "MATH 2551",
+          "CEE 2040",
+          "CEE 2090",
+          "CEE 2300",
+          "EAS 2600",
+          "CHBE 2130"
+        ],
+        "Fall 2028": [
+          "CEE 3040",
+          "CEE 3090",
+          "CEE 3340",
+          "CEE 3770",
+          "COE 3001",
+          "CHEM 3411"
+        ],
+        "Spring 2029": [
+          "EAS 3603",
+          "ME 3322",
+          "CEE 3400",
+          "CEE 4090",
+          "CEE 4200",
+          "CEE 4210"
+        ],
+        "Fall 2029": [
+          "CEE 4620",
+          "CEE 4795",
+          "CEE 4310",
+          "CEE 4320",
+          "CEE 4330",
+          "CEE 4340"
+        ],
+        "Spring 2030": [
+          "CEE 4370",
+          "CEE 4395"
+        ]
+      }
+    },
+    "environmental_science": {
+      "name": "Environmental Science",
+      "url": "https://catalog.gatech.edu/programs/environmental-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "INTA 1200"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1212K",
+          "EAS 1600",
+          "EAS 2600",
+          "BIOS 1207",
+          "BIOS 1107",
+          "BIOS 2300",
+          "BIOS 2310"
+        ],
+        "Major Requirements": [
+          "BIOS 1107L",
+          "BIOS 2301",
+          "EAS 4480",
+          "PUBP 4530",
+          "PUBP 3315",
+          "EAS 4410",
+          "EAS 4420",
+          "BIOS 3380",
+          "EAS 4220"
+        ],
+        "Environmental Science Electives": [
+          "BIOS 3380",
+          "BIOS 3600",
+          "BIOS 4221",
+          "BIOS 4340",
+          "BIOS 4401",
+          "BIOS 4417",
+          "BIOS 4418",
+          "BIOS 4428",
+          "BIOS 4515",
+          "BIOS 4607",
+          "BIOS 4620",
+          "BIOS 4651",
+          "BIOS 4690",
+          "BIOS 4699",
+          "BIOS 4803",
+          "BIOS 4813",
+          "CEE 4300",
+          "CEE 4330",
+          "CEE 4350",
+          "CEE 4360",
+          "CHEM 3700",
+          "CP 4052",
+          "CP 4105",
+          "CP 4190",
+          "CP 4210",
+          "EAS 3110",
+          "EAS 3603",
+          "EAS 3803",
+          "EAS 4205",
+          "EAS 4220",
+          "EAS 4221",
+          "EAS 4224",
+          "EAS 4300",
+          "EAS 4305",
+          "EAS 4350",
+          "EAS 4375",
+          "EAS 4380",
+          "EAS 4430",
+          "EAS 4525",
+          "EAS 4602",
+          "EAS 4699",
+          "EAS 4740",
+          "EAS 4803",
+          "EAS 4813",
+          "ECON 3300",
+          "ECON 4440",
+          "HTS 3005",
+          "HTS 3081",
+          "INTA 3040",
+          "INTA 4040",
+          "PHIL 4176",
+          "PUBP 3320",
+          "PUBP 3350",
+          "PUBP 3600",
+          "PUBP 4440",
+          "PUBP 4530",
+          "PUBP 4620"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "INTA 1200",
+          "MATH 1553",
+          "EAS 1600",
+          "BIOS 1207",
+          "BIOS 1107",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Spring 2027": [
+          "MATH 1552",
+          "EAS 2600",
+          "BIOS 2300",
+          "BIOS 2310",
+          "BIOS 2301",
+          "CHEM 1212K",
+          "BIOS 1107L",
+          "PUBP 3315",
+          "BIOS 3380",
+          "BIOS 3600"
+        ],
+        "Fall 2027": [
+          "CHEM 3700",
+          "EAS 3110",
+          "EAS 3603",
+          "EAS 3803",
+          "ECON 3300",
+          "HTS 3005",
+          "HTS 3081",
+          "INTA 3040",
+          "PUBP 3320",
+          "PUBP 3350"
+        ],
+        "Spring 2028": [
+          "PUBP 3600",
+          "EAS 4480",
+          "PUBP 4530",
+          "EAS 4410",
+          "EAS 4420",
+          "EAS 4220",
+          "BIOS 4221",
+          "BIOS 4340",
+          "BIOS 4401",
+          "BIOS 4417"
+        ],
+        "Fall 2028": [
+          "BIOS 4418",
+          "BIOS 4428",
+          "BIOS 4515",
+          "BIOS 4607",
+          "BIOS 4620",
+          "BIOS 4651",
+          "BIOS 4690",
+          "BIOS 4699",
+          "BIOS 4803",
+          "BIOS 4813"
+        ],
+        "Spring 2029": [
+          "CEE 4300",
+          "CEE 4330",
+          "CEE 4350",
+          "CEE 4360",
+          "CP 4052",
+          "CP 4105",
+          "CP 4190",
+          "CP 4210",
+          "EAS 4205",
+          "EAS 4221"
+        ],
+        "Fall 2029": [
+          "EAS 4224",
+          "EAS 4300",
+          "EAS 4305",
+          "EAS 4350",
+          "EAS 4375",
+          "EAS 4380",
+          "EAS 4430",
+          "EAS 4525",
+          "EAS 4602",
+          "EAS 4699"
+        ],
+        "Spring 2030": [
+          "EAS 4740",
+          "EAS 4803",
+          "EAS 4813",
+          "ECON 4440",
+          "INTA 4040",
+          "PHIL 4176",
+          "PUBP 4440",
+          "PUBP 4620"
+        ]
+      }
+    },
+    "global_economics_modern_languages": {
+      "name": "Global Economics and Modern Languages",
+      "url": "https://catalog.gatech.edu/programs/global-economics-modern-languages-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1315"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "ECON 2105",
+          "ECON 2106"
+        ],
+        "Major Requirements": [
+          "ECON 3110",
+          "ECON 3120",
+          "ECON 3161"
+        ],
+        "Modern Languages": [
+          "CHIN/FREN/GRMN/JAPN/KOR/RUSS/SPAN 4500"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "CS 1315"
+        ],
+        "Spring 2027": [
+          "ENGL 1101",
+          "MATH 1712"
+        ],
+        "Fall 2027": [
+          "MATH 1711",
+          "ENGL 1102"
+        ],
+        "Spring 2028": [
+          "HIST 2111",
+          "ECON 2105"
+        ],
+        "Fall 2028": [
+          "ECON 2106",
+          "ECON 3110"
+        ],
+        "Spring 2029": [
+          "ECON 3120",
+          "ECON 3161"
+        ],
+        "Fall 2029": [
+          "CHIN/FREN/GRMN/JAPN/KOR/RUSS/SPAN 4500"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "history_technology_society": {
+      "name": "History, Technology, and Society",
+      "url": "https://catalog.gatech.edu/programs/history-technology-society-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "HTS 2101",
+          "HIST 2111",
+          "SOC 1101",
+          "HTS 1031",
+          "HTS 2036",
+          "HTS 2037",
+          "HTS 2040",
+          "HTS 2041",
+          "HTS 2053",
+          "HTS 2061",
+          "HTS 2062",
+          "HTS 3028",
+          "HTS 3029",
+          "HTS 3030",
+          "HTS 3031",
+          "HTS 3032",
+          "HTS 3033",
+          "HTS 3035",
+          "HTS 3036",
+          "HTS 3038",
+          "HTS 3039",
+          "HTS 3041",
+          "HTS 3046",
+          "HTS 3048",
+          "HTS 3051",
+          "HTS 3055",
+          "HTS 3061",
+          "HTS 3062",
+          "HTS 3064",
+          "HTS 3065"
+        ],
+        "Major Requirements": [
+          "HTS 3102",
+          "HTS 1081",
+          "HTS 2080",
+          "HTS 2081",
+          "HTS 2082",
+          "HTS 2084",
+          "HTS 2100",
+          "HTS 3007",
+          "HTS 3020",
+          "HTS 3021",
+          "HTS 3046",
+          "HTS 3080",
+          "HTS 3081",
+          "HTS 3084",
+          "HTS 3086",
+          "HTS 3087",
+          "HTS 3088",
+          "HTS 3089",
+          "HTS 4001",
+          "HTS 4011",
+          "HTS 4031",
+          "HTS 4081",
+          "HTS 4086",
+          "HTS 4091"
+        ],
+        "HTS Specialization Electives": [
+          "HTS 2001",
+          "HTS 2002",
+          "HTS 2006",
+          "HTS 2007",
+          "HTS 2013",
+          "HTS 2015",
+          "HTS 2017",
+          "HTS 2052",
+          "HTS 2085",
+          "HTS 2086",
+          "HTS 3002",
+          "HTS 3005",
+          "HTS 3006",
+          "HTS 3009",
+          "HTS 3011",
+          "HTS 3012",
+          "HTS 3015",
+          "HTS 3016",
+          "HTS 3018",
+          "HTS 3019",
+          "HTS 3022",
+          "HTS 3023",
+          "HTS 3024",
+          "HTS 3025",
+          "HTS 3026",
+          "HTS 3027",
+          "HTS 3068",
+          "HTS 3070",
+          "HTS 3073",
+          "HTS 3100",
+          "HTS 1031",
+          "HTS 2036",
+          "HTS 2037",
+          "HTS 2040",
+          "HTS 2041",
+          "HTS 2051",
+          "HTS 2061",
+          "HTS 2062",
+          "HTS 2053",
+          "HTS 2100",
+          "HTS 3028",
+          "HTS 3029",
+          "HTS 3030",
+          "HTS 3031",
+          "HTS 3032",
+          "HTS 3033",
+          "HTS 3035",
+          "HTS 3036",
+          "HTS 3038",
+          "HTS 3039",
+          "HTS 3041",
+          "HTS 3046",
+          "HTS 3048",
+          "HTS 3051",
+          "HTS 3055",
+          "HTS 3061",
+          "HTS 3062",
+          "HTS 3064",
+          "HTS 3065",
+          "HTS 3067",
+          "HTS 1081",
+          "HTS 2080",
+          "HTS 2081",
+          "HTS 2082",
+          "HTS 2084",
+          "HTS 3020",
+          "HTS 3021",
+          "HTS 3080",
+          "HTS 3081",
+          "HTS 3082",
+          "HTS 3084",
+          "HTS 3086",
+          "HTS 3087",
+          "HTS 3088",
+          "HTS 3089",
+          "HTS 2016",
+          "HTS 2018",
+          "HTS 3007",
+          "HTS 3071",
+          "HTS 3072",
+          "HTS 3008",
+          "HTS 3017"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1712",
+          "MATH 1711",
+          "SOC 1101",
+          "HTS 1031",
+          "HTS 1081",
+          "ENGL 1102",
+          "CS 1301",
+          "HIST 2111",
+          "HTS 2101",
+          "HTS 2036",
+          "HTS 2037"
+        ],
+        "Spring 2027": [
+          "HTS 2040",
+          "HTS 2041",
+          "HTS 2053",
+          "HTS 2061",
+          "HTS 2062",
+          "HTS 2080",
+          "HTS 2081",
+          "HTS 2082",
+          "HTS 2084",
+          "HTS 2100",
+          "HTS 2001",
+          "HTS 2002",
+          "HTS 2006"
+        ],
+        "Fall 2027": [
+          "HTS 2007",
+          "HTS 2013",
+          "HTS 2015",
+          "HTS 2017",
+          "HTS 2052",
+          "HTS 2085",
+          "HTS 2086",
+          "HTS 2051",
+          "HTS 2016",
+          "HTS 2018",
+          "HTS 3028",
+          "HTS 3029",
+          "HTS 3030"
+        ],
+        "Spring 2028": [
+          "HTS 3031",
+          "HTS 3032",
+          "HTS 3033",
+          "HTS 3035",
+          "HTS 3036",
+          "HTS 3038",
+          "HTS 3039",
+          "HTS 3041",
+          "HTS 3046",
+          "HTS 3048",
+          "HTS 3051",
+          "HTS 3055",
+          "HTS 3061"
+        ],
+        "Fall 2028": [
+          "HTS 3062",
+          "HTS 3064",
+          "HTS 3065",
+          "HTS 3102",
+          "HTS 3007",
+          "HTS 3020",
+          "HTS 3021",
+          "HTS 3080",
+          "HTS 3081",
+          "HTS 3084",
+          "HTS 3086",
+          "HTS 3087",
+          "HTS 3088"
+        ],
+        "Spring 2029": [
+          "HTS 3089",
+          "HTS 3002",
+          "HTS 3005",
+          "HTS 3006",
+          "HTS 3009",
+          "HTS 3011",
+          "HTS 3012",
+          "HTS 3015",
+          "HTS 3016",
+          "HTS 3018",
+          "HTS 3019",
+          "HTS 3022",
+          "HTS 3023"
+        ],
+        "Fall 2029": [
+          "HTS 3024",
+          "HTS 3025",
+          "HTS 3026",
+          "HTS 3027",
+          "HTS 3068",
+          "HTS 3070",
+          "HTS 3073",
+          "HTS 3100",
+          "HTS 3067",
+          "HTS 3082",
+          "HTS 3071",
+          "HTS 3072",
+          "HTS 3008"
+        ],
+        "Spring 2030": [
+          "HTS 3017",
+          "HTS 4001",
+          "HTS 4011",
+          "HTS 4031",
+          "HTS 4081",
+          "HTS 4086",
+          "HTS 4091"
+        ]
+      }
+    },
+    "industrial_design": {
+      "name": "Industrial Design",
+      "url": "https://catalog.gatech.edu/programs/industrial-design-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1315"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "ID 1011",
+          "ID 1012",
+          "ID 1101",
+          "ID 1102",
+          "ID 1401",
+          "ID 1402",
+          "ID 1418",
+          "ID 2023",
+          "ID 2024",
+          "ID 2242"
+        ],
+        "Major Requirements": [
+          "ID 1419",
+          "ID 2101",
+          "ID 2102",
+          "ID 2202",
+          "ID 2320",
+          "ID 2325",
+          "ID 2510",
+          "ID 3031",
+          "ID 3032",
+          "ID 3301",
+          "ID 3302",
+          "ID 4061",
+          "ID 4062",
+          "ID 3320",
+          "ID 4206"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "CS 1315",
+          "ENGL 1101",
+          "MATH 1553",
+          "ID 1011"
+        ],
+        "Spring 2027": [
+          "ID 1012",
+          "ID 1101",
+          "ID 1102",
+          "ID 1401",
+          "ID 1402"
+        ],
+        "Fall 2027": [
+          "ID 1418",
+          "ID 1419",
+          "ENGL 1102",
+          "MATH 1551",
+          "MATH 1552"
+        ],
+        "Spring 2028": [
+          "HIST 2111",
+          "ID 2023",
+          "ID 2024",
+          "ID 2242",
+          "ID 2101"
+        ],
+        "Fall 2028": [
+          "ID 2102",
+          "ID 2202",
+          "ID 2320",
+          "ID 2325",
+          "ID 2510"
+        ],
+        "Spring 2029": [
+          "ID 3031",
+          "ID 3032",
+          "ID 3301",
+          "ID 3302",
+          "ID 3320"
+        ],
+        "Fall 2029": [
+          "ID 4061",
+          "ID 4062",
+          "ID 4206"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "industrial_engineering_advanced_studies_operations_research_statistics": {
+      "name": "Industrial Engineering - Advanced Studies in Operations Research and Statistics",
+      "url": "https://catalog.gatech.edu/programs/industrial-engineering-advanced-studies-operations-research-statistics-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CS 2316",
+          "MATH 2551",
+          "ACCT 2101",
+          "ISYE 2027"
+        ],
+        "Major Requirements": [
+          "CS 4400",
+          "ISYE 3025",
+          "ISYE 3030",
+          "ISYE 3133",
+          "ISYE 3232",
+          "ISYE 3044",
+          "ISYE 4031",
+          "ISYE 4106"
+        ],
+        "Engineering Electives": [
+          "ECE 2020",
+          "ECE 2026",
+          "ECE 3710",
+          "AE 2220",
+          "BMED 3100",
+          "CHBE 2100",
+          "CHBE 2130",
+          "COE 2001",
+          "COE 3001",
+          "CEE 2040",
+          "CEE 2300",
+          "CEE 3010",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600",
+          "CS 2110",
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 2040",
+          "ECE 3741",
+          "ECE 4606",
+          "ECE 4823",
+          "ME 2202",
+          "ME 3322",
+          "ME 3720",
+          "MSE 2001",
+          "MSE 3015",
+          "NRE 3301",
+          "AE 4701",
+          "AE 4793",
+          "ARCH 6271",
+          "BIOS 2400",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "COE 3002",
+          "CEE 4225",
+          "CEE 4330",
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 2031",
+          "ECE 4755",
+          "ISYE 4740",
+          "MATH 4755",
+          "ME 2110",
+          "ME 3057",
+          "ME 4740",
+          "ME 4793",
+          "MSE 2021",
+          "MSE 3720",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793"
+        ],
+        "Advanced Studies in Operations Research &amp; Statistics Concentration": [
+          "MATH 2106",
+          "MATH 3012",
+          "MATH 3406",
+          "ISYE 8813",
+          "ISYE 4133",
+          "ISYE 4232",
+          "ISYE 6661",
+          "ISYE 6662",
+          "ISYE 6663",
+          "ISYE 6664",
+          "ISYE 6761",
+          "ISYE 6412",
+          "ISYE 3103",
+          "ISYE 3104",
+          "ISYE 3106",
+          "ISYE 3039",
+          "ISYE 4034",
+          "ISYE 4045",
+          "ISYE 4111",
+          "ISYE 4134",
+          "ISYE 4301",
+          "ISYE 4311",
+          "ISYE 4501",
+          "ISYE 4803"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2316",
+          "MATH 2551",
+          "ACCT 2101"
+        ],
+        "Spring 2027": [
+          "ISYE 2027",
+          "ECE 2020",
+          "ECE 2026",
+          "AE 2220",
+          "CHBE 2100",
+          "CHBE 2130",
+          "COE 2001",
+          "CEE 2040",
+          "CEE 2300",
+          "CS 2110",
+          "ECE 2040",
+          "ME 2202",
+          "MSE 2001"
+        ],
+        "Fall 2027": [
+          "BIOS 2400",
+          "ECE 2031",
+          "ME 2110",
+          "MSE 2021",
+          "MATH 2106",
+          "ARCH 6271",
+          "ISYE 8813",
+          "ISYE 6661",
+          "ISYE 6662",
+          "ISYE 6663",
+          "ISYE 6664",
+          "ISYE 6761",
+          "ISYE 6412"
+        ],
+        "Spring 2028": [
+          "ISYE 3025",
+          "ISYE 3030",
+          "ISYE 3133",
+          "ISYE 3232",
+          "ISYE 3044",
+          "ECE 3710",
+          "BMED 3100",
+          "COE 3001",
+          "CEE 3010",
+          "ECE 3741",
+          "ME 3322",
+          "ME 3720",
+          "MSE 3015"
+        ],
+        "Fall 2028": [
+          "NRE 3301",
+          "COE 3002",
+          "ME 3057",
+          "MSE 3720",
+          "MATH 3012",
+          "MATH 3406",
+          "ISYE 3103",
+          "ISYE 3104",
+          "ISYE 3106",
+          "ISYE 3039",
+          "CS 4400",
+          "ISYE 4031",
+          "ISYE 4106"
+        ],
+        "Spring 2029": [
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600",
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 4606",
+          "ECE 4823",
+          "AE 4701",
+          "AE 4793",
+          "BIOS 4740",
+          "BMED 4751"
+        ],
+        "Fall 2029": [
+          "CHBE 4793",
+          "CEE 4225",
+          "CEE 4330",
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 4755",
+          "ISYE 4740",
+          "MATH 4755",
+          "ME 4740",
+          "ME 4793",
+          "MSE 4751",
+          "MSE 4755"
+        ],
+        "Spring 2030": [
+          "MSE 4793",
+          "ISYE 4133",
+          "ISYE 4232",
+          "ISYE 4034",
+          "ISYE 4045",
+          "ISYE 4111",
+          "ISYE 4134",
+          "ISYE 4301",
+          "ISYE 4311",
+          "ISYE 4501",
+          "ISYE 4803"
+        ]
+      }
+    },
+    "industrial_engineering_analytics_data_science": {
+      "name": "Industrial Engineering - Analytics and Data Science",
+      "url": "https://catalog.gatech.edu/programs/industrial-engineering-analytics-data-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CS 2316",
+          "MATH 2551",
+          "ACCT 2101",
+          "ISYE 2027"
+        ],
+        "Major Requirements": [
+          "CS 4400",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3044",
+          "ISYE 3133",
+          "ISYE 3232",
+          "ISYE 4031",
+          "ISYE 4106"
+        ],
+        "Engineering Electives": [
+          "ECE 2020",
+          "ECE 2026",
+          "ECE 3710",
+          "AE 2220",
+          "BMED 3100",
+          "CHBE 2100",
+          "COE 2001",
+          "COE 3001",
+          "CEE 2040",
+          "CEE 2300",
+          "CEE 3010",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600",
+          "CS 2110",
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 2040",
+          "ECE 3741",
+          "ECE 4606",
+          "ME 2202",
+          "ME 3322",
+          "ME 3720",
+          "MSE 2001",
+          "MSE 3015",
+          "NRE 3301",
+          "AE 4701",
+          "AE 4793",
+          "ARCH 6271",
+          "BIOS 2400",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "COE 3002",
+          "CEE 4225",
+          "CEE 4330",
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 2031",
+          "ECE 4755",
+          "ME 2110",
+          "ME 3057",
+          "ME 4740",
+          "ME 4793",
+          "MSE 2021",
+          "MSE 3720",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793"
+        ],
+        "Analytics and Data Science Concentration": [
+          "MATH 2603",
+          "ISYE 4133",
+          "ISYE 4232",
+          "ISYE 4045",
+          "ISYE 4134",
+          "ISYE 4034",
+          "CX 4240",
+          "ISYE 4803",
+          "ECON 3150",
+          "ECON 4340",
+          "ECON 4350",
+          "ISYE 3039",
+          "ISYE 3103",
+          "ISYE 3104",
+          "ISYE 3106",
+          "ISYE 4111",
+          "ISYE 4301",
+          "ISYE 4311",
+          "MATH 4262",
+          "MGT 3078"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2316",
+          "MATH 2551"
+        ],
+        "Spring 2027": [
+          "ACCT 2101",
+          "ISYE 2027",
+          "ECE 2020",
+          "ECE 2026",
+          "AE 2220",
+          "CHBE 2100",
+          "COE 2001",
+          "CEE 2040",
+          "CEE 2300",
+          "CS 2110",
+          "ECE 2040",
+          "ME 2202"
+        ],
+        "Fall 2027": [
+          "MSE 2001",
+          "BIOS 2400",
+          "ECE 2031",
+          "ME 2110",
+          "MSE 2021",
+          "MATH 2603",
+          "ARCH 6271",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3044",
+          "ISYE 3133",
+          "ISYE 3232"
+        ],
+        "Spring 2028": [
+          "ECE 3710",
+          "BMED 3100",
+          "COE 3001",
+          "CEE 3010",
+          "ECE 3741",
+          "ME 3322",
+          "ME 3720",
+          "MSE 3015",
+          "NRE 3301",
+          "COE 3002",
+          "ME 3057",
+          "MSE 3720"
+        ],
+        "Fall 2028": [
+          "ECON 3150",
+          "ISYE 3039",
+          "ISYE 3103",
+          "ISYE 3104",
+          "ISYE 3106",
+          "MGT 3078",
+          "CS 4400",
+          "ISYE 4031",
+          "ISYE 4106",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600"
+        ],
+        "Spring 2029": [
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 4606",
+          "AE 4701",
+          "AE 4793",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "CEE 4225",
+          "CEE 4330"
+        ],
+        "Fall 2029": [
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 4755",
+          "ME 4740",
+          "ME 4793",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793",
+          "ISYE 4133",
+          "ISYE 4232",
+          "ISYE 4045"
+        ],
+        "Spring 2030": [
+          "ISYE 4134",
+          "ISYE 4034",
+          "ISYE 4803",
+          "ECON 4340",
+          "ECON 4350",
+          "ISYE 4111",
+          "ISYE 4301",
+          "ISYE 4311",
+          "MATH 4262"
+        ]
+      }
+    },
+    "industrial_engineering_artificial_intelligence_operations_research": {
+      "name": "Industrial Engineering - Artificial Intelligence/Operations Research for Decisions",
+      "url": "https://catalog.gatech.edu/programs/industrial-engineering-artificial-intelligence-operations-research-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CS 2316",
+          "MATH 2551",
+          "ACCT 2101",
+          "ISYE 2027"
+        ],
+        "Major Requirements": [
+          "CS 4400",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3133",
+          "ISYE 3232",
+          "ISYE 3044",
+          "ISYE 4031",
+          "ISYE 4106"
+        ],
+        "Engineering Electives": [
+          "ECE 2020",
+          "ECE 2026",
+          "ECE 3710",
+          "AE 2220",
+          "BMED 3100",
+          "CHBE 2100",
+          "COE 2001",
+          "COE 3001",
+          "CEE 2040",
+          "CEE 2300",
+          "CEE 3010",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600",
+          "CS 2110",
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 2040",
+          "ECE 3741",
+          "ECE 4606",
+          "ME 2202",
+          "ME 3322",
+          "ME 3720",
+          "MSE 2001",
+          "MSE 3015",
+          "NRE 3301",
+          "AE 4701",
+          "AE 4793",
+          "ARCH 6271",
+          "BIOS 2400",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "COE 3002",
+          "CEE 4225",
+          "CEE 4330",
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 2031",
+          "ECE 4755",
+          "ISYE 4740",
+          "MATH 4755",
+          "ME 2110",
+          "ME 3057",
+          "ME 4740",
+          "ME 4793",
+          "MSE 2021",
+          "MSE 3720",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793"
+        ],
+        "Artificial Intelligence and Operations Research for Decisions": [
+          "MATH 2603",
+          "ISYE 3803",
+          "ISYE 4600",
+          "ISYE 4601",
+          "ISYE 4232",
+          "ISYE 4133",
+          "ISYE 4034",
+          "ISYE 4045",
+          "ISYE 4134",
+          "ISYE 4135",
+          "ISYE 4803",
+          "ISYE 3039",
+          "ISYE 3103",
+          "ISYE 3106",
+          "ISYE 4111",
+          "ISYE 4112",
+          "ISYE 4301",
+          "ISYE 4311",
+          "ISYE 4501",
+          "ISYE 4510",
+          "ISYE 4113",
+          "ISYE 4515"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2316",
+          "MATH 2551",
+          "ACCT 2101"
+        ],
+        "Spring 2027": [
+          "ISYE 2027",
+          "ECE 2020",
+          "ECE 2026",
+          "AE 2220",
+          "CHBE 2100",
+          "COE 2001",
+          "CEE 2040",
+          "CEE 2300",
+          "CS 2110",
+          "ECE 2040",
+          "ME 2202",
+          "MSE 2001",
+          "BIOS 2400"
+        ],
+        "Fall 2027": [
+          "ECE 2031",
+          "ME 2110",
+          "MSE 2021",
+          "MATH 2603",
+          "ARCH 6271",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3133",
+          "ISYE 3232",
+          "ISYE 3044",
+          "ECE 3710",
+          "BMED 3100",
+          "COE 3001"
+        ],
+        "Spring 2028": [
+          "CEE 3010",
+          "ECE 3741",
+          "ME 3322",
+          "ME 3720",
+          "MSE 3015",
+          "NRE 3301",
+          "COE 3002",
+          "ME 3057",
+          "MSE 3720",
+          "ISYE 3803",
+          "ISYE 3039",
+          "ISYE 3103",
+          "ISYE 3106"
+        ],
+        "Fall 2028": [
+          "CS 4400",
+          "ISYE 4031",
+          "ISYE 4106",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600",
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 4606",
+          "AE 4701",
+          "AE 4793"
+        ],
+        "Spring 2029": [
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "CEE 4225",
+          "CEE 4330",
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 4755",
+          "ISYE 4740",
+          "MATH 4755",
+          "ME 4740",
+          "ME 4793"
+        ],
+        "Fall 2029": [
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793",
+          "ISYE 4600",
+          "ISYE 4601",
+          "ISYE 4232",
+          "ISYE 4133",
+          "ISYE 4034",
+          "ISYE 4045",
+          "ISYE 4134",
+          "ISYE 4135",
+          "ISYE 4803",
+          "ISYE 4111"
+        ],
+        "Spring 2030": [
+          "ISYE 4112",
+          "ISYE 4301",
+          "ISYE 4311",
+          "ISYE 4501",
+          "ISYE 4510",
+          "ISYE 4113",
+          "ISYE 4515"
+        ]
+      }
+    },
+    "industrial_engineering_economic_financial_systems": {
+      "name": "Industrial Engineering - Economic and Financial Systems",
+      "url": "https://catalog.gatech.edu/programs/industrial-engineering-economic-financial-systems-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CS 2316",
+          "MATH 2551",
+          "ACCT 2101",
+          "ISYE 2027"
+        ],
+        "Major Requirements": [
+          "CS 4400",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3133",
+          "ISYE 3232",
+          "ISYE 3044",
+          "ISYE 4031",
+          "ISYE 4106"
+        ],
+        "Engineering Electives": [
+          "ECE 2020",
+          "ECE 2026",
+          "ECE 3710",
+          "AE 2220",
+          "BMED 3100",
+          "CHBE 2100",
+          "COE 2001",
+          "COE 3001",
+          "CEE 2040",
+          "CEE 2300",
+          "CEE 3010",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600",
+          "CS 2110",
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 2040",
+          "ECE 3741",
+          "ECE 4606",
+          "ME 2202",
+          "ME 3322",
+          "ME 3720",
+          "MSE 2001",
+          "MSE 3015",
+          "NRE 3301",
+          "AE 4701",
+          "AE 4793",
+          "ARCH 6271",
+          "BIOS 2400",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "COE 3002",
+          "CEE 4225",
+          "CEE 4330",
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 2031",
+          "ECE 4755",
+          "ISYE 4740",
+          "MATH 4755",
+          "ME 2110",
+          "ME 3057",
+          "ME 4740",
+          "ME 4793",
+          "MSE 2021",
+          "MSE 3720",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793"
+        ],
+        "Economic and Financial Systems Concentration": [
+          "MATH 2603",
+          "ISYE 4301",
+          "ISYE 4311",
+          "ECON 3150",
+          "ECON 4340",
+          "ECON 4350",
+          "MGT 3078",
+          "ISYE 3039",
+          "ISYE 3103",
+          "ISYE 3104",
+          "ISYE 3106",
+          "ISYE 4045",
+          "ISYE 4111",
+          "ISYE 4133",
+          "ISYE 4232",
+          "ISYE 4501",
+          "ISYE 4803"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2316",
+          "MATH 2551"
+        ],
+        "Spring 2027": [
+          "ACCT 2101",
+          "ISYE 2027",
+          "ECE 2020",
+          "ECE 2026",
+          "AE 2220",
+          "CHBE 2100",
+          "COE 2001",
+          "CEE 2040",
+          "CEE 2300",
+          "CS 2110",
+          "ECE 2040",
+          "ME 2202"
+        ],
+        "Fall 2027": [
+          "MSE 2001",
+          "BIOS 2400",
+          "ECE 2031",
+          "ME 2110",
+          "MSE 2021",
+          "MATH 2603",
+          "ARCH 6271",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3133",
+          "ISYE 3232",
+          "ISYE 3044"
+        ],
+        "Spring 2028": [
+          "ECE 3710",
+          "BMED 3100",
+          "COE 3001",
+          "CEE 3010",
+          "ECE 3741",
+          "ME 3322",
+          "ME 3720",
+          "MSE 3015",
+          "NRE 3301",
+          "COE 3002",
+          "ME 3057",
+          "MSE 3720"
+        ],
+        "Fall 2028": [
+          "ECON 3150",
+          "MGT 3078",
+          "ISYE 3039",
+          "ISYE 3103",
+          "ISYE 3104",
+          "ISYE 3106",
+          "CS 4400",
+          "ISYE 4031",
+          "ISYE 4106",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600"
+        ],
+        "Spring 2029": [
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 4606",
+          "AE 4701",
+          "AE 4793",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "CEE 4225",
+          "CEE 4330"
+        ],
+        "Fall 2029": [
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 4755",
+          "ISYE 4740",
+          "MATH 4755",
+          "ME 4740",
+          "ME 4793",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793",
+          "ISYE 4301"
+        ],
+        "Spring 2030": [
+          "ISYE 4311",
+          "ECON 4340",
+          "ECON 4350",
+          "ISYE 4045",
+          "ISYE 4111",
+          "ISYE 4133",
+          "ISYE 4232",
+          "ISYE 4501",
+          "ISYE 4803"
+        ]
+      }
+    },
+    "industrial_engineering_general": {
+      "name": "Industrial Engineering - General",
+      "url": "https://catalog.gatech.edu/programs/industrial-engineering-general-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CS 2316",
+          "MATH 2551",
+          "ACCT 2101",
+          "ISYE 2027"
+        ],
+        "Major Requirements": [
+          "CS 4400",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3133",
+          "ISYE 3232",
+          "ISYE 3044",
+          "ISYE 4031",
+          "ISYE 4106"
+        ],
+        "Engineering Electives": [
+          "ECE 2020",
+          "ECE 2026",
+          "ECE 3710",
+          "AE 2220",
+          "BMED 3100",
+          "CHBE 2100",
+          "COE 2001",
+          "COE 3001",
+          "CEE 2040",
+          "CEE 2300",
+          "CEE 3010",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600",
+          "CS 2110",
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 2040",
+          "ECE 3741",
+          "ECE 4606",
+          "ME 2202",
+          "ME 3322",
+          "ME 3720",
+          "MSE 2001",
+          "MSE 3015",
+          "NRE 3301",
+          "AE 4701",
+          "AE 4793",
+          "ARCH 6271",
+          "BIOS 2400",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "COE 3002",
+          "CEE 4225",
+          "CEE 4330",
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 2031",
+          "ECE 4755",
+          "ISYE 4740",
+          "MATH 4755",
+          "ME 2110",
+          "ME 3057",
+          "ME 4740",
+          "ME 4793",
+          "MSE 2021",
+          "MSE 3720",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793"
+        ],
+        "General Concentration": [
+          "MATH 2603",
+          "CS 4641",
+          "CX 4240",
+          "CX 4242",
+          "ECON 3150",
+          "ECON 4340",
+          "ECON 4350",
+          "ISYE 3039",
+          "ISYE 3103",
+          "ISYE 3104",
+          "ISYE 3106",
+          "ISYE 4034",
+          "ISYE 4045",
+          "ISYE 4111",
+          "ISYE 4112",
+          "ISYE 4133",
+          "ISYE 4232",
+          "ISYE 4301",
+          "ISYE 4311",
+          "ISYE 4134",
+          "ISYE 4501",
+          "ISYE 4803",
+          "ISYE 6661",
+          "ISYE 6662",
+          "ISYE 6663",
+          "ISYE 6664",
+          "ISYE 6761",
+          "ISYE 6412",
+          "ISYE 8803",
+          "MATH 4262",
+          "MATH 4317",
+          "MGT 3078",
+          "ISYE 4510"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2316",
+          "MATH 2551",
+          "ACCT 2101",
+          "ISYE 2027"
+        ],
+        "Spring 2027": [
+          "ECE 2020",
+          "ECE 2026",
+          "AE 2220",
+          "CHBE 2100",
+          "COE 2001",
+          "CEE 2040",
+          "CEE 2300",
+          "CS 2110",
+          "ECE 2040",
+          "ME 2202",
+          "MSE 2001",
+          "BIOS 2400",
+          "ECE 2031",
+          "ME 2110"
+        ],
+        "Fall 2027": [
+          "MSE 2021",
+          "MATH 2603",
+          "ARCH 6271",
+          "ISYE 6661",
+          "ISYE 6662",
+          "ISYE 6663",
+          "ISYE 6664",
+          "ISYE 6761",
+          "ISYE 6412",
+          "ISYE 8803",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3133",
+          "ISYE 3232"
+        ],
+        "Spring 2028": [
+          "ISYE 3044",
+          "ECE 3710",
+          "BMED 3100",
+          "COE 3001",
+          "CEE 3010",
+          "ECE 3741",
+          "ME 3322",
+          "ME 3720",
+          "MSE 3015",
+          "NRE 3301",
+          "COE 3002",
+          "ME 3057",
+          "MSE 3720",
+          "ECON 3150"
+        ],
+        "Fall 2028": [
+          "ISYE 3039",
+          "ISYE 3103",
+          "ISYE 3104",
+          "ISYE 3106",
+          "MGT 3078",
+          "CS 4400",
+          "ISYE 4031",
+          "ISYE 4106",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600",
+          "CS 4641",
+          "CX 4010",
+          "CX 4240"
+        ],
+        "Spring 2029": [
+          "CX 4242",
+          "ECE 4606",
+          "AE 4701",
+          "AE 4793",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "CEE 4225",
+          "CEE 4330",
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 4755",
+          "ISYE 4740"
+        ],
+        "Fall 2029": [
+          "MATH 4755",
+          "ME 4740",
+          "ME 4793",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793",
+          "ECON 4340",
+          "ECON 4350",
+          "ISYE 4034",
+          "ISYE 4045",
+          "ISYE 4111",
+          "ISYE 4112",
+          "ISYE 4133",
+          "ISYE 4232"
+        ],
+        "Spring 2030": [
+          "ISYE 4301",
+          "ISYE 4311",
+          "ISYE 4134",
+          "ISYE 4501",
+          "ISYE 4803",
+          "MATH 4262",
+          "MATH 4317",
+          "ISYE 4510"
+        ]
+      }
+    },
+    "industrial_engineering_operations_research": {
+      "name": "Industrial Engineering - Operations Research",
+      "url": "https://catalog.gatech.edu/programs/industrial-engineering-operations-research-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CS 2316",
+          "MATH 2551",
+          "ACCT 2101",
+          "ISYE 2027"
+        ],
+        "Major Requirements": [
+          "CS 4400",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3133",
+          "ISYE 3232",
+          "ISYE 3044",
+          "ISYE 4031",
+          "ISYE 4106"
+        ],
+        "Engineering Electives": [
+          "ECE 2020",
+          "ECE 2026",
+          "ECE 3710",
+          "AE 2220",
+          "BMED 3100",
+          "CHBE 2100",
+          "COE 2001",
+          "COE 3001",
+          "CEE 2040",
+          "CEE 2300",
+          "CEE 3010",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600",
+          "CS 2110",
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 2040",
+          "ECE 3741",
+          "ECE 4606",
+          "ME 2202",
+          "ME 3322",
+          "ME 3720",
+          "MSE 2001",
+          "MSE 3015",
+          "NRE 3301",
+          "AE 4701",
+          "AE 4793",
+          "ARCH 6271",
+          "BIOS 2400",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "COE 3002",
+          "CEE 4225",
+          "CEE 4330",
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 2031",
+          "ECE 4755",
+          "ME 2110",
+          "ME 3057",
+          "ME 4740",
+          "ME 4793",
+          "MSE 2021",
+          "MSE 3720",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793"
+        ],
+        "Operations Research Concentration": [
+          "MATH 2603",
+          "ISYE 4803",
+          "ISYE 4045",
+          "ISYE 4232",
+          "CS 4641",
+          "ECON 3150",
+          "ECON 4340",
+          "ECON 4350",
+          "ISYE 3039",
+          "ISYE 3103",
+          "ISYE 3104",
+          "ISYE 3106",
+          "ISYE 4111",
+          "ISYE 4301",
+          "ISYE 4311",
+          "ISYE 4501",
+          "MATH 4262",
+          "MGT 3078"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2316",
+          "MATH 2551"
+        ],
+        "Spring 2027": [
+          "ACCT 2101",
+          "ISYE 2027",
+          "ECE 2020",
+          "ECE 2026",
+          "AE 2220",
+          "CHBE 2100",
+          "COE 2001",
+          "CEE 2040",
+          "CEE 2300",
+          "CS 2110",
+          "ECE 2040",
+          "ME 2202"
+        ],
+        "Fall 2027": [
+          "MSE 2001",
+          "BIOS 2400",
+          "ECE 2031",
+          "ME 2110",
+          "MSE 2021",
+          "MATH 2603",
+          "ARCH 6271",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3133",
+          "ISYE 3232",
+          "ISYE 3044"
+        ],
+        "Spring 2028": [
+          "ECE 3710",
+          "BMED 3100",
+          "COE 3001",
+          "CEE 3010",
+          "ECE 3741",
+          "ME 3322",
+          "ME 3720",
+          "MSE 3015",
+          "NRE 3301",
+          "COE 3002",
+          "ME 3057",
+          "MSE 3720"
+        ],
+        "Fall 2028": [
+          "ECON 3150",
+          "ISYE 3039",
+          "ISYE 3103",
+          "ISYE 3104",
+          "ISYE 3106",
+          "MGT 3078",
+          "CS 4400",
+          "ISYE 4031",
+          "ISYE 4106",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600"
+        ],
+        "Spring 2029": [
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 4606",
+          "AE 4701",
+          "AE 4793",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "CEE 4225",
+          "CEE 4330"
+        ],
+        "Fall 2029": [
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 4755",
+          "ME 4740",
+          "ME 4793",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793",
+          "ISYE 4803",
+          "ISYE 4045",
+          "ISYE 4232"
+        ],
+        "Spring 2030": [
+          "ECON 4340",
+          "ECON 4350",
+          "ISYE 4111",
+          "ISYE 4301",
+          "ISYE 4311",
+          "ISYE 4501",
+          "MATH 4262"
+        ]
+      }
+    },
+    "industrial_engineering_quality_statistics": {
+      "name": "Industrial Engineering - Quality and Statistics",
+      "url": "https://catalog.gatech.edu/programs/industrial-engineering-quality-statistics-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CS 2316",
+          "MATH 2551",
+          "ACCT 2101",
+          "ISYE 2027"
+        ],
+        "Major Requirements": [
+          "CS 4400",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3133",
+          "ISYE 3232",
+          "ISYE 3044",
+          "ISYE 4031",
+          "ISYE 4106"
+        ],
+        "Engineering Electives": [
+          "ECE 2020",
+          "ECE 2026",
+          "ECE 3710",
+          "AE 2220",
+          "BMED 3100",
+          "CHBE 2100",
+          "COE 2001",
+          "COE 3001",
+          "CEE 2040",
+          "CEE 2300",
+          "CEE 3010",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600",
+          "CS 2110",
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 2040",
+          "ECE 3741",
+          "ECE 4606",
+          "ME 2202",
+          "ME 3322",
+          "ME 3720",
+          "MSE 2001",
+          "MSE 3015",
+          "NRE 3301",
+          "AE 4701",
+          "AE 4793",
+          "ARCH 6271",
+          "BIOS 2400",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "COE 3002",
+          "CEE 4225",
+          "CEE 4330",
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 2031",
+          "ECE 4755",
+          "ISYE 4740",
+          "MATH 4755",
+          "ME 2110",
+          "ME 3057",
+          "ME 4740",
+          "ME 4793",
+          "MSE 2021",
+          "MSE 3720",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793"
+        ],
+        "Quality and Statistics Concentration": [
+          "MATH 2603",
+          "ISYE 3039",
+          "ISYE 4803",
+          "ISYE 4034",
+          "MATH 4262",
+          "CS 4641",
+          "CX 4240",
+          "CX 4242",
+          "ECON 3150",
+          "ECON 4340",
+          "ECON 4350",
+          "ISYE 3103",
+          "ISYE 3104",
+          "ISYE 3106",
+          "ISYE 4045",
+          "ISYE 4111",
+          "ISYE 4133",
+          "ISYE 4301",
+          "ISYE 4232",
+          "ISYE 4311",
+          "ISYE 4501",
+          "MGT 3078"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2316",
+          "MATH 2551"
+        ],
+        "Spring 2027": [
+          "ACCT 2101",
+          "ISYE 2027",
+          "ECE 2020",
+          "ECE 2026",
+          "AE 2220",
+          "CHBE 2100",
+          "COE 2001",
+          "CEE 2040",
+          "CEE 2300",
+          "CS 2110",
+          "ECE 2040",
+          "ME 2202"
+        ],
+        "Fall 2027": [
+          "MSE 2001",
+          "BIOS 2400",
+          "ECE 2031",
+          "ME 2110",
+          "MSE 2021",
+          "MATH 2603",
+          "ARCH 6271",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3133",
+          "ISYE 3232",
+          "ISYE 3044"
+        ],
+        "Spring 2028": [
+          "ECE 3710",
+          "BMED 3100",
+          "COE 3001",
+          "CEE 3010",
+          "ECE 3741",
+          "ME 3322",
+          "ME 3720",
+          "MSE 3015",
+          "NRE 3301",
+          "COE 3002",
+          "ME 3057",
+          "MSE 3720"
+        ],
+        "Fall 2028": [
+          "ISYE 3039",
+          "ECON 3150",
+          "ISYE 3103",
+          "ISYE 3104",
+          "ISYE 3106",
+          "MGT 3078",
+          "CS 4400",
+          "ISYE 4031",
+          "ISYE 4106",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600"
+        ],
+        "Spring 2029": [
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 4606",
+          "AE 4701",
+          "AE 4793",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "CEE 4225",
+          "CEE 4330"
+        ],
+        "Fall 2029": [
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 4755",
+          "ISYE 4740",
+          "MATH 4755",
+          "ME 4740",
+          "ME 4793",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793",
+          "ISYE 4803"
+        ],
+        "Spring 2030": [
+          "ISYE 4034",
+          "MATH 4262",
+          "ECON 4340",
+          "ECON 4350",
+          "ISYE 4045",
+          "ISYE 4111",
+          "ISYE 4133",
+          "ISYE 4301",
+          "ISYE 4232",
+          "ISYE 4311",
+          "ISYE 4501"
+        ]
+      }
+    },
+    "industrial_engineering_supply_chain_engineering": {
+      "name": "Industrial Engineering - Supply Chain Engineering",
+      "url": "https://catalog.gatech.edu/programs/industrial-engineering-supply-chain-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CS 2316",
+          "MATH 2551",
+          "ISYE 2027",
+          "ACCT 2101"
+        ],
+        "Major Requirements": [
+          "CS 4400",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3133",
+          "ISYE 3044",
+          "ISYE 3232",
+          "ISYE 4031",
+          "ISYE 4106"
+        ],
+        "Engineering Electives": [
+          "ECE 2020",
+          "ECE 2026",
+          "ECE 3710",
+          "AE 2220",
+          "BMED 3100",
+          "CHBE 2100",
+          "COE 2001",
+          "COE 3001",
+          "CEE 2040",
+          "CEE 2300",
+          "CEE 3010",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600",
+          "CS 2110",
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 2040",
+          "ECE 3741",
+          "ECE 4606",
+          "ME 2202",
+          "ME 3322",
+          "ME 3720",
+          "MSE 2001",
+          "MSE 3015",
+          "NRE 3301",
+          "AE 4701",
+          "AE 4793",
+          "ARCH 6271",
+          "BIOS 2400",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "COE 3002",
+          "CEE 4225",
+          "CEE 4330",
+          "CEE 4793",
+          "CP 4310",
+          "CP 4510",
+          "ECE 2031",
+          "ECE 4755",
+          "ISYE 4740",
+          "MATH 4755",
+          "ME 2110",
+          "ME 3057",
+          "ME 4740",
+          "ME 4793",
+          "MSE 2021",
+          "MSE 3720",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793"
+        ],
+        "Supply Chain Engineering Concentration": [
+          "MATH 2603",
+          "ISYE 3103",
+          "ISYE 4112",
+          "ISYE 4113",
+          "CS 4641",
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECON 3150",
+          "ECON 4340",
+          "ECON 4350",
+          "ISYE 3039",
+          "ISYE 3106",
+          "ISYE 4034",
+          "ISYE 4045",
+          "ISYE 4133",
+          "ISYE 4134",
+          "ISYE 4232",
+          "ISYE 4301",
+          "ISYE 4311",
+          "ISYE 4501",
+          "ISYE 4803",
+          "MATH 4262",
+          "MGT 3078"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "CS 2316",
+          "MATH 2551"
+        ],
+        "Spring 2027": [
+          "ISYE 2027",
+          "ACCT 2101",
+          "ECE 2020",
+          "ECE 2026",
+          "AE 2220",
+          "CHBE 2100",
+          "COE 2001",
+          "CEE 2040",
+          "CEE 2300",
+          "CS 2110",
+          "ECE 2040",
+          "ME 2202"
+        ],
+        "Fall 2027": [
+          "MSE 2001",
+          "BIOS 2400",
+          "ECE 2031",
+          "ME 2110",
+          "MSE 2021",
+          "MATH 2603",
+          "ARCH 6271",
+          "ISYE 3030",
+          "ISYE 3025",
+          "ISYE 3133",
+          "ISYE 3044",
+          "ISYE 3232"
+        ],
+        "Spring 2028": [
+          "ECE 3710",
+          "BMED 3100",
+          "COE 3001",
+          "CEE 3010",
+          "ECE 3741",
+          "ME 3322",
+          "ME 3720",
+          "MSE 3015",
+          "NRE 3301",
+          "COE 3002",
+          "ME 3057",
+          "MSE 3720"
+        ],
+        "Fall 2028": [
+          "ISYE 3103",
+          "ECON 3150",
+          "ISYE 3039",
+          "ISYE 3106",
+          "MGT 3078",
+          "CS 4400",
+          "ISYE 4031",
+          "ISYE 4106",
+          "CEE 4100",
+          "CEE 4300",
+          "CEE 4600",
+          "CS 4641"
+        ],
+        "Spring 2029": [
+          "CX 4010",
+          "CX 4240",
+          "CX 4242",
+          "ECE 4606",
+          "AE 4701",
+          "AE 4793",
+          "BIOS 4740",
+          "BMED 4751",
+          "CHBE 4793",
+          "CEE 4225",
+          "CEE 4330",
+          "CEE 4793"
+        ],
+        "Fall 2029": [
+          "CP 4310",
+          "CP 4510",
+          "ECE 4755",
+          "ISYE 4740",
+          "MATH 4755",
+          "ME 4740",
+          "ME 4793",
+          "MSE 4751",
+          "MSE 4755",
+          "MSE 4793",
+          "ISYE 4112",
+          "ISYE 4113"
+        ],
+        "Spring 2030": [
+          "ECON 4340",
+          "ECON 4350",
+          "ISYE 4034",
+          "ISYE 4045",
+          "ISYE 4133",
+          "ISYE 4134",
+          "ISYE 4232",
+          "ISYE 4301",
+          "ISYE 4311",
+          "ISYE 4501",
+          "ISYE 4803",
+          "MATH 4262"
+        ]
+      }
+    },
+    "international_affairs": {
+      "name": "International Affairs",
+      "url": "https://catalog.gatech.edu/programs/international-affairs-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1315"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "INTA 2010",
+          "INTA 2040",
+          "BMED 2400",
+          "CP 4510",
+          "CS 1301",
+          "CS 1315",
+          "CS 1331",
+          "CS 2316",
+          "EAS 3110",
+          "EAS 4480",
+          "ECE 2020",
+          "ID 3103",
+          "LMC 3402",
+          "ME 2016",
+          "MGT 2210",
+          "MGT 4052"
+        ],
+        "Major Requirements": [
+          "INTA 1110",
+          "INTA 2001",
+          "INTA 3110",
+          "INTA 3203",
+          "INTA 3301",
+          "INTA 4500"
+        ],
+        "Additional INTA Electives": [
+          "ECON 2100",
+          "ECON 2101",
+          "ECON 2105",
+          "ECON 2106"
+        ],
+        "Free Electives": [
+          "INTA 1110",
+          "INTA 3301",
+          "INTA 3203",
+          "INTA 4500"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "CS 1315",
+          "ENGL 1101",
+          "MATH 1712"
+        ],
+        "Spring 2027": [
+          "MATH 1711",
+          "CS 1331",
+          "INTA 1110",
+          "ENGL 1102"
+        ],
+        "Fall 2027": [
+          "CS 1301",
+          "HIST 2111",
+          "INTA 2010",
+          "INTA 2040"
+        ],
+        "Spring 2028": [
+          "BMED 2400",
+          "CS 2316",
+          "ECE 2020",
+          "ME 2016"
+        ],
+        "Fall 2028": [
+          "MGT 2210",
+          "INTA 2001",
+          "ECON 2100",
+          "ECON 2101"
+        ],
+        "Spring 2029": [
+          "ECON 2105",
+          "ECON 2106",
+          "EAS 3110",
+          "ID 3103"
+        ],
+        "Fall 2029": [
+          "LMC 3402",
+          "INTA 3110",
+          "INTA 3203",
+          "INTA 3301"
+        ],
+        "Spring 2030": [
+          "CP 4510",
+          "EAS 4480",
+          "MGT 4052",
+          "INTA 4500"
+        ]
+      }
+    },
+    "international_affairs_modern_language": {
+      "name": "International Affairs and Modern Languages",
+      "url": "https://catalog.gatech.edu/programs/international-affairs-modern-language-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1315"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "INTA 2010",
+          "INTA 2040",
+          "BMED 2400",
+          "CP 4510",
+          "CS 1301",
+          "CS 1315",
+          "CS 1316",
+          "CS 1331",
+          "CS 2316",
+          "EAS 3110",
+          "EAS 4480",
+          "ECE 2020",
+          "ID 3103",
+          "LMC 3402",
+          "LMC 3410",
+          "ME 2016",
+          "MGT 2210",
+          "MGT 4051",
+          "MGT 4052"
+        ],
+        "Major Requirements": [
+          "INTA 1110",
+          "INTA 2001",
+          "INTA 3110",
+          "INTA 3203",
+          "INTA 3301",
+          "INTA 4500"
+        ],
+        "Capstone Requirement": [
+          "CHIN/FREN/GRMN/JAPN/KOR/RUSS/SPAN 4500"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "CS 1315",
+          "ENGL 1101",
+          "MATH 1712"
+        ],
+        "Spring 2027": [
+          "MATH 1711",
+          "CS 1316",
+          "CS 1331",
+          "INTA 1110"
+        ],
+        "Fall 2027": [
+          "ENGL 1102",
+          "CS 1301",
+          "HIST 2111",
+          "INTA 2010"
+        ],
+        "Spring 2028": [
+          "INTA 2040",
+          "BMED 2400",
+          "CS 2316",
+          "ECE 2020"
+        ],
+        "Fall 2028": [
+          "ME 2016",
+          "MGT 2210",
+          "INTA 2001",
+          "EAS 3110"
+        ],
+        "Spring 2029": [
+          "ID 3103",
+          "LMC 3402",
+          "LMC 3410",
+          "INTA 3110"
+        ],
+        "Fall 2029": [
+          "INTA 3203",
+          "INTA 3301",
+          "CP 4510",
+          "EAS 4480"
+        ],
+        "Spring 2030": [
+          "MGT 4051",
+          "MGT 4052",
+          "INTA 4500",
+          "CHIN/FREN/GRMN/JAPN/KOR/RUSS/SPAN 4500"
+        ]
+      }
+    },
+    "materials_science_engineering_functional_materials": {
+      "name": "Materials and Science Engineering - Functional Materials",
+      "url": "https://catalog.gatech.edu/programs/materials-science-engineering-functional-materials-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1211K",
+          "CHEM 1212K",
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "MSE 1111",
+          "MSE 2001",
+          "MSE 2021",
+          "MSE 3001",
+          "MSE 3002",
+          "MSE 4105",
+          "MSE 3015",
+          "MSE 3021",
+          "MSE 3025",
+          "MSE 3210",
+          "MSE 4022",
+          "MSE 4410",
+          "MSE 4420",
+          "MSE 4775"
+        ],
+        "Other Requirements": [
+          "CHEM 1315",
+          "COE 3001",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ],
+        "Functional Materials Concentration": [
+          "MSE 4002",
+          "MSE 4004",
+          "MSE 4330"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "MSE 1111",
+          "CHEM 1315"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CHEM 1211K",
+          "CS 1371",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "COE 2001",
+          "MATH 2551"
+        ],
+        "Spring 2028": [
+          "MATH 2552",
+          "MSE 2001",
+          "MSE 2021",
+          "CHEM 1212K",
+          "MSE 3001"
+        ],
+        "Fall 2028": [
+          "MSE 3002",
+          "MSE 3015",
+          "MSE 3021",
+          "MSE 3025",
+          "MSE 3210"
+        ],
+        "Spring 2029": [
+          "COE 3001",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "MSE 4105"
+        ],
+        "Fall 2029": [
+          "MSE 4022",
+          "MSE 4410",
+          "MSE 4420",
+          "MSE 4775",
+          "MSE 4002"
+        ],
+        "Spring 2030": [
+          "MSE 4004",
+          "MSE 4330"
+        ]
+      }
+    },
+    "materials_science_engineering_structural_materials": {
+      "name": "Materials and Science Engineering - Structural Materials",
+      "url": "https://catalog.gatech.edu/programs/materials-science-engineering-structural-materials-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1211K",
+          "CHEM 1212K",
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "MSE 1111",
+          "MSE 2001",
+          "MSE 2021",
+          "MSE 3001",
+          "MSE 3002",
+          "MSE 4105",
+          "MSE 3015",
+          "MSE 3021",
+          "MSE 3025",
+          "MSE 3210",
+          "MSE 4022",
+          "MSE 4410",
+          "MSE 4420",
+          "MSE 4775"
+        ],
+        "Other Requirements": [
+          "CHEM 1315",
+          "COE 3001",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ],
+        "Structural &amp; Functional Materials Concentration": [
+          "MSE 4002",
+          "MSE 4006",
+          "MSE 4790"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "MSE 1111",
+          "CHEM 1315"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CHEM 1211K",
+          "CS 1371",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "COE 2001",
+          "MATH 2551"
+        ],
+        "Spring 2028": [
+          "MATH 2552",
+          "MSE 2001",
+          "MSE 2021",
+          "CHEM 1212K",
+          "MSE 3001"
+        ],
+        "Fall 2028": [
+          "MSE 3002",
+          "MSE 3015",
+          "MSE 3021",
+          "MSE 3025",
+          "MSE 3210"
+        ],
+        "Spring 2029": [
+          "COE 3001",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "MSE 4105"
+        ],
+        "Fall 2029": [
+          "MSE 4022",
+          "MSE 4410",
+          "MSE 4420",
+          "MSE 4775",
+          "MSE 4002"
+        ],
+        "Spring 2030": [
+          "MSE 4006",
+          "MSE 4790"
+        ]
+      }
+    },
+    "materials_science_engineering_biomaterials": {
+      "name": "Materials Science and Engineering - Biomaterials",
+      "url": "https://catalog.gatech.edu/programs/materials-science-engineering-biomaterials-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1211K",
+          "CHEM 1212K",
+          "COE 2001",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Major Requirements": [
+          "MSE 1111",
+          "MSE 2001",
+          "MSE 2021",
+          "MSE 3001",
+          "MSE 3002",
+          "MSE 4105",
+          "MSE 3015",
+          "MSE 3021",
+          "MSE 3025",
+          "MSE 3210",
+          "MSE 4022",
+          "MSE 4410",
+          "MSE 4420",
+          "MSE 4775"
+        ],
+        "Other Requirements": [
+          "CHEM 1315",
+          "COE 3001",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ],
+        "Biomaterials Concentration": [
+          "BIOS 1107",
+          "MSE 4751",
+          "MSE 4330",
+          "MSE 4335",
+          "CHEM 3511"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "MSE 1111",
+          "CHEM 1315"
+        ],
+        "Spring 2027": [
+          "BIOS 1107",
+          "ENGL 1102",
+          "MATH 1551",
+          "CHEM 1211K",
+          "CS 1371"
+        ],
+        "Fall 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "COE 2001"
+        ],
+        "Spring 2028": [
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001",
+          "MSE 2021",
+          "CHEM 1212K"
+        ],
+        "Fall 2028": [
+          "MSE 3001",
+          "MSE 3002",
+          "MSE 3015",
+          "MSE 3021",
+          "MSE 3025"
+        ],
+        "Spring 2029": [
+          "MSE 3210",
+          "COE 3001",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ],
+        "Fall 2029": [
+          "CHEM 3511",
+          "MSE 4105",
+          "MSE 4022",
+          "MSE 4410",
+          "MSE 4420"
+        ],
+        "Spring 2030": [
+          "MSE 4775",
+          "MSE 4751",
+          "MSE 4330",
+          "MSE 4335"
+        ]
+      }
+    },
+    "mathematics": {
+      "name": "Mathematics",
+      "url": "https://catalog.gatech.edu/programs/mathematics-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "General Core": [
+          "MATH 2698",
+          "MATH 2699",
+          "LMC 4701",
+          "LMC 4702"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "MATH 2698"
+        ],
+        "Spring 2027": [
+          "MATH 2699"
+        ],
+        "Fall 2027": [
+          "LMC 4701"
+        ],
+        "Spring 2028": [
+          "LMC 4702"
+        ],
+        "Fall 2028": [],
+        "Spring 2029": [],
+        "Fall 2029": [],
+        "Spring 2030": []
+      }
+    },
+    "mathematics_applied": {
+      "name": "Mathematics - Applied Mathematics",
+      "url": "https://catalog.gatech.edu/programs/mathematics-applied-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "MATH 2106"
+        ],
+        "Bridging Courses": [
+          "MATH 3012",
+          "MATH 3235",
+          "MATH 3406"
+        ],
+        "Upper Level Foundation Courses": [
+          "MATH 4107",
+          "MATH 4317",
+          "MATH 4320"
+        ],
+        "Applied Mathematics Concentration": [
+          "MATH 4640",
+          "MATH 4347",
+          "MATH 4541",
+          "MATH 4210",
+          "MATH 4580",
+          "MATH 4581",
+          "MATH 4641",
+          "MATH 4699",
+          "MATH 4755",
+          "MATH 4782",
+          "CX 4140",
+          "CX 4240"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CS 1331"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "MATH 2106",
+          "MATH 3012",
+          "MATH 3235",
+          "MATH 3406"
+        ],
+        "Fall 2028": [
+          "MATH 4107",
+          "MATH 4317",
+          "MATH 4320",
+          "MATH 4640"
+        ],
+        "Spring 2029": [
+          "MATH 4347",
+          "MATH 4541",
+          "MATH 4210",
+          "MATH 4580"
+        ],
+        "Fall 2029": [
+          "MATH 4581",
+          "MATH 4641",
+          "MATH 4699",
+          "MATH 4755"
+        ],
+        "Spring 2030": [
+          "MATH 4782",
+          "CX 4140",
+          "CX 4240"
+        ]
+      }
+    },
+    "mathematics_business_option": {
+      "name": "Mathematics - Business Option",
+      "url": "https://catalog.gatech.edu/programs/mathematics-business-option-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "CS 1331",
+          "MATH 2551",
+          "MATH 2552",
+          "MATH 2106"
+        ],
+        "Bridging Courses": [
+          "MATH 3012",
+          "MATH 3235",
+          "MATH 3406"
+        ],
+        "Upper Level Foundation Courses": [
+          "MATH 4107",
+          "MATH 4317",
+          "MATH 4320"
+        ],
+        "General Mathematics": [
+          "MATH 3236",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4108",
+          "MATH 4150",
+          "MATH 4210",
+          "MATH 4221",
+          "MATH 4261",
+          "MATH 4318",
+          "MATH 4347",
+          "MATH 4431",
+          "MATH 4432",
+          "MATH 4441",
+          "MATH 4541",
+          "MATH 4640",
+          "MATH 4012",
+          "MATH 4222",
+          "MATH 4262",
+          "MATH 4280",
+          "MATH 4580",
+          "MATH 4581",
+          "MATH 4641",
+          "MATH 4699",
+          "MATH 4755",
+          "MATH 4782",
+          "MATH 4801",
+          "MATH 4802",
+          "CS 3510",
+          "CS 4510",
+          "CS 4540",
+          "CS 4641",
+          "CX 4140",
+          "CS 4240",
+          "ECON 3161",
+          "ECON 4180",
+          "ISYE 4031",
+          "ISYE 3133",
+          "ISYE 4133"
+        ],
+        "Business Option": [
+          "ECON 2106",
+          "ACCT 2101",
+          "PSYC 2220",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4029",
+          "MGT 4030",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335",
+          "MGT 4670"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CS 1331",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2212"
+        ],
+        "Spring 2027": [
+          "MATH 2551",
+          "MATH 2552",
+          "MATH 2106",
+          "ECON 2106",
+          "ACCT 2101",
+          "PSYC 2220",
+          "MATH 3012",
+          "MATH 3235",
+          "MATH 3406",
+          "MATH 3236"
+        ],
+        "Fall 2027": [
+          "CS 3510",
+          "ECON 3161",
+          "ISYE 3133",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "MATH 4107",
+          "MATH 4317",
+          "MATH 4320"
+        ],
+        "Spring 2028": [
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4108",
+          "MATH 4150",
+          "MATH 4210",
+          "MATH 4221",
+          "MATH 4261",
+          "MATH 4318",
+          "MATH 4347",
+          "MATH 4431"
+        ],
+        "Fall 2028": [
+          "MATH 4432",
+          "MATH 4441",
+          "MATH 4541",
+          "MATH 4640",
+          "MATH 4012",
+          "MATH 4222",
+          "MATH 4262",
+          "MATH 4280",
+          "MATH 4580",
+          "MATH 4581"
+        ],
+        "Spring 2029": [
+          "MATH 4641",
+          "MATH 4699",
+          "MATH 4755",
+          "MATH 4782",
+          "MATH 4801",
+          "MATH 4802",
+          "CS 4510",
+          "CS 4540",
+          "CS 4641",
+          "CX 4140"
+        ],
+        "Fall 2029": [
+          "CS 4240",
+          "ECON 4180",
+          "ISYE 4031",
+          "ISYE 4133",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4029",
+          "MGT 4030",
+          "MGT 4191",
+          "MGT 4192"
+        ],
+        "Spring 2030": [
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335",
+          "MGT 4670"
+        ]
+      }
+    },
+    "mathematics_discrete": {
+      "name": "Mathematics - Discrete Mathematics",
+      "url": "https://catalog.gatech.edu/programs/mathematics-discrete-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "CS 1331",
+          "MATH 2551",
+          "MATH 2552",
+          "MATH 2106"
+        ],
+        "Bridging Courses": [
+          "MATH 3012",
+          "MATH 3235",
+          "MATH 3406"
+        ],
+        "Upper Level Foundation Courses": [
+          "MATH 4107",
+          "MATH 4317",
+          "MATH 4320"
+        ],
+        "Discrete Mathematics Concentration": [
+          "CS 3510",
+          "MATH 4022",
+          "MATH 4032",
+          "ISYE 3133",
+          "ECON 4180",
+          "MATH 4012",
+          "MATH 4108",
+          "MATH 4150",
+          "MATH 4280",
+          "MATH 4432",
+          "MATH 4699",
+          "CS 4510",
+          "CS 4540",
+          "ISYE 4133"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CS 1331",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "MATH 2551",
+          "MATH 2552",
+          "MATH 2106",
+          "MATH 3012",
+          "MATH 3235"
+        ],
+        "Spring 2028": [
+          "MATH 3406",
+          "CS 3510",
+          "ISYE 3133",
+          "MATH 4107",
+          "MATH 4317"
+        ],
+        "Fall 2028": [
+          "MATH 4320",
+          "MATH 4022",
+          "MATH 4032",
+          "ECON 4180",
+          "MATH 4012"
+        ],
+        "Spring 2029": [
+          "MATH 4108",
+          "MATH 4150",
+          "MATH 4280",
+          "MATH 4432",
+          "MATH 4699"
+        ],
+        "Fall 2029": [
+          "CS 4510",
+          "CS 4540",
+          "ISYE 4133"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "mathematics_general": {
+      "name": "Mathematics - General",
+      "url": "https://catalog.gatech.edu/programs/mathematics-general-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "MATH 2106"
+        ],
+        "Bridging Courses": [
+          "MATH 3012",
+          "MATH 3235",
+          "MATH 3406"
+        ],
+        "Upper Level Foundation Courses": [
+          "MATH 4107",
+          "MATH 4317",
+          "MATH 4320"
+        ],
+        "General Mathematics": [
+          "MATH 3236",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4108",
+          "MATH 4150",
+          "MATH 4210",
+          "MATH 4221",
+          "MATH 4261",
+          "MATH 4318",
+          "MATH 4347",
+          "MATH 4431",
+          "MATH 4432",
+          "MATH 4441",
+          "MATH 4541",
+          "MATH 4640",
+          "MATH 4012",
+          "MATH 4080",
+          "MATH 4222",
+          "MATH 4255",
+          "MATH 4262",
+          "MATH 4280",
+          "MATH 4348",
+          "MATH 4542",
+          "MATH 4580",
+          "MATH 4581",
+          "MATH 4641",
+          "MATH 4699",
+          "MATH 4755",
+          "MATH 4777",
+          "MATH 4782",
+          "MATH 4801",
+          "MATH 4802",
+          "CS 3510",
+          "CS 4510",
+          "CS 4540",
+          "CS 4641",
+          "CX 4140",
+          "CX 4240",
+          "CS 4530",
+          "ECON 3161",
+          "ECON 4180",
+          "ISYE 3133",
+          "ISYE 4031",
+          "ISYE 4133"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CS 1331",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552"
+        ],
+        "Spring 2027": [
+          "HIST 2111",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "MATH 2106",
+          "MATH 3012",
+          "MATH 3235",
+          "MATH 3406"
+        ],
+        "Fall 2027": [
+          "MATH 3236",
+          "CS 3510",
+          "ECON 3161",
+          "ISYE 3133",
+          "MATH 4107",
+          "MATH 4317",
+          "MATH 4320",
+          "MATH 4022"
+        ],
+        "Spring 2028": [
+          "MATH 4032",
+          "MATH 4108",
+          "MATH 4150",
+          "MATH 4210",
+          "MATH 4221",
+          "MATH 4261",
+          "MATH 4318",
+          "MATH 4347"
+        ],
+        "Fall 2028": [
+          "MATH 4431",
+          "MATH 4432",
+          "MATH 4441",
+          "MATH 4541",
+          "MATH 4640",
+          "MATH 4012",
+          "MATH 4080",
+          "MATH 4222"
+        ],
+        "Spring 2029": [
+          "MATH 4255",
+          "MATH 4262",
+          "MATH 4280",
+          "MATH 4348",
+          "MATH 4542",
+          "MATH 4580",
+          "MATH 4581",
+          "MATH 4641"
+        ],
+        "Fall 2029": [
+          "MATH 4699",
+          "MATH 4755",
+          "MATH 4777",
+          "MATH 4782",
+          "MATH 4801",
+          "MATH 4802",
+          "CS 4510",
+          "CS 4540"
+        ],
+        "Spring 2030": [
+          "CS 4641",
+          "CX 4140",
+          "CX 4240",
+          "CS 4530",
+          "ECON 4180",
+          "ISYE 4031",
+          "ISYE 4133"
+        ]
+      }
+    },
+    "mathematics_mathematical_foundations_data_science": {
+      "name": "Mathematics - Mathematical Foundations in Data Science",
+      "url": "https://catalog.gatech.edu/programs/mathematics-mathematical-foundations-data-science-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "CS 1331",
+          "MATH 2551",
+          "MATH 2552",
+          "MATH 2106"
+        ],
+        "Bridging Courses": [
+          "MATH 3012",
+          "MATH 3235",
+          "MATH 3406"
+        ],
+        "Upper Level Foundation Courses": [
+          "MATH 4107",
+          "MATH 4317",
+          "MATH 4320"
+        ],
+        "Mathematical Foundations in Data Science Concentration": [
+          "MATH 3236",
+          "MATH 4210",
+          "MATH 4640",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4221",
+          "MATH 4222",
+          "MATH 4262",
+          "MATH 4641",
+          "MATH 4280",
+          "CS 4641",
+          "CX 4240",
+          "ISYE 3133"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CS 1331"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "MATH 2106",
+          "MATH 3012",
+          "MATH 3235",
+          "MATH 3406"
+        ],
+        "Fall 2028": [
+          "MATH 3236",
+          "ISYE 3133",
+          "MATH 4107",
+          "MATH 4317"
+        ],
+        "Spring 2029": [
+          "MATH 4320",
+          "MATH 4210",
+          "MATH 4640",
+          "MATH 4022"
+        ],
+        "Fall 2029": [
+          "MATH 4032",
+          "MATH 4221",
+          "MATH 4222",
+          "MATH 4262"
+        ],
+        "Spring 2030": [
+          "MATH 4641",
+          "MATH 4280",
+          "CS 4641",
+          "CX 4240"
+        ]
+      }
+    },
+    "mathematics_probability_and_statistics": {
+      "name": "Mathematics - Probability and Statistics",
+      "url": "https://catalog.gatech.edu/programs/mathematics-probability-and-statistics-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "CS 1331",
+          "MATH 2551",
+          "MATH 2552",
+          "MATH 2106"
+        ],
+        "Bridging Courses": [
+          "MATH 3012",
+          "MATH 3235",
+          "MATH 3406"
+        ],
+        "Upper Level Foundation Courses": [
+          "MATH 4107",
+          "MATH 4317",
+          "MATH 4320"
+        ],
+        "Probability and Statistics Concentration": [
+          "MATH 3236",
+          "MATH 4221",
+          "ECON 3161",
+          "ISYE 4031",
+          "MATH 4210",
+          "MATH 4222",
+          "MATH 4262",
+          "MATH 4280",
+          "MATH 4580",
+          "MATH 4699",
+          "CX 4240"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CS 1331"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "MATH 2106",
+          "MATH 3012",
+          "MATH 3235",
+          "MATH 3406"
+        ],
+        "Fall 2028": [
+          "MATH 3236",
+          "ECON 3161",
+          "MATH 4107",
+          "MATH 4317"
+        ],
+        "Spring 2029": [
+          "MATH 4320",
+          "MATH 4221",
+          "ISYE 4031",
+          "MATH 4210"
+        ],
+        "Fall 2029": [
+          "MATH 4222",
+          "MATH 4262",
+          "MATH 4280",
+          "MATH 4580"
+        ],
+        "Spring 2030": [
+          "MATH 4699",
+          "CX 4240"
+        ]
+      }
+    },
+    "mathematics_pure": {
+      "name": "Mathematics - Pure Mathematics",
+      "url": "https://catalog.gatech.edu/programs/mathematics-pure-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "CS 1331",
+          "MATH 2551",
+          "MATH 2552",
+          "MATH 2106"
+        ],
+        "Bridging Courses": [
+          "MATH 3012",
+          "MATH 3235",
+          "MATH 3406"
+        ],
+        "Upper Level Foundation Courses": [
+          "MATH 4107",
+          "MATH 4317",
+          "MATH 4320"
+        ],
+        "Pure Mathematics Concentration": [
+          "MATH 4318",
+          "MATH 4108",
+          "MATH 4431",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4150",
+          "MATH 4221",
+          "MATH 4222",
+          "MATH 4347",
+          "MATH 4432",
+          "MATH 4441",
+          "MATH 4541",
+          "MATH 4699"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CS 1331"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552"
+        ],
+        "Spring 2028": [
+          "MATH 2106",
+          "MATH 3012",
+          "MATH 3235",
+          "MATH 3406"
+        ],
+        "Fall 2028": [
+          "MATH 4107",
+          "MATH 4317",
+          "MATH 4320",
+          "MATH 4318"
+        ],
+        "Spring 2029": [
+          "MATH 4108",
+          "MATH 4431",
+          "MATH 4022",
+          "MATH 4032"
+        ],
+        "Fall 2029": [
+          "MATH 4150",
+          "MATH 4221",
+          "MATH 4222",
+          "MATH 4347"
+        ],
+        "Spring 2030": [
+          "MATH 4432",
+          "MATH 4441",
+          "MATH 4541",
+          "MATH 4699"
+        ]
+      }
+    },
+    "mathematics_computing": {
+      "name": "Mathematics and Computing",
+      "url": "https://catalog.gatech.edu/programs/mathematics-computing-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1554"
+        ],
+        "Field of Study": [
+          "CS 1331",
+          "CS 2110",
+          "MATH 2551",
+          "MATH 2552",
+          "MATH/CS 2740"
+        ],
+        "Major Requirements": [
+          "CS 3001",
+          "CS 1332",
+          "MATH 3406",
+          "MATH 4317",
+          "MATH/CX 3740"
+        ],
+        "Theoretical Computer Science and Discrete Math Concentration": [
+          "MATH 3012",
+          "CS 2050",
+          "CS 3510",
+          "CS 4510",
+          "CS 4540",
+          "MATH 4012",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4107",
+          "MATH 4108",
+          "MATH 4150",
+          "MATH 4210",
+          "MATH 4221",
+          "MATH 4222",
+          "MATH 4280",
+          "MATH 4318",
+          "MATH 4580",
+          "MATH 4803",
+          "CS 3235",
+          "CS 3600",
+          "CS 3790",
+          "CS 4641",
+          "CS 4644",
+          "CX 4220",
+          "CX 4240",
+          "CX/MATH 4640",
+          "CX/MATH 4641",
+          "ECE 3084",
+          "ECE 3251",
+          "ISYE 4133"
+        ],
+        "Modeling, Simulation, Data and Applied Math Concentration": [
+          "MATH 4347",
+          "CX 4220",
+          "CX 4230",
+          "MATH/CX 4640",
+          "CS 4641",
+          "CX 4240",
+          "MATH 4210",
+          "MATH 3012",
+          "MATH 4022",
+          "MATH 4221",
+          "MATH 4222",
+          "MATH 4280",
+          "MATH 4318",
+          "MATH 4320",
+          "MATH 4441",
+          "MATH 4541",
+          "MATH 4580",
+          "MATH 4755",
+          "MATH 4782",
+          "MATH 4803",
+          "CS 4644",
+          "CX 4140",
+          "CX 4232",
+          "CX 4242",
+          "CX/MATH 4641",
+          "CX/MATH 4740",
+          "CX/MATH 4803",
+          "ISYE 4133",
+          "EAS 4610",
+          "EAS 4630"
+        ],
+        "Mathematical Intelligence and Data Science Concentration": [
+          "CS 3600",
+          "MATH/CX 4740",
+          "CS 3630",
+          "CS 3790",
+          "PSYC 3040",
+          "CS 4641",
+          "CX 4240",
+          "MATH 4210",
+          "CS 3510",
+          "CS 3511",
+          "CX 4140",
+          "MATH 3012",
+          "MATH 4022",
+          "MATH 4107",
+          "MATH 4221",
+          "MATH 4222",
+          "MATH 4280",
+          "MATH 4318",
+          "MATH 4320",
+          "MATH 4347",
+          "MATH 4441",
+          "MATH 4541",
+          "MATH 4580",
+          "MATH 4803",
+          "CS 4476",
+          "CS 4540",
+          "CS 4635",
+          "CS 4644",
+          "CS 4646",
+          "CS 4649",
+          "CS 4650",
+          "CS 4731",
+          "CX/MATH 4640",
+          "CX 4641",
+          "CX/MATH 4803",
+          "ECE 4270",
+          "ECE 4271",
+          "ISYE 4133"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1554",
+          "CS 1331",
+          "CS 1332",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Spring 2027": [
+          "CS 2110",
+          "MATH 2551",
+          "MATH 2552",
+          "MATH/CS 2740",
+          "CS 2050",
+          "CS 3001",
+          "MATH 3406",
+          "MATH/CX 3740",
+          "MATH 3012",
+          "CS 3510"
+        ],
+        "Fall 2027": [
+          "CS 3235",
+          "CS 3600",
+          "CS 3790",
+          "ECE 3084",
+          "ECE 3251",
+          "CS 3630",
+          "PSYC 3040",
+          "CS 3511",
+          "MATH 4317",
+          "CS 4510"
+        ],
+        "Spring 2028": [
+          "CS 4540",
+          "MATH 4012",
+          "MATH 4022",
+          "MATH 4032",
+          "MATH 4107",
+          "MATH 4108",
+          "MATH 4150",
+          "MATH 4210",
+          "MATH 4221",
+          "MATH 4222"
+        ],
+        "Fall 2028": [
+          "MATH 4280",
+          "MATH 4318",
+          "MATH 4580",
+          "MATH 4803",
+          "CS 4641",
+          "CS 4644",
+          "CX 4220",
+          "CX 4240",
+          "CX/MATH 4640",
+          "CX/MATH 4641"
+        ],
+        "Spring 2029": [
+          "ISYE 4133",
+          "MATH 4347",
+          "CX 4230",
+          "MATH/CX 4640",
+          "MATH 4320",
+          "MATH 4441",
+          "MATH 4541",
+          "MATH 4755",
+          "MATH 4782",
+          "CX 4140"
+        ],
+        "Fall 2029": [
+          "CX 4232",
+          "CX 4242",
+          "CX/MATH 4740",
+          "CX/MATH 4803",
+          "EAS 4610",
+          "EAS 4630",
+          "MATH/CX 4740",
+          "CS 4476",
+          "CS 4635",
+          "CS 4646"
+        ],
+        "Spring 2030": [
+          "CS 4649",
+          "CS 4650",
+          "CS 4731",
+          "CX 4641",
+          "ECE 4270",
+          "ECE 4271"
+        ]
+      }
+    },
+    "acoustics_vibrations_engineering_mechanical_engineering": {
+      "name": "Mechanical Engineering - Acoustics and Vibration Engineering",
+      "url": "https://catalog.gatech.edu/programs/acoustics-vibrations-engineering-mechanical-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ME 1670",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Major Requirements": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ME 4182"
+        ],
+        "Other Engineering Requirements": [
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "MATH 3670"
+        ],
+        "Acoustics and Vibrations Engineering Concentration": [
+          "ME 3180",
+          "ME 4315",
+          "ME/AE 4760",
+          "ME 4189",
+          "ME 4340",
+          "ME 4452",
+          "ME 4803",
+          "ECE 4260",
+          "ECE 4270",
+          "ECE 4271",
+          "ME 4699"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ME 1670",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001",
+          "COE 2001",
+          "ME 2016",
+          "ME 2110"
+        ],
+        "Spring 2028": [
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340"
+        ],
+        "Fall 2028": [
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ],
+        "Spring 2029": [
+          "MATH 3670",
+          "ME 3180",
+          "ME 4182",
+          "ME 4315",
+          "ME/AE 4760",
+          "ME 4189"
+        ],
+        "Fall 2029": [
+          "ME 4340",
+          "ME 4452",
+          "ME 4803",
+          "ECE 4260",
+          "ECE 4270",
+          "ECE 4271"
+        ],
+        "Spring 2030": [
+          "ME 4699"
+        ]
+      }
+    },
+    "mechanical_engineering_automation_robotic_systems": {
+      "name": "Mechanical Engineering - Automation and Robotic Systems",
+      "url": "https://catalog.gatech.edu/programs/mechanical-engineering-automation-robotic-systems-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ME 1670",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Major Requirements": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ME 4182"
+        ],
+        "Other Engineering Requirements": [
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "MATH 3670"
+        ],
+        "Automation and Robotic Systems Concentration": [
+          "ME 3180",
+          "ME 4452",
+          "CS 3600",
+          "CS 4641",
+          "ME 4012",
+          "ME 4189",
+          "ME 4405",
+          "ME 4451"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ME 1670"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Spring 2028": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017"
+        ],
+        "Fall 2028": [
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345"
+        ],
+        "Spring 2029": [
+          "COE 3001",
+          "ME 3210",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ],
+        "Fall 2029": [
+          "MATH 3670",
+          "ME 3180",
+          "CS 3600",
+          "ME 4182",
+          "ME 4452"
+        ],
+        "Spring 2030": [
+          "CS 4641",
+          "ME 4012",
+          "ME 4189",
+          "ME 4405",
+          "ME 4451"
+        ]
+      }
+    },
+    "mechanical_engineering_automotive": {
+      "name": "Mechanical Engineering - Automotive",
+      "url": "https://catalog.gatech.edu/programs/mechanical-engineering-automotive-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ME 1670",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Major Requirements": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ME 4182"
+        ],
+        "Other Engineering Requirements": [
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "MATH 3670"
+        ],
+        "Automotive Concentration": [
+          "ME 4014",
+          "ME 3180",
+          "ME 4011",
+          "ME 4013",
+          "ME 4215",
+          "ME 4189",
+          "ME 4325",
+          "ME 4405",
+          "ME 4452",
+          "ME/CHBE 4759",
+          "ME/AE 4760",
+          "ME 4699",
+          "ME 4903",
+          "AE 3030"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ME 1670",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001",
+          "COE 2001",
+          "ME 2016",
+          "ME 2110"
+        ],
+        "Spring 2028": [
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340"
+        ],
+        "Fall 2028": [
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ],
+        "Spring 2029": [
+          "MATH 3670",
+          "ME 3180",
+          "AE 3030",
+          "ME 4182",
+          "ME 4014",
+          "ME 4011"
+        ],
+        "Fall 2029": [
+          "ME 4013",
+          "ME 4215",
+          "ME 4189",
+          "ME 4325",
+          "ME 4405",
+          "ME 4452"
+        ],
+        "Spring 2030": [
+          "ME/CHBE 4759",
+          "ME/AE 4760",
+          "ME 4699",
+          "ME 4903"
+        ]
+      }
+    },
+    "mechanical_engineering_design": {
+      "name": "Mechanical Engineering - Design",
+      "url": "https://catalog.gatech.edu/programs/mechanical-engineering-design-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ME 1670",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Major Requirements": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ME 4182"
+        ],
+        "Other Engineering Requirements": [
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "MATH 3670"
+        ],
+        "Design Concentration": [
+          "ME 3180",
+          "ME 4042",
+          "ME 4171",
+          "ME 4193",
+          "ME 4699",
+          "ME/BIOS/BMED/MSE/ISYE 4740",
+          "ME/NRE 4725",
+          "ME/MSE 4790"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ME 1670"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Spring 2028": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017"
+        ],
+        "Fall 2028": [
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345"
+        ],
+        "Spring 2029": [
+          "COE 3001",
+          "ME 3210",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ],
+        "Fall 2029": [
+          "MATH 3670",
+          "ME 3180",
+          "ME 4182",
+          "ME 4042",
+          "ME 4171"
+        ],
+        "Spring 2030": [
+          "ME 4193",
+          "ME 4699",
+          "ME/BIOS/BMED/MSE/ISYE 4740",
+          "ME/NRE 4725",
+          "ME/MSE 4790"
+        ]
+      }
+    },
+    "mechanical_engineering_general": {
+      "name": "Mechanical Engineering - General",
+      "url": "https://catalog.gatech.edu/programs/mechanical-engineering-general-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ME 1670",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Major Requirements": [
+          "ME 3180",
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ME 4182"
+        ],
+        "Other Engineering Requirements": [
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "MATH 3670"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ME 1670"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Spring 2028": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3180"
+        ],
+        "Fall 2028": [
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340"
+        ],
+        "Spring 2029": [
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ECE 3710",
+          "ECE 3741"
+        ],
+        "Fall 2029": [
+          "ISYE 3025",
+          "MATH 3670",
+          "ME 4182"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "mechanical_engineering_manufacturing": {
+      "name": "Mechanical Engineering - Manufacturing",
+      "url": "https://catalog.gatech.edu/programs/mechanical-engineering-manufacturing-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ME 1670",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Major Requirements": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ME 4182"
+        ],
+        "Other Engineering Requirements": [
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "MATH 3670"
+        ],
+        "Manufacturing Concentration": [
+          "ME 3180",
+          "ME 4215",
+          "ME 4214",
+          "ME 4405",
+          "ME 4452",
+          "ME 4699",
+          "ME 4766",
+          "ME 4793"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ME 1670"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Spring 2028": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017"
+        ],
+        "Fall 2028": [
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345"
+        ],
+        "Spring 2029": [
+          "COE 3001",
+          "ME 3210",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ],
+        "Fall 2029": [
+          "MATH 3670",
+          "ME 3180",
+          "ME 4182",
+          "ME 4215",
+          "ME 4214"
+        ],
+        "Spring 2030": [
+          "ME 4405",
+          "ME 4452",
+          "ME 4699",
+          "ME 4766",
+          "ME 4793"
+        ]
+      }
+    },
+    "mechanical_engineering_mechanics_materials": {
+      "name": "Mechanical Engineering - Mechanics of Materials",
+      "url": "https://catalog.gatech.edu/programs/mechanical-engineering-mechanics-materials-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ME 1670",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Major Requirements": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ME 4182"
+        ],
+        "Other Engineering Requirements": [
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "MATH 3670"
+        ],
+        "Mechanics of Materials Concentration": [
+          "ME 3180",
+          "ME 4214",
+          "CEE 3020",
+          "CEE 3055",
+          "CEE 4550",
+          "ME 4042",
+          "ME 4699",
+          "ME 4790",
+          "ME 4791",
+          "ME 4758",
+          "ME 4777",
+          "ME 4795",
+          "MSE 4010",
+          "MSE 4325",
+          "BMED/MSE 4751"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ME 1670",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001",
+          "COE 2001",
+          "ME 2016",
+          "ME 2110"
+        ],
+        "Spring 2028": [
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340"
+        ],
+        "Fall 2028": [
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ],
+        "Spring 2029": [
+          "MATH 3670",
+          "ME 3180",
+          "CEE 3020",
+          "CEE 3055",
+          "ME 4182",
+          "ME 4214"
+        ],
+        "Fall 2029": [
+          "CEE 4550",
+          "ME 4042",
+          "ME 4699",
+          "ME 4790",
+          "ME 4791",
+          "ME 4758"
+        ],
+        "Spring 2030": [
+          "ME 4777",
+          "ME 4795",
+          "MSE 4010",
+          "MSE 4325",
+          "BMED/MSE 4751"
+        ]
+      }
+    },
+    "mechanical_engineering_micro_nano_engineering": {
+      "name": "Mechanical Engineering - Micro- and Nanoengineering",
+      "url": "https://catalog.gatech.edu/programs/mechanical-engineering-micro-nano-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ME 1670",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Major Requirements": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ME 4182"
+        ],
+        "Other Engineering Requirements": [
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "MATH 3670"
+        ],
+        "Micro- and Nanoengineering  Concentration": [
+          "ME 4315",
+          "CHBE 4020",
+          "CHBE 4050",
+          "CHEM 3412",
+          "ME 4699",
+          "ME 4766",
+          "MSE 4325",
+          "MSE 4330",
+          "MSE 4335",
+          "PHYS 4262"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ME 1670",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001",
+          "COE 2001",
+          "ME 2016",
+          "ME 2110"
+        ],
+        "Spring 2028": [
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340"
+        ],
+        "Fall 2028": [
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ],
+        "Spring 2029": [
+          "MATH 3670",
+          "CHEM 3412",
+          "ME 4182",
+          "ME 4315",
+          "CHBE 4020",
+          "CHBE 4050"
+        ],
+        "Fall 2029": [
+          "ME 4699",
+          "ME 4766",
+          "MSE 4325",
+          "MSE 4330",
+          "MSE 4335",
+          "PHYS 4262"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "mechanical_engineering_nre": {
+      "name": "Mechanical Engineering - Nuclear and Radiological Engineering",
+      "url": "https://catalog.gatech.edu/programs/mechanical-engineering-nre-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ME 1670",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Major Requirements": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ME 4182"
+        ],
+        "Other Engineering Requirements": [
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "MATH 3670"
+        ],
+        "Nuclear Energy Concentration": [
+          "NRE 2120",
+          "ME 4315",
+          "ME 3180"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ME 1670"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Spring 2028": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "NRE 2120"
+        ],
+        "Fall 2028": [
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340"
+        ],
+        "Spring 2029": [
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ECE 3710",
+          "ECE 3741"
+        ],
+        "Fall 2029": [
+          "ISYE 3025",
+          "MATH 3670",
+          "ME 3180",
+          "ME 4182",
+          "ME 4315"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "mechanical_engineering_nuclear_engineering": {
+      "name": "Mechanical Engineering - Nuclear Engineering",
+      "url": "https://catalog.gatech.edu/programs/mechanical-engineering-nuclear-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness": [
+          "APPH 1040"
+        ],
+        "Core A - Essential Skills": [
+          "ENGL 1101",
+          "ENGL 1102",
+          "MATH 1552"
+        ],
+        "Core B - Institutional Options": [
+          "CS 1371"
+        ],
+        "Core D - Science, Math, &amp; Technology": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Core E - Social Sciences": [
+          "HIST 2111",
+          "HIST 2112",
+          "INTA 1200",
+          "POL 1101",
+          "PUBP 3000",
+          "ECON 2100",
+          "ECON 2101",
+          "ECON 2105",
+          "ECON 2106"
+        ],
+        "Core F - Courses Related to Major": [
+          "CHEM 1310",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Major Requirements": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ME 4056",
+          "ME 4182"
+        ],
+        "Other Engineering Requirements": [
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "MATH 3670"
+        ],
+        "Nuclear Energy Concentration": [
+          "NRE 3301",
+          "NRE 3208",
+          "ME 3180",
+          "ECE 3025",
+          "ECE 3072",
+          "ME 4214",
+          "ME 4340",
+          "MSE 4010",
+          "NRE 4214",
+          "NRE 4610"
+        ],
+        "Free Electives": [
+          "MSE 2001",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "INTA 1200",
+          "POL 1101",
+          "CHEM 1310",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "MATH 1552",
+          "CS 1371",
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202"
+        ],
+        "Fall 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "HIST 2111",
+          "HIST 2112",
+          "ECON 2100",
+          "ECON 2101",
+          "ECON 2105"
+        ],
+        "Spring 2028": [
+          "ECON 2106",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001",
+          "ME 3017",
+          "ME 3057",
+          "ME 3322"
+        ],
+        "Fall 2028": [
+          "ME 3340",
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "PUBP 3000",
+          "ECE 3710",
+          "ECE 3741"
+        ],
+        "Spring 2029": [
+          "ISYE 3025",
+          "MATH 3670",
+          "NRE 3301",
+          "NRE 3208",
+          "ME 3180",
+          "ECE 3025",
+          "ECE 3072"
+        ],
+        "Fall 2029": [
+          "ME 4056",
+          "ME 4182",
+          "ME 4214",
+          "ME 4340",
+          "MSE 4010",
+          "NRE 4214",
+          "NRE 4610"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "mechanical_engineering_thermal_fluid_energy_systems": {
+      "name": "Mechanical Engineering - Thermal, Fluid, & Energy Systems",
+      "url": "https://catalog.gatech.edu/programs/mechanical-engineering-thermal-fluid-energy-systems-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "ME 1670",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001"
+        ],
+        "Major Requirements": [
+          "COE 2001",
+          "ME 2016",
+          "ME 2110",
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340",
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ME 4182"
+        ],
+        "Other Engineering Requirements": [
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "MATH 3670"
+        ],
+        "Thermal, Fluid, and Energy Systems Concentration": [
+          "ME 4315",
+          "ME 4011",
+          "ME 4013",
+          "ME 4321",
+          "ME 4325",
+          "ME 4332",
+          "ME 4340",
+          "ME 4342",
+          "ME 4701",
+          "ME 4759"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ME 1670",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001",
+          "COE 2001",
+          "ME 2016",
+          "ME 2110"
+        ],
+        "Spring 2028": [
+          "ME 2202",
+          "ME 3017",
+          "ME 3057",
+          "ME 3058",
+          "ME 3322",
+          "ME 3340"
+        ],
+        "Fall 2028": [
+          "ME 3345",
+          "COE 3001",
+          "ME 3210",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ],
+        "Spring 2029": [
+          "MATH 3670",
+          "ME 4182",
+          "ME 4315",
+          "ME 4011",
+          "ME 4013",
+          "ME 4321"
+        ],
+        "Fall 2029": [
+          "ME 4325",
+          "ME 4332",
+          "ME 4340",
+          "ME 4342",
+          "ME 4701",
+          "ME 4759"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "music_technology_ece": {
+      "name": "Music Technology - Electrical and Computer Engineering: Signal Processing",
+      "url": "https://catalog.gatech.edu/programs/music-technology-ece-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "MUSI 2010",
+          "MUSI 2011",
+          "MUSI 2012",
+          "MUSI 2013",
+          "MUSI 2015",
+          "MUSI 2525"
+        ],
+        "Major Requirements": [
+          "MUSI 2526",
+          "MUSI 4630",
+          "MUSI 3770",
+          "MUSI 4677",
+          "MUSI 4705"
+        ],
+        "Concentration: ECE/Signal Processing": [
+          "MATH 2552",
+          "ECE 2026",
+          "ECE 3084",
+          "ECE 3710",
+          "ECE 3741",
+          "ECE 4270",
+          "ECE 4271",
+          "ECE 4445"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "MUSI 2010",
+          "MUSI 2011",
+          "MUSI 2012",
+          "MUSI 2013"
+        ],
+        "Spring 2028": [
+          "MUSI 2015",
+          "MUSI 2525",
+          "MUSI 2526",
+          "MATH 2552"
+        ],
+        "Fall 2028": [
+          "ECE 2026",
+          "MUSI 3770",
+          "ECE 3084",
+          "ECE 3710"
+        ],
+        "Spring 2029": [
+          "ECE 3741",
+          "MUSI 4630",
+          "MUSI 4677",
+          "MUSI 4705"
+        ],
+        "Fall 2029": [
+          "ECE 4270",
+          "ECE 4271",
+          "ECE 4445"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "music_technology_gen": {
+      "name": "Music Technology - General",
+      "url": "https://catalog.gatech.edu/programs/music-technology-gen-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "MUSI 2010",
+          "MUSI 2011",
+          "MUSI 2012",
+          "MUSI 2013",
+          "MUSI 2015",
+          "MUSI 2525"
+        ],
+        "Major Requirements": [
+          "MUSI 2526",
+          "MUSI 4630",
+          "MUSI 3770",
+          "MUSI 4677",
+          "MUSI 4705"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371"
+        ],
+        "Fall 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "MUSI 2010"
+        ],
+        "Spring 2028": [
+          "MUSI 2011",
+          "MUSI 2012",
+          "MUSI 2013"
+        ],
+        "Fall 2028": [
+          "MUSI 2015",
+          "MUSI 2525",
+          "MUSI 2526"
+        ],
+        "Spring 2029": [
+          "MUSI 3770",
+          "MUSI 4630",
+          "MUSI 4677"
+        ],
+        "Fall 2029": [
+          "MUSI 4705"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "music_technology_me_av": {
+      "name": "Music Technology - Mechanical Engineering: Acoustics and Vibrations",
+      "url": "https://catalog.gatech.edu/programs/music-technology-me-av-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "MUSI 2010",
+          "MUSI 2011",
+          "MUSI 2012",
+          "MUSI 2013",
+          "MUSI 2015",
+          "MUSI 2525"
+        ],
+        "Major Requirements": [
+          "MUSI 2526",
+          "MUSI 4630",
+          "MUSI 3770",
+          "MUSI 4677",
+          "MUSI 4705"
+        ],
+        "Concentration: ME/Acoustics and Vibration": [
+          "MATH 2552",
+          "ECE 3710",
+          "COE 2001",
+          "ME 2202",
+          "ME 2016",
+          "ME 4760",
+          "ME 3017",
+          "ME 4189"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "MUSI 2010",
+          "MUSI 2011",
+          "MUSI 2012",
+          "MUSI 2013"
+        ],
+        "Spring 2028": [
+          "MUSI 2015",
+          "MUSI 2525",
+          "MUSI 2526",
+          "MATH 2552"
+        ],
+        "Fall 2028": [
+          "COE 2001",
+          "ME 2202",
+          "ME 2016",
+          "MUSI 3770"
+        ],
+        "Spring 2029": [
+          "ECE 3710",
+          "ME 3017",
+          "MUSI 4630",
+          "MUSI 4677"
+        ],
+        "Fall 2029": [
+          "MUSI 4705",
+          "ME 4760",
+          "ME 4189"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "music_technology_me_cr": {
+      "name": "Music Technology - Mechanical Engineering: Controls and Robotics",
+      "url": "https://catalog.gatech.edu/programs/music-technology-me-cr-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "MUSI 2010",
+          "MUSI 2011",
+          "MUSI 2012",
+          "MUSI 2013",
+          "MUSI 2015",
+          "MUSI 2525"
+        ],
+        "Major Requirements": [
+          "MUSI 2526",
+          "MUSI 4630",
+          "MUSI 3770",
+          "MUSI 4677",
+          "MUSI 4705"
+        ],
+        "Concentration: ME/Controls and Robotics": [
+          "MATH 2552",
+          "ECE 3710",
+          "COE 2001",
+          "ME 2202",
+          "ME 3017",
+          "ME 4189",
+          "ME 4451",
+          "ME 4452"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111"
+        ],
+        "Fall 2027": [
+          "MUSI 2010",
+          "MUSI 2011",
+          "MUSI 2012",
+          "MUSI 2013"
+        ],
+        "Spring 2028": [
+          "MUSI 2015",
+          "MUSI 2525",
+          "MUSI 2526",
+          "MATH 2552"
+        ],
+        "Fall 2028": [
+          "COE 2001",
+          "ME 2202",
+          "MUSI 3770",
+          "ECE 3710"
+        ],
+        "Spring 2029": [
+          "ME 3017",
+          "MUSI 4630",
+          "MUSI 4677",
+          "MUSI 4705"
+        ],
+        "Fall 2029": [
+          "ME 4189",
+          "ME 4451",
+          "ME 4452"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "neuroscience": {
+      "name": "Neuroscience",
+      "url": "https://catalog.gatech.edu/programs/neuroscience-bs/",
+      "target_hours": 124,
+      "requirements": {
+        "Core Neuroscience": [
+          "NEUR 2001",
+          "NEUR 3001",
+          "NEUR 3010",
+          "NEUR 4001",
+          "PSYC 3013",
+          "PSYC 2020"
+        ],
+        "Core Biology & Chemistry": [
+          "BIOS 1107",
+          "BIOS 1107L",
+          "BIOS 1108",
+          "BIOS 1108L",
+          "CHEM 1211K",
+          "CHEM 1212K",
+          "CHEM 2311"
+        ],
+        "Math & Physics": [
+          "MATH 1551",
+          "MATH 1552",
+          "MATH 1553",
+          "MATH 2550",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
+        "Breadth Electives": [
+          "NEUR BREADTH 1",
+          "NEUR BREADTH 2",
+          "NEUR BREADTH 3",
+          "NEUR BREADTH 4",
+          "NEUR BREADTH 5"
+        ],
+        "General Core": [
+          "GT 1000",
+          "ENGL 1101",
+          "ENGL 1102",
+          "WELLNESS",
+          "COMPUTING",
+          "HIST/GOVT",
+          "HUM ELECTIVE",
+          "HUM ELECTIVE",
+          "SS ELECTIVE",
+          "SS ELECTIVE",
+          "SS ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "GT 1000",
+          "ENGL 1101",
+          "WELLNESS",
+          "BIOS 1107",
+          "BIOS 1108"
+        ],
+        "Spring 2027": [
+          "MATH 1553",
+          "ENGL 1102",
+          "CHEM 1211K",
+          "MATH 1551",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "NEUR 2001",
+          "PSYC 2020",
+          "CHEM 2311",
+          "MATH 2550",
+          "PHYS 2211"
+        ],
+        "Spring 2028": [
+          "PHYS 2212",
+          "COMPUTING",
+          "HIST/GOVT",
+          "BIOS 1107L",
+          "BIOS 1108L"
+        ],
+        "Fall 2028": [
+          "CHEM 1212K",
+          "NEUR 3001",
+          "NEUR 3010",
+          "PSYC 3013",
+          "HUM ELECTIVE"
+        ],
+        "Spring 2029": [
+          "SS ELECTIVE",
+          "FREE ELECTIVE",
+          "NEUR BREADTH 1",
+          "NEUR BREADTH 2",
+          "NEUR BREADTH 3"
+        ],
+        "Fall 2029": [
+          "NEUR BREADTH 4",
+          "NEUR BREADTH 5",
+          "NEUR 4001"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "neuroscience_business": {
+      "name": "Neuroscience - Business Option",
+      "url": "https://catalog.gatech.edu/programs/neuroscience-business-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "CHEM 1315",
+          "BIOS 1107",
+          "BIOS 1107L",
+          "NEUR 2001",
+          "BIOS 4401"
+        ],
+        "Major Requirements": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "NEUR 3001",
+          "NEUR 3002",
+          "NEUR 3003",
+          "NEUR 3010",
+          "CHEM 3511"
+        ],
+        "Neuroscience Depth Electives": [
+          "NEUR 4001",
+          "BIOS 2600",
+          "BIOS 2610",
+          "BIOS 3450",
+          "BIOS 3451",
+          "BIOS 3753",
+          "BIOS 3754",
+          "BIOS 3755",
+          "BIOS 3756",
+          "BIOS 4200",
+          "BIOS 4238",
+          "BIOS 4400",
+          "BIOS 4464",
+          "BIOS 4471",
+          "BIOS 4480",
+          "BIOS 4651",
+          "BIOS 4746",
+          "CHEM 3522",
+          "CHEM 4803",
+          "MATH 4803",
+          "NEUR 2699",
+          "NEUR 2803",
+          "NEUR 3803",
+          "NEUR 4100",
+          "NEUR 4200",
+          "NEUR 4238",
+          "NEUR 4300",
+          "NEUR 4400",
+          "NEUR 4699",
+          "NEUR 4696",
+          "NEUR 4697",
+          "NEUR 4740",
+          "NEUR 4803",
+          "PHYS 3250",
+          "PHYS 4251",
+          "PSYC 2015",
+          "PSYC 2103",
+          "PSYC 2230",
+          "PSYC 3012",
+          "PSYC 3040",
+          "PSYC 4011",
+          "PSYC 4041",
+          "PSYC 4100",
+          "PSYC 4090",
+          "PSYC 4745",
+          "PSYC 4803"
+        ],
+        "Business Option": [
+          "ECON 2106",
+          "ACCT 2101",
+          "MGT 3101",
+          "MGT 3150",
+          "PSYC 2220",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4029",
+          "MGT 4030",
+          "MGT 4190",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335",
+          "MGT 4610",
+          "MGT 4670"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "CHEM 1315",
+          "BIOS 1107",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "NEUR 2001"
+        ],
+        "Spring 2027": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "BIOS 2600",
+          "BIOS 2610",
+          "NEUR 2699",
+          "NEUR 2803",
+          "PSYC 2015",
+          "PSYC 2103",
+          "PSYC 2230",
+          "ECON 2106",
+          "ACCT 2101",
+          "PSYC 2220"
+        ],
+        "Fall 2027": [
+          "BIOS 1107L",
+          "NEUR 3001",
+          "NEUR 3002",
+          "NEUR 3003",
+          "NEUR 3010",
+          "CHEM 3511",
+          "BIOS 3450",
+          "BIOS 3451",
+          "BIOS 3753",
+          "BIOS 3754",
+          "BIOS 3755",
+          "BIOS 3756"
+        ],
+        "Spring 2028": [
+          "CHEM 3522",
+          "NEUR 3803",
+          "PHYS 3250",
+          "PSYC 3012",
+          "PSYC 3040",
+          "MGT 3101",
+          "MGT 3150",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "BIOS 4401"
+        ],
+        "Fall 2028": [
+          "NEUR 4001",
+          "BIOS 4200",
+          "BIOS 4238",
+          "BIOS 4400",
+          "BIOS 4464",
+          "BIOS 4471",
+          "BIOS 4480",
+          "BIOS 4651",
+          "BIOS 4746",
+          "CHEM 4803",
+          "MATH 4803",
+          "NEUR 4100"
+        ],
+        "Spring 2029": [
+          "NEUR 4200",
+          "NEUR 4238",
+          "NEUR 4300",
+          "NEUR 4400",
+          "NEUR 4699",
+          "NEUR 4696",
+          "NEUR 4697",
+          "NEUR 4740",
+          "NEUR 4803",
+          "PHYS 4251",
+          "PSYC 4011",
+          "PSYC 4041"
+        ],
+        "Fall 2029": [
+          "PSYC 4100",
+          "PSYC 4090",
+          "PSYC 4745",
+          "PSYC 4803",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4029",
+          "MGT 4030",
+          "MGT 4190",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193"
+        ],
+        "Spring 2030": [
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335",
+          "MGT 4610",
+          "MGT 4670"
+        ]
+      }
+    },
+    "neuroscience_general": {
+      "name": "Neuroscience - General",
+      "url": "https://catalog.gatech.edu/programs/neuroscience-general-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "CHEM 1315",
+          "BIOS 1107",
+          "BIOS 1107L",
+          "NEUR 2001",
+          "BIOS 4401"
+        ],
+        "Major Requirements": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "NEUR 3001",
+          "NEUR 3002",
+          "NEUR 3003",
+          "NEUR 3010",
+          "CHEM 3511"
+        ],
+        "Neuroscience Depth Electives": [
+          "NEUR 4001",
+          "BIOS 2600",
+          "BIOS 2610",
+          "BIOS 3450",
+          "BIOS 3451",
+          "BIOS 3753",
+          "BIOS 3754",
+          "BIOS 3755",
+          "BIOS 3756",
+          "BIOS 4200",
+          "BIOS 4238",
+          "BIOS 4400",
+          "BIOS 4464",
+          "BIOS 4471",
+          "BIOS 4480",
+          "BIOS 4651",
+          "BIOS 4746",
+          "CHEM 3522",
+          "CHEM 4803",
+          "MATH 4803",
+          "NEUR 2699",
+          "NEUR 2803",
+          "NEUR 3803",
+          "NEUR 4100",
+          "NEUR 4200",
+          "NEUR 4238",
+          "NEUR 4300",
+          "NEUR 4400",
+          "NEUR 4699",
+          "NEUR 4696",
+          "NEUR 4697",
+          "NEUR 4740",
+          "NEUR 4803",
+          "PHYS 3250",
+          "PHYS 4251",
+          "PSYC 2015",
+          "PSYC 2103",
+          "PSYC 2230",
+          "PSYC 3012",
+          "PSYC 3040",
+          "PSYC 4011",
+          "PSYC 4041",
+          "PSYC 4100",
+          "PSYC 4090",
+          "PSYC 4745",
+          "PSYC 4803"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "CHEM 1315",
+          "BIOS 1107",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Spring 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "NEUR 2001",
+          "PHYS 2211",
+          "PHYS 2212",
+          "BIOS 2600",
+          "BIOS 2610",
+          "NEUR 2699",
+          "NEUR 2803"
+        ],
+        "Fall 2027": [
+          "PSYC 2015",
+          "PSYC 2103",
+          "PSYC 2230",
+          "BIOS 1107L",
+          "NEUR 3001",
+          "NEUR 3002",
+          "NEUR 3003",
+          "NEUR 3010",
+          "CHEM 3511"
+        ],
+        "Spring 2028": [
+          "BIOS 3450",
+          "BIOS 3451",
+          "BIOS 3753",
+          "BIOS 3754",
+          "BIOS 3755",
+          "BIOS 3756",
+          "CHEM 3522",
+          "NEUR 3803",
+          "PHYS 3250"
+        ],
+        "Fall 2028": [
+          "PSYC 3012",
+          "PSYC 3040",
+          "BIOS 4401",
+          "NEUR 4001",
+          "BIOS 4200",
+          "BIOS 4238",
+          "BIOS 4400",
+          "BIOS 4464",
+          "BIOS 4471"
+        ],
+        "Spring 2029": [
+          "BIOS 4480",
+          "BIOS 4651",
+          "BIOS 4746",
+          "CHEM 4803",
+          "MATH 4803",
+          "NEUR 4100",
+          "NEUR 4200",
+          "NEUR 4238",
+          "NEUR 4300"
+        ],
+        "Fall 2029": [
+          "NEUR 4400",
+          "NEUR 4699",
+          "NEUR 4696",
+          "NEUR 4697",
+          "NEUR 4740",
+          "NEUR 4803",
+          "PHYS 4251",
+          "PSYC 4011",
+          "PSYC 4041"
+        ],
+        "Spring 2030": [
+          "PSYC 4100",
+          "PSYC 4090",
+          "PSYC 4745",
+          "PSYC 4803"
+        ]
+      }
+    },
+    "nuclear_radiological_engineering_nuclear_engineering": {
+      "name": "Nuclear and Radiological Engineering - Nuclear Engineering Concentration",
+      "url": "https://catalog.gatech.edu/programs/nuclear-radiological-engineering-nuclear-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001",
+          "NRE 2120"
+        ],
+        "Major Requirements": [
+          "NRE 3026",
+          "NRE 3112",
+          "NRE 3208",
+          "NRE 3301",
+          "NRE 3316",
+          "NRE 4350",
+          "NRE 4351"
+        ],
+        "Non-NRE Requirements": [
+          "COE 2001",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "ME 3322",
+          "ME 3340",
+          "MATH 3670"
+        ],
+        "Nuclear Energy Concentration requirements": [
+          "ME 3345",
+          "NRE 4210",
+          "NRE 4214"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551"
+        ],
+        "Spring 2028": [
+          "MATH 2552",
+          "MSE 2001",
+          "NRE 2120",
+          "COE 2001"
+        ],
+        "Fall 2028": [
+          "NRE 3026",
+          "NRE 3112",
+          "NRE 3208",
+          "NRE 3301"
+        ],
+        "Spring 2029": [
+          "NRE 3316",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025"
+        ],
+        "Fall 2029": [
+          "ME 3322",
+          "ME 3340",
+          "MATH 3670",
+          "ME 3345"
+        ],
+        "Spring 2030": [
+          "NRE 4350",
+          "NRE 4351",
+          "NRE 4210",
+          "NRE 4214"
+        ]
+      }
+    },
+    "nuclear_radiological_engineering_radiological_engineering": {
+      "name": "Nuclear and Radiological Engineering - Radiological Science and Engineering concentration",
+      "url": "https://catalog.gatech.edu/programs/nuclear-radiological-engineering-radiological-engineering-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1371"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "CHEM 1310",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001",
+          "NRE 2120"
+        ],
+        "Major Requirements": [
+          "NRE 3026",
+          "NRE 3112",
+          "NRE 3208",
+          "NRE 3301",
+          "NRE 3316",
+          "NRE 4350",
+          "NRE 4351"
+        ],
+        "Non-NRE Requirements": [
+          "COE 2001",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "ME 3322",
+          "ME 3340",
+          "MATH 3670"
+        ],
+        "Radiological Science and Engineering Concentration requirements": [
+          "NRE 4328",
+          "NRE 4407",
+          "NRE 4750",
+          "NRE 4803"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1371",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "MSE 2001",
+          "NRE 2120"
+        ],
+        "Spring 2028": [
+          "COE 2001",
+          "NRE 3026",
+          "NRE 3112",
+          "NRE 3208",
+          "NRE 3301"
+        ],
+        "Fall 2028": [
+          "NRE 3316",
+          "ECE 3710",
+          "ECE 3741",
+          "ISYE 3025",
+          "ME 3322"
+        ],
+        "Spring 2029": [
+          "ME 3340",
+          "MATH 3670",
+          "NRE 4350",
+          "NRE 4351",
+          "NRE 4328"
+        ],
+        "Fall 2029": [
+          "NRE 4407",
+          "NRE 4750",
+          "NRE 4803"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "physics": {
+      "name": "Physics",
+      "url": "https://catalog.gatech.edu/programs/physics-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "General Core": [
+          "PHYS 4698",
+          "LMC 4701",
+          "LMC 4702"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "PHYS 4698"
+        ],
+        "Spring 2027": [
+          "LMC 4701"
+        ],
+        "Fall 2027": [
+          "LMC 4702"
+        ],
+        "Spring 2028": [],
+        "Fall 2028": [],
+        "Spring 2029": [],
+        "Fall 2029": [],
+        "Spring 2030": []
+      }
+    },
+    "physics_business_option": {
+      "name": "Physics - Business Option",
+      "url": "https://catalog.gatech.edu/programs/physics-business-option-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "PHYS 2303",
+          "PHYS 2304"
+        ],
+        "Upper-Level Physics": [
+          "PHYS 3122",
+          "PHYS 3123",
+          "PHYS 3141",
+          "PHYS 3143",
+          "PHYS 3201",
+          "PHYS 4142",
+          "PHYS 4143",
+          "PHYS 4321",
+          "PHYS 4604",
+          "PHYS 4605"
+        ],
+        "Business Option": [
+          "ECON 2106",
+          "ACCT 2101",
+          "MGT 3101",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4029",
+          "MGT 4030",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335",
+          "MGT 4670"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ENGL 1102",
+          "MATH 1551"
+        ],
+        "Spring 2027": [
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551"
+        ],
+        "Fall 2027": [
+          "MATH 2552",
+          "PHYS 2303",
+          "PHYS 2304",
+          "ECON 2106",
+          "ACCT 2101",
+          "PHYS 3122"
+        ],
+        "Spring 2028": [
+          "PHYS 3123",
+          "PHYS 3141",
+          "PHYS 3143",
+          "PHYS 3201",
+          "MGT 3101",
+          "MGT 3062"
+        ],
+        "Fall 2028": [
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "PHYS 4142",
+          "PHYS 4143",
+          "PHYS 4321"
+        ],
+        "Spring 2029": [
+          "PHYS 4604",
+          "PHYS 4605",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4029",
+          "MGT 4030"
+        ],
+        "Fall 2029": [
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304"
+        ],
+        "Spring 2030": [
+          "MGT 4307",
+          "MGT 4335",
+          "MGT 4670"
+        ]
+      }
+    },
+    "physics_general": {
+      "name": "Physics - General",
+      "url": "https://catalog.gatech.edu/programs/physics-general-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "PHYS 2304",
+          "PHYS 2303"
+        ],
+        "Upper-Level Physics": [
+          "PHYS 3122",
+          "PHYS 3123",
+          "PHYS 3141",
+          "PHYS 3143",
+          "PHYS 3201",
+          "PHYS 4142",
+          "PHYS 4143",
+          "PHYS 4321",
+          "PHYS 4604",
+          "PHYS 4605"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 2551"
+        ],
+        "Spring 2028": [
+          "MATH 2552",
+          "PHYS 2304",
+          "PHYS 2303",
+          "PHYS 3122"
+        ],
+        "Fall 2028": [
+          "PHYS 3123",
+          "PHYS 3141",
+          "PHYS 3143",
+          "PHYS 3201"
+        ],
+        "Spring 2029": [
+          "PHYS 4142",
+          "PHYS 4143",
+          "PHYS 4321",
+          "PHYS 4604"
+        ],
+        "Fall 2029": [
+          "PHYS 4605"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "physics_physics_living_systems": {
+      "name": "Physics - Physics of Living Systems",
+      "url": "https://catalog.gatech.edu/programs/physics-physics-living-systems-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "PHYS 2211",
+          "PHYS 2212",
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "MATH 2551",
+          "MATH 2552",
+          "CHEM 1310",
+          "PHYS 2303",
+          "PHYS 2304"
+        ],
+        "Upper-Level Physics": [
+          "PHYS 3122",
+          "PHYS 3123",
+          "PHYS 3141",
+          "PHYS 3143",
+          "PHYS 3201",
+          "PHYS 4142",
+          "PHYS 4143",
+          "PHYS 4321",
+          "PHYS 4604",
+          "PHYS 4605"
+        ],
+        "Physics of Living Systems Concentration": [
+          "PHYS 3120",
+          "PHYS 3207",
+          "PHYS 4250",
+          "PHYS 4251",
+          "PHYS 4301",
+          "PHYS 4699",
+          "PHYS 4745",
+          "PHYS 4801"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "CHEM 1310",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PHYS 2211"
+        ],
+        "Fall 2027": [
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "PHYS 2303",
+          "PHYS 2304"
+        ],
+        "Spring 2028": [
+          "PHYS 3122",
+          "PHYS 3123",
+          "PHYS 3141",
+          "PHYS 3143",
+          "PHYS 3201"
+        ],
+        "Fall 2028": [
+          "PHYS 3120",
+          "PHYS 3207",
+          "PHYS 4142",
+          "PHYS 4143",
+          "PHYS 4321"
+        ],
+        "Spring 2029": [
+          "PHYS 4604",
+          "PHYS 4605",
+          "PHYS 4250",
+          "PHYS 4251",
+          "PHYS 4301"
+        ],
+        "Fall 2029": [
+          "PHYS 4699",
+          "PHYS 4745",
+          "PHYS 4801"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "psychology_business_option": {
+      "name": "Psychology - Business Option",
+      "url": "https://catalog.gatech.edu/programs/psychology-business-option-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "BIOS 1107",
+          "BIOS 1108",
+          "PSYC 1101",
+          "PSYC 2020",
+          "PSYC 2103",
+          "PSYC 2210",
+          "PSYC 2230",
+          "PSYC 2240"
+        ],
+        "Major Requirements": [
+          "PSYC 2015",
+          "PSYC 4011",
+          "PSYC 4020",
+          "PSYC 4025",
+          "PSYC 4041",
+          "PSYC 4031"
+        ],
+        "PSYC Electives": [
+          "PSYC 2005",
+          "PSYC 2103",
+          "PSYC 2130",
+          "PSYC 2210",
+          "PSYC 2230",
+          "PSYC 2240",
+          "PSYC 2270",
+          "PSYC 2280",
+          "PSYC 2695",
+          "PSYC 2699",
+          "PSYC 2760",
+          "PSYC 2803",
+          "PSYC 3000",
+          "PSYC 3005",
+          "PSYC 3009",
+          "PSYC 3031",
+          "PSYC 3100",
+          "PSYC 3750",
+          "PSYC 3790",
+          "PSYC 3803",
+          "PSYC 3873",
+          "PSYC 4010",
+          "PSYC 4011",
+          "PSYC 4020",
+          "PSYC 4025",
+          "PSYC 4041",
+          "PSYC 4050",
+          "PSYC 4090",
+          "PSYC 4100",
+          "PSYC 4200"
+        ],
+        "Business Option": [
+          "ECON 2106",
+          "ACCT 2101",
+          "MGT 3101",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4030",
+          "MGT 4190",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335",
+          "MGT 4610",
+          "MGT 4670"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "BIOS 1107",
+          "BIOS 1108",
+          "PSYC 1101",
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301"
+        ],
+        "Spring 2027": [
+          "MATH 1552",
+          "HIST 2111",
+          "PSYC 2020",
+          "PSYC 2103",
+          "PSYC 2210",
+          "PSYC 2230",
+          "PSYC 2240",
+          "PSYC 2015",
+          "PSYC 2005"
+        ],
+        "Fall 2027": [
+          "PSYC 2130",
+          "PSYC 2270",
+          "PSYC 2280",
+          "PSYC 2695",
+          "PSYC 2699",
+          "PSYC 2760",
+          "PSYC 2803",
+          "ECON 2106",
+          "ACCT 2101"
+        ],
+        "Spring 2028": [
+          "PSYC 3000",
+          "PSYC 3005",
+          "PSYC 3009",
+          "PSYC 3031",
+          "PSYC 3100",
+          "PSYC 3750",
+          "PSYC 3790",
+          "PSYC 3803",
+          "PSYC 3873"
+        ],
+        "Fall 2028": [
+          "MGT 3101",
+          "MGT 3062",
+          "MGT 3078",
+          "MGT 3300",
+          "MGT 3660",
+          "PSYC 4011",
+          "PSYC 4020",
+          "PSYC 4025",
+          "PSYC 4041"
+        ],
+        "Spring 2029": [
+          "PSYC 4031",
+          "PSYC 4010",
+          "PSYC 4050",
+          "PSYC 4090",
+          "PSYC 4100",
+          "PSYC 4200",
+          "MGT 4015",
+          "MGT 4026",
+          "MGT 4030"
+        ],
+        "Fall 2029": [
+          "MGT 4190",
+          "MGT 4191",
+          "MGT 4192",
+          "MGT 4193",
+          "MGT 4194",
+          "MGT 4303",
+          "MGT 4304",
+          "MGT 4307",
+          "MGT 4335"
+        ],
+        "Spring 2030": [
+          "MGT 4610",
+          "MGT 4670"
+        ]
+      }
+    },
+    "psychology_general": {
+      "name": "Psychology - General",
+      "url": "https://catalog.gatech.edu/programs/psychology-general-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "BIOS 1107",
+          "BIOS 1108",
+          "PSYC 1101",
+          "PSYC 2020",
+          "PSYC 2103",
+          "PSYC 2210",
+          "PSYC 2230",
+          "PSYC 2240"
+        ],
+        "Major Requirements": [
+          "PSYC 2015",
+          "PSYC 4011",
+          "PSYC 4020",
+          "PSYC 4025",
+          "PSYC 4041",
+          "PSYC 4031"
+        ],
+        "PSYC Electives": [
+          "PSYC 2005",
+          "PSYC 2103",
+          "PSYC 2130",
+          "PSYC 2210",
+          "PSYC 2220",
+          "PSYC 2230",
+          "PSYC 2240",
+          "PSYC 2270",
+          "PSYC 2280",
+          "PSYC 2695",
+          "PSYC 2699",
+          "PSYC 2760",
+          "PSYC 2803",
+          "PSYC 3000",
+          "PSYC 3005",
+          "PSYC 3009",
+          "PSYC 3031",
+          "PSYC 3100",
+          "PSYC 3750",
+          "PSYC 3790",
+          "PSYC 3803",
+          "PSYC 3873",
+          "PSYC 4010",
+          "PSYC 4011",
+          "PSYC 4020",
+          "PSYC 4025",
+          "PSYC 4041",
+          "PSYC 4050",
+          "PSYC 4090",
+          "PSYC 4100",
+          "PSYC 4260",
+          "PSYC 4270",
+          "PSYC 4600",
+          "PSYC 4690",
+          "PSYC 4695",
+          "PSYC 4697",
+          "PSYC 4699",
+          "PSYC 4740",
+          "PSYC 4745",
+          "PSYC 4803"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1553",
+          "BIOS 1107",
+          "BIOS 1108",
+          "PSYC 1101",
+          "ENGL 1102"
+        ],
+        "Spring 2027": [
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "HIST 2111",
+          "PSYC 2020",
+          "PSYC 2103",
+          "PSYC 2210"
+        ],
+        "Fall 2027": [
+          "PSYC 2230",
+          "PSYC 2240",
+          "PSYC 2015",
+          "PSYC 2005",
+          "PSYC 2130",
+          "PSYC 2220",
+          "PSYC 2270"
+        ],
+        "Spring 2028": [
+          "PSYC 2280",
+          "PSYC 2695",
+          "PSYC 2699",
+          "PSYC 2760",
+          "PSYC 2803",
+          "PSYC 3000",
+          "PSYC 3005"
+        ],
+        "Fall 2028": [
+          "PSYC 3009",
+          "PSYC 3031",
+          "PSYC 3100",
+          "PSYC 3750",
+          "PSYC 3790",
+          "PSYC 3803",
+          "PSYC 3873"
+        ],
+        "Spring 2029": [
+          "PSYC 4011",
+          "PSYC 4020",
+          "PSYC 4025",
+          "PSYC 4041",
+          "PSYC 4031",
+          "PSYC 4010",
+          "PSYC 4050"
+        ],
+        "Fall 2029": [
+          "PSYC 4090",
+          "PSYC 4100",
+          "PSYC 4260",
+          "PSYC 4270",
+          "PSYC 4600",
+          "PSYC 4690",
+          "PSYC 4695"
+        ],
+        "Spring 2030": [
+          "PSYC 4697",
+          "PSYC 4699",
+          "PSYC 4740",
+          "PSYC 4745",
+          "PSYC 4803"
+        ]
+      }
+    },
+    "public_policy": {
+      "name": "Public Policy",
+      "url": "https://catalog.gatech.edu/programs/public-policy-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1315"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "POL 1101"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "ECON 2106",
+          "PHIL 2025",
+          "PUBP 2010",
+          "PUBP 2030"
+        ],
+        "Major Requirements": [
+          "PUBP 3020",
+          "PUBP 3030",
+          "PUBP 3120",
+          "PUBP 3130",
+          "PUBP 4010",
+          "PUBP 4020",
+          "PUBP 2651"
+        ],
+        "Free Electives": [
+          "PHIL 4176",
+          "PUBP 3315",
+          "PUBP 3320",
+          "PUBP 3350",
+          "PUBP 3600",
+          "PUBP 4440",
+          "PUBP 4620",
+          "PHIL 3127",
+          "PHIL 3180",
+          "PUBP 3230",
+          "PUBP 3244",
+          "PUBP 3502",
+          "PUBP 4111",
+          "PUBP 4214",
+          "PUBP 4410",
+          "PUBP 4414",
+          "PUBP 4501",
+          "PUBP 4640",
+          "PUBP 4650",
+          "PUBP 4725",
+          "PUBP 4756",
+          "PUBP 3201",
+          "PUBP 3210",
+          "PUBP 3214",
+          "PUBP 4200",
+          "PUBP 4211",
+          "PUBP 4212",
+          "PUBP 4630",
+          "PHIL 2010",
+          "PHIL 3050",
+          "PHIL 3102",
+          "PHIL 3103",
+          "PHIL 3105",
+          "PHIL 3109",
+          "PHIL 3113",
+          "PHIL 3115",
+          "PHIL 3135",
+          "PHIL 3140",
+          "PHIL 3790",
+          "PHIL 4110",
+          "POL 2101",
+          "PUBP 1142",
+          "PUBP 2142",
+          "PUBP 3000",
+          "PUBP 3016",
+          "PUBP 3141",
+          "PUBP 3510",
+          "PUBP 3520",
+          "PUBP 4140",
+          "PUBP 4226"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "CS 1315",
+          "ENGL 1101",
+          "MATH 1712",
+          "POL 1101",
+          "MATH 1711",
+          "PUBP 1142",
+          "ENGL 1102",
+          "ECON 2106"
+        ],
+        "Spring 2027": [
+          "PHIL 2025",
+          "PUBP 2010",
+          "PUBP 2030",
+          "PUBP 2651",
+          "PHIL 2010",
+          "POL 2101",
+          "PUBP 2142",
+          "PUBP 3020",
+          "PUBP 3030"
+        ],
+        "Fall 2027": [
+          "PUBP 3120",
+          "PUBP 3130",
+          "PUBP 3315",
+          "PUBP 3320",
+          "PUBP 3350",
+          "PUBP 3600",
+          "PHIL 3127",
+          "PHIL 3180",
+          "PUBP 3230"
+        ],
+        "Spring 2028": [
+          "PUBP 3244",
+          "PUBP 3502",
+          "PUBP 3201",
+          "PUBP 3210",
+          "PUBP 3214",
+          "PHIL 3050",
+          "PHIL 3102",
+          "PHIL 3103",
+          "PHIL 3105"
+        ],
+        "Fall 2028": [
+          "PHIL 3109",
+          "PHIL 3113",
+          "PHIL 3115",
+          "PHIL 3135",
+          "PHIL 3140",
+          "PHIL 3790",
+          "PUBP 3000",
+          "PUBP 3016",
+          "PUBP 3141"
+        ],
+        "Spring 2029": [
+          "PUBP 3510",
+          "PUBP 3520",
+          "PUBP 4010",
+          "PUBP 4020",
+          "PHIL 4176",
+          "PUBP 4440",
+          "PUBP 4620",
+          "PUBP 4111",
+          "PUBP 4214"
+        ],
+        "Fall 2029": [
+          "PUBP 4410",
+          "PUBP 4414",
+          "PUBP 4501",
+          "PUBP 4640",
+          "PUBP 4650",
+          "PUBP 4725",
+          "PUBP 4756",
+          "PUBP 4200",
+          "PUBP 4211"
+        ],
+        "Spring 2030": [
+          "PUBP 4212",
+          "PUBP 4630",
+          "PHIL 4110",
+          "PUBP 4140",
+          "PUBP 4226"
+        ]
+      }
+    },
+    "solid_earth_planetary_sciences": {
+      "name": "Solid Earth and Planetary Sciences",
+      "url": "https://catalog.gatech.edu/programs/solid-earth-planetary-sciences-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1552"
+        ],
+        "Political Science and U.S. History": [
+          "INTA 1200"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Scienecs": [
+          "MATH 1551",
+          "MATH 1553"
+        ],
+        "Field of Study": [
+          "PHYS 2212",
+          "MATH 2551",
+          "MATH 2552",
+          "EAS 1601",
+          "EAS 2600"
+        ],
+        "Major Requirements": [
+          "EAS 2655",
+          "EAS 3603",
+          "EAS 3610",
+          "EAS 4370",
+          "EAS 4200",
+          "EAS 4801"
+        ],
+        "Capstone Credits": [
+          "EAS 4610",
+          "EAS 4814"
+        ],
+        "SEP Technical Electives": [
+          "EAS 4200",
+          "EAS 4205",
+          "EAS 4312",
+          "EAS 4314",
+          "EAS 4316",
+          "EAS 4360",
+          "EAS 4375",
+          "EAS 4380",
+          "EAS 4420",
+          "EAS 4480",
+          "EAS 4520",
+          "EAS 4610",
+          "EAS 4651",
+          "EAS 4699",
+          "EAS 4803"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "INTA 1200",
+          "EAS 1601",
+          "MATH 1553"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1551",
+          "CS 1301",
+          "MATH 1552",
+          "PHYS 2212"
+        ],
+        "Fall 2027": [
+          "MATH 2551",
+          "MATH 2552",
+          "EAS 2600",
+          "EAS 2655",
+          "EAS 3603"
+        ],
+        "Spring 2028": [
+          "EAS 3610",
+          "EAS 4370",
+          "EAS 4200",
+          "EAS 4801",
+          "EAS 4610"
+        ],
+        "Fall 2028": [
+          "EAS 4814",
+          "EAS 4205",
+          "EAS 4312",
+          "EAS 4314",
+          "EAS 4316"
+        ],
+        "Spring 2029": [
+          "EAS 4360",
+          "EAS 4375",
+          "EAS 4380",
+          "EAS 4420",
+          "EAS 4480"
+        ],
+        "Fall 2029": [
+          "EAS 4520",
+          "EAS 4651",
+          "EAS 4699",
+          "EAS 4803"
+        ],
+        "Spring 2030": []
+      }
+    },
+    "urban_planning_and_spatial_analytics": {
+      "name": "Urban Planning and Spatial Analytics",
+      "url": "https://catalog.gatech.edu/programs/urban-planning-and-spatial-analytics-bs/",
+      "target_hours": 120,
+      "requirements": {
+        "Wellness Requirement": [
+          "APPH 1040"
+        ],
+        "Institutional Priority": [
+          "CS 1301"
+        ],
+        "Mathematics and Quantitative Skills": [
+          "MATH 1712"
+        ],
+        "Political Science and U.S. History": [
+          "HIST 2111"
+        ],
+        "Communicating in Writing": [
+          "ENGL 1101",
+          "ENGL 1102"
+        ],
+        "Technology, Mathematics, and Sciences": [
+          "MATH 1711"
+        ],
+        "Field of Study": [
+          "CP 2020",
+          "CP 2233",
+          "CP 2030",
+          "CP 2040"
+        ],
+        "Major Requirements": [
+          "CP 3024",
+          "CP 3025",
+          "CP 4190",
+          "CP 4510",
+          "CP 4060",
+          "CP 4052"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "APPH 1040",
+          "ENGL 1101",
+          "MATH 1712"
+        ],
+        "Spring 2027": [
+          "MATH 1711",
+          "ENGL 1102",
+          "CS 1301"
+        ],
+        "Fall 2027": [
+          "HIST 2111",
+          "CP 2020",
+          "CP 2233"
+        ],
+        "Spring 2028": [
+          "CP 2030",
+          "CP 2040",
+          "CP 3024"
+        ],
+        "Fall 2028": [
+          "CP 3025",
+          "CP 4190",
+          "CP 4510"
+        ],
+        "Spring 2029": [
+          "CP 4060",
+          "CP 4052"
+        ],
+        "Fall 2029": [],
+        "Spring 2030": []
       }
     }
   }
