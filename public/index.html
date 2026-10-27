@@ -48,6 +48,7 @@
                 <select id="gt-major">
                     <option value="biology">Biology</option>
                     <option value="neuroscience">Neuroscience</option>
+                    <option value="psychology">Psychology</option>
                     <option value="bme">Biomedical Engineering</option>
                 </select>
                 <a id="major-catalog-link" href="#" target="_blank" rel="noopener noreferrer" class="settings-btn catalog-link-btn" title="View official GT catalog degree requirements page" style="text-decoration: none; background: rgba(255, 255, 255, 0.15);">🔗 Catalog Page</a>
@@ -178,7 +179,7 @@
                     <div style="font-size: 1.15rem; background: var(--gt-navy); color: white; border-radius: 50%; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; font-family: 'Roboto Condensed', sans-serif;">1</div>
                     <div>
                         <h4 style="margin: 0 0 0.25rem 0; color: var(--gt-navy); font-size: 0.95rem; font-weight: 700;">Transfer Credits (AP & DE)</h4>
-                        <p style="margin: 0; font-size: 0.82rem; color: #555; line-height: 1.45;">Click the ✏️ edit links on <strong>AP Credits</strong> or <strong>Dual Enrollment</strong> inside the <strong>Transfer Credits</strong> box to configure prior exam scores or college classes.</p>
+                        <p style="margin: 0; font-size: 0.82rem; color: #555; line-height: 1.45;">Click the ✏️ edit links on <strong>AP Credits</strong> or <strong>Dual Enrollment</strong> inside the <strong>Transfer Credits</strong> box to configure prior exam scores or college classes — or drag and drop any course card directly onto those sections!</p>
                     </div>
                 </div>
 
@@ -207,6 +208,16 @@
                 </label>
                 <button id="tutorial-start-btn" class="modal-btn" style="width: 100%; background-color: var(--gt-navy); color: white; font-weight: bold; padding: 0.75rem; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem;">Get Started!</button>
             </div>
+        </div>
+    </div>
+
+    <!-- Transfer Drop Prompt Modal (AP Score / Dual Enrollment Institution) -->
+    <div id="transfer-drop-modal" class="modal">
+        <div class="modal-content" style="max-width: 480px;">
+            <span class="close-modal" id="close-transfer-drop-btn">&times;</span>
+            <h2 id="transfer-drop-title" style="margin-bottom: 0.25rem;">Add Transfer Credit</h2>
+            <p id="transfer-drop-subtitle" class="modal-subtitle" style="margin-bottom: 1.25rem; padding-bottom: 0.75rem;">Configure transfer credit details for this course.</p>
+            <div id="transfer-drop-body"></div>
         </div>
     </div>
 

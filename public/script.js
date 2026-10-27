@@ -242,6 +242,7 @@ function getAPCredits() {
                         name: `AP ${ap.name} Credit (Score: ${score})`,
                         hours: hours,
                         source: "AP Credit",
+                        examName: ap.name,
                         description: ap.description || `Earned credit for ${partCode} via AP Exam.`
                     });
                 });
@@ -253,7 +254,7 @@ function getAPCredits() {
 
 function getDECredits() {
     const list = [];
-    deData.forEach(de => {
+    deData.forEach((de, deIndex) => {
         const code = de.gt_credit;
         if (code && code !== 'None') {
             const parts = code.split('&').map(p => p.trim());
@@ -264,6 +265,7 @@ function getDECredits() {
                     name: de.name,
                     hours: hours,
                     source: "Dual Enrollment",
+                    deIndex: deIndex,
                     description: de.description || `Earned credit for ${partCode} via Dual Enrollment.`
                 });
             });
@@ -406,6 +408,13 @@ function auditRequirements(majorKey, schedule, transferCredits) {
                 } else if (slotKey.startsWith("NEUR BREADTH")) {
                     const neurPrefixes = ["NEUR", "PSYC", "BIOS", "BMED", "CS", "MATH"];
                     matchFn = c => c.code === slotKey || neurPrefixes.some(p => c.code.startsWith(p));
+                } else if (slotKey.startsWith("PSYC ELECTIVE")) {
+                    matchFn = c => {
+                        if (c.code === slotKey) return true;
+                        if (!c.code.startsWith("PSYC")) return false;
+                        const num = parseInt(c.code.replace(/\D/g, ''));
+                        return num >= 2000 && num < 5000;
+                    };
                 } else if (slotKey === "HUM ELECTIVE") {
                     matchFn = c => c.code === slotKey || getCourseCategory(c.code) === "HUM";
                 } else if (slotKey === "SS ELECTIVE") {
@@ -651,12 +660,54 @@ function createSemesterCell(semName, fulfilledMap) {
 
         const apListEl = semEl.querySelector('#ap-transfer-list');
         apCredits.forEach(cls => {
-            apListEl.appendChild(createClassCardForSemester(cls, true, fulfilledMap, "Transfer"));
+            apListEl.appendChild(createClassCardForSemester(cls, true, fulfilledMap, "AP Credit"));
         });
 
         const deListEl = semEl.querySelector('#de-transfer-list');
         deCredits.forEach(cls => {
-            deListEl.appendChild(createClassCardForSemester(cls, true, fulfilledMap, "Transfer"));
+            deListEl.appendChild(createClassCardForSemester(cls, true, fulfilledMap, "Dual Enrollment"));
+        });
+
+        new Sortable(apListEl, {
+            group: {
+                name: 'shared',
+                pull: false,
+                put: true
+            },
+            animation: 150,
+            filter: '.locked',
+            ghostClass: 'sortable-ghost',
+            onAdd: (evt) => {
+                const itemEl = evt.item;
+                const code = itemEl.dataset.code;
+                itemEl.remove();
+                // Restore UI before opening prompt so dragged item isn't lost if user cancels
+                updatePlanner();
+                if (code) {
+                    promptAPDrop(code);
+                }
+            }
+        });
+
+        new Sortable(deListEl, {
+            group: {
+                name: 'shared',
+                pull: false,
+                put: true
+            },
+            animation: 150,
+            filter: '.locked',
+            ghostClass: 'sortable-ghost',
+            onAdd: (evt) => {
+                const itemEl = evt.item;
+                const code = itemEl.dataset.code;
+                itemEl.remove();
+                // Restore UI before opening prompt so dragged item isn't lost if user cancels
+                updatePlanner();
+                if (code) {
+                    promptDEDrop(code);
+                }
+            }
         });
 
         const apHeader = semEl.querySelector('#ap-header');
@@ -860,6 +911,16 @@ function createClassCardForSemester(cls, isLocked, fulfilledMap, semName) {
         deleteBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             removeCourseFromSemester(semName, cls.code);
+        });
+        card.appendChild(deleteBtn);
+    } else if (semName === "AP Credit" || semName === "Dual Enrollment") {
+        const deleteBtn = document.createElement('span');
+        deleteBtn.className = 'delete-btn';
+        deleteBtn.innerHTML = '&times;';
+        deleteBtn.title = semName === "AP Credit" ? `Remove AP ${cls.examName || ''} credit` : `Remove Dual Enrollment credit`;
+        deleteBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            removeTransferCredit(cls);
         });
         card.appendChild(deleteBtn);
     }
@@ -1252,7 +1313,7 @@ function renderSearchCatalog() {
 }
 
 function isUpperDivision(code) {
-    if (code.includes("DEPTH") || code === "RESEARCH" || code === "BIOS 4460" || code === "QUANT/BIO" || code === "BIOS 3450" || code === "BIOS 3600") {
+    if (code.includes("DEPTH") || code.startsWith("PSYC CORE A") || code === "PSYC CAPSTONE" || code.startsWith("PSYC ELECTIVE") || code === "RESEARCH" || code === "BIOS 4460" || code === "QUANT/BIO" || code === "BIOS 3450" || code === "BIOS 3600") {
         return true;
     }
     const match = code.match(/\d{4}/);
@@ -1874,6 +1935,355 @@ function initTutorial() {
                 handleClose();
             }
         });
+    }
+}
+
+// Transfer Credit Drag-and-Drop & Removal Logic
+function findMatchingAPExams(courseCode) {
+    const targetCodes = new Set([courseCode]);
+    if (COURSES_DB[courseCode] && Array.isArray(COURSES_DB[courseCode].choices)) {
+        COURSES_DB[courseCode].choices.forEach(c => targetCodes.add(c));
+    }
+    if (courseCode.endsWith("L")) {
+        targetCodes.add(courseCode.slice(0, -1));
+    }
+
+    const matches = [];
+    apData.forEach(ap => {
+        const validScores = [];
+        for (let scoreStr in ap.rules) {
+            const rule = ap.rules[scoreStr];
+            const creditOptions = rule.choices ? rule.choices : [rule.gt_credit];
+            for (const opt of creditOptions) {
+                if (!opt || opt === 'None') continue;
+                const parts = opt.split('&').map(p => p.trim());
+                if (parts.some(p => targetCodes.has(p))) {
+                    validScores.push({
+                        score: parseInt(scoreStr, 10),
+                        credit: opt,
+                        hours: rule.gt_hours
+                    });
+                }
+            }
+        }
+        if (validScores.length > 0) {
+            matches.push({
+                exam: ap,
+                validScores: validScores
+            });
+        }
+    });
+    return matches;
+}
+
+function openTransferDropModal(title, subtitle, bodyHtml) {
+    const modal = document.getElementById('transfer-drop-modal');
+    const titleEl = document.getElementById('transfer-drop-title');
+    const subtitleEl = document.getElementById('transfer-drop-subtitle');
+    const bodyEl = document.getElementById('transfer-drop-body');
+    const closeBtn = document.getElementById('close-transfer-drop-btn');
+
+    if (!modal || !bodyEl) return null;
+
+    titleEl.textContent = title;
+    subtitleEl.textContent = subtitle;
+    bodyEl.innerHTML = bodyHtml;
+    modal.classList.add('active');
+
+    const closeModal = () => {
+        modal.classList.remove('active');
+    };
+
+    if (closeBtn) {
+        closeBtn.onclick = closeModal;
+    }
+    modal.onclick = (e) => {
+        if (e.target === modal) closeModal();
+    };
+
+    return { modal, bodyEl, closeModal };
+}
+
+function promptAPDrop(courseCode) {
+    const courseObj = COURSES_DB[courseCode];
+    const courseTitle = courseObj ? `${courseCode} — ${courseObj.name}` : courseCode;
+    const matches = findMatchingAPExams(courseCode);
+
+    let savedScores = {};
+    let savedSelections = {};
+    try {
+        savedScores = JSON.parse(localStorage.getItem('gt_ap_scores') || '{}');
+        savedSelections = JSON.parse(localStorage.getItem('gt_ap_selections') || '{}');
+    } catch (e) {}
+
+    // Build exam options: matched exams first, or all exams with credit rules if no direct match
+    const examList = matches.length > 0 ? matches.map(m => m.exam) : apData.filter(ap => Object.keys(ap.rules).length > 0);
+    const hasDirectMatch = matches.length > 0;
+
+    const examOptionsHtml = examList.map((ap, idx) => {
+        return `<option value="${ap.name}" ${idx === 0 ? 'selected' : ''}>AP ${ap.name}</option>`;
+    }).join('');
+
+    const noticeHtml = !hasDirectMatch ? `
+        <div style="background: #fff3e0; color: #e65100; border: 1px solid #ffe0b2; padding: 0.6rem 0.75rem; border-radius: 6px; font-size: 0.8rem; margin-bottom: 1rem; line-height: 1.4;">
+            ⚠️ <strong>${courseCode}</strong> does not have a direct AP exam equivalency in the GT catalog. You can select an AP exam below or switch to Dual Enrollment.
+        </div>
+    ` : '';
+
+    const bodyHtml = `
+        ${noticeHtml}
+        <form id="ap-drop-form" style="display: flex; flex-direction: column; gap: 1rem;">
+            <div>
+                <label style="display: block; font-weight: 700; font-size: 0.85rem; color: var(--gt-navy); margin-bottom: 0.35rem;">AP Exam</label>
+                <select id="ap-drop-exam-select" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid var(--border-color); font-size: 0.92rem; background: white;">
+                    ${examOptionsHtml}
+                </select>
+            </div>
+            <div>
+                <label style="display: block; font-weight: 700; font-size: 0.85rem; color: var(--gt-navy); margin-bottom: 0.35rem;">What AP Score did you earn?</label>
+                <div id="ap-drop-score-options" style="display: flex; flex-direction: column; gap: 0.45rem;"></div>
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 0.6rem; margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                ${!hasDirectMatch ? `<button type="button" id="ap-switch-to-de-btn" class="modal-btn" style="background: #555; margin-right: auto;">Use Dual Enrollment Instead</button>` : ''}
+                <button type="button" id="ap-drop-cancel-btn" class="modal-btn" style="background: #e0e0e0; color: #333;">Cancel</button>
+                <button type="submit" class="modal-btn" style="background: var(--gt-navy);">Save AP Credit</button>
+            </div>
+        </form>
+    `;
+
+    const ctx = openTransferDropModal(
+        "Add AP Credit",
+        `Grant credit for ${courseTitle} via AP Exam score.`,
+        bodyHtml
+    );
+    if (!ctx) return;
+
+    const examSelect = ctx.bodyEl.querySelector('#ap-drop-exam-select');
+    const scoreContainer = ctx.bodyEl.querySelector('#ap-drop-score-options');
+    const cancelBtn = ctx.bodyEl.querySelector('#ap-drop-cancel-btn');
+    const switchDeBtn = ctx.bodyEl.querySelector('#ap-switch-to-de-btn');
+    const form = ctx.bodyEl.querySelector('#ap-drop-form');
+
+    const renderScoreRadios = (examName) => {
+        const ap = apData.find(a => a.name === examName);
+        if (!ap) return;
+        scoreContainer.innerHTML = '';
+
+        const scores = Object.keys(ap.rules).map(Number).sort((a, b) => a - b);
+        const currentSavedScore = savedScores[examName];
+
+        // Build radio options for each credit-granting score (and choice if applicable)
+        const radioItems = [];
+        scores.forEach(s => {
+            const rule = ap.rules[s];
+            if (rule.choices && rule.choices.length > 0) {
+                rule.choices.forEach(ch => {
+                    radioItems.push({
+                        score: s,
+                        credit: ch,
+                        hours: rule.gt_hours,
+                        hasChoice: true
+                    });
+                });
+            } else {
+                radioItems.push({
+                    score: s,
+                    credit: rule.gt_credit,
+                    hours: rule.gt_hours,
+                    hasChoice: false
+                });
+            }
+        });
+
+        // Pre-select the option that matches courseCode or currentSavedScore, or highest score
+        let defaultIdx = radioItems.length - 1;
+        const exactIdx = radioItems.findIndex(item => {
+            const parts = item.credit.split('&').map(p => p.trim());
+            return parts.includes(courseCode) && (currentSavedScore ? item.score === currentSavedScore : true);
+        });
+        if (exactIdx !== -1) {
+            defaultIdx = exactIdx;
+        } else if (currentSavedScore) {
+            const savedIdx = radioItems.findIndex(item => item.score === currentSavedScore);
+            if (savedIdx !== -1) defaultIdx = savedIdx;
+        }
+
+        radioItems.forEach((item, idx) => {
+            const label = document.createElement('label');
+            label.style.cssText = 'display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 0.8rem; border: 1px solid var(--border-color); border-radius: 6px; cursor: pointer; background: #fafafa; font-size: 0.88rem;';
+            label.innerHTML = `
+                <span style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--gt-navy);">
+                    <input type="radio" name="ap_drop_score" value="${item.score}" data-credit="${item.credit}" data-has-choice="${item.hasChoice}" ${idx === defaultIdx ? 'checked' : ''} style="accent-color: var(--gt-navy); cursor: pointer;">
+                    Score of ${item.score}
+                </span>
+                <span style="font-size: 0.8rem; color: #2e7d32; font-weight: 700; background: #e8f5e9; padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid #c8e6c9;">
+                    Grants ${item.credit} (${item.hours}h)
+                </span>
+            `;
+            scoreContainer.appendChild(label);
+        });
+    };
+
+    renderScoreRadios(examSelect.value);
+    examSelect.addEventListener('change', () => renderScoreRadios(examSelect.value));
+
+    if (cancelBtn) cancelBtn.addEventListener('click', ctx.closeModal);
+    if (switchDeBtn) {
+        switchDeBtn.addEventListener('click', () => {
+            ctx.closeModal();
+            promptDEDrop(courseCode);
+        });
+    }
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const examName = examSelect.value;
+        const checked = scoreContainer.querySelector('input[name="ap_drop_score"]:checked');
+        if (!examName || !checked) return;
+
+        const chosenScore = parseInt(checked.value, 10);
+        const chosenCredit = checked.dataset.credit;
+        const hasChoice = checked.dataset.hasChoice === 'true';
+
+        savedScores[examName] = chosenScore;
+        if (hasChoice) {
+            savedSelections[examName] = chosenCredit;
+        } else {
+            delete savedSelections[examName];
+        }
+
+        localStorage.setItem('gt_ap_scores', JSON.stringify(savedScores));
+        localStorage.setItem('gt_ap_selections', JSON.stringify(savedSelections));
+
+        ctx.closeModal();
+        initDataAndRefresh();
+    });
+}
+
+function promptDEDrop(courseCode) {
+    const courseObj = COURSES_DB[courseCode];
+    const isPlaceholder = !courseObj || (courseObj.choices && courseObj.choices.length > 0) || courseCode.includes("ELECTIVE") || courseCode.includes("DEPTH") || courseCode.includes("BREADTH");
+
+    let gtEquivalentControlHtml = '';
+    if (courseObj && Array.isArray(courseObj.choices) && courseObj.choices.length > 0) {
+        const opts = courseObj.choices.map(c => {
+            const cInfo = COURSES_DB[c];
+            return `<option value="${c}">${c}${cInfo ? ` — ${cInfo.name} (${cInfo.hours}h)` : ''}</option>`;
+        }).join('');
+        gtEquivalentControlHtml = `
+            <select id="de-drop-gt-code" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid var(--border-color); font-size: 0.92rem; background: white;">
+                ${opts}
+            </select>
+        `;
+    } else {
+        const defaultVal = isPlaceholder ? '' : courseCode;
+        gtEquivalentControlHtml = `
+            <input type="text" id="de-drop-gt-code" value="${defaultVal}" placeholder="e.g. ${courseCode === 'HUM ELECTIVE' ? 'ENGL 2130' : 'MATH 1551 & MATH 1552'}" required style="width: 100%; padding: 0.6rem 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); font-size: 0.92rem; box-sizing: border-box;">
+        `;
+    }
+
+    const defaultTransferCode = !isPlaceholder ? courseCode : (courseObj && courseObj.choices ? courseObj.choices[0] : '');
+
+    const bodyHtml = `
+        <form id="de-drop-form" style="display: flex; flex-direction: column; gap: 1rem;">
+            <div>
+                <label for="de-drop-institution" style="display: block; font-weight: 700; font-size: 0.85rem; color: var(--gt-navy); margin-bottom: 0.35rem;">What institution grants this credit?</label>
+                <input type="text" id="de-drop-institution" placeholder="e.g. Georgia State University, GSU, UGA" required style="width: 100%; padding: 0.6rem 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); font-size: 0.92rem; box-sizing: border-box;">
+                <span style="font-size: 0.75rem; color: #666; display: block; margin-top: 0.25rem;">Enter the college or university where you took the course.</span>
+            </div>
+            <div>
+                <label for="de-drop-transfer-code" style="display: block; font-weight: 700; font-size: 0.85rem; color: var(--gt-navy); margin-bottom: 0.35rem;">Course Code Taken at Institution</label>
+                <input type="text" id="de-drop-transfer-code" value="${defaultTransferCode}" placeholder="e.g. MATH 2211, ENGL 1101" required style="width: 100%; padding: 0.6rem 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); font-size: 0.92rem; box-sizing: border-box;">
+            </div>
+            <div>
+                <label for="de-drop-gt-code" style="display: block; font-weight: 700; font-size: 0.85rem; color: var(--gt-navy); margin-bottom: 0.35rem;">GT Equivalent Course Code(s)</label>
+                ${gtEquivalentControlHtml}
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 0.6rem; margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                <button type="button" id="de-drop-cancel-btn" class="modal-btn" style="background: #e0e0e0; color: #333;">Cancel</button>
+                <button type="submit" class="modal-btn" style="background: var(--gt-navy);">Save Dual Enrollment Credit</button>
+            </div>
+        </form>
+    `;
+
+    const courseTitle = courseObj ? `${courseCode} — ${courseObj.name}` : courseCode;
+    const ctx = openTransferDropModal(
+        "Add Dual Enrollment Credit",
+        `Grant transfer credit for ${courseTitle}.`,
+        bodyHtml
+    );
+    if (!ctx) return;
+
+    const instInput = ctx.bodyEl.querySelector('#de-drop-institution');
+    const transferCodeInput = ctx.bodyEl.querySelector('#de-drop-transfer-code');
+    const gtCodeInput = ctx.bodyEl.querySelector('#de-drop-gt-code');
+    const cancelBtn = ctx.bodyEl.querySelector('#de-drop-cancel-btn');
+    const form = ctx.bodyEl.querySelector('#de-drop-form');
+
+    if (gtCodeInput && gtCodeInput.tagName === 'SELECT') {
+        gtCodeInput.addEventListener('change', () => {
+            transferCodeInput.value = gtCodeInput.value;
+        });
+    }
+
+    setTimeout(() => {
+        if (instInput) instInput.focus();
+    }, 50);
+
+    if (cancelBtn) cancelBtn.addEventListener('click', ctx.closeModal);
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const institution = instInput.value.trim();
+        const classTaken = transferCodeInput.value.trim() || gtCodeInput.value.trim();
+        const gtCreditRaw = gtCodeInput.value.trim();
+
+        if (!institution || !gtCreditRaw) return;
+
+        const cleanGtCredit = gtCreditRaw.split('&').map(p => p.trim().toUpperCase()).join(' & ');
+        const parts = cleanGtCredit.split('&').map(p => p.trim());
+        const totalHours = parts.reduce((sum, p) => sum + getCourseHours(p), 0);
+
+        const currentDE = loadDEData();
+        currentDE.push({
+            code: classTaken,
+            name: `${classTaken} at ${institution}`,
+            gt_credit: cleanGtCredit,
+            gt_hours: totalHours,
+            institution: institution,
+            description: `Transfer credit for ${cleanGtCredit} from ${institution} (${classTaken}) via Dual Enrollment.`
+        });
+
+        localStorage.setItem('gt_de_credits', JSON.stringify(currentDE));
+        ctx.closeModal();
+        initDataAndRefresh();
+    });
+}
+
+function removeTransferCredit(cls) {
+    if (cls.source === "AP Credit" && cls.examName) {
+        if (confirm(`Remove AP ${cls.examName} credit (${cls.code})?`)) {
+            let savedScores = {};
+            let savedSelections = {};
+            try {
+                savedScores = JSON.parse(localStorage.getItem('gt_ap_scores') || '{}');
+                savedSelections = JSON.parse(localStorage.getItem('gt_ap_selections') || '{}');
+            } catch (e) {}
+            delete savedScores[cls.examName];
+            delete savedSelections[cls.examName];
+            localStorage.setItem('gt_ap_scores', JSON.stringify(savedScores));
+            localStorage.setItem('gt_ap_selections', JSON.stringify(savedSelections));
+            initDataAndRefresh();
+        }
+    } else if (cls.source === "Dual Enrollment" && cls.deIndex !== undefined) {
+        if (confirm(`Remove Dual Enrollment credit "${cls.name}" (${cls.code})?`)) {
+            const currentDE = loadDEData();
+            if (cls.deIndex >= 0 && cls.deIndex < currentDE.length) {
+                currentDE.splice(cls.deIndex, 1);
+                localStorage.setItem('gt_de_credits', JSON.stringify(currentDE));
+                initDataAndRefresh();
+            }
+        }
     }
 }
 

@@ -178,6 +178,42 @@ main {
     text-decoration: underline;
 }
 
+#ap-transfer-list,
+#de-transfer-list {
+    min-height: 52px;
+    border: 1.5px dashed rgba(46, 125, 50, 0.28);
+    border-radius: 6px;
+    padding: 0.35rem;
+    background-color: rgba(255, 255, 255, 0.45);
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+#ap-transfer-list:empty::before {
+    content: "Drop a course here to add AP credit, or click ✏️ Edit above";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    font-size: 0.76rem;
+    color: #558b2f;
+    font-style: italic;
+    text-align: center;
+    pointer-events: none;
+}
+
+#de-transfer-list:empty::before {
+    content: "Drop a course here to add Dual Enrollment credit, or click ✏️ Edit above";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    font-size: 0.76rem;
+    color: #558b2f;
+    font-style: italic;
+    text-align: center;
+    pointer-events: none;
+}
+
 .semester.placeholder { visibility: hidden; border: none; box-shadow: none; pointer-events: none; }
 
 .semester h3 {

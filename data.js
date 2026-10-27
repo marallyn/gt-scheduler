@@ -1177,6 +1177,8 @@ const COURSES_DB = {
   "JAPN 2001": {"name": "Intermediate Japanese I", "hours": 3, "description": "Intermediate Japanese speaking and reading."},
   "JAPN 2002": {"name": "Intermediate Japanese II", "hours": 3, "description": "Continuation of intermediate Japanese."},
   "JAPN 3001": {"name": "Advanced Japanese I", "hours": 3, "description": "Advanced Japanese language and literature studies."},
+  "LAB SCIENCE 1": {"name": "Core Lab Science I", "hours": 4, "choices": ["CHEM 1211K", "CHEM 1310", "PHYS 2211", "PHYS 1111K", "EAS 1600"], "description": "Core IMPACTS Technology, Mathematics, and Sciences lab course."},
+  "LAB SCIENCE 2": {"name": "Core Lab Science II", "hours": 4, "choices": ["CHEM 1212K", "PHYS 2212", "EAS 1601", "PHYS 2211", "CHEM 1211K"], "description": "Core IMPACTS Technology, Mathematics, and Sciences lab course."},
   "LATN 2001": {"name": "Intermediate Latin I", "hours": 3, "description": "Intermediate Latin grammar and reading."},
   "LATN 2002": {"name": "Intermediate Latin II", "hours": 3, "description": "Continuation of intermediate Latin."},
   "LATN 2XXX": {"name": "Latin Elective Credit", "hours": 6, "description": "Generic Latin language transfer credit."},
@@ -1394,6 +1396,11 @@ const COURSES_DB = {
   "NEUR 8801": {"name": "Special Topics", "hours": 1, "description": "Special Topics."},
   "NEUR 8802": {"name": "Special Topics", "hours": 2, "description": "special topics."},
   "NEUR 9000": {"name": "Doctoral Research", "hours": 1, "description": "Doctoral research."},
+  "NEUR BREADTH 1": {"name": "Neuroscience Breadth Elective 1", "hours": 3, "description": "Approved breadth elective in Neuroscience, Psychology, Biology, BME, CS, or Math."},
+  "NEUR BREADTH 2": {"name": "Neuroscience Breadth Elective 2", "hours": 3, "description": "Approved breadth elective in Neuroscience, Psychology, Biology, BME, CS, or Math."},
+  "NEUR BREADTH 3": {"name": "Neuroscience Breadth Elective 3", "hours": 3, "description": "Approved breadth elective in Neuroscience, Psychology, Biology, BME, CS, or Math."},
+  "NEUR BREADTH 4": {"name": "Neuroscience Breadth Elective 4", "hours": 3, "description": "Approved breadth elective in Neuroscience, Psychology, Biology, BME, CS, or Math."},
+  "NEUR BREADTH 5": {"name": "Neuroscience Breadth Elective 5", "hours": 3, "description": "Approved breadth elective in Neuroscience, Psychology, Biology, BME, CS, or Math."},
   "PHYS 1111K": {"name": "Introductory Physics I", "hours": 4, "description": "An introductory course which will include mechanics (kinematics, dynamics, work and energy, momentum and collisions, and rotational motion and statics), and will include thermodynamics and waves. Elementary algebra and trigonometry will be used."},
   "PHYS 11X1": {"name": "Transfer Non-Calc Phys I", "hours": 1, "description": ""},
   "PHYS 11X2": {"name": "Transfer Non-Calc PhysII", "hours": 1, "description": ""},
@@ -1656,6 +1663,15 @@ const COURSES_DB = {
   "PSYC 8997": {"name": "Teaching Assistantship", "hours": 1, "description": "For graduate students holding a teaching assistantship."},
   "PSYC 8998": {"name": "Research Assistantship", "hours": 1, "description": "For graduate students holding a research assistantship."},
   "PSYC 9000": {"name": "Doctoral Thesis", "hours": 1, "description": ""},
+  "PSYC CAPSTONE": {"name": "Psychology Capstone / Thesis", "hours": 4, "choices": ["PSYC 4031", "PSYC 4601"], "description": "Choose either PSYC 4031 (Psychology Capstone) or PSYC 4601 (Senior Thesis II)."},
+  "PSYC CORE A1": {"name": "PSYC 4000-Level Core Choice 1", "hours": 4, "choices": ["PSYC 4011", "PSYC 4020", "PSYC 4025", "PSYC 4041"], "description": "Choose two upper-level core Psychology courses: Cognitive Psychology, Biopsychology, Learning & Memory, or Sensation & Perception."},
+  "PSYC CORE A2": {"name": "PSYC 4000-Level Core Choice 2", "hours": 4, "choices": ["PSYC 4041", "PSYC 4011", "PSYC 4020", "PSYC 4025"], "description": "Choose two upper-level core Psychology courses: Cognitive Psychology, Biopsychology, Learning & Memory, or Sensation & Perception."},
+  "PSYC CORE B": {"name": "PSYC 2000-Level Core Choice", "hours": 3, "choices": ["PSYC 2103", "PSYC 2210", "PSYC 2230", "PSYC 2240"], "description": "Choose one foundational 2000-level Psychology course: Human Development, Social, Abnormal, or Personality."},
+  "PSYC ELECTIVE 1": {"name": "Psychology Elective 1", "hours": 3, "description": "Approved 2000/3000/4000-level Psychology elective course (at least 21 hours of 3000/4000-level PSYC required overall)."},
+  "PSYC ELECTIVE 2": {"name": "Psychology Elective 2", "hours": 3, "description": "Approved 2000/3000/4000-level Psychology elective course (at least 21 hours of 3000/4000-level PSYC required overall)."},
+  "PSYC ELECTIVE 3": {"name": "Psychology Elective 3", "hours": 3, "description": "Approved 2000/3000/4000-level Psychology elective course (at least 21 hours of 3000/4000-level PSYC required overall)."},
+  "PSYC ELECTIVE 4": {"name": "Psychology Elective 4", "hours": 3, "description": "Approved 2000/3000/4000-level Psychology elective course (at least 21 hours of 3000/4000-level PSYC required overall)."},
+  "PSYC ELECTIVE 5": {"name": "Psychology Elective 5", "hours": 3, "description": "Approved 2000/3000/4000-level Psychology elective course (at least 21 hours of 3000/4000-level PSYC required overall)."},
   "PUBP 3000": {"name": "American Constitutional Issues", "hours": 3, "description": "U.S. Constitution, civil liberties, and federalism issues."},
   "QUANT/BIO": {"name": "Quantitative / Bioinformatics", "hours": 3, "choices": ["BIOS 3400", "BIOS 4150", "BIOS 4401"], "description": "Choose one quantitative biology or genomics course."},
   "RESEARCH": {"name": "BIOS Research Project", "hours": 3, "choices": ["BIOS 4590", "BIOS 4690"], "description": "Senior-level biological research project."},
@@ -3935,36 +3951,129 @@ const MAJOR_DATA = {
       }
     },
     "biology": {
-      "name": "Biology",
-      "url": "https://catalog.gatech.edu/programs/biology-bs/",
-      "target_hours": 120,
+      "name": "Biology (B.S.)",
+      "target_hours": 122,
       "requirements": {
+        "Core Biology": [
+          "BIOS 1207",
+          "BIOS 1207L",
+          "BIOS 1208",
+          "BIOS 1208L",
+          "ECOLOGY",
+          "GENETICS",
+          "ECOL/GENE LAB",
+          "BIOS 3450",
+          "BIOS 3451",
+          "BIOS 3600",
+          "QUANT/BIO",
+          "BIOS 4460",
+          "RESEARCH"
+        ],
+        "Biology Breadth & Depth": [
+          "BIOS DEPTH 1",
+          "BIOS DEPTH 2",
+          "BIOS DEPTH 3",
+          "BIOS DEPTH 4",
+          "BIOS BREADTH 1",
+          "BIOS BREADTH 2",
+          "BIOS BREADTH 3"
+        ],
+        "Chemistry": [
+          "CHEM 1211K",
+          "CHEM 1212K",
+          "CHEM 2311",
+          "CHEM 2312",
+          "CHEM 2380"
+        ],
+        "Math & Physics": [
+          "MATH 1551",
+          "MATH 1552",
+          "MATH 1553",
+          "PHYS 2211",
+          "PHYS 2212"
+        ],
         "General Core": [
-          "BIOS 4699",
-          "BIOS 4698",
-          "BIOS 4690",
-          "LMC 4701"
+          "GT 1000",
+          "ENGL 1101",
+          "ENGL 1102",
+          "WELLNESS",
+          "COMPUTING",
+          "HIST/GOVT",
+          "HUM ELECTIVE",
+          "HUM ELECTIVE",
+          "SS ELECTIVE",
+          "SS ELECTIVE",
+          "SS ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE"
         ]
       },
       "suggested_semesters": {
         "Summer 2026": [],
         "Fall 2026": [
-          "BIOS 4699"
+          "GT 1000",
+          "ENGL 1101",
+          "MATH 1551",
+          "BIOS 1207",
+          "BIOS 1207L",
+          "CHEM 1211K"
         ],
         "Spring 2027": [
-          "BIOS 4698"
+          "ENGL 1102",
+          "MATH 1552",
+          "BIOS 1208",
+          "BIOS 1208L",
+          "CHEM 1212K"
         ],
         "Fall 2027": [
-          "BIOS 4690"
+          "ECOLOGY",
+          "ECOL/GENE LAB",
+          "CHEM 2311",
+          "MATH 1553",
+          "COMPUTING",
+          "SS ELECTIVE"
         ],
         "Spring 2028": [
-          "LMC 4701"
+          "GENETICS",
+          "CHEM 2312",
+          "CHEM 2380",
+          "QUANT/BIO",
+          "HIST/GOVT",
+          "FREE ELECTIVE"
         ],
-        "Fall 2028": [],
-        "Spring 2029": [],
-        "Fall 2029": [],
-        "Spring 2030": []
-      }
+        "Fall 2028": [
+          "PHYS 2211",
+          "BIOS 3450",
+          "BIOS 3451",
+          "BIOS DEPTH 1",
+          "HUM ELECTIVE",
+          "WELLNESS"
+        ],
+        "Spring 2029": [
+          "PHYS 2212",
+          "BIOS 3600",
+          "BIOS DEPTH 2",
+          "SS ELECTIVE",
+          "FREE ELECTIVE"
+        ],
+        "Fall 2029": [
+          "BIOS DEPTH 3",
+          "BIOS DEPTH 4",
+          "FREE ELECTIVE",
+          "SS ELECTIVE",
+          "RESEARCH",
+          "BIOS 4460"
+        ],
+        "Spring 2030": [
+          "BIOS BREADTH 1",
+          "BIOS BREADTH 2",
+          "BIOS BREADTH 3",
+          "FREE ELECTIVE",
+          "HUM ELECTIVE"
+        ]
+      },
+      "url": "https://catalog.gatech.edu/programs/biology-general-bs/"
     },
     "biology_business": {
       "name": "Biology - Business Option",
@@ -4116,106 +4225,8 @@ const MAJOR_DATA = {
         ]
       }
     },
-    "biology_general": {
-      "name": "Biology - General",
-      "url": "https://catalog.gatech.edu/programs/biology-general-bs/",
-      "target_hours": 120,
-      "requirements": {
-        "Wellness Requirement": [
-          "APPH 1040"
-        ],
-        "Institutional Priortiy": [
-          "CS 1301"
-        ],
-        "Mathematics and Quantitative Skills": [
-          "MATH 1552"
-        ],
-        "Political Science and U.S. History": [
-          "HIST 2111"
-        ],
-        "Communicating in Writing": [
-          "ENGL 1101",
-          "ENGL 1102"
-        ],
-        "Technology, Mathematics, and Science": [
-          "MATH 1551",
-          "MATH 1553"
-        ],
-        "Field of Study": [
-          "BIOS 1207",
-          "CHEM 1211K",
-          "CHEM 1212K",
-          "CHEM 2311",
-          "CHEM 2312"
-        ],
-        "Major Requirements": [
-          "PHYS 2211",
-          "PHYS 2212",
-          "BIOS 1208",
-          "BIOS 2300",
-          "BIOS 3450",
-          "BIOS 2600",
-          "BIOS 3600",
-          "BIOS 4460",
-          "BIOS 4590",
-          "BIOS 4690"
-        ],
-        "Non-Biology Courses": [
-          "CHEM 2380",
-          "BIOS 3400",
-          "BIOS 4150",
-          "BIOS 4401"
-        ]
-      },
-      "suggested_semesters": {
-        "Summer 2026": [],
-        "Fall 2026": [
-          "APPH 1040",
-          "ENGL 1101",
-          "BIOS 1207",
-          "BIOS 1208"
-        ],
-        "Spring 2027": [
-          "MATH 1553",
-          "ENGL 1102",
-          "CHEM 1211K",
-          "MATH 1551"
-        ],
-        "Fall 2027": [
-          "MATH 1552",
-          "CS 1301",
-          "HIST 2111",
-          "CHEM 2311"
-        ],
-        "Spring 2028": [
-          "CHEM 2312",
-          "PHYS 2211",
-          "PHYS 2212",
-          "BIOS 2300"
-        ],
-        "Fall 2028": [
-          "BIOS 2600",
-          "CHEM 2380",
-          "CHEM 1212K",
-          "BIOS 3450"
-        ],
-        "Spring 2029": [
-          "BIOS 3600",
-          "BIOS 3400",
-          "BIOS 4460",
-          "BIOS 4590"
-        ],
-        "Fall 2029": [
-          "BIOS 4690",
-          "BIOS 4150",
-          "BIOS 4401"
-        ],
-        "Spring 2030": []
-      }
-    },
     "bme": {
-      "name": "Biomedical Engineering",
-      "url": "https://catalog.gatech.edu/programs/biomedical-engineering-bs/",
+      "name": "Biomedical Engineering (B.S.)",
       "target_hours": 128,
       "requirements": {
         "Core BME": [
@@ -4276,175 +4287,72 @@ const MAJOR_DATA = {
         ]
       },
       "suggested_semesters": {
-        "Summer 2026": [],
-        "Fall 2026": [
+        "Summer 2026": [
           "GT 1000",
+          "MATH 1551",
           "ENGL 1101",
-          "WELLNESS",
-          "BMED 1000",
-          "CHEM 1315",
-          "MATH 1553"
+          "WELLNESS"
+        ],
+        "Fall 2026": [
+          "CHEM 1211K",
+          "MATH 1552",
+          "COMPUTING",
+          "ENGL 1102"
         ],
         "Spring 2027": [
-          "ENGL 1102",
-          "CHEM 1211K",
-          "MATH 1551",
-          "MATH 1552",
+          "PHYS 2211",
+          "MATH 1553",
+          "BMED 1000",
           "BMED 2110",
-          "COE 2001"
+          "HIST/GOVT"
         ],
         "Fall 2027": [
-          "BMED 2250",
-          "BMED 2310",
-          "PHYS 2211",
           "PHYS 2212",
           "MATH 2551",
-          "MATH 2552"
+          "COE 2001",
+          "BMED 2250",
+          "HUM ELECTIVE"
         ],
         "Spring 2028": [
+          "MATH 2552",
+          "BMED 2310",
+          "CHEM 1315",
           "BMED 2400",
-          "MSE 2001",
-          "COMPUTING",
-          "HIST/GOVT",
-          "BMED 3100",
-          "BMED 3110"
+          "MSE 2001"
         ],
         "Fall 2028": [
+          "BMED 3100",
+          "BMED 3110",
           "BMED 3310",
+          "ECE 3710",
+          "ECE 3741",
+          "SS ELECTIVE"
+        ],
+        "Spring 2029": [
           "BMED 3410",
           "BMED 3520",
           "BMED 3600",
           "BMED 3610",
-          "ECE 3710"
-        ],
-        "Spring 2029": [
-          "ECE 3741",
           "HUM ELECTIVE",
-          "SS ELECTIVE",
-          "BMED DEPTH 1",
-          "BMED DEPTH 2",
-          "BMED DEPTH 3"
+          "SS ELECTIVE"
         ],
         "Fall 2029": [
+          "BMED 4000",
+          "BMED DEPTH 1",
           "BMED BREADTH 1",
           "BMED BREADTH 2",
           "BMED BREADTH 3",
-          "BMED BREADTH 4",
-          "BMED BREADTH 5",
-          "BMED 4000"
+          "SS ELECTIVE"
         ],
         "Spring 2030": [
-          "BMED 4602"
-        ]
-      }
-    },
-    "biomedical_engineering": {
-      "name": "Biomedical Engineering",
-      "url": "https://catalog.gatech.edu/programs/biomedical-engineering-bs/",
-      "target_hours": 120,
-      "requirements": {
-        "Wellness Requirement": [
-          "APPH 1040"
-        ],
-        "Institutional Priority": [
-          "CS 1371"
-        ],
-        "Mathematics and Quantitative Skills": [
-          "MATH 1552"
-        ],
-        "Political Science and U.S. History": [
-          "HIST 2111"
-        ],
-        "Communicating in Writing": [
-          "ENGL 1101",
-          "ENGL 1102"
-        ],
-        "Technology, Mathematics, and Sciences": [
-          "PHYS 2211",
-          "PHYS 2212",
-          "MATH 1551",
-          "MATH 1553"
-        ],
-        "Field of Study": [
-          "BMED 1000",
-          "BMED 2110",
-          "COE 2001",
-          "MATH 2551",
-          "MATH 2552",
-          "CHEM 1211K"
-        ],
-        "Major Requirements": [
-          "BMED 2250",
-          "BMED 2310",
-          "BMED 3100",
-          "BMED 3110",
-          "BMED 3310",
-          "BMED 3410",
-          "BMED 3520",
-          "BMED 3600",
-          "BMED 3610",
-          "BMED 4000",
-          "BMED 4602"
-        ],
-        "Other Engineering and Science Requirements": [
-          "CHEM 1315",
-          "BMED 2400",
-          "MSE 2001",
-          "ECE 3710",
-          "ECE 3741"
+          "BMED 4602",
+          "BMED DEPTH 2",
+          "BMED DEPTH 3",
+          "BMED BREADTH 4",
+          "BMED BREADTH 5"
         ]
       },
-      "suggested_semesters": {
-        "Summer 2026": [],
-        "Fall 2026": [
-          "APPH 1040",
-          "ENGL 1101",
-          "MATH 1553",
-          "BMED 1000"
-        ],
-        "Spring 2027": [
-          "CHEM 1315",
-          "ENGL 1102",
-          "MATH 1551",
-          "CHEM 1211K"
-        ],
-        "Fall 2027": [
-          "CS 1371",
-          "MATH 1552",
-          "HIST 2111",
-          "PHYS 2211"
-        ],
-        "Spring 2028": [
-          "PHYS 2212",
-          "BMED 2110",
-          "COE 2001",
-          "MATH 2551"
-        ],
-        "Fall 2028": [
-          "MATH 2552",
-          "BMED 2250",
-          "BMED 2310",
-          "BMED 2400"
-        ],
-        "Spring 2029": [
-          "MSE 2001",
-          "BMED 3100",
-          "BMED 3110",
-          "BMED 3310"
-        ],
-        "Fall 2029": [
-          "BMED 3410",
-          "BMED 3520",
-          "BMED 3600",
-          "BMED 3610"
-        ],
-        "Spring 2030": [
-          "ECE 3710",
-          "ECE 3741",
-          "BMED 4000",
-          "BMED 4602"
-        ]
-      }
+      "url": "https://catalog.gatech.edu/programs/biomedical-engineering-bs/"
     },
     "business_administration_accounting": {
       "name": "Business Administration - Accounting",
@@ -26717,8 +26625,7 @@ const MAJOR_DATA = {
       }
     },
     "neuroscience": {
-      "name": "Neuroscience",
-      "url": "https://catalog.gatech.edu/programs/neuroscience-bs/",
+      "name": "Neuroscience (B.S.)",
       "target_hours": 124,
       "requirements": {
         "Core Neuroscience": [
@@ -26775,56 +26682,68 @@ const MAJOR_DATA = {
         ]
       },
       "suggested_semesters": {
-        "Summer 2026": [],
-        "Fall 2026": [
+        "Summer 2026": [
           "GT 1000",
+          "MATH 1551",
           "ENGL 1101",
-          "WELLNESS",
+          "WELLNESS"
+        ],
+        "Fall 2026": [
           "BIOS 1107",
-          "BIOS 1108"
+          "BIOS 1107L",
+          "CHEM 1211K",
+          "ENGL 1102",
+          "PSYC 1101"
         ],
         "Spring 2027": [
-          "MATH 1553",
-          "ENGL 1102",
-          "CHEM 1211K",
-          "MATH 1551",
-          "MATH 1552"
+          "BIOS 1108",
+          "BIOS 1108L",
+          "CHEM 1212K",
+          "MATH 1552",
+          "COMPUTING"
         ],
         "Fall 2027": [
           "NEUR 2001",
-          "PSYC 2020",
           "CHEM 2311",
-          "MATH 2550",
-          "PHYS 2211"
+          "MATH 1553",
+          "PHYS 2211",
+          "SS ELECTIVE"
         ],
         "Spring 2028": [
-          "PHYS 2212",
-          "COMPUTING",
-          "HIST/GOVT",
-          "BIOS 1107L",
-          "BIOS 1108L"
-        ],
-        "Fall 2028": [
-          "CHEM 1212K",
           "NEUR 3001",
-          "NEUR 3010",
-          "PSYC 3013",
+          "PHYS 2212",
+          "MATH 2550",
+          "HIST/GOVT",
           "HUM ELECTIVE"
         ],
-        "Spring 2029": [
-          "SS ELECTIVE",
-          "FREE ELECTIVE",
+        "Fall 2028": [
+          "NEUR 3010",
+          "PSYC 2020",
           "NEUR BREADTH 1",
+          "SS ELECTIVE",
+          "FREE ELECTIVE"
+        ],
+        "Spring 2029": [
+          "PSYC 3013",
           "NEUR BREADTH 2",
-          "NEUR BREADTH 3"
+          "NEUR BREADTH 3",
+          "HUM ELECTIVE",
+          "FREE ELECTIVE"
         ],
         "Fall 2029": [
+          "NEUR 4001",
           "NEUR BREADTH 4",
-          "NEUR BREADTH 5",
-          "NEUR 4001"
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE"
         ],
-        "Spring 2030": []
-      }
+        "Spring 2030": [
+          "NEUR BREADTH 5",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE"
+        ]
+      },
+      "url": "https://catalog.gatech.edu/programs/neuroscience-general-bs/"
     },
     "neuroscience_business": {
       "name": "Neuroscience - Business Option",
@@ -27051,184 +26970,6 @@ const MAJOR_DATA = {
           "MGT 4335",
           "MGT 4610",
           "MGT 4670"
-        ]
-      }
-    },
-    "neuroscience_general": {
-      "name": "Neuroscience - General",
-      "url": "https://catalog.gatech.edu/programs/neuroscience-general-bs/",
-      "target_hours": 120,
-      "requirements": {
-        "Wellness Requirement": [
-          "APPH 1040"
-        ],
-        "Institutional Priority": [
-          "CS 1301"
-        ],
-        "Mathematics and Quantitative Skills": [
-          "MATH 1552"
-        ],
-        "Communicating in Writing": [
-          "ENGL 1101",
-          "ENGL 1102"
-        ],
-        "Political Science and U.S. History": [
-          "HIST 2111"
-        ],
-        "Technology, Mathematics, and Sciences": [
-          "MATH 1551",
-          "MATH 1553"
-        ],
-        "Field of Study": [
-          "CHEM 1310",
-          "CHEM 1315",
-          "BIOS 1107",
-          "BIOS 1107L",
-          "NEUR 2001",
-          "BIOS 4401"
-        ],
-        "Major Requirements": [
-          "PHYS 2211",
-          "PHYS 2212",
-          "NEUR 3001",
-          "NEUR 3002",
-          "NEUR 3003",
-          "NEUR 3010",
-          "CHEM 3511"
-        ],
-        "Neuroscience Depth Electives": [
-          "NEUR 4001",
-          "BIOS 2600",
-          "BIOS 2610",
-          "BIOS 3450",
-          "BIOS 3451",
-          "BIOS 3753",
-          "BIOS 3754",
-          "BIOS 3755",
-          "BIOS 3756",
-          "BIOS 4200",
-          "BIOS 4238",
-          "BIOS 4400",
-          "BIOS 4464",
-          "BIOS 4471",
-          "BIOS 4480",
-          "BIOS 4651",
-          "BIOS 4746",
-          "CHEM 3522",
-          "CHEM 4803",
-          "MATH 4803",
-          "NEUR 2699",
-          "NEUR 2803",
-          "NEUR 3803",
-          "NEUR 4100",
-          "NEUR 4200",
-          "NEUR 4238",
-          "NEUR 4300",
-          "NEUR 4400",
-          "NEUR 4699",
-          "NEUR 4696",
-          "NEUR 4697",
-          "NEUR 4740",
-          "NEUR 4803",
-          "PHYS 3250",
-          "PHYS 4251",
-          "PSYC 2015",
-          "PSYC 2103",
-          "PSYC 2230",
-          "PSYC 3012",
-          "PSYC 3040",
-          "PSYC 4011",
-          "PSYC 4041",
-          "PSYC 4100",
-          "PSYC 4090",
-          "PSYC 4745",
-          "PSYC 4803"
-        ]
-      },
-      "suggested_semesters": {
-        "Summer 2026": [],
-        "Fall 2026": [
-          "APPH 1040",
-          "ENGL 1101",
-          "MATH 1553",
-          "CHEM 1310",
-          "CHEM 1315",
-          "BIOS 1107",
-          "ENGL 1102",
-          "MATH 1551",
-          "CS 1301"
-        ],
-        "Spring 2027": [
-          "MATH 1552",
-          "HIST 2111",
-          "NEUR 2001",
-          "PHYS 2211",
-          "PHYS 2212",
-          "BIOS 2600",
-          "BIOS 2610",
-          "NEUR 2699",
-          "NEUR 2803"
-        ],
-        "Fall 2027": [
-          "PSYC 2015",
-          "PSYC 2103",
-          "PSYC 2230",
-          "BIOS 1107L",
-          "NEUR 3001",
-          "NEUR 3002",
-          "NEUR 3003",
-          "NEUR 3010",
-          "CHEM 3511"
-        ],
-        "Spring 2028": [
-          "BIOS 3450",
-          "BIOS 3451",
-          "BIOS 3753",
-          "BIOS 3754",
-          "BIOS 3755",
-          "BIOS 3756",
-          "CHEM 3522",
-          "NEUR 3803",
-          "PHYS 3250"
-        ],
-        "Fall 2028": [
-          "PSYC 3012",
-          "PSYC 3040",
-          "BIOS 4401",
-          "NEUR 4001",
-          "BIOS 4200",
-          "BIOS 4238",
-          "BIOS 4400",
-          "BIOS 4464",
-          "BIOS 4471"
-        ],
-        "Spring 2029": [
-          "BIOS 4480",
-          "BIOS 4651",
-          "BIOS 4746",
-          "CHEM 4803",
-          "MATH 4803",
-          "NEUR 4100",
-          "NEUR 4200",
-          "NEUR 4238",
-          "NEUR 4300"
-        ],
-        "Fall 2029": [
-          "NEUR 4400",
-          "NEUR 4699",
-          "NEUR 4696",
-          "NEUR 4697",
-          "NEUR 4740",
-          "NEUR 4803",
-          "PHYS 4251",
-          "PSYC 4011",
-          "PSYC 4041"
-        ],
-        "Spring 2030": [
-          "PSYC 4100",
-          "PSYC 4090",
-          "PSYC 4745",
-          "PSYC 4803"
         ]
       }
     },
@@ -28000,166 +27741,6 @@ const MAJOR_DATA = {
         ]
       }
     },
-    "psychology_general": {
-      "name": "Psychology - General",
-      "url": "https://catalog.gatech.edu/programs/psychology-general-bs/",
-      "target_hours": 120,
-      "requirements": {
-        "Wellness Requirement": [
-          "APPH 1040"
-        ],
-        "Institutional Priority": [
-          "CS 1301"
-        ],
-        "Mathematics and Quantitative Skills": [
-          "MATH 1552"
-        ],
-        "Political Science and U.S. History": [
-          "HIST 2111"
-        ],
-        "Communicating in Writing": [
-          "ENGL 1101",
-          "ENGL 1102"
-        ],
-        "Technology, Mathematics, and Sciences": [
-          "MATH 1551",
-          "MATH 1553"
-        ],
-        "Field of Study": [
-          "BIOS 1107",
-          "BIOS 1108",
-          "PSYC 1101",
-          "PSYC 2020",
-          "PSYC 2103",
-          "PSYC 2210",
-          "PSYC 2230",
-          "PSYC 2240"
-        ],
-        "Major Requirements": [
-          "PSYC 2015",
-          "PSYC 4011",
-          "PSYC 4020",
-          "PSYC 4025",
-          "PSYC 4041",
-          "PSYC 4031"
-        ],
-        "PSYC Electives": [
-          "PSYC 2005",
-          "PSYC 2103",
-          "PSYC 2130",
-          "PSYC 2210",
-          "PSYC 2220",
-          "PSYC 2230",
-          "PSYC 2240",
-          "PSYC 2270",
-          "PSYC 2280",
-          "PSYC 2695",
-          "PSYC 2699",
-          "PSYC 2760",
-          "PSYC 2803",
-          "PSYC 3000",
-          "PSYC 3005",
-          "PSYC 3009",
-          "PSYC 3031",
-          "PSYC 3100",
-          "PSYC 3750",
-          "PSYC 3790",
-          "PSYC 3803",
-          "PSYC 3873",
-          "PSYC 4010",
-          "PSYC 4011",
-          "PSYC 4020",
-          "PSYC 4025",
-          "PSYC 4041",
-          "PSYC 4050",
-          "PSYC 4090",
-          "PSYC 4100",
-          "PSYC 4260",
-          "PSYC 4270",
-          "PSYC 4600",
-          "PSYC 4690",
-          "PSYC 4695",
-          "PSYC 4697",
-          "PSYC 4699",
-          "PSYC 4740",
-          "PSYC 4745",
-          "PSYC 4803"
-        ]
-      },
-      "suggested_semesters": {
-        "Summer 2026": [],
-        "Fall 2026": [
-          "APPH 1040",
-          "ENGL 1101",
-          "MATH 1553",
-          "BIOS 1107",
-          "BIOS 1108",
-          "PSYC 1101",
-          "ENGL 1102"
-        ],
-        "Spring 2027": [
-          "MATH 1551",
-          "CS 1301",
-          "MATH 1552",
-          "HIST 2111",
-          "PSYC 2020",
-          "PSYC 2103",
-          "PSYC 2210"
-        ],
-        "Fall 2027": [
-          "PSYC 2230",
-          "PSYC 2240",
-          "PSYC 2015",
-          "PSYC 2005",
-          "PSYC 2130",
-          "PSYC 2220",
-          "PSYC 2270"
-        ],
-        "Spring 2028": [
-          "PSYC 2280",
-          "PSYC 2695",
-          "PSYC 2699",
-          "PSYC 2760",
-          "PSYC 2803",
-          "PSYC 3000",
-          "PSYC 3005"
-        ],
-        "Fall 2028": [
-          "PSYC 3009",
-          "PSYC 3031",
-          "PSYC 3100",
-          "PSYC 3750",
-          "PSYC 3790",
-          "PSYC 3803",
-          "PSYC 3873"
-        ],
-        "Spring 2029": [
-          "PSYC 4011",
-          "PSYC 4020",
-          "PSYC 4025",
-          "PSYC 4041",
-          "PSYC 4031",
-          "PSYC 4010",
-          "PSYC 4050"
-        ],
-        "Fall 2029": [
-          "PSYC 4090",
-          "PSYC 4100",
-          "PSYC 4260",
-          "PSYC 4270",
-          "PSYC 4600",
-          "PSYC 4690",
-          "PSYC 4695"
-        ],
-        "Spring 2030": [
-          "PSYC 4697",
-          "PSYC 4699",
-          "PSYC 4740",
-          "PSYC 4745",
-          "PSYC 4803"
-        ]
-      }
-    },
     "public_policy": {
       "name": "Public Policy",
       "url": "https://catalog.gatech.edu/programs/public-policy-bs/",
@@ -28527,6 +28108,125 @@ const MAJOR_DATA = {
         ],
         "Fall 2029": [],
         "Spring 2030": []
+      }
+    },
+    "psychology": {
+      "name": "Psychology (B.S.)",
+      "url": "https://catalog.gatech.edu/programs/psychology-general-bs/",
+      "target_hours": 122,
+      "requirements": {
+        "Core Psychology": [
+          "PSYC 1101",
+          "PSYC 2020",
+          "PSYC 2015",
+          "PSYC CORE B",
+          "PSYC CORE A1",
+          "PSYC CORE A2",
+          "PSYC CAPSTONE"
+        ],
+        "Psychology Electives": [
+          "PSYC ELECTIVE 1",
+          "PSYC ELECTIVE 2",
+          "PSYC ELECTIVE 3",
+          "PSYC ELECTIVE 4",
+          "PSYC ELECTIVE 5"
+        ],
+        "Biology & Lab Sciences": [
+          "BIOS 1107",
+          "BIOS 1107L",
+          "BIOS 1108",
+          "BIOS 1108L",
+          "LAB SCIENCE 1",
+          "LAB SCIENCE 2"
+        ],
+        "Mathematics": [
+          "MATH 1551",
+          "MATH 1552",
+          "MATH 1553"
+        ],
+        "General Core": [
+          "GT 1000",
+          "ENGL 1101",
+          "ENGL 1102",
+          "WELLNESS",
+          "COMPUTING",
+          "HIST/GOVT",
+          "HUM ELECTIVE",
+          "HUM ELECTIVE",
+          "SS ELECTIVE",
+          "SS ELECTIVE",
+          "SS ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE"
+        ]
+      },
+      "suggested_semesters": {
+        "Summer 2026": [],
+        "Fall 2026": [
+          "GT 1000",
+          "ENGL 1101",
+          "MATH 1551",
+          "BIOS 1107",
+          "BIOS 1107L",
+          "PSYC 1101",
+          "WELLNESS"
+        ],
+        "Spring 2027": [
+          "ENGL 1102",
+          "MATH 1552",
+          "BIOS 1108",
+          "BIOS 1108L",
+          "COMPUTING",
+          "PSYC CORE B"
+        ],
+        "Fall 2027": [
+          "PSYC 2020",
+          "MATH 1553",
+          "LAB SCIENCE 1",
+          "HIST/GOVT",
+          "HUM ELECTIVE"
+        ],
+        "Spring 2028": [
+          "PSYC 2015",
+          "LAB SCIENCE 2",
+          "SS ELECTIVE",
+          "HUM ELECTIVE",
+          "FREE ELECTIVE"
+        ],
+        "Fall 2028": [
+          "PSYC CORE A1",
+          "PSYC ELECTIVE 1",
+          "SS ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE"
+        ],
+        "Spring 2029": [
+          "PSYC CORE A2",
+          "PSYC ELECTIVE 2",
+          "SS ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE"
+        ],
+        "Fall 2029": [
+          "PSYC CAPSTONE",
+          "PSYC ELECTIVE 3",
+          "PSYC ELECTIVE 4",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE"
+        ],
+        "Spring 2030": [
+          "PSYC ELECTIVE 5",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE",
+          "FREE ELECTIVE"
+        ]
       }
     }
   }
