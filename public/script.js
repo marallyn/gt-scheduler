@@ -281,16 +281,90 @@ function getTransferCredits() {
 }
 
 function getCourseCategory(code) {
+    if (!code) return null;
     if (COURSES_DB[code] && COURSES_DB[code].category) {
         return COURSES_DB[code].category;
     }
-    if (code.startsWith("SPAN") || code.startsWith("FREN") || code.startsWith("GRMN") || code.startsWith("JAPN") || code.startsWith("CHIN") || code.startsWith("LATN") || code === "ID 2242" || code === "MUSI 2700" || code.startsWith("HUM") || code.startsWith("ARCH")) {
+    const humPrefixes = [
+        "LMC", "PHIL", "LING", "MUSI", "ID", "ARCH", "COA", "HUM", "IAC", "CLL", "GMC", "ML",
+        "SPAN", "FREN", "GRMN", "JAPN", "CHIN", "KOR", "RUSS", "ARBC", "LATN", "PORT", "PERS", "HEBW", "HIN", "SWAH", "WOLO"
+    ];
+    if (humPrefixes.some(p => code.startsWith(p + " ") || code === p)) {
         return "HUM";
     }
-    if (code.startsWith("ECON") || code.startsWith("PSYC") || code.startsWith("SOC") || code.startsWith("HTS") || code.startsWith("POL") || code.startsWith("INTA") || code.startsWith("SS") || code === "PUBP 3000") {
+    if (code.startsWith("ENGL ") && code !== "ENGL 1101" && code !== "ENGL 1102") {
+        return "HUM";
+    }
+    const ssPrefixes = [
+        "ECON", "PSYC", "SOC", "HTS", "HIST", "POL", "INTA", "PUBP", "SS", "CP", "SLS"
+    ];
+    if (ssPrefixes.some(p => code.startsWith(p + " ") || code === p)) {
         return "SS";
     }
     return null;
+}
+
+function isElectivePlaceholderCode(code) {
+    if (!code) return false;
+    return code.includes("ELECTIVE") || code.includes("DEPTH") || code.includes("BREADTH") || code === "RESEARCH";
+}
+
+function doesCourseMatchElectiveSlot(courseCode, slotKey, hasAPBio5 = false) {
+    if (!courseCode || !slotKey) return false;
+    if (isElectivePlaceholderCode(courseCode)) return false;
+    if (COURSES_DB[courseCode] && Array.isArray(COURSES_DB[courseCode].choices)) return false;
+
+    const numMatch = courseCode.match(/(\d+)/);
+    const num = numMatch ? parseInt(numMatch[1], 10) : 0;
+
+    if (hasAPBio5 && (slotKey === "BIOS 1208" || slotKey === "BIOS 1208L")) {
+        return courseCode.startsWith("BIOS ");
+    } else if (slotKey === "RESEARCH") {
+        return courseCode === "BIOS 4590" || courseCode === "BIOS 4690" || courseCode === "BIOS 4699" || courseCode === "BIOS 2699";
+    } else if (slotKey.startsWith("BIOS DEPTH")) {
+        return courseCode.startsWith("BIOS ") && num >= 3000 && num < 5000;
+    } else if (slotKey.startsWith("BIOS BREADTH")) {
+        const sciencePrefixes = ["CHEM", "PHYS", "MATH", "CS", "NEUR", "BMED", "BIOS", "EAS", "PSYC"];
+        return sciencePrefixes.some(p => courseCode.startsWith(p + " "));
+    } else if (slotKey.startsWith("BMED DEPTH")) {
+        return courseCode.startsWith("BMED ") && num >= 3000 && num < 5000;
+    } else if (slotKey.startsWith("BMED BREADTH")) {
+        const engSciPrefixes = ["CHEM", "PHYS", "MATH", "CS", "BIOS", "MSE", "ECE", "COE", "ISYE", "BMED", "ME", "CHBE"];
+        return engSciPrefixes.some(p => courseCode.startsWith(p + " "));
+    } else if (slotKey.startsWith("NEUR BREADTH")) {
+        const neurPrefixes = ["NEUR", "PSYC", "BIOS", "BMED", "CS", "MATH", "CHEM", "PHYS"];
+        return neurPrefixes.some(p => courseCode.startsWith(p + " "));
+    } else if (slotKey.startsWith("PSYC ELECTIVE")) {
+        return courseCode.startsWith("PSYC ") && num >= 2000 && num < 5000;
+    } else if (slotKey === "HUM ELECTIVE") {
+        return getCourseCategory(courseCode) === "HUM";
+    } else if (slotKey === "SS ELECTIVE") {
+        return getCourseCategory(courseCode) === "SS";
+    } else if (slotKey === "FREE ELECTIVE") {
+        return true;
+    }
+    return false;
+}
+
+function getMatchingCoursesForElective(slotKey) {
+    const results = [];
+    for (const code in COURSES_DB) {
+        if (code.endsWith("XXX")) continue;
+        const numMatch = code.match(/(\d+)/);
+        const num = numMatch ? parseInt(numMatch[1], 10) : 0;
+        if (num >= 5000) continue;
+
+        if (doesCourseMatchElectiveSlot(code, slotKey)) {
+            const c = COURSES_DB[code];
+            results.push({
+                code: code,
+                name: c.name,
+                hours: c.hours,
+                description: c.description
+            });
+        }
+    }
+    return results;
 }
 
 function auditRequirements(majorKey, schedule, transferCredits) {
@@ -350,7 +424,8 @@ function auditRequirements(majorKey, schedule, transferCredits) {
             }
             
             if (isChoice) {
-                satisfiedBy = consumeCourse(c => choices.includes(c.code) || c.code === slotKey);
+                // Prefer a specific chosen course over the generic choice key
+                satisfiedBy = consumeCourse(c => choices.includes(c.code)) || consumeCourse(c => c.code === slotKey);
             } else if (slotKey.includes("ELECTIVE") || slotKey.includes("DEPTH") || slotKey.includes("BREADTH")) {
                 // Elective placeholders are skipped in the first specific pass
                 satisfiedBy = null;
@@ -371,60 +446,23 @@ function auditRequirements(majorKey, schedule, transferCredits) {
         });
     }
     
-    // 2. Audit elective placeholders next
-    for (let category in auditResults) {
-        auditResults[category].forEach(slot => {
-            if (slot.satisfiedBy) return;
-            
-            const slotKey = slot.slotKey;
-            if (slotKey.includes("ELECTIVE") || slotKey.includes("DEPTH") || slotKey.includes("BREADTH") || slotKey === "RESEARCH" || (hasAPBio5 && (slotKey === "BIOS 1208" || slotKey === "BIOS 1208L"))) {
-                let matchFn = null;
+    // 2. Audit elective placeholders next (non-FREE ELECTIVE first, then FREE ELECTIVE last)
+    const auditElectiveSlots = (onlyFreeElectives) => {
+        for (let category in auditResults) {
+            auditResults[category].forEach(slot => {
+                if (slot.satisfiedBy) return;
                 
-                if (hasAPBio5 && (slotKey === "BIOS 1208" || slotKey === "BIOS 1208L")) {
-                    matchFn = c => c.code.startsWith("BIOS");
-                    slot.displayName = slotKey === "BIOS 1208" ? "AP Bio 5 Sub Elective (3h)" : "AP Bio 5 Sub Elective (1h)";
-                } else if (slotKey === "RESEARCH") {
-                    matchFn = c => c.code === slotKey || c.code === "BIOS 4590" || c.code === "BIOS 4690";
-                } else if (slotKey.startsWith("BIOS DEPTH")) {
-                    matchFn = c => {
-                        if (c.code === slotKey) return true;
-                        if (!c.code.startsWith("BIOS")) return false;
-                        const num = parseInt(c.code.replace(/\D/g, ''));
-                        return num >= 3000 && num < 5000;
-                    };
-                } else if (slotKey.startsWith("BIOS BREADTH")) {
-                    const sciencePrefixes = ["CHEM", "PHYS", "MATH", "CS", "NEUR", "BMED", "BIOS"];
-                    matchFn = c => c.code === slotKey || sciencePrefixes.some(p => c.code.startsWith(p));
-                } else if (slotKey.startsWith("BMED DEPTH")) {
-                    matchFn = c => {
-                        if (c.code === slotKey) return true;
-                        if (!c.code.startsWith("BMED")) return false;
-                        const num = parseInt(c.code.replace(/\D/g, ''));
-                        return num >= 3000 && num < 5000;
-                    };
-                } else if (slotKey.startsWith("BMED BREADTH")) {
-                    const engSciPrefixes = ["CHEM", "PHYS", "MATH", "CS", "BIOS", "MSE", "ECE", "COE", "ISYE", "BMED"];
-                    matchFn = c => c.code === slotKey || engSciPrefixes.some(p => c.code.startsWith(p));
-                } else if (slotKey.startsWith("NEUR BREADTH")) {
-                    const neurPrefixes = ["NEUR", "PSYC", "BIOS", "BMED", "CS", "MATH"];
-                    matchFn = c => c.code === slotKey || neurPrefixes.some(p => c.code.startsWith(p));
-                } else if (slotKey.startsWith("PSYC ELECTIVE")) {
-                    matchFn = c => {
-                        if (c.code === slotKey) return true;
-                        if (!c.code.startsWith("PSYC")) return false;
-                        const num = parseInt(c.code.replace(/\D/g, ''));
-                        return num >= 2000 && num < 5000;
-                    };
-                } else if (slotKey === "HUM ELECTIVE") {
-                    matchFn = c => c.code === slotKey || getCourseCategory(c.code) === "HUM";
-                } else if (slotKey === "SS ELECTIVE") {
-                    matchFn = c => c.code === slotKey || getCourseCategory(c.code) === "SS";
-                } else if (slotKey === "FREE ELECTIVE") {
-                    matchFn = c => c.code === slotKey || true;
-                }
-                
-                if (matchFn) {
-                    const satisfiedBy = consumeCourse(matchFn);
+                const slotKey = slot.slotKey;
+                const isFree = (slotKey === "FREE ELECTIVE");
+                if (onlyFreeElectives !== isFree) return;
+
+                if (slotKey.includes("ELECTIVE") || slotKey.includes("DEPTH") || slotKey.includes("BREADTH") || slotKey === "RESEARCH" || (hasAPBio5 && (slotKey === "BIOS 1208" || slotKey === "BIOS 1208L"))) {
+                    if (hasAPBio5 && (slotKey === "BIOS 1208" || slotKey === "BIOS 1208L")) {
+                        slot.displayName = slotKey === "BIOS 1208" ? "AP Bio 5 Sub Elective (3h)" : "AP Bio 5 Sub Elective (1h)";
+                    }
+                    // First try to match a specific planned course; fall back to the placeholder itself
+                    const satisfiedBy = consumeCourse(c => doesCourseMatchElectiveSlot(c.code, slotKey, hasAPBio5))
+                        || consumeCourse(c => c.code === slotKey);
                     if (satisfiedBy) {
                         slot.satisfiedBy = satisfiedBy;
                         if (COURSES_DB[satisfiedBy.code]) {
@@ -432,9 +470,12 @@ function auditRequirements(majorKey, schedule, transferCredits) {
                         }
                     }
                 }
-            }
-        });
-    }
+            });
+        }
+    };
+
+    auditElectiveSlots(false);
+    auditElectiveSlots(true);
     
     // Remaining planned courses go to Unused
     auditResults["Unused Courses"] = planned.map(c => ({
@@ -790,6 +831,166 @@ function createSemesterCell(semName, fulfilledMap) {
     return cell;
 }
 
+function attachElectiveSearchControl(selectContainer, slotKey, slotTitle, onSelectCourse, startOpen = false) {
+    const warningBtn = document.createElement('button');
+    warningBtn.type = 'button';
+    warningBtn.className = 'card-warning-btn';
+    warningBtn.textContent = '⚠️ Select Course';
+    if (startOpen) {
+        warningBtn.style.display = 'none';
+    }
+    selectContainer.appendChild(warningBtn);
+
+    const searchWrapper = document.createElement('div');
+    searchWrapper.className = 'card-elective-search-wrapper';
+    searchWrapper.style.display = startOpen ? 'flex' : 'none';
+
+    const inputRow = document.createElement('div');
+    inputRow.className = 'card-elective-input-row';
+
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.className = 'card-elective-search-input';
+    searchInput.placeholder = 'Search code or title (e.g. LMC)...';
+
+    const closeSearchBtn = document.createElement('button');
+    closeSearchBtn.type = 'button';
+    closeSearchBtn.className = 'card-elective-close-btn';
+    closeSearchBtn.title = 'Close search';
+    closeSearchBtn.innerHTML = '&times;';
+
+    inputRow.appendChild(searchInput);
+    if (!startOpen) {
+        inputRow.appendChild(closeSearchBtn);
+    }
+
+    const resultsList = document.createElement('div');
+    resultsList.className = 'card-elective-results';
+
+    searchWrapper.appendChild(inputRow);
+    searchWrapper.appendChild(resultsList);
+    selectContainer.appendChild(searchWrapper);
+
+    let allMatching = null;
+
+    const renderResults = (query) => {
+        if (!allMatching) {
+            allMatching = getMatchingCoursesForElective(slotKey);
+        }
+        const q = (query || '').trim().toLowerCase();
+        const qNoSpace = q.replace(/\s+/g, '');
+
+        let filtered = allMatching;
+        if (q) {
+            filtered = allMatching.filter(c => {
+                const codeLow = c.code.toLowerCase();
+                const codeNoSpace = codeLow.replace(/\s+/g, '');
+                const nameLow = c.name.toLowerCase();
+                return codeLow.includes(q) || codeNoSpace.includes(qNoSpace) || nameLow.includes(q);
+            });
+
+            filtered.sort((a, b) => {
+                const aCode = a.code.toLowerCase();
+                const bCode = b.code.toLowerCase();
+                const aNoSpace = aCode.replace(/\s+/g, '');
+                const bNoSpace = bCode.replace(/\s+/g, '');
+
+                const aExact = aCode === q || aNoSpace === qNoSpace;
+                const bExact = bCode === q || bNoSpace === qNoSpace;
+                if (aExact !== bExact) return aExact ? -1 : 1;
+
+                const aStarts = aCode.startsWith(q) || aNoSpace.startsWith(qNoSpace);
+                const bStarts = bCode.startsWith(q) || bNoSpace.startsWith(qNoSpace);
+                if (aStarts !== bStarts) return aStarts ? -1 : 1;
+
+                const aInCode = aCode.includes(q) || aNoSpace.includes(qNoSpace);
+                const bInCode = bCode.includes(q) || bNoSpace.includes(qNoSpace);
+                if (aInCode !== bInCode) return aInCode ? -1 : 1;
+
+                return a.code.localeCompare(b.code);
+            });
+        }
+
+        resultsList.innerHTML = '';
+
+        if (filtered.length === 0) {
+            const emptyEl = document.createElement('div');
+            emptyEl.className = 'card-elective-empty';
+            emptyEl.textContent = `No matching courses found for "${query}".`;
+            resultsList.appendChild(emptyEl);
+            return filtered;
+        }
+
+        const slice = filtered.slice(0, 40);
+        slice.forEach(c => {
+            const item = document.createElement('div');
+            item.className = 'card-elective-result-item';
+            item.title = c.description || c.name;
+            item.innerHTML = `
+                <span class="result-code">${c.code}</span>
+                <span class="result-name">${c.name}</span>
+                <span class="result-hours">${c.hours}h</span>
+            `;
+            item.addEventListener('click', (e) => {
+                e.stopPropagation();
+                onSelectCourse(c.code);
+            });
+            resultsList.appendChild(item);
+        });
+
+        if (filtered.length > slice.length) {
+            const moreEl = document.createElement('div');
+            moreEl.className = 'card-elective-more';
+            moreEl.textContent = `+ ${filtered.length - slice.length} more — type to narrow results`;
+            resultsList.appendChild(moreEl);
+        }
+
+        return filtered;
+    };
+
+    warningBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        warningBtn.style.display = 'none';
+        searchWrapper.style.display = 'flex';
+        renderResults(searchInput.value);
+        searchInput.focus();
+    });
+
+    closeSearchBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        searchWrapper.style.display = 'none';
+        warningBtn.style.display = 'inline-flex';
+    });
+
+    searchInput.addEventListener('click', (e) => e.stopPropagation());
+    searchInput.addEventListener('mousedown', (e) => e.stopPropagation());
+    resultsList.addEventListener('click', (e) => e.stopPropagation());
+    resultsList.addEventListener('mousedown', (e) => e.stopPropagation());
+
+    searchInput.addEventListener('input', (e) => {
+        renderResults(e.target.value);
+    });
+
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !startOpen) {
+            e.stopPropagation();
+            searchWrapper.style.display = 'none';
+            warningBtn.style.display = 'inline-flex';
+        } else if (e.key === 'Enter') {
+            e.preventDefault();
+            e.stopPropagation();
+            const matches = renderResults(searchInput.value);
+            if (matches && matches.length > 0) {
+                onSelectCourse(matches[0].code);
+            }
+        }
+    });
+
+    if (startOpen) {
+        renderResults('');
+    }
+}
+
 function createClassCardForSemester(cls, isLocked, fulfilledMap, semName) {
     const card = document.createElement('div');
     card.className = `class-card ${isLocked ? 'locked' : ''}`;
@@ -809,7 +1010,7 @@ function createClassCardForSemester(cls, isLocked, fulfilledMap, semName) {
             <span class="code">${cls.code}</span>
             <span class="name">${cls.name}</span>
             <span class="hours-container" style="display: flex; align-items: center; gap: 6px;">
-                ${hasChoices ? `<span class="card-info-icon" title="View course descriptions in catalog" style="cursor: pointer; font-size: 0.85rem;">ℹ️</span>` : ''}
+                ${(hasChoices || isGenericElective) ? `<span class="card-info-icon" title="View matching courses in catalog" style="cursor: pointer; font-size: 0.85rem;">ℹ️</span>` : ''}
                 <span class="hours">${cls.hours}h</span>
             </span>
         </div>
@@ -873,16 +1074,20 @@ function createClassCardForSemester(cls, isLocked, fulfilledMap, semName) {
             select.addEventListener('click', (e) => e.stopPropagation());
             selectContainer.appendChild(select);
         } else {
-            const warningBadge = document.createElement('span');
-            warningBadge.className = 'warning-badge';
-            warningBadge.style.color = '#c62828';
-            warningBadge.textContent = '⚠️ Specific Course Required';
-            selectContainer.appendChild(warningBadge);
-            
-            const warningText = document.createElement('div');
-            warningText.className = 'warning-text';
-            warningText.textContent = 'Replace from left or search catalog';
-            selectContainer.appendChild(warningText);
+            const infoIcon = card.querySelector('.card-info-icon');
+            if (infoIcon) {
+                infoIcon.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const matchingCodes = getMatchingCoursesForElective(cls.code).map(c => c.code);
+                    showChoicesInCatalog(matchingCodes, cls.name);
+                });
+            }
+
+            attachElectiveSearchControl(selectContainer, cls.code, cls.name, (chosenCode) => {
+                card.dataset.code = chosenCode;
+                saveState();
+                updatePlanner();
+            });
         }
         card.appendChild(selectContainer);
     }
@@ -1215,12 +1420,58 @@ function createElectiveCard(slot) {
         <div class="class-card-header">
             <span class="code" style="color: #e65100;">${slot.slotKey}</span>
             <span class="name">${slot.displayName}</span>
-            <span class="hours">3h</span>
+            <span class="hours-container" style="display: flex; align-items: center; gap: 6px;">
+                <span class="choice-info-link" title="View matching courses in catalog" style="cursor: pointer; font-size: 0.85rem;">ℹ️</span>
+                <span class="hours">3h</span>
+            </span>
         </div>
         <div class="course-details">
-            Drag this placeholder, or search catalog and drag a specific course.
+            Drag this placeholder to a semester, or select a specific course below.
         </div>
     `;
+
+    const infoLink = card.querySelector('.choice-info-link');
+    if (infoLink) {
+        infoLink.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const matchingCodes = getMatchingCoursesForElective(slot.slotKey).map(c => c.code);
+            showChoicesInCatalog(matchingCodes, slot.displayName);
+        });
+    }
+
+    const selectContainer = document.createElement('div');
+    selectContainer.className = 'card-select-container';
+    attachElectiveSearchControl(selectContainer, slot.slotKey, slot.displayName, (chosenCode) => {
+        const chosenCourse = COURSES_DB[chosenCode];
+        if (!chosenCourse) return;
+        card.dataset.code = chosenCode;
+        card.dataset.hours = chosenCourse.hours;
+        card.querySelector('.code').textContent = chosenCode;
+        card.querySelector('.name').textContent = chosenCourse.name;
+        card.querySelector('.hours').textContent = `${chosenCourse.hours}h`;
+        card.querySelector('.course-details').textContent = chosenCourse.description || '';
+        selectContainer.innerHTML = '';
+        const changeBtn = document.createElement('button');
+        changeBtn.type = 'button';
+        changeBtn.className = 'card-warning-btn';
+        changeBtn.textContent = '🔄 Change Course';
+        changeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            selectContainer.innerHTML = '';
+            attachElectiveSearchControl(selectContainer, slot.slotKey, slot.displayName, (nextCode) => {
+                const nextCourse = COURSES_DB[nextCode];
+                if (!nextCourse) return;
+                card.dataset.code = nextCode;
+                card.dataset.hours = nextCourse.hours;
+                card.querySelector('.code').textContent = nextCode;
+                card.querySelector('.name').textContent = nextCourse.name;
+                card.querySelector('.hours').textContent = `${nextCourse.hours}h`;
+                card.querySelector('.course-details').textContent = nextCourse.description || '';
+            }, true);
+        });
+        selectContainer.appendChild(changeBtn);
+    });
+    card.appendChild(selectContainer);
     
     card.addEventListener('click', () => {
         card.classList.toggle('expanded');
@@ -1617,7 +1868,9 @@ function showChoicesInCatalog(choices, title) {
                 hours: c.hours,
                 description: c.description
             });
-            card.classList.add('expanded');
+            if (choices.length <= 25) {
+                card.classList.add('expanded');
+            }
             container.appendChild(card);
         }
     });
