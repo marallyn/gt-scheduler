@@ -270,7 +270,10 @@ def main():
         for subj in subjects:
             new_courses = fetch_subject_courses(subj)
             if new_courses:
-                existing_db.update(new_courses)
+                for code, info in new_courses.items():
+                    if code.endswith("XXX") and code in existing_db and existing_db[code].get("description"):
+                        continue
+                    existing_db[code] = info
                 total_fetched += len(new_courses)
         save_db(existing_db)
         print(f"Successfully cataloged {total_fetched} total courses across {len(subjects)} subjects!")
