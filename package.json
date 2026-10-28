@@ -5,8 +5,8 @@
   "main": "worker.js",
   "scripts": {
     "sync": "mkdir -p public && cp index.html ap-credits.html de-credits.html data.js script.js style.css favicon.ico *.png public/",
-    "dev": "npm run sync && wrangler dev",
-    "deploy": "npm run sync && wrangler deploy"
+    "dev": "npm run sync && npx wrangler dev",
+    "deploy": "npm run sync && npx wrangler deploy"
   },
   "devDependencies": {
     "wrangler": "^3.0.0"
