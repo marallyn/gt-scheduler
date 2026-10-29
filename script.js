@@ -535,7 +535,13 @@ function buildCourseToRequirementMap(auditResults) {
         auditResults[category].forEach(slot => {
             if (slot.satisfiedBy) {
                 const key = `${slot.satisfiedBy.source}|${slot.satisfiedBy.code}`;
-                mapping.set(key, category);
+                mapping.set(key, {
+                    category: category,
+                    slotKey: slot.slotKey,
+                    slotName: slot.displayName,
+                    isChoice: slot.isChoice,
+                    choices: slot.choices
+                });
             }
         });
     }
@@ -1101,13 +1107,62 @@ function createClassCardForSemester(cls, isLocked, fulfilledMap, semName) {
 
     // Map requirement category badge
     const key = `${semName}|${cls.code}`;
-    const reqCategory = fulfilledMap.get(key);
+    const reqInfo = fulfilledMap.get(key);
     
     const badge = document.createElement('div');
-    if (reqCategory) {
+    if (reqInfo) {
+        const reqCategory = typeof reqInfo === 'string' ? reqInfo : reqInfo.category;
+        const slotKey = typeof reqInfo === 'object' ? reqInfo.slotKey : null;
+        const slotName = typeof reqInfo === 'object' ? reqInfo.slotName : null;
+
         badge.className = 'class-badge';
-        badge.textContent = reqCategory;
+        if (slotKey && slotKey !== cls.code && slotName) {
+            badge.textContent = `${reqCategory} • ${slotName}`;
+        } else {
+            badge.textContent = reqCategory;
+        }
         card.appendChild(badge);
+
+        // If this is a specific course fulfilling an elective placeholder slot in a semester, allow changing/resetting right on the card
+        if (!isLocked && slotKey && slotKey !== cls.code && isElectivePlaceholderCode(slotKey)) {
+            const electiveActionRow = document.createElement('div');
+            electiveActionRow.className = 'card-select-container';
+            electiveActionRow.style.cssText = 'border-top: none; margin-top: 0.25rem; padding-top: 0;';
+
+            attachElectiveSearchControl(electiveActionRow, slotKey, slotName || slotKey, (chosenCode) => {
+                card.dataset.code = chosenCode;
+                saveState();
+                updatePlanner();
+            });
+
+            const btn = electiveActionRow.querySelector('.card-warning-btn');
+            if (btn) {
+                btn.textContent = '🔄 Change Course';
+                btn.style.background = '#e8f5e9';
+                btn.style.color = '#2e7d32';
+                btn.style.borderColor = '#c8e6c9';
+
+                const resetBtn = document.createElement('button');
+                resetBtn.type = 'button';
+                resetBtn.className = 'card-warning-btn';
+                resetBtn.style.cssText = 'background: #fff3e0; color: #e65100; border-color: #ffe0b2; margin-left: 4px; flex: 1;';
+                resetBtn.textContent = '↩️ Reset';
+                resetBtn.title = `Reset back to ${slotKey}`;
+                resetBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    card.dataset.code = slotKey;
+                    saveState();
+                    updatePlanner();
+                });
+
+                const btnRow = document.createElement('div');
+                btnRow.style.cssText = 'display: flex; gap: 4px; width: 100%;';
+                btn.parentElement.insertBefore(btnRow, btn);
+                btnRow.appendChild(btn);
+                btnRow.appendChild(resetBtn);
+            }
+            card.appendChild(electiveActionRow);
+        }
     } else if (!isLocked) {
         badge.className = 'class-badge unused';
         badge.textContent = 'Unused / Extra';
