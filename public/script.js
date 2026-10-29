@@ -465,9 +465,6 @@ function auditRequirements(majorKey, schedule, transferCredits) {
                         || consumeCourse(c => c.code === slotKey);
                     if (satisfiedBy) {
                         slot.satisfiedBy = satisfiedBy;
-                        if (COURSES_DB[satisfiedBy.code]) {
-                            slot.displayName = COURSES_DB[satisfiedBy.code].name;
-                        }
                     }
                 }
             });
@@ -1203,6 +1200,7 @@ function renderChecklist(auditResults) {
         });
         
         const listEl = catEl.querySelector('.checklist-category-list');
+        const unscheduledSlotCounts = {};
         
         categoryData.forEach(slot => {
             if (slot.satisfiedBy) {
@@ -1271,12 +1269,62 @@ function renderChecklist(auditResults) {
                         saveState();
                         updatePlanner();
                     });
+                } else if (isElectivePlaceholderCode(slot.slotKey) && !isTransfer) {
+                    const isStillPlaceholder = (code === slot.slotKey);
+                    const courseObj = COURSES_DB[code];
+                    const courseLabel = (!isStillPlaceholder && courseObj)
+                        ? `${code} — ${courseObj.name} (${hours}h) - ${source}`
+                        : `${code} (${hours}h) - ${source}`;
+
+                    satisfiedSlot.innerHTML = `
+                        <div class="satisfied-details" style="width: 100%;">
+                            <div class="satisfied-title-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                <span class="satisfied-title">${slot.displayName}</span>
+                                <span class="satisfied-info-btn" title="View matching courses in catalog" style="cursor: pointer; font-size: 0.85rem; color: var(--gt-link-blue);">ℹ️</span>
+                            </div>
+                            <span class="satisfied-source">${courseLabel}</span>
+                            <div class="satisfied-elective-control" style="margin-top: 0.35rem;"></div>
+                        </div>
+                        <span class="satisfied-icon">${isStillPlaceholder ? '⚠️' : '✓'}</span>
+                    `;
+
+                    const infoBtn = satisfiedSlot.querySelector('.satisfied-info-btn');
+                    infoBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const matchingCodes = getMatchingCoursesForElective(slot.slotKey).map(c => c.code);
+                        showChoicesInCatalog(matchingCodes, slot.displayName);
+                    });
+
+                    const controlDiv = satisfiedSlot.querySelector('.satisfied-elective-control');
+                    attachElectiveSearchControl(controlDiv, slot.slotKey, slot.displayName, (newCode) => {
+                        const idSafeName = source.replace(/\s+/g, '-');
+                        const semListEl = document.getElementById(`list-${idSafeName}`);
+                        if (semListEl) {
+                            const card = semListEl.querySelector(`.class-card[data-code="${code}"]`);
+                            if (card) {
+                                card.dataset.code = newCode;
+                            }
+                        }
+                        saveState();
+                        updatePlanner();
+                    });
+                    const btn = controlDiv.querySelector('.card-warning-btn');
+                    if (btn && !isStillPlaceholder) {
+                        btn.textContent = '🔄 Change Course';
+                        btn.style.background = '#e8f5e9';
+                        btn.style.color = '#2e7d32';
+                        btn.style.borderColor = '#c8e6c9';
+                    }
                 } else {
-                    // Regular satisfied slot
+                    // Regular or transfer-satisfied slot
+                    const courseObj = COURSES_DB[code];
+                    const courseTitleNote = (code !== slot.slotKey && courseObj && courseObj.name !== slot.displayName)
+                        ? `${code} — ${courseObj.name} (${hours}h) - ${source}`
+                        : `${code} (${hours}h) - ${source}`;
                     satisfiedSlot.innerHTML = `
                         <div class="satisfied-details">
                             <span class="satisfied-title">${slot.displayName}</span>
-                            <span class="satisfied-source">${code} (${hours}h) - ${source}</span>
+                            <span class="satisfied-source">${courseTitleNote}</span>
                         </div>
                         <span class="satisfied-icon">✓</span>
                     `;
@@ -1310,11 +1358,14 @@ function renderChecklist(auditResults) {
                     return;
                 }
                 
+                unscheduledSlotCounts[slot.slotKey] = (unscheduledSlotCounts[slot.slotKey] || 0) + 1;
+                const occIdx = unscheduledSlotCounts[slot.slotKey];
+
                 let card;
                 if (slot.isChoice) {
                     card = createChoiceCard(slot);
                 } else if (slot.slotKey.includes("ELECTIVE") || slot.slotKey.includes("DEPTH") || slot.slotKey.includes("BREADTH") || slot.slotKey === "RESEARCH") {
-                    card = createElectiveCard(slot);
+                    card = createElectiveCard(slot, occIdx);
                 } else {
                     const courseInfo = COURSES_DB[slot.slotKey] || {
                         name: slot.displayName,
@@ -1409,24 +1460,35 @@ function createChoiceCard(slot) {
     return card;
 }
 
-function createElectiveCard(slot) {
+function createElectiveCard(slot, occIdx = 1) {
+    const storageKey = `${activeMajor}|${slot.slotKey}|${occIdx}`;
+    let savedUnscheduled = {};
+    try {
+        savedUnscheduled = JSON.parse(localStorage.getItem('gt_planner_unscheduled_selections') || '{}');
+    } catch (e) {}
+
+    const initialCode = (savedUnscheduled[storageKey] && COURSES_DB[savedUnscheduled[storageKey]])
+        ? savedUnscheduled[storageKey]
+        : slot.slotKey;
+    const initialCourse = (initialCode !== slot.slotKey) ? COURSES_DB[initialCode] : null;
+
     const card = document.createElement('div');
     card.className = 'class-card elective-card';
-    card.dataset.code = slot.slotKey;
-    card.dataset.hours = 3;
+    card.dataset.code = initialCode;
+    card.dataset.hours = initialCourse ? initialCourse.hours : 3;
     card.dataset.type = 'elective';
     
     card.innerHTML = `
         <div class="class-card-header">
-            <span class="code" style="color: #e65100;">${slot.slotKey}</span>
-            <span class="name">${slot.displayName}</span>
+            <span class="code" style="color: #e65100;">${initialCode}</span>
+            <span class="name">${initialCourse ? `${slot.displayName}: ${initialCourse.name}` : slot.displayName}</span>
             <span class="hours-container" style="display: flex; align-items: center; gap: 6px;">
                 <span class="choice-info-link" title="View matching courses in catalog" style="cursor: pointer; font-size: 0.85rem;">ℹ️</span>
-                <span class="hours">3h</span>
+                <span class="hours">${card.dataset.hours}h</span>
             </span>
         </div>
         <div class="course-details">
-            Drag this placeholder to a semester, or select a specific course below.
+            ${initialCourse ? (initialCourse.description || '') : 'Drag this placeholder to a semester, or select a specific course below.'}
         </div>
     `;
 
@@ -1441,16 +1503,32 @@ function createElectiveCard(slot) {
 
     const selectContainer = document.createElement('div');
     selectContainer.className = 'card-select-container';
-    attachElectiveSearchControl(selectContainer, slot.slotKey, slot.displayName, (chosenCode) => {
+
+    const applyChosenCourse = (chosenCode) => {
         const chosenCourse = COURSES_DB[chosenCode];
         if (!chosenCourse) return;
+        try {
+            const map = JSON.parse(localStorage.getItem('gt_planner_unscheduled_selections') || '{}');
+            map[storageKey] = chosenCode;
+            localStorage.setItem('gt_planner_unscheduled_selections', JSON.stringify(map));
+        } catch (e) {}
+
         card.dataset.code = chosenCode;
         card.dataset.hours = chosenCourse.hours;
         card.querySelector('.code').textContent = chosenCode;
-        card.querySelector('.name').textContent = chosenCourse.name;
+        card.querySelector('.name').textContent = `${slot.displayName}: ${chosenCourse.name}`;
         card.querySelector('.hours').textContent = `${chosenCourse.hours}h`;
         card.querySelector('.course-details').textContent = chosenCourse.description || '';
+        renderSelectedState();
+    };
+
+    const renderSelectedState = () => {
         selectContainer.innerHTML = '';
+        const dragHint = document.createElement('div');
+        dragHint.style.cssText = 'font-size: 0.72rem; color: var(--gt-navy); font-weight: 600; margin-bottom: 0.25rem;';
+        dragHint.textContent = '✋ Drag this card into a semester to schedule';
+        selectContainer.appendChild(dragHint);
+
         const changeBtn = document.createElement('button');
         changeBtn.type = 'button';
         changeBtn.className = 'card-warning-btn';
@@ -1458,19 +1536,17 @@ function createElectiveCard(slot) {
         changeBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             selectContainer.innerHTML = '';
-            attachElectiveSearchControl(selectContainer, slot.slotKey, slot.displayName, (nextCode) => {
-                const nextCourse = COURSES_DB[nextCode];
-                if (!nextCourse) return;
-                card.dataset.code = nextCode;
-                card.dataset.hours = nextCourse.hours;
-                card.querySelector('.code').textContent = nextCode;
-                card.querySelector('.name').textContent = nextCourse.name;
-                card.querySelector('.hours').textContent = `${nextCourse.hours}h`;
-                card.querySelector('.course-details').textContent = nextCourse.description || '';
-            }, true);
+            attachElectiveSearchControl(selectContainer, slot.slotKey, slot.displayName, applyChosenCourse, true);
         });
         selectContainer.appendChild(changeBtn);
-    });
+    };
+
+    if (initialCourse) {
+        renderSelectedState();
+    } else {
+        attachElectiveSearchControl(selectContainer, slot.slotKey, slot.displayName, applyChosenCourse);
+    }
+
     card.appendChild(selectContainer);
     
     card.addEventListener('click', () => {
