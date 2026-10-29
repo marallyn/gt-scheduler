@@ -315,25 +315,35 @@ function doesCourseMatchElectiveSlot(courseCode, slotKey, hasAPBio5 = false) {
     if (COURSES_DB[courseCode] && Array.isArray(COURSES_DB[courseCode].choices)) return false;
 
     const numMatch = courseCode.match(/(\d+)/);
-    const num = numMatch ? parseInt(numMatch[1], 10) : 0;
+    const rawNum = numMatch ? parseInt(numMatch[1], 10) : 0;
+    const isGenericTransfer = courseCode.endsWith("XXX");
+    const num = isGenericTransfer ? rawNum * 1000 : rawNum;
+    const hours = getCourseHours(courseCode);
 
     if (hasAPBio5 && (slotKey === "BIOS 1208" || slotKey === "BIOS 1208L")) {
-        return courseCode.startsWith("BIOS ");
-    } else if (slotKey === "RESEARCH") {
+        const minHours = slotKey === "BIOS 1208L" ? 1 : 3;
+        return courseCode.startsWith("BIOS ") && hours >= minHours;
+    }
+
+    // All standard 3-hour elective/breadth/depth/research slots require at least 3 credit hours
+    // (prevents 0h recitations, 1h labs, and 1h support courses like MATH 1499 from hijacking 3h slots)
+    if (hours < 3) return false;
+
+    if (slotKey === "RESEARCH") {
         return courseCode === "BIOS 4590" || courseCode === "BIOS 4690" || courseCode === "BIOS 4699" || courseCode === "BIOS 2699";
     } else if (slotKey.startsWith("BIOS DEPTH")) {
         return courseCode.startsWith("BIOS ") && num >= 3000 && num < 5000;
     } else if (slotKey.startsWith("BIOS BREADTH")) {
         const sciencePrefixes = ["CHEM", "PHYS", "MATH", "CS", "NEUR", "BMED", "BIOS", "EAS", "PSYC"];
-        return sciencePrefixes.some(p => courseCode.startsWith(p + " "));
+        return num >= 2000 && num < 5000 && sciencePrefixes.some(p => courseCode.startsWith(p + " "));
     } else if (slotKey.startsWith("BMED DEPTH")) {
         return courseCode.startsWith("BMED ") && num >= 3000 && num < 5000;
     } else if (slotKey.startsWith("BMED BREADTH")) {
         const engSciPrefixes = ["CHEM", "PHYS", "MATH", "CS", "BIOS", "MSE", "ECE", "COE", "ISYE", "BMED", "ME", "CHBE"];
-        return engSciPrefixes.some(p => courseCode.startsWith(p + " "));
+        return num >= 2000 && num < 5000 && engSciPrefixes.some(p => courseCode.startsWith(p + " "));
     } else if (slotKey.startsWith("NEUR BREADTH")) {
         const neurPrefixes = ["NEUR", "PSYC", "BIOS", "BMED", "CS", "MATH", "CHEM", "PHYS"];
-        return neurPrefixes.some(p => courseCode.startsWith(p + " "));
+        return num >= 2000 && num < 5000 && neurPrefixes.some(p => courseCode.startsWith(p + " "));
     } else if (slotKey.startsWith("PSYC ELECTIVE")) {
         return courseCode.startsWith("PSYC ") && num >= 2000 && num < 5000;
     } else if (slotKey === "HUM ELECTIVE") {
@@ -1314,6 +1324,27 @@ function renderChecklist(auditResults) {
                         btn.style.background = '#e8f5e9';
                         btn.style.color = '#2e7d32';
                         btn.style.borderColor = '#c8e6c9';
+
+                        const resetBtn = document.createElement('button');
+                        resetBtn.type = 'button';
+                        resetBtn.className = 'card-warning-btn';
+                        resetBtn.style.cssText = 'background: #fff3e0; color: #e65100; border-color: #ffe0b2; margin-left: 4px;';
+                        resetBtn.textContent = '↩️ Reset';
+                        resetBtn.title = `Reset this card back to ${slot.slotKey}`;
+                        resetBtn.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            const idSafeName = source.replace(/\s+/g, '-');
+                            const semListEl = document.getElementById(`list-${idSafeName}`);
+                            if (semListEl) {
+                                const card = semListEl.querySelector(`.class-card[data-code="${code}"]`);
+                                if (card) {
+                                    card.dataset.code = slot.slotKey;
+                                }
+                            }
+                            saveState();
+                            updatePlanner();
+                        });
+                        btn.parentElement.insertBefore(resetBtn, btn.nextSibling);
                     }
                 } else {
                     // Regular or transfer-satisfied slot
